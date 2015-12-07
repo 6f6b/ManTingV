@@ -9,9 +9,9 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#define ScreenWidth [UIScreen mainScreen].bounds.size.width;
-#define Screenheight [UIScreen mainScreen].bounds.size.height;
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define Screenheight [UIScreen mainScreen].bounds.size.height
 
 //创建顶部滚动广告栏
-
+#import "MTModel.h"
 #endif /* PrefixHeader_pch */

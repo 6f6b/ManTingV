@@ -38,6 +38,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (!indexPath.row) {
+        return 150;
+    }
     return 120;
 }
 
@@ -51,6 +54,7 @@
         ShortRentCell *shortRentCell = [self.tableView dequeueReusableCellWithIdentifier:@"shortRentCell"];
         cell = shortRentCell;
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 /*

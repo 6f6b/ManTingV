@@ -19,6 +19,9 @@
     
     //隐藏掉所有的navigationBar
     self.navigationBar.hidden = YES;
+
+    self.navigationBar.tintColor = [UIColor blueColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {

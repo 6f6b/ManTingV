@@ -17,9 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //创建顶部搜索框
+    UISearchBar *productSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 10, 80, 40)];
+    productSearchBar.placeholder = @"请输入关键词";
+    self.navigationItem.titleView = productSearchBar;
+    
+    //创建左边下弹城市列表按钮
+    UIButton *homeCityListButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    homeCityListButton.frame = CGRectMake(0, 0, 50, 30);
+    [homeCityListButton setTitle:@"成都" forState:UIControlStateNormal];
+    [homeCityListButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    //[homeCityListButton setBackgroundColor:[UIColor blackColor]];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:homeCityListButton];
+    
     ContentScrollView *contentScrollView = [[ContentScrollView alloc] initWithFrame:self.view.bounds];
     contentScrollView.backgroundColor = [UIColor whiteColor];
     self.contentScrollView = contentScrollView;
+    self.contentScrollView.contentSize = CGSizeMake(ScreenWidth, 1000);
     [self.view addSubview:contentScrollView];
 }
 

@@ -9,5 +9,7 @@
 #import "MTModel.h"
 
 @implementation MTModel
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
 
+}
 @end

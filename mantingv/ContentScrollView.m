@@ -14,7 +14,7 @@
     float adsX = 0;
     float adsY = 0;
     float adsW = self.frame.size.width;
-    float adsH = 100;
+    float adsH = 150;
     self.adScrollView.frame = CGRectMake(adsX, adsY, adsW, adsH);
     
 //    self.adPageControl.center = self.center;

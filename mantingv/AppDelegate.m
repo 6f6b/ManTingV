@@ -27,11 +27,13 @@
     HomeController *home = [[HomeController alloc] init];
     //[self configControllerWith:home title:@"首页"];
     MTNavigationController *homeNav = [[MTNavigationController alloc] initWithRootViewController:home];
+    homeNav.navigationBar.hidden = NO;
     homeNav.title = @"首页";
     
     //创建产品页
     ProductController *product = [[ProductController alloc] init];
     MTNavigationController *productNav = [[MTNavigationController alloc] initWithRootViewController:product];
+    productNav.navigationBar.hidden = NO;
     productNav.title = @"产品";
     
     //创建短租页
