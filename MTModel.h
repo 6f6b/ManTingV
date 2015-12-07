@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  MTModel.h
 //  mantingv
 //
 //  Created by LiuFeng on 15/12/3.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
-
+@interface MTModel : NSObject
 
 @end
-
