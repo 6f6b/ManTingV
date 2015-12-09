@@ -8,9 +8,11 @@
 
 #import "ProductController.h"
 #import "ProductView.h"
+#import "LFLoopScrollView.h"
 
 @interface ProductController ()
 @property (nonatomic,weak) UIScrollView *productContentScrollView;
+@property (nonatomic,weak) LFLoopScrollView *adScrollView;
 @end
 
 @implementation ProductController
@@ -24,10 +26,18 @@
     self.navigationItem.titleView = productSearchBar;
     
     //创建滚动广告视图
-    UIScrollView *productAdScrollView = [[UIScrollView alloc] init];
-    productAdScrollView.frame = CGRectMake(0, 0, ScreenWidth, 100);
-    productAdScrollView.backgroundColor = [UIColor greenColor];
-    [self.productContentScrollView addSubview:productAdScrollView];
+    LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+    adScrollView.autoScroll = YES;
+    adScrollView.backgroundColor = [UIColor greenColor];
+    _adScrollView = adScrollView;
+    NSArray *urls = @[@"http://down.tutu001.com/d/file/20101129/2f5ca0f1c9b6d02ea87df74fcc_560.jpg",@"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg",@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
+    [_adScrollView setImageWithUrlS:urls];
+    [self.productContentScrollView addSubview:_adScrollView];
+    
+//    UIScrollView *productAdScrollView = [[UIScrollView alloc] init];
+//    productAdScrollView.frame = CGRectMake(0, 0, ScreenWidth, 100);
+//    productAdScrollView.backgroundColor = [UIColor greenColor];
+//    [self.productContentScrollView addSubview:productAdScrollView];
     
     //创建条件选择button
     NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择主题"];
@@ -38,7 +48,7 @@
         [button addTarget:self action:@selector(dealSelect:) forControlEvents:UIControlEventTouchUpInside];
         [button setTitle:buttonTitles[i] forState:UIControlStateNormal];
         CGFloat btnX = i*ScreenWidth/(float)buttonTitles.count;
-        CGFloat btnY = CGRectGetMaxY(productAdScrollView.frame);
+        CGFloat btnY = CGRectGetMaxY(adScrollView.frame);
         CGFloat btnW = ScreenWidth/(float)buttonTitles.count;
         CGFloat btnH = 40;
         button.frame = CGRectMake(btnX, btnY, btnW, btnH);
@@ -50,7 +60,7 @@
         ProductView *productView = [[ProductView alloc] init];
         productView.backgroundColor = [UIColor blueColor];
         CGFloat productViewX = 0;
-        CGFloat productViewY = CGRectGetMaxY(productAdScrollView.frame)+40+i*155;
+        CGFloat productViewY = CGRectGetMaxY(adScrollView.frame)+40+i*155;
         CGFloat productViewW = ScreenWidth;
         CGFloat productViewH =  150;
         productView.frame = CGRectMake(productViewX, productViewY, productViewW, productViewH);

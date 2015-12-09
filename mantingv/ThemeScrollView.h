@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ThemeScrollView : UIView
-
+- (void)setValueWithModel:(MTModel *)model;
 @end

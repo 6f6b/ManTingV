@@ -8,14 +8,16 @@
 
 #import "ThemeScrollView.h"
 
+@interface ThemeScrollView ()
+@property (nonatomic,strong) NSMutableArray *thems;
+@end
 @implementation ThemeScrollView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)willMoveToSuperview:(UIView *)newSuperview{
+    
 }
-*/
 
+- (void)setValueWithModel:(MTModel *)model{
+    
+}
 @end

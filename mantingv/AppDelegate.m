@@ -29,27 +29,33 @@
     MTNavigationController *homeNav = [[MTNavigationController alloc] initWithRootViewController:home];
     homeNav.navigationBar.hidden = NO;
     homeNav.title = @"首页";
+    [homeNav.tabBarItem setImage:[UIImage imageNamed:@"down"]];
+
     
     //创建产品页
     ProductController *product = [[ProductController alloc] init];
     MTNavigationController *productNav = [[MTNavigationController alloc] initWithRootViewController:product];
     productNav.navigationBar.hidden = NO;
     productNav.title = @"产品";
+    [productNav.tabBarItem setImage:[UIImage imageNamed:@"down"]];
     
     //创建短租页
     ShortRentController *shortRent = [[ShortRentController alloc] init];
     MTNavigationController *shortRentNav = [[MTNavigationController alloc] initWithRootViewController:shortRent];
     shortRentNav.title = @"短租";
+    [shortRentNav.tabBarItem setImage:[UIImage imageNamed:@"down"]];
     
     //创建产权中心页
     PropertyRightCenterController *propertyRC = [[PropertyRightCenterController alloc] init];
     MTNavigationController *propertyRCNav = [[MTNavigationController alloc] initWithRootViewController:propertyRC];
     propertyRCNav.title = @"产权中心";
+    [propertyRCNav.tabBarItem setImage:[UIImage imageNamed:@"down"]];
     
     //创建我的页
     MineController *mine = [[MineController alloc] init];
     MTNavigationController *mineNAV = [[MTNavigationController alloc] initWithRootViewController:mine];
     mineNAV.title = @"我的";
+    [mineNAV.tabBarItem setImage:[UIImage imageNamed:@"down"]];
     
     //创建TabBarController控制器
     MTTabBarController *tbc = [[MTTabBarController alloc] init];

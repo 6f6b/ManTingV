@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface Choice : UIView
-
+- (void)setValueWith:(NSInteger)type model:(MTModel *)model;
 @end

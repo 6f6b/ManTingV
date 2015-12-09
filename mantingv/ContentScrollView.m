@@ -7,55 +7,75 @@
 //
 
 #import "ContentScrollView.h"
+#import "ThemeScrollView.h"
+
+@interface ContentScrollView ()
+@property (nonatomic,weak) ThemeScrollView *themeScrollView;
+@property (nonatomic,weak) UIImageView *what;
+@end
 
 @implementation ContentScrollView
 
-- (void)willMoveToSuperview:(UIView *)newSuperview{
-    float adsX = 0;
-    float adsY = 0;
-    float adsW = self.frame.size.width;
-    float adsH = 150;
-    self.adScrollView.frame = CGRectMake(adsX, adsY, adsW, adsH);
-    
-//    self.adPageControl.center = self.center;
-//    float adpX = self.adPageControl.frame.origin.x;
-//    float adpY = CGRectGetMaxY(self.adScrollView.frame)-20;
-//    float adpW = 20;
-//    float adpH = 100;
-//    self.adPageControl.frame = CGRectMake(adpX, adpY, adpW, adpH);
-    
+
+- (id)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.fourButtons = [[NSMutableArray alloc] init];
+        
+        //滚动广告视图
+        
+        //四个按钮
+        [self setButtons];
+        
+        //默认两个主题
+        UIButton *button = self.fourButtons[0];
+        self.themeScrollView.frame = CGRectMake(0, CGRectGetMaxY(button.frame), frame.size.width, 150);
+
+        //不知道什么鬼
+        self.what.frame = CGRectMake(0, CGRectGetMaxY(self.themeScrollView.frame), frame.size.width, 200);
+        
+        //精选主题
+        self.choiceTheme.frame = CGRectMake(0, CGRectGetMaxY(self.what.frame), frame.size.width, 100);
+        [self.choiceTheme setValueWith:1 model:nil];
+        
+        //精选房间
+        self.choiceRoom.frame = CGRectMake(0, CGRectGetMaxY(self.choiceTheme.frame), frame.size.width, 100);
+        [self.choiceRoom setValueWith:0 model:nil];
+    }
+    return self;
 }
 
-- (UIScrollView *)adScrollView{
+#pragma mark - 滚动广告视图
+- (LFLoopScrollView *)adScrollView{
     if (nil == _adScrollView) {
-        UIScrollView *adScrollView = [[UIScrollView alloc] init];
+        LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+        adScrollView.autoScroll = YES;
         adScrollView.backgroundColor = [UIColor greenColor];
         _adScrollView = adScrollView;
+        NSArray *urls = @[@"http://down.tutu001.com/d/file/20101129/2f5ca0f1c9b6d02ea87df74fcc_560.jpg",@"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg",@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
+        [_adScrollView setImageWithUrlS:urls];
         [self addSubview:_adScrollView];
     }
     return _adScrollView;
 }
 
-//- (UIPageControl *)adPageControl{
-//    if (nil == _adPageControl) {
-//        UIPageControl *adPageControl = [[UIPageControl alloc] init];
-//        adPageControl.backgroundColor = [UIColor redColor];
-//        adPageControl.numberOfPages = 4;
-//        _adPageControl = adPageControl;
-//        [self addSubview:_adPageControl];
-//    }
-//    return _adPageControl;
-//}
-
-
+#pragma  mark - 买房、入住、交换、转让按钮
 - (void)setButtons{
-    NSArray *titles = @[@"认购",@"交换",@"转让",@"入住"];
+    NSArray *titles = @[@"我要买房",@"我要入住",@"我要交换",@"我要转让"];
     NSArray *images = @[];
     for (int i=0; i<4; i++) {
-//        float btnX = Screenheight
-//        float btnY =
-//        float btnW =
-//        float btnH =
+        float btnX = i*ScreenWidth/4;
+        float btnY = CGRectGetMaxY(self.adScrollView.frame);
+        float btnW = ScreenWidth/4;
+        float btnH = 25;
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setBackgroundColor:[UIColor blackColor]];
+        [button setTitle:titles[i] forState:UIControlStateNormal];
+        button.frame = CGRectMake(btnX, btnY, btnW, btnH);
+        button.tag = 100+i;
+        [button addTarget:self action:@selector(dealButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.fourButtons addObject:button];
+        [self addSubview:button];
     }
 }
 
@@ -67,43 +87,50 @@
 }
 
 - (void)dealButton:(UIButton *)button{
-    
+    NSLog(@"%lu",button.tag);
 }
 
-- (UIButton *)subscription{
-    if (_subscription == nil) {
-        UIButton *subscription = [[UIButton alloc] init];
-        _subscription = subscription;
-        [self addSubview:_subscription];
+#pragma mark - 默认的两个主题
+- (ThemeScrollView *)themeScrollView{
+    if (nil == _themeScrollView) {
+        ThemeScrollView *themeScrollView = [[ThemeScrollView alloc] init];
+        [self addSubview:themeScrollView];
+        themeScrollView.backgroundColor = [UIColor blueColor];
+        _themeScrollView = themeScrollView;
     }
-    return _subscription;
+    return _themeScrollView;
 }
 
-- (UIButton *)exchange{
-    if (_exchange == nil) {
-        UIButton *exchange = [[UIButton alloc] init];
-        _exchange = exchange;
-        [self addSubview:_exchange];
+#pragma mark - 不知道什么鬼
+- (UIImageView *)what{
+    if (nil == _what) {
+        UIImageView *what = [[UIImageView alloc] init];
+        what.backgroundColor = [UIColor redColor];
+        [self addSubview:what];
+        _what = what;
     }
-    return _exchange;
+    return _what;
 }
 
-- (UIButton *)assignment{
-    if (_assignment == nil) {
-        UIButton *assignment = [[UIButton alloc] init];
-        _assignment = assignment;
-        [self addSubview:_assignment];
+#pragma mark - 精选主题
+- (Choice *)choiceTheme{
+    if (nil == _choiceTheme) {
+        Choice *choiceTheme = [[Choice alloc] init];
+        choiceTheme.backgroundColor = [UIColor greenColor];
+        [self addSubview:choiceTheme];
+        _choiceTheme = choiceTheme;
     }
-    return _assignment;
+    return _choiceTheme;
 }
 
-- (UIButton *)checkInto{
-    if (_checkInto == nil) {
-        UIButton *checkInto = [[UIButton alloc] init];
-        _checkInto = checkInto;
-        [self addSubview:_checkInto];
+#pragma mark - 精选房间
+- (Choice *)choiceRoom{
+    if (nil == _choiceRoom) {
+        Choice *choiceRoom = [[Choice alloc] init];
+        choiceRoom.backgroundColor = [UIColor redColor];
+        [self addSubview:choiceRoom];
+        _choiceRoom = choiceRoom;
     }
-    return _checkInto;
+    return _choiceRoom;
 }
-
 @end

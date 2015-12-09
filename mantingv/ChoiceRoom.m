@@ -10,12 +10,10 @@
 
 @implementation ChoiceRoom
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+//- (id)initWithFrame:(CGRect)frame{
+//    if (self = [super initWithFrame:frame]) {
+//        //UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)]
+//    }
+//}
 
 @end

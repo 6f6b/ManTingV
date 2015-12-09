@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //控制器下载数据
+    [self downLoadData];
+    
     //创建顶部搜索框
     UISearchBar *productSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 10, 80, 40)];
     productSearchBar.placeholder = @"请输入关键词";
@@ -28,19 +31,34 @@
     homeCityListButton.frame = CGRectMake(0, 0, 50, 30);
     [homeCityListButton setTitle:@"成都" forState:UIControlStateNormal];
     [homeCityListButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    //[homeCityListButton setBackgroundColor:[UIColor blackColor]];
+    [homeCityListButton setImage:[UIImage imageNamed:@"down"] forState:UIControlStateNormal];
+    [homeCityListButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
+    [homeCityListButton setImageEdgeInsets:UIEdgeInsetsMake(0, 40, 0, -40)];
+    [homeCityListButton addTarget:self action:@selector(dealCityList) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:homeCityListButton];
     
     ContentScrollView *contentScrollView = [[ContentScrollView alloc] initWithFrame:self.view.bounds];
     contentScrollView.backgroundColor = [UIColor whiteColor];
-    self.contentScrollView = contentScrollView;
-    self.contentScrollView.contentSize = CGSizeMake(ScreenWidth, 1000);
+    contentScrollView.homeController = self;
+    _contentScrollView = contentScrollView;
     [self.view addSubview:contentScrollView];
 }
 
+- (void)downLoadData{
+    //[NSThread sleepForTimeInterval:2];
+    //下载数据
+    //处理数据
+    //刷新UI
+}
+
+
+- (void)dealCityList{
+    NSLog(@"城市列表");
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

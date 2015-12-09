@@ -49,7 +49,16 @@
 		03775BB31C11486900319C32 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BB21C11486900319C32 /* ContentScrollView.m */; };
 		03775BC01C11874700319C32 /* MTTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BBF1C11874700319C32 /* MTTableController.m */; };
 		03D0C0821C152ABA00397364 /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D0C0811C152ABA00397364 /* ProductView.m */; };
-		03D0C0CB1C1572DC00397364 /* ontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D0C0CA1C1572DC00397364 /* ontroller.m */; };
+		03D8C4FA1C17B9A700C71B98 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8C4F91C17B9A700C71B98 /* down.png */; };
+		03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8C4FF1C17D24800C71B98 /* LFLoopScrollView.m */; };
+		03E0A2521C180FDB00FCAAAC /* ThemeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A2511C180FDB00FCAAAC /* ThemeScrollView.m */; };
+		03E0A2551C18140D00FCAAAC /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A2541C18140D00FCAAAC /* Choice.m */; };
+		03E0A25B1C18274000FCAAAC /* mine.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2561C18274000FCAAAC /* mine.png */; };
+		03E0A25C1C18274000FCAAAC /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2571C18274000FCAAAC /* home.png */; };
+		03E0A25D1C18274000FCAAAC /* property.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2581C18274000FCAAAC /* property.png */; };
+		03E0A25E1C18274000FCAAAC /* short.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2591C18274000FCAAAC /* short.png */; };
+		03E0A25F1C18274000FCAAAC /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A25A1C18274000FCAAAC /* product.png */; };
+		03E0A2621C18340D00FCAAAC /* ChoiceRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A2611C18340D00FCAAAC /* ChoiceRoom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +142,20 @@
 		03775BBF1C11874700319C32 /* MTTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableController.m; sourceTree = "<group>"; };
 		03D0C0801C152ABA00397364 /* ProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductView.h; sourceTree = "<group>"; };
 		03D0C0811C152ABA00397364 /* ProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductView.m; sourceTree = "<group>"; };
-		03D0C0C91C1572DC00397364 /* ontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ontroller.h; sourceTree = "<group>"; };
-		03D0C0CA1C1572DC00397364 /* ontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ontroller.m; sourceTree = "<group>"; };
+		03D8C4F91C17B9A700C71B98 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down.png; path = ../down.png; sourceTree = "<group>"; };
+		03D8C4FE1C17D24800C71B98 /* LFLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoopScrollView.h; sourceTree = "<group>"; };
+		03D8C4FF1C17D24800C71B98 /* LFLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoopScrollView.m; sourceTree = "<group>"; };
+		03E0A2501C180FDB00FCAAAC /* ThemeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeScrollView.h; sourceTree = "<group>"; };
+		03E0A2511C180FDB00FCAAAC /* ThemeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeScrollView.m; sourceTree = "<group>"; };
+		03E0A2531C18140D00FCAAAC /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
+		03E0A2541C18140D00FCAAAC /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
+		03E0A2561C18274000FCAAAC /* mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine.png; sourceTree = "<group>"; };
+		03E0A2571C18274000FCAAAC /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		03E0A2581C18274000FCAAAC /* property.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = property.png; sourceTree = "<group>"; };
+		03E0A2591C18274000FCAAAC /* short.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = short.png; sourceTree = "<group>"; };
+		03E0A25A1C18274000FCAAAC /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product.png; sourceTree = "<group>"; };
+		03E0A2601C18340D00FCAAAC /* ChoiceRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceRoom.h; sourceTree = "<group>"; };
+		03E0A2611C18340D00FCAAAC /* ChoiceRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceRoom.m; sourceTree = "<group>"; };
 		58EC7ED67ED18BE89D8F1137 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C933A41749C4C07835044EA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DCB1BD81C0C01DCDA3E11FDE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +190,12 @@
 		0376AFD31C1196C30033D2A2 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				03D8C4F91C17B9A700C71B98 /* down.png */,
+				03E0A2561C18274000FCAAAC /* mine.png */,
+				03E0A2571C18274000FCAAAC /* home.png */,
+				03E0A2581C18274000FCAAAC /* property.png */,
+				03E0A2591C18274000FCAAAC /* short.png */,
+				03E0A25A1C18274000FCAAAC /* product.png */,
 				0376AFD41C1196C30033D2A2 /* Welcome1.jpg */,
 				0376AFD51C1196C30033D2A2 /* Welcome1@2x.jpg */,
 				0376AFD61C1196C30033D2A2 /* Welcome2.jpg */,
@@ -328,8 +355,6 @@
 			children = (
 				03775B7C1C113AAD00319C32 /* HomeController.h */,
 				03775B7D1C113AAD00319C32 /* HomeController.m */,
-				03D0C0C91C1572DC00397364 /* ontroller.h */,
-				03D0C0CA1C1572DC00397364 /* ontroller.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -339,6 +364,12 @@
 			children = (
 				03775BB11C11486900319C32 /* ContentScrollView.h */,
 				03775BB21C11486900319C32 /* ContentScrollView.m */,
+				03E0A2501C180FDB00FCAAAC /* ThemeScrollView.h */,
+				03E0A2511C180FDB00FCAAAC /* ThemeScrollView.m */,
+				03E0A2531C18140D00FCAAAC /* Choice.h */,
+				03E0A2541C18140D00FCAAAC /* Choice.m */,
+				03E0A2601C18340D00FCAAAC /* ChoiceRoom.h */,
+				03E0A2611C18340D00FCAAAC /* ChoiceRoom.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -468,8 +499,18 @@
 		03775BB51C11853700319C32 /* ThirdLibrarys */ = {
 			isa = PBXGroup;
 			children = (
+				03D8C4FD1C17D24800C71B98 /* LFLoopScrollView */,
 			);
 			name = ThirdLibrarys;
+			sourceTree = "<group>";
+		};
+		03D8C4FD1C17D24800C71B98 /* LFLoopScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				03D8C4FE1C17D24800C71B98 /* LFLoopScrollView.h */,
+				03D8C4FF1C17D24800C71B98 /* LFLoopScrollView.m */,
+			);
+			path = LFLoopScrollView;
 			sourceTree = "<group>";
 		};
 		9D39272C0FD25EC0F26D3446 /* Frameworks */ = {
@@ -595,9 +636,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E0A25E1C18274000FCAAAC /* short.png in Resources */,
 				0376AFE81C1196C30033D2A2 /* Welcome3.jpg in Resources */,
 				0376AFEC1C1196C30033D2A2 /* Welcome_3.0_2.jpg in Resources */,
 				0376AFED1C1196C30033D2A2 /* Welcome_3.0_2@2x.jpg in Resources */,
+				03E0A25D1C18274000FCAAAC /* property.png in Resources */,
 				0376AFEA1C1196C30033D2A2 /* Welcome_3.0_1.jpg in Resources */,
 				03775BA31C113C3000319C32 /* MineController.xib in Resources */,
 				0376AFF31C1196C30033D2A2 /* Welcome_3.0_5@2x.jpg in Resources */,
@@ -605,16 +648,20 @@
 				0376AFD21C1195290033D2A2 /* shortRentAdCell.xib in Resources */,
 				0376AFEF1C1196C30033D2A2 /* Welcome_3.0_3@2x.jpg in Resources */,
 				0376AFF11C1196C30033D2A2 /* Welcome_3.0_4@2x.jpg in Resources */,
+				03E0A25C1C18274000FCAAAC /* home.png in Resources */,
 				0376AFC81C118D8F0033D2A2 /* ShortRentCell.xib in Resources */,
+				03D8C4FA1C17B9A700C71B98 /* down.png in Resources */,
 				03775B4A1C11368F00319C32 /* Assets.xcassets in Resources */,
 				0376AFF01C1196C30033D2A2 /* Welcome_3.0_4.jpg in Resources */,
 				0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */,
+				03E0A25F1C18274000FCAAAC /* product.png in Resources */,
 				0376AFF21C1196C30033D2A2 /* Welcome_3.0_5.jpg in Resources */,
 				0376AFEE1C1196C30033D2A2 /* Welcome_3.0_3.jpg in Resources */,
 				0376AFE71C1196C30033D2A2 /* Welcome2@2x.jpg in Resources */,
 				0376AFEB1C1196C30033D2A2 /* Welcome_3.0_1@2x.jpg in Resources */,
 				03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */,
 				0376AFE41C1196C30033D2A2 /* Welcome1.jpg in Resources */,
+				03E0A25B1C18274000FCAAAC /* mine.png in Resources */,
 				0376AFE91C1196C30033D2A2 /* Welcome3@2x.jpg in Resources */,
 				0376AFE61C1196C30033D2A2 /* Welcome2.jpg in Resources */,
 				03775B481C11368F00319C32 /* Main.storyboard in Resources */,
@@ -697,12 +744,15 @@
 				03D0C0821C152ABA00397364 /* ProductView.m in Sources */,
 				03775BC01C11874700319C32 /* MTTableController.m in Sources */,
 				03775B421C11368F00319C32 /* AppDelegate.m in Sources */,
-				03D0C0CB1C1572DC00397364 /* ontroller.m in Sources */,
+				03E0A2621C18340D00FCAAAC /* ChoiceRoom.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
+				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
 				0376AFD11C1195290033D2A2 /* shortRentAdCell.m in Sources */,
+				03E0A2551C18140D00FCAAAC /* Choice.m in Sources */,
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
+				03E0A2521C180FDB00FCAAAC /* ThemeScrollView.m in Sources */,
 				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03775BA61C113E8600319C32 /* MTModel.m in Sources */,
