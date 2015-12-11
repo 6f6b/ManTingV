@@ -1,13 +1,13 @@
 //
-//  ThemeScrollView.h
+//  ChoiceTheme.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/9.
+//  Created by LiuFeng on 15/12/10.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ThemeScrollView : UIScrollView
+@interface ChoiceTheme : UIView
 - (void)setValueWithModel:(MTModel *)model;
 @end

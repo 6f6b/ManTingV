@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ChoiceRoom : UIView
-
+- (void)setValueWith:(MTModel *)model;
 @end

@@ -24,6 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    return NO;
+}
 /*
 #pragma mark - Navigation
 

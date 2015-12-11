@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MTController : UIViewController
-
+@property (nonatomic,assign) BOOL isNeedToCheckLogin;
 @end

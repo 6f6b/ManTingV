@@ -8,6 +8,9 @@
 
 #import "ContentScrollView.h"
 #import "ThemeScrollView.h"
+#import "ProductController.h"
+#import "CheckInController.h"
+#import "RightsListController.h"
 
 @interface ContentScrollView ()
 @property (nonatomic,weak) ThemeScrollView *themeScrollView;
@@ -28,8 +31,9 @@
         
         //默认两个主题
         UIButton *button = self.fourButtons[0];
-        self.themeScrollView.frame = CGRectMake(0, CGRectGetMaxY(button.frame), frame.size.width, 150);
-
+        self.themeScrollView.frame = CGRectMake(0, CGRectGetMaxY(button.frame), frame.size.width, 100);
+        [self.themeScrollView setValueWithModel:nil];
+        
         //不知道什么鬼
         self.what.frame = CGRectMake(0, CGRectGetMaxY(self.themeScrollView.frame), frame.size.width, 200);
         
@@ -61,17 +65,22 @@
 #pragma  mark - 买房、入住、交换、转让按钮
 - (void)setButtons{
     NSArray *titles = @[@"我要买房",@"我要入住",@"我要交换",@"我要转让"];
-    NSArray *images = @[];
+    //NSArray *images = @[];
     for (int i=0; i<4; i++) {
         float btnX = i*ScreenWidth/4;
         float btnY = CGRectGetMaxY(self.adScrollView.frame);
         float btnW = ScreenWidth/4;
-        float btnH = 25;
+        float btnH = 50;
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundColor:[UIColor blackColor]];
         [button setTitle:titles[i] forState:UIControlStateNormal];
         button.frame = CGRectMake(btnX, btnY, btnW, btnH);
+        [button setBackgroundImage:[UIImage imageNamed:@"RSS_button_48px_1104904_easyicon.net"] forState:UIControlStateNormal];
+        [button setImageEdgeInsets:UIEdgeInsetsMake(10, 20, -20, -10)];
+        [button setTitleEdgeInsets:UIEdgeInsetsMake(20, 0, -20, 0)];
+        
+        //button.
         button.tag = 100+i;
         [button addTarget:self action:@selector(dealButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.fourButtons addObject:button];
@@ -88,6 +97,20 @@
 
 - (void)dealButton:(UIButton *)button{
     NSLog(@"%lu",button.tag);
+    if (100 == button.tag) {
+        ProductController *pc = [[ProductController alloc] init];
+        pc.isNeedToCheckLogin = NO;
+        [self.homeController.navigationController pushViewController:pc animated:YES];
+    }
+    else if(101 == button.tag){
+        CheckInController *checkIn = [[CheckInController alloc] init];
+        [self.homeController.navigationController pushViewController:checkIn animated:YES];
+    }
+    else{
+        RightsListController *rightsVC = [[RightsListController alloc] init];
+        [self.homeController.navigationController pushViewController:rightsVC animated:YES];
+    }
+
 }
 
 #pragma mark - 默认的两个主题
@@ -127,7 +150,7 @@
 - (Choice *)choiceRoom{
     if (nil == _choiceRoom) {
         Choice *choiceRoom = [[Choice alloc] init];
-        choiceRoom.backgroundColor = [UIColor redColor];
+        choiceRoom.backgroundColor = [UIColor whiteColor];
         [self addSubview:choiceRoom];
         _choiceRoom = choiceRoom;
     }

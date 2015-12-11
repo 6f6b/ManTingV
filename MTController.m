@@ -14,6 +14,14 @@
 
 @implementation MTController
 
+- (id)init{
+    if (self = [super init]) {
+        self.isNeedToCheckLogin = YES;
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

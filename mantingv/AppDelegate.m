@@ -15,7 +15,9 @@
 #import "PropertyRightCenterController.h"
 #import "MineController.h"
 
-@interface AppDelegate ()
+#import "LoginController.h"
+
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -59,10 +61,44 @@
     
     //创建TabBarController控制器
     MTTabBarController *tbc = [[MTTabBarController alloc] init];
+    tbc.delegate = self;
     tbc.viewControllers = @[homeNav,productNav,shortRentNav,propertyRCNav,mineNAV];
     self.window.rootViewController = tbc;
     
     
+    return YES;
+}
+
+//实现tabbarcontroller代理方法，判断是否登录，已经登录则直接到“我的”界面，否则push到登录界面
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    //如果不是点击的 我的 item，则不必进行判断
+    if (![viewController.tabBarItem.title isEqualToString:@"我的"]) {
+        return YES;
+    }
+    
+    //判断，如果已经登录则正常返回YES
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    if ([user objectForKey:@"seraccount"]) {
+        return YES;
+    }
+    
+    //判断，如果没登录则跳转到登录界面
+        //1.如果没登录成功则提示错误，并且停留在登录界面
+        //2.如果登录成功，则直接跳到 我的 界面？
+//    if(![user objectForKey:@"seraccount"]){
+//        NSLog(@"%@",tabBarController.selectedViewController);
+//        NSLog(@"%@",NSStringFromClass([viewController class]));
+//        
+//        MTNavigationController *nav = viewController;
+//        MTController *vc = [nav.viewControllers objectAtIndex:0];
+//        
+//        LoginController *login = [[LoginController alloc] init];
+//        login.willPushVC = vc;
+//        login.hidesBottomBarWhenPushed = YES;
+//        
+//        [(MTNavigationController *)tabBarController.selectedViewController pushViewController:login animated:YES];
+//        return NO;
+//    }
     return YES;
 }
 

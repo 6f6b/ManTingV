@@ -7,6 +7,9 @@
 //
 
 #import "Choice.h"
+#import "ChoiceRoom.h"
+#import "ChoiceTheme.h"
+
 @interface Choice ()
 @property (nonatomic,weak) UILabel *titleLabel;
 @property (nonatomic,weak) UIButton *seeMore;
@@ -32,7 +35,7 @@
 }
 
 
-
+//“查看更多”按钮点击事件
 - (void)dealSeeMore{
     NSLog(@"查看更多");
 }
@@ -41,42 +44,68 @@
     if (type) {
         self.titleLabel.text = @"精选主题";
         for(int i=0;i<5;i++){
-            UIImageView *imageView = [[UIImageView alloc] init];
-            imageView.backgroundColor = [UIColor brownColor];
-            imageView.layer.cornerRadius = 5;
-            imageView.clipsToBounds = YES;
+            ChoiceTheme *choiceTheme = [[ChoiceTheme alloc] init];
+            choiceTheme.backgroundColor = [UIColor brownColor];
+            choiceTheme.layer.cornerRadius = 5;
+            choiceTheme.clipsToBounds = YES;
+            choiceTheme.tag = 100+i;
+            
+            //添加手势
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTapChoiceTheme:)];
+            [choiceTheme addGestureRecognizer:tap];
+            
             float X = 0;
             float Y = 30+155*i;
             float W = ScreenWidth;
             float H = 150;
-            imageView.frame = CGRectMake(X, Y, W, H);
-            [self addSubview:imageView];
+            choiceTheme.frame = CGRectMake(X, Y, W, H);
+            [self addSubview:choiceTheme];
             
-            self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(imageView.frame));
+            self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(choiceTheme.frame));
         }
     }
     else{
         self.titleLabel.text = @"精选房间";
         for (int i=0; i<10; i++) {
-            UIView *view = [[UIView alloc] init];
-            view.layer.cornerRadius = 5;
-            view.clipsToBounds = YES;
             float X = i%2*10+(ScreenWidth-10)/2*(i%2);
             float Y = i/2*100;
             float W = (ScreenWidth-10)/2;
             float H = 90;
             
-            view.backgroundColor = [UIColor orangeColor];
-            [self addSubview:view];
-            view.frame = CGRectMake(X, Y, W, H);
+            ChoiceRoom *choiceRoom = [[ChoiceRoom alloc] initWithFrame:CGRectMake(X, Y, W, H)];
+            choiceRoom.layer.cornerRadius = 5;
+            choiceRoom.clipsToBounds = YES;
+            choiceRoom.backgroundColor = [UIColor grayColor];
+            choiceRoom.tag = 100+i;
             
-            self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(view.frame));
+            //添加手势
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTapChoiceRoom:)];
+            [choiceRoom addGestureRecognizer:tap];
+            
+            [self addSubview:choiceRoom];
+            //choiceRoom.frame = CGRectMake(X, Y, W, H);
+            
+            self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(choiceRoom.frame));
         }
     }
     self.titleLabel.sizeToFit;
+    
+    //获取到父视图指针，在数据加载完成之后重新调整父视图的Contentsize
     UIScrollView *contentScrollView = self.superview;
     contentScrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.frame));
     
     
+}
+
+//“精选主题”添加手势点击事件
+- (void)dealTapChoiceTheme:(UITapGestureRecognizer *)tap{
+    UIView *view = tap.view;
+    NSLog(@"%@-->%lu",self.titleLabel.text,view.tag);
+}
+
+//“精选房间”添加手势点击事件
+- (void)dealTapChoiceRoom:(UITapGestureRecognizer *)tap{
+    UIView *view = tap.view;
+    NSLog(@"%@-->%lu",self.titleLabel.text,view.tag);
 }
 @end

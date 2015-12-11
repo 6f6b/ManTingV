@@ -49,6 +49,22 @@
 		03775BB31C11486900319C32 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BB21C11486900319C32 /* ContentScrollView.m */; };
 		03775BC01C11874700319C32 /* MTTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BBF1C11874700319C32 /* MTTableController.m */; };
 		03D0C0821C152ABA00397364 /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D0C0811C152ABA00397364 /* ProductView.m */; };
+		03D643941C1942700082F0D4 /* ChoiceTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643931C1942700082F0D4 /* ChoiceTheme.m */; };
+		03D643991C194FDF0082F0D4 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643981C194FDF0082F0D4 /* Theme.m */; };
+		03D6439D1C195B010082F0D4 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6439B1C195B010082F0D4 /* LoginController.m */; };
+		03D6439E1C195B010082F0D4 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6439C1C195B010082F0D4 /* LoginController.xib */; };
+		03D643A01C195C590082F0D4 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D6439F1C195C590082F0D4 /* login.png */; };
+		03D643A21C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D643A11C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png */; };
+		03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643B21C197E1B0082F0D4 /* NSObject+AOP.m */; };
+		03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643BD1C198A9F0082F0D4 /* CheckInController.m */; };
+		03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643C01C1992A00082F0D4 /* UserAccount.m */; };
+		03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643C31C1994BB0082F0D4 /* RightsListController.m */; };
+		03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8AFB21C1A672200B41FF0 /* ThemeListController.m */; };
+		03D8AFC61C1A69FA00B41FF0 /* ThemeListContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8AFC51C1A69FA00B41FF0 /* ThemeListContentView.m */; };
+		03D8AFC91C1A714C00B41FF0 /* ThemeListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8AFC81C1A714C00B41FF0 /* ThemeListView.m */; };
+		03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8AFCE1C1AA5D700B41FF0 /* MTBaseView.m */; };
+		03D8AFDB1C1ACE5D00B41FF0 /* ResortFacilitiesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8AFD81C1ACE5D00B41FF0 /* ResortFacilitiesView.m */; };
+		03D8AFDC1C1ACE5D00B41FF0 /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8AFDA1C1ACE5D00B41FF0 /* SelectView.m */; };
 		03D8C4FA1C17B9A700C71B98 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8C4F91C17B9A700C71B98 /* down.png */; };
 		03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8C4FF1C17D24800C71B98 /* LFLoopScrollView.m */; };
 		03E0A2521C180FDB00FCAAAC /* ThemeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A2511C180FDB00FCAAAC /* ThemeScrollView.m */; };
@@ -142,6 +158,35 @@
 		03775BBF1C11874700319C32 /* MTTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableController.m; sourceTree = "<group>"; };
 		03D0C0801C152ABA00397364 /* ProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductView.h; sourceTree = "<group>"; };
 		03D0C0811C152ABA00397364 /* ProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductView.m; sourceTree = "<group>"; };
+		03D643921C1942700082F0D4 /* ChoiceTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceTheme.h; sourceTree = "<group>"; };
+		03D643931C1942700082F0D4 /* ChoiceTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceTheme.m; sourceTree = "<group>"; };
+		03D643971C194FDF0082F0D4 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		03D643981C194FDF0082F0D4 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		03D6439A1C195B010082F0D4 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = ../LoginController.h; sourceTree = "<group>"; };
+		03D6439B1C195B010082F0D4 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = ../LoginController.m; sourceTree = "<group>"; };
+		03D6439C1C195B010082F0D4 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = ../LoginController.xib; sourceTree = "<group>"; };
+		03D6439F1C195C590082F0D4 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		03D643A11C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RSS_button_48px_1104904_easyicon.net.png; sourceTree = "<group>"; };
+		03D643B11C197E1B0082F0D4 /* NSObject+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AOP.h"; sourceTree = "<group>"; };
+		03D643B21C197E1B0082F0D4 /* NSObject+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AOP.m"; sourceTree = "<group>"; };
+		03D643BC1C198A9F0082F0D4 /* CheckInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInController.h; sourceTree = "<group>"; };
+		03D643BD1C198A9F0082F0D4 /* CheckInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInController.m; sourceTree = "<group>"; };
+		03D643BF1C1992A00082F0D4 /* UserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserAccount.h; path = ../UserAccount.h; sourceTree = "<group>"; };
+		03D643C01C1992A00082F0D4 /* UserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserAccount.m; path = ../UserAccount.m; sourceTree = "<group>"; };
+		03D643C21C1994BB0082F0D4 /* RightsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightsListController.h; sourceTree = "<group>"; };
+		03D643C31C1994BB0082F0D4 /* RightsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightsListController.m; sourceTree = "<group>"; };
+		03D8AFB11C1A672200B41FF0 /* ThemeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeListController.h; sourceTree = "<group>"; };
+		03D8AFB21C1A672200B41FF0 /* ThemeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeListController.m; sourceTree = "<group>"; };
+		03D8AFC41C1A69FA00B41FF0 /* ThemeListContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeListContentView.h; sourceTree = "<group>"; };
+		03D8AFC51C1A69FA00B41FF0 /* ThemeListContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeListContentView.m; sourceTree = "<group>"; };
+		03D8AFC71C1A714C00B41FF0 /* ThemeListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeListView.h; sourceTree = "<group>"; };
+		03D8AFC81C1A714C00B41FF0 /* ThemeListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeListView.m; sourceTree = "<group>"; };
+		03D8AFCD1C1AA5D700B41FF0 /* MTBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBaseView.h; sourceTree = "<group>"; };
+		03D8AFCE1C1AA5D700B41FF0 /* MTBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBaseView.m; sourceTree = "<group>"; };
+		03D8AFD71C1ACE5D00B41FF0 /* ResortFacilitiesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResortFacilitiesView.h; sourceTree = "<group>"; };
+		03D8AFD81C1ACE5D00B41FF0 /* ResortFacilitiesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResortFacilitiesView.m; sourceTree = "<group>"; };
+		03D8AFD91C1ACE5D00B41FF0 /* SelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
+		03D8AFDA1C1ACE5D00B41FF0 /* SelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
 		03D8C4F91C17B9A700C71B98 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down.png; path = ../down.png; sourceTree = "<group>"; };
 		03D8C4FE1C17D24800C71B98 /* LFLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoopScrollView.h; sourceTree = "<group>"; };
 		03D8C4FF1C17D24800C71B98 /* LFLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoopScrollView.m; sourceTree = "<group>"; };
@@ -190,6 +235,8 @@
 		0376AFD31C1196C30033D2A2 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				03D643A11C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png */,
+				03D6439F1C195C590082F0D4 /* login.png */,
 				03D8C4F91C17B9A700C71B98 /* down.png */,
 				03E0A2561C18274000FCAAAC /* mine.png */,
 				03E0A2571C18274000FCAAAC /* home.png */,
@@ -345,6 +392,8 @@
 				03775BB41C11670F00319C32 /* PrefixHeader.pch */,
 				03775BBE1C11874700319C32 /* MTTableController.h */,
 				03775BBF1C11874700319C32 /* MTTableController.m */,
+				03D8AFCD1C1AA5D700B41FF0 /* MTBaseView.h */,
+				03D8AFCE1C1AA5D700B41FF0 /* MTBaseView.m */,
 			);
 			name = Common;
 			path = ..;
@@ -355,6 +404,9 @@
 			children = (
 				03775B7C1C113AAD00319C32 /* HomeController.h */,
 				03775B7D1C113AAD00319C32 /* HomeController.m */,
+				03D8AFB61C1A67BE00B41FF0 /* 权益列表 */,
+				03D8AFB51C1A678200B41FF0 /* 入住 */,
+				03D8AFB41C1A675200B41FF0 /* 主题房间列表 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -364,12 +416,8 @@
 			children = (
 				03775BB11C11486900319C32 /* ContentScrollView.h */,
 				03775BB21C11486900319C32 /* ContentScrollView.m */,
-				03E0A2501C180FDB00FCAAAC /* ThemeScrollView.h */,
-				03E0A2511C180FDB00FCAAAC /* ThemeScrollView.m */,
-				03E0A2531C18140D00FCAAAC /* Choice.h */,
-				03E0A2541C18140D00FCAAAC /* Choice.m */,
-				03E0A2601C18340D00FCAAAC /* ChoiceRoom.h */,
-				03E0A2611C18340D00FCAAAC /* ChoiceRoom.m */,
+				03D643961C194F900082F0D4 /* 主题轮播（默认两张） */,
+				03D643951C194F3B0082F0D4 /* 精选 */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -486,12 +534,19 @@
 		03775BA71C11401900319C32 /* Applications */ = {
 			isa = PBXGroup;
 			children = (
+				03D6439A1C195B010082F0D4 /* LoginController.h */,
+				03D6439B1C195B010082F0D4 /* LoginController.m */,
+				03D6439C1C195B010082F0D4 /* LoginController.xib */,
+				03D643BF1C1992A00082F0D4 /* UserAccount.h */,
+				03D643C01C1992A00082F0D4 /* UserAccount.m */,
 				03775B401C11368F00319C32 /* AppDelegate.h */,
 				03775B411C11368F00319C32 /* AppDelegate.m */,
 				03775BA81C11406000319C32 /* MTTabBarController.h */,
 				03775BA91C11406000319C32 /* MTTabBarController.m */,
 				03775BAE1C1140B800319C32 /* MTNavigationController.h */,
 				03775BAF1C1140B800319C32 /* MTNavigationController.m */,
+				03D643B11C197E1B0082F0D4 /* NSObject+AOP.h */,
+				03D643B21C197E1B0082F0D4 /* NSObject+AOP.m */,
 			);
 			name = Applications;
 			sourceTree = "<group>";
@@ -502,6 +557,137 @@
 				03D8C4FD1C17D24800C71B98 /* LFLoopScrollView */,
 			);
 			name = ThirdLibrarys;
+			sourceTree = "<group>";
+		};
+		03D643951C194F3B0082F0D4 /* 精选 */ = {
+			isa = PBXGroup;
+			children = (
+				03E0A2531C18140D00FCAAAC /* Choice.h */,
+				03E0A2541C18140D00FCAAAC /* Choice.m */,
+				03E0A2601C18340D00FCAAAC /* ChoiceRoom.h */,
+				03E0A2611C18340D00FCAAAC /* ChoiceRoom.m */,
+				03D643921C1942700082F0D4 /* ChoiceTheme.h */,
+				03D643931C1942700082F0D4 /* ChoiceTheme.m */,
+			);
+			name = "精选";
+			sourceTree = "<group>";
+		};
+		03D643961C194F900082F0D4 /* 主题轮播（默认两张） */ = {
+			isa = PBXGroup;
+			children = (
+				03E0A2501C180FDB00FCAAAC /* ThemeScrollView.h */,
+				03E0A2511C180FDB00FCAAAC /* ThemeScrollView.m */,
+				03D643971C194FDF0082F0D4 /* Theme.h */,
+				03D643981C194FDF0082F0D4 /* Theme.m */,
+			);
+			name = "主题轮播（默认两张）";
+			sourceTree = "<group>";
+		};
+		03D8AFB41C1A675200B41FF0 /* 主题房间列表 */ = {
+			isa = PBXGroup;
+			children = (
+				03D8AFBF1C1A680400B41FF0 /* Models */,
+				03D8AFBE1C1A680200B41FF0 /* Views */,
+				03D8AFBD1C1A680000B41FF0 /* Controllers */,
+			);
+			name = "主题房间列表";
+			sourceTree = "<group>";
+		};
+		03D8AFB51C1A678200B41FF0 /* 入住 */ = {
+			isa = PBXGroup;
+			children = (
+				03D8AFBC1C1A67FD00B41FF0 /* Models */,
+				03D8AFBB1C1A67FC00B41FF0 /* Views */,
+				03D8AFBA1C1A67FA00B41FF0 /* Controllers */,
+			);
+			name = "入住";
+			sourceTree = "<group>";
+		};
+		03D8AFB61C1A67BE00B41FF0 /* 权益列表 */ = {
+			isa = PBXGroup;
+			children = (
+				03D8AFB91C1A67F800B41FF0 /* Models */,
+				03D8AFB81C1A67F600B41FF0 /* Views */,
+				03D8AFB71C1A67F300B41FF0 /* Controllers */,
+			);
+			name = "权益列表";
+			sourceTree = "<group>";
+		};
+		03D8AFB71C1A67F300B41FF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D643C21C1994BB0082F0D4 /* RightsListController.h */,
+				03D643C31C1994BB0082F0D4 /* RightsListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D8AFB81C1A67F600B41FF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03D8AFB91C1A67F800B41FF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		03D8AFBA1C1A67FA00B41FF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D643BC1C198A9F0082F0D4 /* CheckInController.h */,
+				03D643BD1C198A9F0082F0D4 /* CheckInController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D8AFBB1C1A67FC00B41FF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03D8AFBC1C1A67FD00B41FF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		03D8AFBD1C1A680000B41FF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D8AFB11C1A672200B41FF0 /* ThemeListController.h */,
+				03D8AFB21C1A672200B41FF0 /* ThemeListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D8AFBE1C1A680200B41FF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03D8AFC41C1A69FA00B41FF0 /* ThemeListContentView.h */,
+				03D8AFC51C1A69FA00B41FF0 /* ThemeListContentView.m */,
+				03D8AFC71C1A714C00B41FF0 /* ThemeListView.h */,
+				03D8AFC81C1A714C00B41FF0 /* ThemeListView.m */,
+				03D8AFD91C1ACE5D00B41FF0 /* SelectView.h */,
+				03D8AFDA1C1ACE5D00B41FF0 /* SelectView.m */,
+				03D8AFD71C1ACE5D00B41FF0 /* ResortFacilitiesView.h */,
+				03D8AFD81C1ACE5D00B41FF0 /* ResortFacilitiesView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03D8AFBF1C1A680400B41FF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		03D8C4FD1C17D24800C71B98 /* LFLoopScrollView */ = {
@@ -641,6 +827,7 @@
 				0376AFEC1C1196C30033D2A2 /* Welcome_3.0_2.jpg in Resources */,
 				0376AFED1C1196C30033D2A2 /* Welcome_3.0_2@2x.jpg in Resources */,
 				03E0A25D1C18274000FCAAAC /* property.png in Resources */,
+				03D643A01C195C590082F0D4 /* login.png in Resources */,
 				0376AFEA1C1196C30033D2A2 /* Welcome_3.0_1.jpg in Resources */,
 				03775BA31C113C3000319C32 /* MineController.xib in Resources */,
 				0376AFF31C1196C30033D2A2 /* Welcome_3.0_5@2x.jpg in Resources */,
@@ -649,9 +836,11 @@
 				0376AFEF1C1196C30033D2A2 /* Welcome_3.0_3@2x.jpg in Resources */,
 				0376AFF11C1196C30033D2A2 /* Welcome_3.0_4@2x.jpg in Resources */,
 				03E0A25C1C18274000FCAAAC /* home.png in Resources */,
+				03D6439E1C195B010082F0D4 /* LoginController.xib in Resources */,
 				0376AFC81C118D8F0033D2A2 /* ShortRentCell.xib in Resources */,
 				03D8C4FA1C17B9A700C71B98 /* down.png in Resources */,
 				03775B4A1C11368F00319C32 /* Assets.xcassets in Resources */,
+				03D643A21C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png in Resources */,
 				0376AFF01C1196C30033D2A2 /* Welcome_3.0_4.jpg in Resources */,
 				0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */,
 				03E0A25F1C18274000FCAAAC /* product.png in Resources */,
@@ -739,23 +928,36 @@
 			files = (
 				03775BA21C113C3000319C32 /* MineController.m in Sources */,
 				03775B7F1C113AAD00319C32 /* HomeController.m in Sources */,
+				03D6439D1C195B010082F0D4 /* LoginController.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
+				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
+				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
 				03775BB31C11486900319C32 /* ContentScrollView.m in Sources */,
 				03D0C0821C152ABA00397364 /* ProductView.m in Sources */,
+				03D8AFDB1C1ACE5D00B41FF0 /* ResortFacilitiesView.m in Sources */,
+				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
 				03775BC01C11874700319C32 /* MTTableController.m in Sources */,
 				03775B421C11368F00319C32 /* AppDelegate.m in Sources */,
 				03E0A2621C18340D00FCAAAC /* ChoiceRoom.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
+				03D8AFDC1C1ACE5D00B41FF0 /* SelectView.m in Sources */,
+				03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */,
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
 				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
 				0376AFD11C1195290033D2A2 /* shortRentAdCell.m in Sources */,
 				03E0A2551C18140D00FCAAAC /* Choice.m in Sources */,
+				03D8AFC91C1A714C00B41FF0 /* ThemeListView.m in Sources */,
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
+				03D643991C194FDF0082F0D4 /* Theme.m in Sources */,
+				03D8AFC61C1A69FA00B41FF0 /* ThemeListContentView.m in Sources */,
 				03E0A2521C180FDB00FCAAAC /* ThemeScrollView.m in Sources */,
 				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
+				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
+				03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */,
 				03775BA61C113E8600319C32 /* MTModel.m in Sources */,
+				03D643941C1942700082F0D4 /* ChoiceTheme.m in Sources */,
 				03775B981C113BF100319C32 /* ShortRentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
