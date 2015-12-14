@@ -19,7 +19,7 @@
         productView.tag = 100+i;
         
         //添加手势
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTapChoiceTheme:)];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
         [productView addGestureRecognizer:tap];
         
         float X = 0;
@@ -36,4 +36,7 @@
     contentScrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.frame));
 }
 
+- (void)dealTap:(UITapGestureRecognizer *)tap{
+    
+}
 @end
