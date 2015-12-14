@@ -130,13 +130,13 @@
                             <exclude reference="wV5-cs-C8A"/>
                         </mask>
                         <mask key="constraints">
-                            <exclude reference="Vm2-LA-ww5"/>
-                            <exclude reference="dVy-gW-1JK"/>
-                            <exclude reference="r9o-D5-JXz"/>
                             <exclude reference="6Fj-V9-Gnx"/>
                             <exclude reference="FlS-Em-S5b"/>
                             <exclude reference="cCf-RB-jq4"/>
                             <exclude reference="ciF-0l-o9i"/>
+                            <exclude reference="Vm2-LA-ww5"/>
+                            <exclude reference="dVy-gW-1JK"/>
+                            <exclude reference="r9o-D5-JXz"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular">
@@ -145,13 +145,13 @@
                             <include reference="wV5-cs-C8A"/>
                         </mask>
                         <mask key="constraints">
-                            <include reference="Vm2-LA-ww5"/>
-                            <include reference="dVy-gW-1JK"/>
-                            <include reference="r9o-D5-JXz"/>
                             <include reference="6Fj-V9-Gnx"/>
                             <include reference="FlS-Em-S5b"/>
                             <include reference="cCf-RB-jq4"/>
                             <include reference="ciF-0l-o9i"/>
+                            <include reference="Vm2-LA-ww5"/>
+                            <include reference="dVy-gW-1JK"/>
+                            <include reference="r9o-D5-JXz"/>
                         </mask>
                     </variation>
                 </view>
@@ -183,18 +183,18 @@
                     <exclude reference="VNb-92-WFN"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="GMf-8R-s3E"/>
-                    <exclude reference="SRZ-yu-85e"/>
-                    <exclude reference="d7s-rp-AwH"/>
-                    <exclude reference="sqs-BH-GAf"/>
                     <exclude reference="5B8-KF-P6j"/>
                     <exclude reference="DYn-h1-pXq"/>
                     <exclude reference="kS5-s5-brc"/>
                     <exclude reference="qmZ-XS-3dM"/>
-                    <exclude reference="BP6-s1-POa"/>
-                    <exclude reference="FXu-Kz-Sm1"/>
                     <exclude reference="Sb2-bn-jOu"/>
                     <exclude reference="b1R-PG-4fR"/>
+                    <exclude reference="BP6-s1-POa"/>
+                    <exclude reference="FXu-Kz-Sm1"/>
+                    <exclude reference="GMf-8R-s3E"/>
+                    <exclude reference="SRZ-yu-85e"/>
+                    <exclude reference="d7s-rp-AwH"/>
+                    <exclude reference="sqs-BH-GAf"/>
                     <exclude reference="Mm9-jA-mRO"/>
                     <exclude reference="fiN-5D-wtL"/>
                 </mask>
@@ -209,18 +209,18 @@
                     <include reference="VNb-92-WFN"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="GMf-8R-s3E"/>
-                    <include reference="SRZ-yu-85e"/>
-                    <include reference="d7s-rp-AwH"/>
-                    <include reference="sqs-BH-GAf"/>
                     <include reference="5B8-KF-P6j"/>
                     <include reference="DYn-h1-pXq"/>
                     <include reference="kS5-s5-brc"/>
                     <include reference="qmZ-XS-3dM"/>
-                    <include reference="BP6-s1-POa"/>
-                    <include reference="FXu-Kz-Sm1"/>
                     <include reference="Sb2-bn-jOu"/>
                     <include reference="b1R-PG-4fR"/>
+                    <include reference="BP6-s1-POa"/>
+                    <include reference="FXu-Kz-Sm1"/>
+                    <include reference="GMf-8R-s3E"/>
+                    <include reference="SRZ-yu-85e"/>
+                    <include reference="d7s-rp-AwH"/>
+                    <include reference="sqs-BH-GAf"/>
                     <include reference="Mm9-jA-mRO"/>
                     <include reference="fiN-5D-wtL"/>
                 </mask>

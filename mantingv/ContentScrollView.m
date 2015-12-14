@@ -11,6 +11,7 @@
 #import "ProductController.h"
 #import "CheckInController.h"
 #import "RightsListController.h"
+#import "ChoiceNessRoom.h"
 
 @interface ContentScrollView ()
 @property (nonatomic,weak) ThemeScrollView *themeScrollView;
@@ -38,12 +39,10 @@
         self.what.frame = CGRectMake(0, CGRectGetMaxY(self.themeScrollView.frame), frame.size.width, 200);
         
         //精选主题
-        self.choiceTheme.frame = CGRectMake(0, CGRectGetMaxY(self.what.frame), frame.size.width, 100);
-        [self.choiceTheme setValueWith:1 model:nil];
+        [self.choiceNessTheme setValue];
         
         //精选房间
-        self.choiceRoom.frame = CGRectMake(0, CGRectGetMaxY(self.choiceTheme.frame), frame.size.width, 100);
-        [self.choiceRoom setValueWith:0 model:nil];
+        [self.choiceNessRoom setValue];
     }
     return self;
 }
@@ -136,24 +135,25 @@
 }
 
 #pragma mark - 精选主题
-- (Choice *)choiceTheme{
-    if (nil == _choiceTheme) {
-        Choice *choiceTheme = [[Choice alloc] init];
-        choiceTheme.backgroundColor = [UIColor greenColor];
-        [self addSubview:choiceTheme];
-        _choiceTheme = choiceTheme;
+- (ChoiceNessTheme *)choiceNessTheme{
+    if (nil == _choiceNessTheme) {
+        ChoiceNessTheme *choiceNessTheme = [ChoiceNessTheme choiceNessViewWith:@"精选主题" point:CGPointMake(0,CGRectGetMaxY(self.what.frame))];
+        choiceNessTheme.backgroundColor = [UIColor greenColor];
+        [self addSubview:choiceNessTheme];
+        _choiceNessTheme = choiceNessTheme;
     }
-    return _choiceTheme;
+    return _choiceNessTheme;
 }
 
+
 #pragma mark - 精选房间
-- (Choice *)choiceRoom{
-    if (nil == _choiceRoom) {
-        Choice *choiceRoom = [[Choice alloc] init];
-        choiceRoom.backgroundColor = [UIColor whiteColor];
-        [self addSubview:choiceRoom];
-        _choiceRoom = choiceRoom;
+- (ChoiceNessRoom *)choiceNessRoom{
+    if (nil == _choiceNessRoom) {
+        ChoiceNessRoom *choiceNessRoom = [ChoiceNessRoom choiceNessViewWith:@"精选房间" point:CGPointMake(0, CGRectGetMaxY(self.choiceNessTheme.frame))];
+        choiceNessRoom.backgroundColor = [UIColor greenColor];
+        [self addSubview:choiceNessRoom];
+        _choiceNessRoom = choiceNessRoom;
     }
-    return _choiceRoom;
+    return _choiceNessRoom;
 }
 @end

@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "HomeController.h"
 #import "LFLoopScrollView.h"
-#import "Choice.h"
+
+#import "ChoiceNessRoom.h"
+#import "ChoiceNessTheme.h"
 
 @interface ContentScrollView : UIScrollView
 @property (nonatomic,weak) HomeController *homeController;
 @property (nonatomic,weak) LFLoopScrollView *adScrollView;
 
 @property (nonatomic,strong) NSMutableArray * fourButtons;
-@property (nonatomic,weak) Choice *choiceTheme;
-@property (nonatomic,weak) Choice *choiceRoom;
+@property (nonatomic,weak) ChoiceNessTheme *choiceNessTheme;
+@property (nonatomic,weak) ChoiceNessRoom *choiceNessRoom;
 @end

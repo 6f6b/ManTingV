@@ -18,6 +18,7 @@
 //@property (nonatomic,weak) UILabel *seeDetailLabel;
 //@property (nonatomic,weak) UILabel *descriptionLabel;
 
+
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     CGFloat selfW = self.frame.size.width;
     CGFloat selfH = self.frame.size.height;
@@ -32,15 +33,6 @@
     self.titleLabel.frame = CGRectMake(titlelabelX, titlelabelY, titlelabelW, titlelabelH);
     [self addSubview:self.titleLabel];
     
-    UILabel *seeMoreLabel = [[UILabel alloc] init];
-    seeMoreLabel.backgroundColor = [UIColor orangeColor];
-    self.seeMoreLabel = seeMoreLabel;
-    CGFloat seeMoreLabelX = selfW-100;
-    CGFloat seeMoreLabelY = 10;
-    CGFloat seeMoreLabelW = 20;
-    CGFloat seeMoreLabelH = 20;
-    self.seeMoreLabel.frame = CGRectMake(seeMoreLabelX, seeMoreLabelY, seeMoreLabelW, seeMoreLabelH);
-    [self addSubview:self.seeMoreLabel];
     
     UIImageView *backImage = [[UIImageView alloc] init];
     backImage.backgroundColor = [UIColor redColor];
@@ -82,6 +74,16 @@
     self.seeDetailLabel.frame = CGRectMake(seeDetailLabelX, seeDetailLabelY, seeDetailLabelW, seeDetailLabelH);
     [self addSubview:seeDetailLabel];
     
+    UILabel *sizeLabel = [[UILabel alloc] init];
+    self.sizeLabel = sizeLabel;
+    sizeLabel.backgroundColor = [UIColor greenColor];
+    CGFloat sizeLabelX = 10;
+    CGFloat sizeLabelY = CGRectGetMaxY(self.locationLabel.frame)+10;
+    CGFloat sizeLabelW = 50;
+    CGFloat sizeLabelH = 20;
+    self.sizeLabel.frame = CGRectMake(sizeLabelX, sizeLabelY, sizeLabelW, sizeLabelH);
+    [self addSubview:sizeLabel];
+    
     
 }
 
@@ -89,8 +91,6 @@
     self.titleLabel.text = @"漫庭";
     self.titleLabel.sizeToFit;
     
-    self.seeMoreLabel.text = @"查看更多";
-    self.seeMoreLabel.sizeToFit;
     
     self.priceLabel.text = @"10000/份起";
     self.priceLabel.sizeToFit;
@@ -100,5 +100,8 @@
     
     self.seeDetailLabel.text = @"查看详情";
     self.seeDetailLabel.sizeToFit;
+    
+    self.sizeLabel.text = @"三居室";
+    self.sizeLabel.sizeToFit;
 }
 @end

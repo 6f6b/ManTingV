@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MTBaseView : UIView
+@property (nonatomic,strong) UIViewController *controller;
 - (void)setValue;
 @end

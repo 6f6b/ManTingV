@@ -10,8 +10,11 @@
 
 @interface ShortRentCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *shortRentCellBackImage;
-@property (weak, nonatomic) IBOutlet UILabel *shortRentCellTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numOfRoomLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *backImage;
 
-
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *houseTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weeklyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @end

@@ -8,8 +8,8 @@
 
 #import "ShortRentController.h"
 #import "ShortRentCell.h"
-#import "shortRentAdCell.h"
-
+#import "ChooserCell.h"
+#import "ChooserView.h"
 @interface ShortRentController ()
 
 @end
@@ -18,9 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerNib:[UINib nibWithNibName:@"ShortRentCell" bundle:nil] forCellReuseIdentifier:@"shortRentCell"];
+    self.title = @"短租";
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"shortRentAdCell" bundle:nil] forCellReuseIdentifier:@"shortRentAdCell"];
+    //创建条件选择器
+    NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择主题"];
+    ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, 0)];
+    [chooserView setTitlesOfButtonWith:buttonTitles];
+    [chooserView setDataArraysWith:@[@[@"11",@"21",@"31",@"5"],@[@"12",@"22",@"32"],@[@"13",@"23",@"33"]]];
+    [chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
+        
+    }];
+    [self.tableView addSubview:chooserView];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ShortRentCell" bundle:nil] forCellReuseIdentifier:@"shortRentCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ChooserCell" bundle:nil] forCellReuseIdentifier:@"chooserCell"];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -39,21 +50,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (!indexPath.row) {
-        return 150;
+        return 40;
     }
     return 120;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell;
-    if (0 == indexPath.row) {
-        shortRentAdCell *shortRentAdCell = [self.tableView dequeueReusableCellWithIdentifier:@"shortRentAdCell"];
-        cell = shortRentAdCell;
+    if (!indexPath.row) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"chooserCell"];
     }
-    else{
-        ShortRentCell *shortRentCell = [self.tableView dequeueReusableCellWithIdentifier:@"shortRentCell"];
-        cell = shortRentCell;
+    if (indexPath.row) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"shortRentCell"];
     }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

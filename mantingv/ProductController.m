@@ -9,6 +9,7 @@
 #import "ProductController.h"
 #import "ProductView.h"
 #import "LFLoopScrollView.h"
+#import "ChooserView.h"
 
 @interface ProductController ()
 @property (nonatomic,weak) UIScrollView *productContentScrollView;
@@ -34,35 +35,25 @@
     [_adScrollView setImageWithUrlS:urls];
     [self.productContentScrollView addSubview:_adScrollView];
     
-//    UIScrollView *productAdScrollView = [[UIScrollView alloc] init];
-//    productAdScrollView.frame = CGRectMake(0, 0, ScreenWidth, 100);
-//    productAdScrollView.backgroundColor = [UIColor greenColor];
-//    [self.productContentScrollView addSubview:productAdScrollView];
-    
-    //创建条件选择button
+    //创建条件选择器
     NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择主题"];
-    for (int i=0; i<buttonTitles.count; i++) {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setBackgroundColor:[UIColor redColor]];
-        button.tag = 100+i;
-        [button addTarget:self action:@selector(dealSelect:) forControlEvents:UIControlEventTouchUpInside];
-        [button setTitle:buttonTitles[i] forState:UIControlStateNormal];
-        CGFloat btnX = i*ScreenWidth/(float)buttonTitles.count;
-        CGFloat btnY = CGRectGetMaxY(adScrollView.frame);
-        CGFloat btnW = ScreenWidth/(float)buttonTitles.count;
-        CGFloat btnH = 40;
-        button.frame = CGRectMake(btnX, btnY, btnW, btnH);
-        [self.productContentScrollView addSubview:button];
-    }
+    ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, CGRectGetMaxY(adScrollView.frame))];
+    [chooserView setTitlesOfButtonWith:buttonTitles];
+    [chooserView setDataArraysWith:@[@[@"11",@"21",@"31",@"5"],@[@"12",@"22",@"32"],@[@"13",@"23",@"33"]]];
+    [chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
+        
+    }];
+    [self.productContentScrollView addSubview:chooserView];
+
     
     //创建产品视图
     for (int i=0; i<7; i++) {
         ProductView *productView = [[ProductView alloc] init];
         productView.backgroundColor = [UIColor blueColor];
         CGFloat productViewX = 0;
-        CGFloat productViewY = CGRectGetMaxY(adScrollView.frame)+40+i*155;
+        CGFloat productViewY = CGRectGetMaxY(adScrollView.frame)+40+i*175;
         CGFloat productViewW = ScreenWidth;
-        CGFloat productViewH =  150;
+        CGFloat productViewH =  170;
         productView.frame = CGRectMake(productViewX, productViewY, productViewW, productViewH);
         [self.productContentScrollView addSubview:productView];
         [productView setValue:nil forModel:nil];
@@ -80,7 +71,6 @@
 - (UIScrollView *)productContentScrollView{
     if (nil == _productContentScrollView) {
         UIScrollView *productContentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        NSLog(@"---------->%@",NSStringFromCGRect(self.view.bounds));
         productContentScrollView.backgroundColor = [UIColor yellowColor];
         _productContentScrollView = productContentScrollView;
         [self.view addSubview:productContentScrollView];
