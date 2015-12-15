@@ -57,7 +57,7 @@ typedef void(^SeeMoreBlock)();
 }
 
 
-- (void)setValue{
+- (void)setValueWith:(id)data{
     //创建自定义视图
 }
 @end

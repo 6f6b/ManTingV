@@ -7,6 +7,8 @@
 //
 
 #import "ThemeListView.h"
+#import "MTPayController.h"
+#import "ThemeListContentView.h"
 @interface ThemeListView ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *timeLabel;
@@ -183,7 +185,11 @@
 }
 
 - (void)dealBuyBtn{
-    NSLog(@"跳到支付页面");
+    MTPayController *payController = [[MTPayController alloc] init];
+    payController.title = @"支付";
+    
+    ThemeListContentView *themeListContentView =  self.superview;
+    [themeListContentView.controller.navigationController pushViewController:payController animated:YES];
 }
 
 - (void)setValueWithModel:(MTModel *)model{

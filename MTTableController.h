@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MTTableController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
-
+@property (nonatomic,assign) BOOL isNeedToCheckLogin;
 @end

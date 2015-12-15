@@ -12,9 +12,13 @@
 #import "CheckInController.h"
 #import "RightsListController.h"
 #import "ChoiceNessRoom.h"
+#import "ShortRentController.h"
+
+#import "ThemeContentView.h"
 
 @interface ContentScrollView ()
 @property (nonatomic,weak) ThemeScrollView *themeScrollView;
+@property (nonatomic,weak) ThemeContentView *themeContentView;
 @property (nonatomic,weak) UIImageView *what;
 @end
 
@@ -32,17 +36,17 @@
         
         //默认两个主题
         UIButton *button = self.fourButtons[0];
-        self.themeScrollView.frame = CGRectMake(0, CGRectGetMaxY(button.frame), frame.size.width, 100);
-        [self.themeScrollView setValueWithModel:nil];
+        self.themeContentView.frame = CGRectMake(0, CGRectGetMaxY(button.frame), ScreenWidth, 100);
+        [self.themeContentView setValueWith:nil];
         
         //不知道什么鬼
-        self.what.frame = CGRectMake(0, CGRectGetMaxY(self.themeScrollView.frame), frame.size.width, 200);
+        self.what.frame = CGRectMake(0, CGRectGetMaxY(self.themeContentView.frame), frame.size.width, 200);
         
         //精选主题
-        [self.choiceNessTheme setValue];
+        [self.choiceNessTheme setValueWith:nil];
         
         //精选房间
-        [self.choiceNessRoom setValue];
+        [self.choiceNessRoom setValueWith:nil];
     }
     return self;
 }
@@ -123,6 +127,16 @@
     return _themeScrollView;
 }
 
+
+- (ThemeContentView *)themeContentView{
+    if (nil == _themeContentView) {
+        ThemeContentView *themeContentView = [[ThemeContentView alloc] init];
+        [self addSubview:themeContentView];
+        themeContentView.backgroundColor = [UIColor blueColor];
+        _themeContentView = themeContentView;
+    }
+    return _themeContentView;
+}
 #pragma mark - 不知道什么鬼
 - (UIImageView *)what{
     if (nil == _what) {
@@ -139,6 +153,10 @@
     if (nil == _choiceNessTheme) {
         ChoiceNessTheme *choiceNessTheme = [ChoiceNessTheme choiceNessViewWith:@"精选主题" point:CGPointMake(0,CGRectGetMaxY(self.what.frame))];
         choiceNessTheme.backgroundColor = [UIColor greenColor];
+        [choiceNessTheme setClickedAction:^{
+            ProductController *productController = [[ProductController alloc] init];
+            [self.homeController.navigationController pushViewController:productController animated:YES];
+        }];
         [self addSubview:choiceNessTheme];
         _choiceNessTheme = choiceNessTheme;
     }
@@ -150,6 +168,10 @@
 - (ChoiceNessRoom *)choiceNessRoom{
     if (nil == _choiceNessRoom) {
         ChoiceNessRoom *choiceNessRoom = [ChoiceNessRoom choiceNessViewWith:@"精选房间" point:CGPointMake(0, CGRectGetMaxY(self.choiceNessTheme.frame))];
+        [choiceNessRoom setClickedAction:^{
+            ShortRentController *shortController = [[ShortRentController alloc] init];
+            [self.homeController.navigationController pushViewController:shortController animated:YES];
+        }];
         choiceNessRoom.backgroundColor = [UIColor greenColor];
         [self addSubview:choiceNessRoom];
         _choiceNessRoom = choiceNessRoom;

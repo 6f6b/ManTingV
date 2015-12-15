@@ -10,8 +10,7 @@
 
 @implementation MTBaseScrollView
 
-- (void)setValue{
+- (void)setValueWith:(id)data{
 
 }
-
 @end

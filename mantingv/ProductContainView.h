@@ -1,14 +1,13 @@
 //
-//  MTBaseView.h
+//  ProductContainView.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/11.
+//  Created by LiuFeng on 15/12/15.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ChoiceNessView.h"
 
-@interface MTBaseView : UIView
+@interface ProductContainView : ChoiceNessView
 @property (nonatomic,strong) UIViewController *controller;
-- (void)setValueWith:(id)data;
 @end

@@ -22,7 +22,7 @@
 //    return choiceNessView;
 //}
 
-- (void)setValue{
+- (void)setValueWith:(id)data{
     NSLog(@"转型了");
     for (int i=0; i<10; i++) {
         float X = i%2*10+(ScreenWidth-10)/2*(i%2);

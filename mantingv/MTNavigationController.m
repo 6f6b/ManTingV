@@ -27,28 +27,40 @@
 }
 
 #pragma mark - 加载这个控制器的时候交换里面的两个方法的指针
-+ (void)load{
-    NSLog(@"----------->????");
-    [self exchangeMethodWithNewMethod:@selector(pushViewController:animated:) oldMethod:@selector(aopPushViewController:animated:)
-     ];
-}
+//+ (void)load{
+//    [self exchangeMethodWithNewMethod:@selector(pushViewController:animated:) oldMethod:@selector(aopPushViewController:animated:)
+//     ];
+//}
 
 #pragma mark - push 第二个界面的时候隐藏Tabbar pop回来的时候恢复Tabbar
-//注意！ 需要在pop回来的时候显示出tabbar
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    [super pushViewController:viewController animated:YES];
-    if (self.viewControllers.count>1) {
-        self.hidesBottomBarWhenPushed = YES;
+    if (self.viewControllers.count>0) {
+        NSLog(@"隐藏");
+        viewController.hidesBottomBarWhenPushed = YES;
     }
-    
+    [super pushViewController:viewController animated:animated];
 }
+////注意！ 需要在pop回来的时候显示出tabbar
+//- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+//    [super pushViewController:viewController animated:YES];
+////    NSLog(@"------------>%lu",self.viewControllers.count);
+//    if (self.viewControllers.count>1) {
+//        NSLog(@"隐藏");
+//        self.hidesBottomBarWhenPushed = YES;
+//    }
+//    
+//}
 
 
-- (UIViewController *)popViewControllerAnimated:(BOOL)animated{
-    UIViewController *vc = [super popViewControllerAnimated:animated];
-    //self.hidesBottomBarWhenPushed = NO;
-    return vc;
-}
+//- (UIViewController *)popViewControllerAnimated:(BOOL)animated{
+//    UIViewController *vc = [super popViewControllerAnimated:animated];
+//    if (1 == self.viewControllers.count) {
+//        NSLog(@"显示");
+//        self.hidesBottomBarWhenPushed = NO;
+//    }
+////    NSLog(@"------------>%lu",self.viewControllers.count);
+//    return vc;
+//}
 
 #pragma mark - push的时候检测是否登录 逻辑判断
 - (void)aopPushViewController:(UIViewController *)viewController animated:(BOOL)animated{

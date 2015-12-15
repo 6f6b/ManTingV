@@ -1,25 +1,23 @@
 //
-//  ShortRentController.m
+//  HolidayHouseSearchController.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/4.
+//  Created by LiuFeng on 15/12/15.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "ShortRentController.h"
-#import "ShortRentCell.h"
-#import "ChooserCell.h"
+#import "HolidayHouseSearchController.h"
+#import "ThemeListController.h"
 #import "ChooserView.h"
-@interface ShortRentController ()
+
+@interface HolidayHouseSearchController ()
 
 @end
 
-@implementation ShortRentController
+@implementation HolidayHouseSearchController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"短租";
-    
     //创建条件选择器
     NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择主题"];
     ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, 0)];
@@ -30,10 +28,9 @@
     }];
     [self.tableView addSubview:chooserView];
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"ShortRentCell" bundle:nil] forCellReuseIdentifier:@"shortRentCell"];
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"HolidayHouseSearchCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ChooserCell" bundle:nil] forCellReuseIdentifier:@"chooserCell"];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,36 +43,34 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell;
+    if (!indexPath.row) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"chooserCell"];
+    }
+    
+    if (indexPath.row) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (!indexPath.row) {
         return 40;
     }
-    return 120;
+    return 181;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell ;
-    if (!indexPath.row) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"chooserCell"];
-    }
-    if (indexPath.row) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"shortRentCell"];
-    }
-    
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ThemeListController *themeListController = [[ThemeListController alloc] init];
+    [self.navigationController pushViewController:themeListController animated:YES];
 }
-/*
-#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

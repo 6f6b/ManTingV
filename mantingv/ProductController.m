@@ -10,6 +10,8 @@
 #import "ProductView.h"
 #import "LFLoopScrollView.h"
 #import "ChooserView.h"
+#import "ProductContainView.h"
+#import "HolidayHouseSearchController.h"
 
 @interface ProductController ()
 @property (nonatomic,weak) UIScrollView *productContentScrollView;
@@ -47,18 +49,30 @@
 
     
     //创建产品视图
+    ProductContainView *previewsProductContainView;
     for (int i=0; i<7; i++) {
-        ProductView *productView = [[ProductView alloc] init];
-        productView.backgroundColor = [UIColor blueColor];
         CGFloat productViewX = 0;
-        CGFloat productViewY = CGRectGetMaxY(adScrollView.frame)+40+i*175;
-        CGFloat productViewW = ScreenWidth;
-        CGFloat productViewH =  170;
-        productView.frame = CGRectMake(productViewX, productViewY, productViewW, productViewH);
-        [self.productContentScrollView addSubview:productView];
-        [productView setValue:nil forModel:nil];
+        CGFloat productViewY;
+        if (!i) {
+            productViewY = CGRectGetMaxY(chooserView.frame)+CGRectGetMaxY(previewsProductContainView.frame);
+        }
+        if (i) {
+            productViewY = CGRectGetMaxY(previewsProductContainView.frame);
+        }
+        ProductContainView *productContainView = [ProductContainView choiceNessViewWith:@"苏州" point:CGPointMake(productViewX, productViewY)];
         
-        self.productContentScrollView.contentSize = CGSizeMake(ScreenWidth, CGRectGetMaxY(productView.frame));
+        productContainView.controller = self;
+        
+        [productContainView setClickedAction:^{
+            HolidayHouseSearchController *holidayHouseSearchController = [[HolidayHouseSearchController alloc] init];
+            [self.navigationController pushViewController:holidayHouseSearchController animated:YES];
+        }];
+        
+        previewsProductContainView = productContainView;
+        [self.productContentScrollView addSubview:productContainView];
+        [productContainView setValueWith:nil];
+        
+        self.productContentScrollView.contentSize = CGSizeMake(ScreenWidth, CGRectGetMaxY(productContainView.frame));
     }
     
 }

@@ -9,6 +9,6 @@
 #import "MTBaseView.h"
 
 @implementation MTBaseView
-- (void)setValue{
+- (void)setValueWith:(id)data{
 }
 @end

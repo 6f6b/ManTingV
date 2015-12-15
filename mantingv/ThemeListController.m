@@ -63,6 +63,7 @@
     if (nil == _themListContentView) {
         ThemeListContentView *themeListContentView = [[ThemeListContentView alloc] init];
         themeListContentView.frame = CGRectMake(0, CGRectGetMaxY(self.themeListPictuerScrollView.frame), 0, 0);
+        themeListContentView.controller = self;
         themeListContentView.backgroundColor = [UIColor orangeColor];
         [self.contentScrollView addSubview:themeListContentView];
         _themListContentView = themeListContentView;

@@ -10,5 +10,6 @@
 
 
 @interface ThemeListContentView : UIView
+@property (nonatomic,strong) UIViewController *controller;
 - (void)setValueWithModel:(MTModel *)model;
 @end

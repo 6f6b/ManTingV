@@ -9,9 +9,11 @@
 #import "ChoiceNessTheme.h"
 #import "ChoiceTheme.h"
 
+#import "HolidayHouseSearchController.h"
+#import "ContentScrollView.h"
 @implementation ChoiceNessTheme
 
-- (void)setValue{
+- (void)setValueWith:(id)data{
     for(int i=0;i<5;i++){
         ChoiceTheme *choiceTheme = [[ChoiceTheme alloc] init];
         choiceTheme.backgroundColor = [UIColor brownColor];
@@ -38,6 +40,10 @@
 }
 
 - (void)dealTap:(UITapGestureRecognizer *)tap{
+    UIView *view = tap.view;
+    HolidayHouseSearchController *holidayHouseSearchController = [[HolidayHouseSearchController alloc] init];
     
+    ContentScrollView *contentScrollView = self.superview;
+    [contentScrollView.homeController.navigationController pushViewController:holidayHouseSearchController animated:YES];
 }
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MTBaseScrollView : UIScrollView
-- (void)setValue;
+@property (nonatomic,strong) UIViewController *controller;
+- (void)setValueWith:(id)data;
 @end
