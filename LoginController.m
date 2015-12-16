@@ -24,16 +24,16 @@
 - (IBAction)loginBtn:(id)sender {
     NSString *useraccount = self.phoneNumberTextFeild.text;
     NSString *password = self.passWordTextFeild.text;
-    if (!useraccount) {
+    if (@"" == useraccount) {
         return;
     }
-    if (!password) {
+    if (@"" == password) {
         return;
     }
     
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    [user setObject:useraccount forKey:@"useraccount"];
-    [user setObject:password forKey:@"password"];
+    [user setObject:useraccount forKey:USER_ACCOUNT];
+    [user setObject:password forKey:USER_PASSWORD];
     
     [self.navigationController pushViewController:self.willPushVC animated:YES];
     [self removeFromParentViewController];

@@ -7,16 +7,32 @@
 //
 
 #import "MineController.h"
+#import "LoginController.h"
+#import "MineContentScrollView.h"
 
 @interface MineController ()
-
+@property (nonatomic,weak) MineContentScrollView *mineContentScrollView;
 @end
 
 @implementation MineController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.frame = CGRectMake(0, -20, self.view.frame.size.width, Screenheight);
+    MineContentScrollView *mineContentScrollView = [[MineContentScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:mineContentScrollView];
+    self.mineContentScrollView = mineContentScrollView;
+    self.mineContentScrollView.controller = self;
+    [self.mineContentScrollView setValueWith:nil];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"PPPPPPP");
+    [self.mineContentScrollView setValueWith:nil];
 }
 
 - (void)didReceiveMemoryWarning {

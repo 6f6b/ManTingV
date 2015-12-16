@@ -18,6 +18,7 @@
 - (id)init{
     if (self = [super init]) {
         self.roomList = [[NSMutableArray alloc] init];
+        self.isNeedToCheckLogin = YES;
     }
     return self;
 }

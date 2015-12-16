@@ -102,7 +102,6 @@
     NSLog(@"%lu",button.tag);
     if (100 == button.tag) {
         ProductController *pc = [[ProductController alloc] init];
-        pc.isNeedToCheckLogin = NO;
         [self.homeController.navigationController pushViewController:pc animated:YES];
     }
     else if(101 == button.tag){

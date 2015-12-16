@@ -40,7 +40,6 @@
 		03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775B9B1C113C1B00319C32 /* PropertyRightCenterController.m */; };
 		03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03775B9C1C113C1B00319C32 /* PropertyRightCenterController.xib */; };
 		03775BA21C113C3000319C32 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA01C113C3000319C32 /* MineController.m */; };
-		03775BA31C113C3000319C32 /* MineController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03775BA11C113C3000319C32 /* MineController.xib */; };
 		03775BA61C113E8600319C32 /* MTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA51C113E8600319C32 /* MTModel.m */; };
 		03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA91C11406000319C32 /* MTTabBarController.m */; };
 		03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BAF1C1140B800319C32 /* MTNavigationController.m */; };
@@ -60,6 +59,16 @@
 		03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */; };
 		03D65DE21C1E691A00E7C679 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DE11C1E691A00E7C679 /* ContentScrollView.m */; };
 		03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */; };
+		03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7D41C210491003A3A68 /* MTLoginController.m */; };
+		03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7D91C210506003A3A68 /* MTLoginContentScrollVIew.m */; };
+		03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7DC1C210772003A3A68 /* MTLoginModule.m */; };
+		03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7DF1C210F13003A3A68 /* MTRegisterPreview.m */; };
+		03D7A7E21C213F48003A3A68 /* arrow_right_12.81592039801px_1197003_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D7A7E11C213F48003A3A68 /* arrow_right_12.81592039801px_1197003_easyicon.net.png */; };
+		03D7A7E51C214234003A3A68 /* MineContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7E41C214234003A3A68 /* MineContentScrollView.m */; };
+		03D7A7E81C21439A003A3A68 /* MineTopContainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7E71C21439A003A3A68 /* MineTopContainView.m */; };
+		03D7A7EB1C214776003A3A68 /* MineSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7EA1C214776003A3A68 /* MineSubView.m */; };
+		03D7A7ED1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03D7A7EC1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg */; };
+		03D7A7EF1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03D7A7EE1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg */; };
 		03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D830A71C1EB88C006DBFD9 /* ChoiceNessView.m */; };
 		03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D830AA1C1EBD9B006DBFD9 /* ChoiceNessRoom.m */; };
 		03D830AE1C1EBDE1006DBFD9 /* ChoiceNessTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D830AD1C1EBDE1006DBFD9 /* ChoiceNessTheme.m */; };
@@ -164,7 +173,6 @@
 		03775B9C1C113C1B00319C32 /* PropertyRightCenterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyRightCenterController.xib; sourceTree = "<group>"; };
 		03775B9F1C113C3000319C32 /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		03775BA01C113C3000319C32 /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
-		03775BA11C113C3000319C32 /* MineController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineController.xib; sourceTree = "<group>"; };
 		03775BA41C113E8600319C32 /* MTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTModel.h; sourceTree = "<group>"; };
 		03775BA51C113E8600319C32 /* MTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTModel.m; sourceTree = "<group>"; };
 		03775BA81C11406000319C32 /* MTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTabBarController.h; sourceTree = "<group>"; };
@@ -200,6 +208,23 @@
 		03D65DE11C1E691A00E7C679 /* ContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentScrollView.m; sourceTree = "<group>"; };
 		03D65DE31C1E697C00E7C679 /* MTBaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBaseScrollView.h; sourceTree = "<group>"; };
 		03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBaseScrollView.m; sourceTree = "<group>"; };
+		03D7A7D31C210491003A3A68 /* MTLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginController.h; sourceTree = "<group>"; };
+		03D7A7D41C210491003A3A68 /* MTLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLoginController.m; sourceTree = "<group>"; };
+		03D7A7D81C210506003A3A68 /* MTLoginContentScrollVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginContentScrollVIew.h; sourceTree = "<group>"; };
+		03D7A7D91C210506003A3A68 /* MTLoginContentScrollVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLoginContentScrollVIew.m; sourceTree = "<group>"; };
+		03D7A7DB1C210772003A3A68 /* MTLoginModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginModule.h; sourceTree = "<group>"; };
+		03D7A7DC1C210772003A3A68 /* MTLoginModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLoginModule.m; sourceTree = "<group>"; };
+		03D7A7DE1C210F13003A3A68 /* MTRegisterPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRegisterPreview.h; sourceTree = "<group>"; };
+		03D7A7DF1C210F13003A3A68 /* MTRegisterPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRegisterPreview.m; sourceTree = "<group>"; };
+		03D7A7E11C213F48003A3A68 /* arrow_right_12.81592039801px_1197003_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right_12.81592039801px_1197003_easyicon.net.png; sourceTree = "<group>"; };
+		03D7A7E31C214234003A3A68 /* MineContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineContentScrollView.h; sourceTree = "<group>"; };
+		03D7A7E41C214234003A3A68 /* MineContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineContentScrollView.m; sourceTree = "<group>"; };
+		03D7A7E61C21439A003A3A68 /* MineTopContainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTopContainView.h; sourceTree = "<group>"; };
+		03D7A7E71C21439A003A3A68 /* MineTopContainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTopContainView.m; sourceTree = "<group>"; };
+		03D7A7E91C214776003A3A68 /* MineSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSubView.h; sourceTree = "<group>"; };
+		03D7A7EA1C214776003A3A68 /* MineSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSubView.m; sourceTree = "<group>"; };
+		03D7A7EC1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "14008695_135933664000_2-2.jpg"; sourceTree = "<group>"; };
+		03D7A7EE1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 18c2bff02481ae8f22c021a4142b44ba.jpg; path = ../18c2bff02481ae8f22c021a4142b44ba.jpg; sourceTree = "<group>"; };
 		03D830A61C1EB88C006DBFD9 /* ChoiceNessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceNessView.h; sourceTree = "<group>"; };
 		03D830A71C1EB88C006DBFD9 /* ChoiceNessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceNessView.m; sourceTree = "<group>"; };
 		03D830A91C1EBD9B006DBFD9 /* ChoiceNessRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceNessRoom.h; sourceTree = "<group>"; };
@@ -300,6 +325,9 @@
 		0376AFD31C1196C30033D2A2 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				03D7A7EE1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg */,
+				03D7A7EC1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg */,
+				03D7A7E11C213F48003A3A68 /* arrow_right_12.81592039801px_1197003_easyicon.net.png */,
 				03DB9D241C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png */,
 				03DB9D221C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png */,
 				03DB9D201C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png */,
@@ -587,7 +615,6 @@
 			children = (
 				03775B9F1C113C3000319C32 /* MineController.h */,
 				03775BA01C113C3000319C32 /* MineController.m */,
-				03775BA11C113C3000319C32 /* MineController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -595,6 +622,12 @@
 		03775B931C113B0300319C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03D7A7E31C214234003A3A68 /* MineContentScrollView.h */,
+				03D7A7E41C214234003A3A68 /* MineContentScrollView.m */,
+				03D7A7E61C21439A003A3A68 /* MineTopContainView.h */,
+				03D7A7E71C21439A003A3A68 /* MineTopContainView.m */,
+				03D7A7E91C214776003A3A68 /* MineSubView.h */,
+				03D7A7EA1C214776003A3A68 /* MineSubView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -609,6 +642,7 @@
 		03775BA71C11401900319C32 /* Applications */ = {
 			isa = PBXGroup;
 			children = (
+				03D7A7D21C210470003A3A68 /* 登录界面 */,
 				03D6439A1C195B010082F0D4 /* LoginController.h */,
 				03D6439B1C195B010082F0D4 /* LoginController.m */,
 				03D6439C1C195B010082F0D4 /* LoginController.xib */,
@@ -704,6 +738,37 @@
 				03E25B741C1E9E9B001A2065 /* ChooserView.m */,
 			);
 			name = "选择器";
+			sourceTree = "<group>";
+		};
+		03D7A7D21C210470003A3A68 /* 登录界面 */ = {
+			isa = PBXGroup;
+			children = (
+				03D7A7D71C2104A7003A3A68 /* Views */,
+				03D7A7D61C2104A5003A3A68 /* Controllers */,
+			);
+			name = "登录界面";
+			sourceTree = "<group>";
+		};
+		03D7A7D61C2104A5003A3A68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D7A7D31C210491003A3A68 /* MTLoginController.h */,
+				03D7A7D41C210491003A3A68 /* MTLoginController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D7A7D71C2104A7003A3A68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03D7A7D81C210506003A3A68 /* MTLoginContentScrollVIew.h */,
+				03D7A7D91C210506003A3A68 /* MTLoginContentScrollVIew.m */,
+				03D7A7DB1C210772003A3A68 /* MTLoginModule.h */,
+				03D7A7DC1C210772003A3A68 /* MTLoginModule.m */,
+				03D7A7DE1C210F13003A3A68 /* MTRegisterPreview.h */,
+				03D7A7DF1C210F13003A3A68 /* MTRegisterPreview.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		03D8AFB41C1A675200B41FF0 /* 主题房间列表 */ = {
@@ -1041,12 +1106,13 @@
 				03DB9D211C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png in Resources */,
 				03E0A25D1C18274000FCAAAC /* property.png in Resources */,
 				03D643A01C195C590082F0D4 /* login.png in Resources */,
+				03D7A7ED1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg in Resources */,
 				0376AFEA1C1196C30033D2A2 /* Welcome_3.0_1.jpg in Resources */,
-				03775BA31C113C3000319C32 /* MineController.xib in Resources */,
 				0376AFF31C1196C30033D2A2 /* Welcome_3.0_5@2x.jpg in Resources */,
 				03775B4D1C11368F00319C32 /* LaunchScreen.storyboard in Resources */,
 				0376AFEF1C1196C30033D2A2 /* Welcome_3.0_3@2x.jpg in Resources */,
 				0376AFF11C1196C30033D2A2 /* Welcome_3.0_4@2x.jpg in Resources */,
+				03D7A7E21C213F48003A3A68 /* arrow_right_12.81592039801px_1197003_easyicon.net.png in Resources */,
 				03E0A25C1C18274000FCAAAC /* home.png in Resources */,
 				03D6439E1C195B010082F0D4 /* LoginController.xib in Resources */,
 				0376AFC81C118D8F0033D2A2 /* ShortRentCell.xib in Resources */,
@@ -1063,6 +1129,7 @@
 				0376AFE71C1196C30033D2A2 /* Welcome2@2x.jpg in Resources */,
 				0376AFEB1C1196C30033D2A2 /* Welcome_3.0_1@2x.jpg in Resources */,
 				03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */,
+				03D7A7EF1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg in Resources */,
 				0376AFE41C1196C30033D2A2 /* Welcome1.jpg in Resources */,
 				03E0A25B1C18274000FCAAAC /* mine.png in Resources */,
 				0376AFE91C1196C30033D2A2 /* Welcome3@2x.jpg in Resources */,
@@ -1149,6 +1216,7 @@
 				03D6439D1C195B010082F0D4 /* LoginController.m in Sources */,
 				03DB9D1F1C2053EC00A40361 /* ThemeContentView.m in Sources */,
 				03DB9D0A1C200B3E00A40361 /* RecipientInformationView.m in Sources */,
+				03D7A7EB1C214776003A3A68 /* MineSubView.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
 				03D650B11C1EB021005856F2 /* ChooserCell.m in Sources */,
 				03DB9CDF1C1FAFF100A40361 /* HolidayHouseSearchCell.m in Sources */,
@@ -1159,9 +1227,13 @@
 				03D8AFDB1C1ACE5D00B41FF0 /* ResortFacilitiesView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
 				03775BC01C11874700319C32 /* MTTableController.m in Sources */,
+				03D7A7E81C21439A003A3A68 /* MineTopContainView.m in Sources */,
+				03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */,
 				03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */,
 				03775B421C11368F00319C32 /* AppDelegate.m in Sources */,
+				03D7A7E51C214234003A3A68 /* MineContentScrollView.m in Sources */,
 				03DB9D0D1C200B8E00A40361 /* AddAddressView.m in Sources */,
+				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03E0A2621C18340D00FCAAAC /* ChoiceRoom.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
@@ -1181,11 +1253,13 @@
 				03D643991C194FDF0082F0D4 /* Theme.m in Sources */,
 				03D8AFC61C1A69FA00B41FF0 /* ThemeListContentView.m in Sources */,
 				03DB9D161C200CAF00A40361 /* LeaveWordView.m in Sources */,
+				03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */,
 				03E0A2521C180FDB00FCAAAC /* ThemeScrollView.m in Sources */,
 				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
+				03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
 				03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */,
 				03DB9CF51C1FF23600A40361 /* ProductView.m in Sources */,

@@ -16,7 +16,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.isNeedToCheckLogin = YES;
+        self.isNeedToCheckLogin = NO;
     }
     return self;
 }

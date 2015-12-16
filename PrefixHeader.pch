@@ -11,7 +11,8 @@
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define Screenheight [UIScreen mainScreen].bounds.size.height
-
+#define USER_ACCOUNT @"E80A6DE3440C2706D2D9BF5231454182"
+#define USER_PASSWORD @"1F6D7763FF8C7B37625210A4D95317D1"
 //创建顶部滚动广告栏
 #import "MTModel.h"
 #import "AFNetworking.h"

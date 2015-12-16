@@ -8,6 +8,7 @@
 
 #import "MTNavigationController.h"
 #import "NSObject+AOP.h"
+#import "MTLoginController.h"
 #import "LoginController.h"
 
 @interface MTNavigationController ()
@@ -27,51 +28,37 @@
 }
 
 #pragma mark - 加载这个控制器的时候交换里面的两个方法的指针
-//+ (void)load{
-//    [self exchangeMethodWithNewMethod:@selector(pushViewController:animated:) oldMethod:@selector(aopPushViewController:animated:)
-//     ];
-//}
++ (void)load{
+    [self exchangeMethodWithNewMethod:@selector(pushViewController:animated:) oldMethod:@selector(aopPushViewController:animated:)
+     ];
+}
 
 #pragma mark - push 第二个界面的时候隐藏Tabbar pop回来的时候恢复Tabbar
+//注意！ 需要在pop回来的时候显示出tabbar
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.viewControllers.count>0) {
-        NSLog(@"隐藏");
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];
+    if (1 ==self.viewControllers.count) {
+        self.hidesBottomBarWhenPushed = NO;
+    }
 }
-////注意！ 需要在pop回来的时候显示出tabbar
-//- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-//    [super pushViewController:viewController animated:YES];
-////    NSLog(@"------------>%lu",self.viewControllers.count);
-//    if (self.viewControllers.count>1) {
-//        NSLog(@"隐藏");
-//        self.hidesBottomBarWhenPushed = YES;
-//    }
-//    
-//}
 
 
-//- (UIViewController *)popViewControllerAnimated:(BOOL)animated{
-//    UIViewController *vc = [super popViewControllerAnimated:animated];
-//    if (1 == self.viewControllers.count) {
-//        NSLog(@"显示");
-//        self.hidesBottomBarWhenPushed = NO;
-//    }
-////    NSLog(@"------------>%lu",self.viewControllers.count);
-//    return vc;
-//}
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated{
+    if (1 == self.viewControllers.count) {
+        self.hidesBottomBarWhenPushed = NO;
+    }
+    UIViewController *vc = [super popViewControllerAnimated:animated];
+    return vc;
+}
 
 #pragma mark - push的时候检测是否登录 逻辑判断
 - (void)aopPushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    //如果是当前Viewcontrollers为0则不必进行判断是否登录
-    if(!self.viewControllers.count){
-        [self aopPushViewController:viewController animated:animated];
-        return;
-    }
     
     //如果viewcontroller说明了不需要检测，也正常登录
-    MTController *vc = viewController;
+    MTController *vc = (MTController *)viewController;
     if (!vc.isNeedToCheckLogin) {
         [self aopPushViewController:viewController animated:YES];
         return;
@@ -79,7 +66,7 @@
     
     //检测是否登录，已经登录则正常push
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    id name = [user objectForKey:@"useraccount"];
+    id name = [user objectForKey:USER_ACCOUNT];
     if (name) {
         [self aopPushViewController:viewController animated:YES];
         return;

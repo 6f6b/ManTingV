@@ -8,11 +8,18 @@
 
 #import "RightsListController.h"
 
-@interface RightsListController ()
+@interface RightsListController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,weak) UITableView *tableView;
 @end
 
 @implementation RightsListController
+
+- (id)init{
+    if (self == [super init]) {
+        self.isNeedToCheckLogin = YES;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
