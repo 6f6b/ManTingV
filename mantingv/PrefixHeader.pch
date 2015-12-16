@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  mantingv
+//
+//  Created by LiuFeng on 15/12/3.
+//  Copyright © 2015年 LiuFeng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define Screenheight [UIScreen mainScreen].bounds.size.height
+
+//创建顶部滚动广告栏
+#import "MTModel.h"
+#import "AFNetworking.h"
+#import "Masonry.h"
+#import "LFLoopScrollView.h"
+#endif /* PrefixHeader_pch */
