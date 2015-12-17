@@ -49,6 +49,7 @@
         CGFloat Y = (mineSubView.frame.size.height+2)*i+20+CGRectGetMaxY(self.mineTopContainView.frame);
         CGFloat W = mineSubView.frame.size.width;
         CGFloat H = mineSubView.frame.size.height;
+//        CGFloat H = mineSubView.frame.size.height;
         
         mineSubView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:mineSubView];
