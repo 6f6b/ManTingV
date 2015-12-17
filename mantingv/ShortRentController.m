@@ -10,6 +10,8 @@
 #import "ShortRentCell.h"
 #import "ChooserCell.h"
 #import "ChooserView.h"
+
+#import "ShortRentDetailController.h"
 @interface ShortRentController ()
 
 @end
@@ -68,6 +70,13 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%lu",indexPath.row);
+    ShortRentDetailController *shortRentDetailController = [[ShortRentDetailController alloc] init];
+    [self.navigationController pushViewController:shortRentDetailController animated:YES];
+}
+
 /*
 #pragma mark - Navigation
 

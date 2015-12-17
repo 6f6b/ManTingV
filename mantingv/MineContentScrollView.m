@@ -11,6 +11,13 @@
 #import "MineSubView.h"
 #import "LoginController.h"
 
+#import "RightsListController.h"
+#import "MyShortRentListController.h"
+#import "MyAssignmentListController.h"
+#import "MyCheckInListController.h"
+#import "AccountConfigController.h"
+#import "AboutUsController.h"
+
 @interface MineContentScrollView ()
 @property (nonatomic,weak) MineTopContainView *mineTopContainView;
 @property (nonatomic,strong) NSMutableArray *mineSubViews;
@@ -44,33 +51,31 @@
     NSArray *titles = @[@"权益中心",@"我的短租",@"我的转让",@"我的入住",@"帐号设置",@"关于我们"];
     for (int i=0; i<6; i++) {
         MineSubView *mineSubView = [MineSubView mineSubViewWithLeftImage:@"arrow_right_12.81592039801px_1197003_easyicon.net"rightImage:@"arrow_right_12.81592039801px_1197003_easyicon.net" title:titles[i]];
-        
+        mineSubView.tag = 1000+i;
         CGFloat X = 0;
         CGFloat Y = (mineSubView.frame.size.height+2)*i+20+CGRectGetMaxY(self.mineTopContainView.frame);
         CGFloat W = mineSubView.frame.size.width;
         CGFloat H = mineSubView.frame.size.height;
-//        CGFloat H = mineSubView.frame.size.height;
-        
         mineSubView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:mineSubView];
-        
         [self.mineSubViews addObject:mineSubView];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
+        [mineSubView addGestureRecognizer:tap];
     }
     
     MineSubView *mineSubView = self.mineSubViews[self.mineSubViews.count-1];
     
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     if (![user objectForKey:USER_ACCOUNT]) {
-        NSLog(@"111111111");
-        [self bringSubviewToFront:self.loginButton];
+        [self.resignButton setTitle:@"登录" forState:UIControlStateNormal];
     }
     if ([user objectForKey:USER_ACCOUNT]) {
-        NSLog(@"222222222");
-        [self bringSubviewToFront:self.resignButton];
+        [self.resignButton setTitle:@"退出登录" forState:UIControlStateNormal];
     }
     
     [self.mineTopContainView setValueWith:nil];
-//    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.resignButton.frame));
+    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.resignButton.frame));
 }
 
 - (void)dealLoginBtn{
@@ -78,22 +83,35 @@
     [self.controller.navigationController pushViewController:loginController animated:YES];
 }
 
-- (void)dealResignBtn{
+- (void)dealResignBtn:(UIButton *)button{
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    [user setObject:nil forKey:USER_ACCOUNT];
-    [user setObject:nil forKey:USER_PASSWORD];
-    [self setValueWith:nil];
+    
+    //如果已经登录
+    if ([user objectForKey:USER_ACCOUNT]) {
+        [user setObject:nil forKey:USER_ACCOUNT];
+        [user setObject:nil forKey:USER_PASSWORD];
+        [button setTitle:@"登录" forState:UIControlStateNormal];
+        [self setValueWith:nil];
+        return;
+    }
+    
+    //如果未登录
+    if(![user objectForKey:USER_ACCOUNT]){
+        [button setTitle:@"退出登录" forState:UIControlStateNormal];
+        LoginController *loginController = [[LoginController alloc] init];
+        [self.controller.navigationController pushViewController:loginController animated:YES];
+    }
+    return;
 }
 
 - (UIButton *)resignButton{
     if (nil == _resignButton) {
         UIButton *resignButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [resignButton addTarget:self action:@selector(dealResignBtn) forControlEvents:UIControlEventTouchUpInside];
+        [resignButton addTarget:self action:@selector(dealResignBtn:) forControlEvents:UIControlEventTouchUpInside];
         resignButton.backgroundColor = [UIColor redColor];
         resignButton.layer.cornerRadius = 8;
         resignButton.clipsToBounds = YES;
-        [resignButton setTitle:@"退出登录" forState:UIControlStateNormal];
-        resignButton.frame = CGRectMake(0, 0, 250, 35);
+        resignButton.frame = CGRectMake(0, 0, 350, 35);
         MineSubView *mineSubView = self.mineSubViews[self.mineSubViews.count-1];
         resignButton.center = CGPointMake(self.center.x, CGRectGetMaxY(mineSubView.frame)+50);
         [self addSubview:resignButton];
@@ -103,22 +121,59 @@
     return _resignButton;
 }
 
-- (UIButton *)loginButton{
-    if (nil == _loginButton) {
-        UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [loginButton addTarget:self action:@selector(dealLoginBtn) forControlEvents:UIControlEventTouchUpInside];
-        loginButton.backgroundColor = [UIColor redColor];
-        loginButton.layer.cornerRadius = 8;
-        loginButton.clipsToBounds = YES;
-        [loginButton setTitle:@"登录" forState:UIControlStateNormal];
-        loginButton.frame = CGRectMake(0, 0, 250, 35);
-        MineSubView *mineSubView = self.mineSubViews[self.mineSubViews.count-1];
-        loginButton.center = CGPointMake(self.center.x, CGRectGetMaxY(mineSubView.frame)+50);
-        [self addSubview:loginButton];
-        _loginButton = loginButton;
-        self.contentSize = CGSizeMake(0, CGRectGetMaxY(loginButton.frame));
+
+- (void)dealTap:(UITapGestureRecognizer *)tap{
+    
+    UIView *view = tap.view;
+    MTController *vc;
+    switch (view.tag) {
+        case 1000:{
+            //权益列表
+            RightsListController *rightsListController = [[RightsListController alloc] init];
+            vc = rightsListController;
+        }
+            break;
+        case 1001:{
+            //我的短租
+            MyShortRentListController *myShortRentListController = [[MyShortRentListController alloc] init];
+            vc = myShortRentListController;
+        }
+            
+            break;
+        case 1002:{
+            //我的转让
+            MyAssignmentListController *myAssignmentListController = [[MyAssignmentListController alloc] init];
+            vc = myAssignmentListController;
+        }
+            
+            break;
+        case 1003:{
+            //我的入住
+            MyCheckInListController *myCheckInListController = [[MyCheckInListController alloc] init];
+            vc = myCheckInListController;
+        }
+            
+            break;
+        case 1004:{
+            //账号设置
+            AccountConfigController *accountConfigController = [[AccountConfigController alloc] init];
+            vc = accountConfigController;
+        }
+            
+            break;
+        case 1005:{
+            //关于我们
+            AboutUsController *aboutUsController = [[AboutUsController alloc] init];
+            vc = aboutUsController;
+        }
+            
+            break;
+        default:
+            break;
     }
-    return _loginButton;
+    vc.isNeedToCheckLogin = YES;
+    [self.controller.navigationController pushViewController:vc animated:YES];
 }
+
 
 @end

@@ -41,22 +41,15 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房型:一居室" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBx-wY-Gvh">
-                        <rect key="frame" x="95" y="36" width="90" height="21"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="周次：黄金周" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSa-uF-sbo">
-                        <rect key="frame" x="190" y="36" width="102" height="21"/>
+                        <rect key="frame" x="195" y="36" width="102" height="21"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6O-ap-2eh">
-                        <rect key="frame" x="100" y="63" width="38" height="21"/>
+                        <rect key="frame" x="100" y="88" width="38" height="21"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,16 +61,30 @@
                             <constraint firstAttribute="width" constant="80" id="fv8-eB-vUm"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmG-xP-Oq5">
+                        <rect key="frame" x="100" y="62" width="34" height="21"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房型:一居室" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBx-wY-Gvh">
+                        <rect key="frame" x="100" y="36" width="90" height="21"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="p8i-sh-7Ef" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0SY-as-q1j"/>
                     <constraint firstItem="jgW-ci-5RR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6S9-KH-gum"/>
                     <constraint firstItem="B6O-ap-2eh" firstAttribute="leading" secondItem="jgW-ci-5RR" secondAttribute="leading" id="8tj-cU-4Sl"/>
+                    <constraint firstItem="DmG-xP-Oq5" firstAttribute="top" secondItem="uBx-wY-Gvh" secondAttribute="bottom" constant="5" id="CVy-4Z-dtn"/>
                     <constraint firstItem="AGJ-eU-zLF" firstAttribute="width" secondItem="p8i-sh-7Ef" secondAttribute="width" id="Km2-aa-8W9"/>
                     <constraint firstItem="jSa-uF-sbo" firstAttribute="top" secondItem="uBx-wY-Gvh" secondAttribute="top" id="QGk-gh-BYJ"/>
-                    <constraint firstItem="B6O-ap-2eh" firstAttribute="top" secondItem="uBx-wY-Gvh" secondAttribute="bottom" constant="6" id="RGM-6L-XoC"/>
-                    <constraint firstItem="uBx-wY-Gvh" firstAttribute="leading" secondItem="AGJ-eU-zLF" secondAttribute="trailing" constant="5" id="VKg-X8-Q9X"/>
+                    <constraint firstItem="uBx-wY-Gvh" firstAttribute="leading" secondItem="AGJ-eU-zLF" secondAttribute="trailing" constant="10" id="VKg-X8-Q9X"/>
                     <constraint firstItem="jgW-ci-5RR" firstAttribute="leading" secondItem="0b8-bB-k3Q" secondAttribute="trailing" constant="10" id="dVX-0w-sQq"/>
                     <constraint firstItem="0b8-bB-k3Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dp0-ui-YUA"/>
                     <constraint firstItem="0b8-bB-k3Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fLL-2I-d7N"/>
@@ -86,7 +93,9 @@
                     <constraint firstItem="uBx-wY-Gvh" firstAttribute="top" secondItem="jgW-ci-5RR" secondAttribute="bottom" constant="5" id="kX6-QX-BPs"/>
                     <constraint firstItem="p8i-sh-7Ef" firstAttribute="top" secondItem="0b8-bB-k3Q" secondAttribute="bottom" id="l3j-xo-pXN"/>
                     <constraint firstItem="AGJ-eU-zLF" firstAttribute="top" secondItem="p8i-sh-7Ef" secondAttribute="bottom" id="oiW-mO-3aE"/>
+                    <constraint firstItem="DmG-xP-Oq5" firstAttribute="leading" secondItem="uBx-wY-Gvh" secondAttribute="leading" id="ppa-Zr-4Qo"/>
                     <constraint firstAttribute="bottom" secondItem="AGJ-eU-zLF" secondAttribute="bottom" constant="10" id="xgk-4b-fZT"/>
+                    <constraint firstItem="B6O-ap-2eh" firstAttribute="top" secondItem="DmG-xP-Oq5" secondAttribute="bottom" constant="5" id="xgl-Nb-Jkd"/>
                     <constraint firstItem="AGJ-eU-zLF" firstAttribute="width" secondItem="0b8-bB-k3Q" secondAttribute="width" id="zph-hd-Efh"/>
                 </constraints>
             </tableViewCellContentView>
@@ -98,7 +107,7 @@
                 <outlet property="titleLabel" destination="jgW-ci-5RR" id="d0l-Fe-Uvi"/>
                 <outlet property="weeklyLabel" destination="jSa-uF-sbo" id="Aq8-Gd-RmB"/>
             </connections>
-            <point key="canvasLocation" x="345.5" y="306.5"/>
+            <point key="canvasLocation" x="170.5" y="160"/>
         </tableViewCell>
     </objects>
     <resources>

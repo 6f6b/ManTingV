@@ -44,6 +44,26 @@
 		03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA91C11406000319C32 /* MTTabBarController.m */; };
 		03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BAF1C1140B800319C32 /* MTNavigationController.m */; };
 		03775BC01C11874700319C32 /* MTTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BBF1C11874700319C32 /* MTTableController.m */; };
+		03D251851C224EB400BA9ED7 /* ShortRentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */; };
+		03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251871C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m */; };
+		03D2518B1C22509900BA9ED7 /* CheckInAndCheckOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2518A1C22509900BA9ED7 /* CheckInAndCheckOutView.m */; };
+		03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2518D1C22510700BA9ED7 /* ShortRentPriceView.m */; };
+		03D251971C228CF600BA9ED7 /* RelatedProductsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251961C228CF600BA9ED7 /* RelatedProductsView.m */; };
+		03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2519C1C22924100BA9ED7 /* RelatedProductView.m */; };
+		03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251B91C22A43F00BA9ED7 /* MyAssignmentListController.m */; };
+		03D251BD1C22A46100BA9ED7 /* MyShortRentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251BC1C22A46100BA9ED7 /* MyShortRentListController.m */; };
+		03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251BF1C22A47E00BA9ED7 /* MyCheckInListController.m */; };
+		03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251C21C22A4AA00BA9ED7 /* AccountConfigController.m */; };
+		03D251C51C22A4AA00BA9ED7 /* AccountConfigController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251C31C22A4AA00BA9ED7 /* AccountConfigController.xib */; };
+		03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251C71C22A4D900BA9ED7 /* AboutUsController.m */; };
+		03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251CC1C22ACA600BA9ED7 /* ModifyIconController.m */; };
+		03D251CF1C22ACA600BA9ED7 /* ModifyIconController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251CD1C22ACA600BA9ED7 /* ModifyIconController.xib */; };
+		03D251DA1C22AE4D00BA9ED7 /* ModifyPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251D81C22AE4D00BA9ED7 /* ModifyPasswordController.m */; };
+		03D251DB1C22AE4D00BA9ED7 /* ModifyPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251D91C22AE4D00BA9ED7 /* ModifyPasswordController.xib */; };
+		03D251DF1C22AE9300BA9ED7 /* ModifyNickNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251DD1C22AE9300BA9ED7 /* ModifyNickNameController.m */; };
+		03D251E01C22AE9300BA9ED7 /* ModifyNickNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251DE1C22AE9300BA9ED7 /* ModifyNickNameController.xib */; };
+		03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251E41C22BDDA00BA9ED7 /* BookOrderController.m */; };
+		03D251E71C22BDDA00BA9ED7 /* BookOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251E51C22BDDA00BA9ED7 /* BookOrderController.xib */; };
 		03D643941C1942700082F0D4 /* ChoiceTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643931C1942700082F0D4 /* ChoiceTheme.m */; };
 		03D643991C194FDF0082F0D4 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643981C194FDF0082F0D4 /* Theme.m */; };
 		03D6439D1C195B010082F0D4 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6439B1C195B010082F0D4 /* LoginController.m */; };
@@ -182,6 +202,41 @@
 		03775BB41C11670F00319C32 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		03775BBE1C11874700319C32 /* MTTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableController.h; sourceTree = "<group>"; };
 		03775BBF1C11874700319C32 /* MTTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableController.m; sourceTree = "<group>"; };
+		03D251831C224EB400BA9ED7 /* ShortRentDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentDetailController.h; sourceTree = "<group>"; };
+		03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentDetailController.m; sourceTree = "<group>"; };
+		03D251861C224EF200BA9ED7 /* ShortRentDetailContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentDetailContentScrollView.h; sourceTree = "<group>"; };
+		03D251871C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentDetailContentScrollView.m; sourceTree = "<group>"; };
+		03D251891C22509900BA9ED7 /* CheckInAndCheckOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInAndCheckOutView.h; sourceTree = "<group>"; };
+		03D2518A1C22509900BA9ED7 /* CheckInAndCheckOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInAndCheckOutView.m; sourceTree = "<group>"; };
+		03D2518C1C22510700BA9ED7 /* ShortRentPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentPriceView.h; sourceTree = "<group>"; };
+		03D2518D1C22510700BA9ED7 /* ShortRentPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentPriceView.m; sourceTree = "<group>"; };
+		03D251951C228CF600BA9ED7 /* RelatedProductsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedProductsView.h; sourceTree = "<group>"; };
+		03D251961C228CF600BA9ED7 /* RelatedProductsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedProductsView.m; sourceTree = "<group>"; };
+		03D2519B1C22924100BA9ED7 /* RelatedProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedProductView.h; sourceTree = "<group>"; };
+		03D2519C1C22924100BA9ED7 /* RelatedProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedProductView.m; sourceTree = "<group>"; };
+		03D251B81C22A43F00BA9ED7 /* MyAssignmentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAssignmentListController.h; sourceTree = "<group>"; };
+		03D251B91C22A43F00BA9ED7 /* MyAssignmentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAssignmentListController.m; sourceTree = "<group>"; };
+		03D251BB1C22A46100BA9ED7 /* MyShortRentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShortRentListController.h; sourceTree = "<group>"; };
+		03D251BC1C22A46100BA9ED7 /* MyShortRentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShortRentListController.m; sourceTree = "<group>"; };
+		03D251BE1C22A47E00BA9ED7 /* MyCheckInListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCheckInListController.h; sourceTree = "<group>"; };
+		03D251BF1C22A47E00BA9ED7 /* MyCheckInListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCheckInListController.m; sourceTree = "<group>"; };
+		03D251C11C22A4AA00BA9ED7 /* AccountConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountConfigController.h; sourceTree = "<group>"; };
+		03D251C21C22A4AA00BA9ED7 /* AccountConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountConfigController.m; sourceTree = "<group>"; };
+		03D251C31C22A4AA00BA9ED7 /* AccountConfigController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountConfigController.xib; sourceTree = "<group>"; };
+		03D251C61C22A4D900BA9ED7 /* AboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsController.h; sourceTree = "<group>"; };
+		03D251C71C22A4D900BA9ED7 /* AboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsController.m; sourceTree = "<group>"; };
+		03D251CB1C22ACA500BA9ED7 /* ModifyIconController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyIconController.h; sourceTree = "<group>"; };
+		03D251CC1C22ACA600BA9ED7 /* ModifyIconController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyIconController.m; sourceTree = "<group>"; };
+		03D251CD1C22ACA600BA9ED7 /* ModifyIconController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyIconController.xib; sourceTree = "<group>"; };
+		03D251D71C22AE4D00BA9ED7 /* ModifyPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordController.h; sourceTree = "<group>"; };
+		03D251D81C22AE4D00BA9ED7 /* ModifyPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordController.m; sourceTree = "<group>"; };
+		03D251D91C22AE4D00BA9ED7 /* ModifyPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPasswordController.xib; sourceTree = "<group>"; };
+		03D251DC1C22AE9300BA9ED7 /* ModifyNickNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyNickNameController.h; sourceTree = "<group>"; };
+		03D251DD1C22AE9300BA9ED7 /* ModifyNickNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyNickNameController.m; sourceTree = "<group>"; };
+		03D251DE1C22AE9300BA9ED7 /* ModifyNickNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyNickNameController.xib; sourceTree = "<group>"; };
+		03D251E31C22BDDA00BA9ED7 /* BookOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookOrderController.h; sourceTree = "<group>"; };
+		03D251E41C22BDDA00BA9ED7 /* BookOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOrderController.m; sourceTree = "<group>"; };
+		03D251E51C22BDDA00BA9ED7 /* BookOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookOrderController.xib; sourceTree = "<group>"; };
 		03D643921C1942700082F0D4 /* ChoiceTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceTheme.h; sourceTree = "<group>"; };
 		03D643931C1942700082F0D4 /* ChoiceTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceTheme.m; sourceTree = "<group>"; };
 		03D643971C194FDF0082F0D4 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
@@ -505,7 +560,6 @@
 				03775B7D1C113AAD00319C32 /* HomeController.m */,
 				03DB9CD51C1FAE5F00A40361 /* 度假屋搜索页 */,
 				03D65DD31C1E5EF900E7C679 /* 精选主题 */,
-				03D8AFB61C1A67BE00B41FF0 /* 权益列表 */,
 				03D8AFB51C1A678200B41FF0 /* 入住 */,
 				03D8AFB41C1A675200B41FF0 /* 主题房间列表 */,
 			);
@@ -562,6 +616,7 @@
 			children = (
 				03775B951C113BF100319C32 /* ShortRentController.h */,
 				03775B961C113BF100319C32 /* ShortRentController.m */,
+				03D2517F1C224E7000BA9ED7 /* 短租详情 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -615,6 +670,12 @@
 			children = (
 				03775B9F1C113C3000319C32 /* MineController.h */,
 				03775BA01C113C3000319C32 /* MineController.m */,
+				03D8AFB61C1A67BE00B41FF0 /* 权益中心 */,
+				03D2519E1C22A2A600BA9ED7 /* 我的短租 */,
+				03D251A81C22A31D00BA9ED7 /* 我的转让 */,
+				03D251A71C22A31B00BA9ED7 /* 我的入住 */,
+				03D251A61C22A31A00BA9ED7 /* 账号设置 */,
+				03D251A51C22A31800BA9ED7 /* 关于我们 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -666,6 +727,275 @@
 				03D8C4FD1C17D24800C71B98 /* LFLoopScrollView */,
 			);
 			name = ThirdLibrarys;
+			sourceTree = "<group>";
+		};
+		03D2517F1C224E7000BA9ED7 /* 短租详情 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251821C224E8300BA9ED7 /* Models */,
+				03D251811C224E8100BA9ED7 /* Views */,
+				03D251801C224E7F00BA9ED7 /* Controllers */,
+			);
+			name = "短租详情";
+			sourceTree = "<group>";
+		};
+		03D251801C224E7F00BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251E11C22BD4800BA9ED7 /* 预订订单 */,
+				03D251831C224EB400BA9ED7 /* ShortRentDetailController.h */,
+				03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251811C224E8100BA9ED7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03D251861C224EF200BA9ED7 /* ShortRentDetailContentScrollView.h */,
+				03D251871C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m */,
+				03D251891C22509900BA9ED7 /* CheckInAndCheckOutView.h */,
+				03D2518A1C22509900BA9ED7 /* CheckInAndCheckOutView.m */,
+				03D2518C1C22510700BA9ED7 /* ShortRentPriceView.h */,
+				03D2518D1C22510700BA9ED7 /* ShortRentPriceView.m */,
+				03D251951C228CF600BA9ED7 /* RelatedProductsView.h */,
+				03D251961C228CF600BA9ED7 /* RelatedProductsView.m */,
+				03D2519B1C22924100BA9ED7 /* RelatedProductView.h */,
+				03D2519C1C22924100BA9ED7 /* RelatedProductView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03D251821C224E8300BA9ED7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		03D2519E1C22A2A600BA9ED7 /* 我的短租 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251A11C22A2C100BA9ED7 /* Models */,
+				03D251A01C22A2C000BA9ED7 /* Views */,
+				03D2519F1C22A2BD00BA9ED7 /* Controllers */,
+			);
+			name = "我的短租";
+			sourceTree = "<group>";
+		};
+		03D2519F1C22A2BD00BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251BB1C22A46100BA9ED7 /* MyShortRentListController.h */,
+				03D251BC1C22A46100BA9ED7 /* MyShortRentListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251A01C22A2C000BA9ED7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03D251A11C22A2C100BA9ED7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		03D251A51C22A31800BA9ED7 /* 关于我们 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251B41C22A3A800BA9ED7 /* New Group2 */,
+				03D251B31C22A3A600BA9ED7 /* New Group1 */,
+				03D251B21C22A3A500BA9ED7 /* Controllers */,
+			);
+			name = "关于我们";
+			sourceTree = "<group>";
+		};
+		03D251A61C22A31A00BA9ED7 /* 账号设置 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251AF1C22A39E00BA9ED7 /* Controllers */,
+			);
+			name = "账号设置";
+			sourceTree = "<group>";
+		};
+		03D251A71C22A31B00BA9ED7 /* 我的入住 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251AE1C22A39B00BA9ED7 /* New Group2 */,
+				03D251AD1C22A39900BA9ED7 /* New Group1 */,
+				03D251AC1C22A39700BA9ED7 /* Controllers */,
+			);
+			name = "我的入住";
+			sourceTree = "<group>";
+		};
+		03D251A81C22A31D00BA9ED7 /* 我的转让 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251AB1C22A39500BA9ED7 /* models */,
+				03D251AA1C22A39300BA9ED7 /* New Group1 */,
+				03D251A91C22A39100BA9ED7 /* Controllers */,
+			);
+			name = "我的转让";
+			sourceTree = "<group>";
+		};
+		03D251A91C22A39100BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251B81C22A43F00BA9ED7 /* MyAssignmentListController.h */,
+				03D251B91C22A43F00BA9ED7 /* MyAssignmentListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251AA1C22A39300BA9ED7 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group1";
+			sourceTree = "<group>";
+		};
+		03D251AB1C22A39500BA9ED7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		03D251AC1C22A39700BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251BE1C22A47E00BA9ED7 /* MyCheckInListController.h */,
+				03D251BF1C22A47E00BA9ED7 /* MyCheckInListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251AD1C22A39900BA9ED7 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group1";
+			sourceTree = "<group>";
+		};
+		03D251AE1C22A39B00BA9ED7 /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group2";
+			sourceTree = "<group>";
+		};
+		03D251AF1C22A39E00BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251C91C22AC2200BA9ED7 /* 我的头像 */,
+				03D251D11C22ADEB00BA9ED7 /* 我的昵称 */,
+				03D251D01C22ADE900BA9ED7 /* 修改密码 */,
+				03D251C11C22A4AA00BA9ED7 /* AccountConfigController.h */,
+				03D251C21C22A4AA00BA9ED7 /* AccountConfigController.m */,
+				03D251C31C22A4AA00BA9ED7 /* AccountConfigController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251B21C22A3A500BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251C61C22A4D900BA9ED7 /* AboutUsController.h */,
+				03D251C71C22A4D900BA9ED7 /* AboutUsController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251B31C22A3A600BA9ED7 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group1";
+			sourceTree = "<group>";
+		};
+		03D251B41C22A3A800BA9ED7 /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group2";
+			sourceTree = "<group>";
+		};
+		03D251C91C22AC2200BA9ED7 /* 我的头像 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251CA1C22AC8500BA9ED7 /* Controllers */,
+			);
+			name = "我的头像";
+			sourceTree = "<group>";
+		};
+		03D251CA1C22AC8500BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251CB1C22ACA500BA9ED7 /* ModifyIconController.h */,
+				03D251CC1C22ACA600BA9ED7 /* ModifyIconController.m */,
+				03D251CD1C22ACA600BA9ED7 /* ModifyIconController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251D01C22ADE900BA9ED7 /* 修改密码 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251D31C22AE1100BA9ED7 /* Controllers */,
+			);
+			name = "修改密码";
+			sourceTree = "<group>";
+		};
+		03D251D11C22ADEB00BA9ED7 /* 我的昵称 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251D21C22AE0A00BA9ED7 /* Controlllers */,
+			);
+			name = "我的昵称";
+			sourceTree = "<group>";
+		};
+		03D251D21C22AE0A00BA9ED7 /* Controlllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251DC1C22AE9300BA9ED7 /* ModifyNickNameController.h */,
+				03D251DD1C22AE9300BA9ED7 /* ModifyNickNameController.m */,
+				03D251DE1C22AE9300BA9ED7 /* ModifyNickNameController.xib */,
+			);
+			name = Controlllers;
+			sourceTree = "<group>";
+		};
+		03D251D31C22AE1100BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251D71C22AE4D00BA9ED7 /* ModifyPasswordController.h */,
+				03D251D81C22AE4D00BA9ED7 /* ModifyPasswordController.m */,
+				03D251D91C22AE4D00BA9ED7 /* ModifyPasswordController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D251E11C22BD4800BA9ED7 /* 预订订单 */ = {
+			isa = PBXGroup;
+			children = (
+				03D251E21C22BD8A00BA9ED7 /* Controllers */,
+			);
+			name = "预订订单";
+			sourceTree = "<group>";
+		};
+		03D251E21C22BD8A00BA9ED7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D251E31C22BDDA00BA9ED7 /* BookOrderController.h */,
+				03D251E41C22BDDA00BA9ED7 /* BookOrderController.m */,
+				03D251E51C22BDDA00BA9ED7 /* BookOrderController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		03D643951C194F3B0082F0D4 /* 精选 */ = {
@@ -791,14 +1121,14 @@
 			name = "入住";
 			sourceTree = "<group>";
 		};
-		03D8AFB61C1A67BE00B41FF0 /* 权益列表 */ = {
+		03D8AFB61C1A67BE00B41FF0 /* 权益中心 */ = {
 			isa = PBXGroup;
 			children = (
 				03D8AFB91C1A67F800B41FF0 /* Models */,
 				03D8AFB81C1A67F600B41FF0 /* Views */,
 				03D8AFB71C1A67F300B41FF0 /* Controllers */,
 			);
-			name = "权益列表";
+			name = "权益中心";
 			sourceTree = "<group>";
 		};
 		03D8AFB71C1A67F300B41FF0 /* Controllers */ = {
@@ -1113,6 +1443,7 @@
 				0376AFEF1C1196C30033D2A2 /* Welcome_3.0_3@2x.jpg in Resources */,
 				0376AFF11C1196C30033D2A2 /* Welcome_3.0_4@2x.jpg in Resources */,
 				03D7A7E21C213F48003A3A68 /* arrow_right_12.81592039801px_1197003_easyicon.net.png in Resources */,
+				03D251DB1C22AE4D00BA9ED7 /* ModifyPasswordController.xib in Resources */,
 				03E0A25C1C18274000FCAAAC /* home.png in Resources */,
 				03D6439E1C195B010082F0D4 /* LoginController.xib in Resources */,
 				0376AFC81C118D8F0033D2A2 /* ShortRentCell.xib in Resources */,
@@ -1120,13 +1451,17 @@
 				03775B4A1C11368F00319C32 /* Assets.xcassets in Resources */,
 				03D643A21C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png in Resources */,
 				03DB9D251C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png in Resources */,
+				03D251E01C22AE9300BA9ED7 /* ModifyNickNameController.xib in Resources */,
+				03D251CF1C22ACA600BA9ED7 /* ModifyIconController.xib in Resources */,
 				0376AFF01C1196C30033D2A2 /* Welcome_3.0_4.jpg in Resources */,
+				03D251C51C22A4AA00BA9ED7 /* AccountConfigController.xib in Resources */,
 				03D650B21C1EB021005856F2 /* ChooserCell.xib in Resources */,
 				0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */,
 				03E0A25F1C18274000FCAAAC /* product.png in Resources */,
 				0376AFF21C1196C30033D2A2 /* Welcome_3.0_5.jpg in Resources */,
 				0376AFEE1C1196C30033D2A2 /* Welcome_3.0_3.jpg in Resources */,
 				0376AFE71C1196C30033D2A2 /* Welcome2@2x.jpg in Resources */,
+				03D251E71C22BDDA00BA9ED7 /* BookOrderController.xib in Resources */,
 				0376AFEB1C1196C30033D2A2 /* Welcome_3.0_1@2x.jpg in Resources */,
 				03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */,
 				03D7A7EF1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg in Resources */,
@@ -1209,6 +1544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DB9CE61C1FBE0F00A40361 /* HolidayHouseSearchController.m in Sources */,
+				03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */,
 				03D65DE21C1E691A00E7C679 /* ContentScrollView.m in Sources */,
 				03775BA21C113C3000319C32 /* MineController.m in Sources */,
 				03775B7F1C113AAD00319C32 /* HomeController.m in Sources */,
@@ -1217,12 +1553,15 @@
 				03DB9D1F1C2053EC00A40361 /* ThemeContentView.m in Sources */,
 				03DB9D0A1C200B3E00A40361 /* RecipientInformationView.m in Sources */,
 				03D7A7EB1C214776003A3A68 /* MineSubView.m in Sources */,
+				03D251DF1C22AE9300BA9ED7 /* ModifyNickNameController.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
 				03D650B11C1EB021005856F2 /* ChooserCell.m in Sources */,
+				03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */,
 				03DB9CDF1C1FAFF100A40361 /* HolidayHouseSearchCell.m in Sources */,
 				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
+				03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */,
 				03DB9D131C200C7900A40361 /* FreightView.m in Sources */,
 				03D8AFDB1C1ACE5D00B41FF0 /* ResortFacilitiesView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
@@ -1231,13 +1570,17 @@
 				03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */,
 				03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */,
 				03775B421C11368F00319C32 /* AppDelegate.m in Sources */,
+				03D2518B1C22509900BA9ED7 /* CheckInAndCheckOutView.m in Sources */,
 				03D7A7E51C214234003A3A68 /* MineContentScrollView.m in Sources */,
+				03D251DA1C22AE4D00BA9ED7 /* ModifyPasswordController.m in Sources */,
 				03DB9D0D1C200B8E00A40361 /* AddAddressView.m in Sources */,
 				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03E0A2621C18340D00FCAAAC /* ChoiceRoom.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
+				03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */,
 				03DB9D061C20052000A40361 /* MTPayController.m in Sources */,
+				03D251851C224EB400BA9ED7 /* ShortRentDetailController.m in Sources */,
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
@@ -1246,7 +1589,11 @@
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
 				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
+				03D251BD1C22A46100BA9ED7 /* MyShortRentListController.m in Sources */,
+				03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */,
 				03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */,
+				03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */,
+				03D251971C228CF600BA9ED7 /* RelatedProductsView.m in Sources */,
 				03D8AFC91C1A714C00B41FF0 /* ThemeListView.m in Sources */,
 				03D830AE1C1EBDE1006DBFD9 /* ChoiceNessTheme.m in Sources */,
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
@@ -1255,10 +1602,12 @@
 				03DB9D161C200CAF00A40361 /* LeaveWordView.m in Sources */,
 				03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */,
 				03E0A2521C180FDB00FCAAAC /* ThemeScrollView.m in Sources */,
+				03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */,
 				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
+				03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */,
 				03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
 				03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */,
@@ -1266,6 +1615,7 @@
 				03DB9CEF1C1FDF8C00A40361 /* ProductContainView.m in Sources */,
 				03775BA61C113E8600319C32 /* MTModel.m in Sources */,
 				03D643941C1942700082F0D4 /* ChoiceTheme.m in Sources */,
+				03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */,
 				03775B981C113BF100319C32 /* ShortRentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

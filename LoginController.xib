@@ -202,20 +202,20 @@
                     <exclude reference="DJk-k4-Zem"/>
                     <exclude reference="Peb-fa-wo1"/>
                     <exclude reference="k5A-WP-6Tr"/>
+                    <exclude reference="9Gs-dt-1vy"/>
+                    <exclude reference="dJE-jJ-6kw"/>
+                    <exclude reference="xMG-wW-0iX"/>
+                    <exclude reference="y27-5x-MQ4"/>
                     <exclude reference="kit-qe-50e"/>
                     <exclude reference="mIs-EW-MuT"/>
-                    <exclude reference="2cU-yr-4OH"/>
-                    <exclude reference="y27-5x-MQ4"/>
                     <exclude reference="CHZ-0P-uqh"/>
                     <exclude reference="LSg-uf-3Pb"/>
                     <exclude reference="gsi-c1-3B2"/>
                     <exclude reference="ks3-dM-iSb"/>
+                    <exclude reference="2cU-yr-4OH"/>
                     <exclude reference="3jO-Hn-J3C"/>
                     <exclude reference="X4B-iv-QDD"/>
                     <exclude reference="xrb-wq-c9K"/>
-                    <exclude reference="9Gs-dt-1vy"/>
-                    <exclude reference="dJE-jJ-6kw"/>
-                    <exclude reference="xMG-wW-0iX"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -234,20 +234,20 @@
                     <include reference="DJk-k4-Zem"/>
                     <include reference="Peb-fa-wo1"/>
                     <include reference="k5A-WP-6Tr"/>
+                    <include reference="9Gs-dt-1vy"/>
+                    <include reference="dJE-jJ-6kw"/>
+                    <include reference="xMG-wW-0iX"/>
+                    <include reference="y27-5x-MQ4"/>
                     <include reference="kit-qe-50e"/>
                     <include reference="mIs-EW-MuT"/>
-                    <include reference="2cU-yr-4OH"/>
-                    <include reference="y27-5x-MQ4"/>
                     <include reference="CHZ-0P-uqh"/>
                     <include reference="LSg-uf-3Pb"/>
                     <include reference="gsi-c1-3B2"/>
                     <include reference="ks3-dM-iSb"/>
+                    <include reference="2cU-yr-4OH"/>
                     <include reference="3jO-Hn-J3C"/>
                     <include reference="X4B-iv-QDD"/>
                     <include reference="xrb-wq-c9K"/>
-                    <include reference="9Gs-dt-1vy"/>
-                    <include reference="dJE-jJ-6kw"/>
-                    <include reference="xMG-wW-0iX"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="495" y="193"/>
