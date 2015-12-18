@@ -2,7 +2,7 @@
 //  ThemeListContentView.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/11.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
@@ -11,12 +11,11 @@
 
 @implementation ThemeListContentView
 
-
 //创建的同时赋值
-- (void)setValueWithModel:(MTModel *)model{
+- (void)setValueWith:(id)data{
     for (int i=0; i<10; i++) {
         ThemeListView *themeListView = [[ThemeListView alloc] init];
-        [themeListView setValueWithModel:nil];
+        [themeListView setValueWith:nil];
         themeListView.tag = 100+i;
         themeListView.backgroundColor = [UIColor blueColor];
         
@@ -30,6 +29,5 @@
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, ScreenWidth, CGRectGetMaxY(themeListView.frame));
     }
 }
-
 
 @end

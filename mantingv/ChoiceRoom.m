@@ -2,9 +2,11 @@
 //  ChoiceRoom.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/9.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
+
+#import "ChoiceRoom.h"
 
 #import "ChoiceRoom.h"
 @interface ChoiceRoom ()
@@ -113,6 +115,6 @@
 
 //为子控件赋值
 - (void)setValueWith:(MTModel *)model{
-
+    
 }
 @end

@@ -2,7 +2,7 @@
 //  Theme.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/10.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
@@ -19,7 +19,6 @@
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     UIView *superView = self;
     
-    NSLog(@"------>%@",@"fsda");
     //backImage
     [self.backImage mas_makeConstraints:^(MASConstraintMaker *make) {
         //距 父视图 四边 0

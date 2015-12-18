@@ -9,7 +9,6 @@
 #import "ThemeContentView.h"
 #import "ThemeListController.h"
 #import "Theme.h"
-#import "ContentScrollView.h"
 
 @implementation ThemeContentView
 
@@ -42,7 +41,7 @@
     ThemeListController *themeListController = [[ThemeListController alloc] init];
     themeListController.title = [NSString stringWithFormat:@"%lu",view.tag];
     
-    ContentScrollView *contentScrollView = self.superview;
-    [contentScrollView.homeController.navigationController pushViewController:themeListController animated:YES];
+    MTBaseScrollView *homeContentScrollView = (MTBaseScrollView *)self.superview;
+    [homeContentScrollView.controller.navigationController pushViewController:themeListController animated:YES];
 }
 @end

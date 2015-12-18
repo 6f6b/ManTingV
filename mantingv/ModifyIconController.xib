@@ -103,6 +103,9 @@
                             <include reference="IFX-ev-keQ"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="modifyIcon:" destination="-1" eventType="touchUpInside" id="FbT-Xu-i1U"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -119,11 +122,11 @@
                     <exclude reference="YJP-Su-6Nz"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="JMa-0T-RsA"/>
+                    <exclude reference="dsC-Rc-LlH"/>
                     <exclude reference="XX2-Rl-9xn"/>
                     <exclude reference="iAz-q9-fvG"/>
                     <exclude reference="rhi-Da-ag9"/>
-                    <exclude reference="JMa-0T-RsA"/>
-                    <exclude reference="dsC-Rc-LlH"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -132,11 +135,11 @@
                     <include reference="YJP-Su-6Nz"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="JMa-0T-RsA"/>
+                    <include reference="dsC-Rc-LlH"/>
                     <include reference="XX2-Rl-9xn"/>
                     <include reference="iAz-q9-fvG"/>
                     <include reference="rhi-Da-ag9"/>
-                    <include reference="JMa-0T-RsA"/>
-                    <include reference="dsC-Rc-LlH"/>
                 </mask>
             </variation>
         </view>

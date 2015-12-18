@@ -17,6 +17,13 @@
 
 @implementation MTNavigationController
 
+//- (id)init{
+//    if (self = [super init]) {
+//        self.navigationItem.hidesBackButton = YES;
+//    }
+//    return self;
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,11 +45,11 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.viewControllers.count>0) {
         viewController.hidesBottomBarWhenPushed = YES;
+        
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrows_slim_left_51.707317073171px_1182560_easyicon.net"] style:UIBarButtonItemStyleDone target:self action:@selector(popToRootViewControllerAnimated:)];
+        viewController.navigationItem.leftBarButtonItem = leftItem;
     }
     [super pushViewController:viewController animated:animated];
-    if (1 ==self.viewControllers.count) {
-        self.hidesBottomBarWhenPushed = NO;
-    }
 }
 
 
@@ -50,8 +57,9 @@
     if (1 == self.viewControllers.count) {
         self.hidesBottomBarWhenPushed = NO;
     }
-    UIViewController *vc = [super popViewControllerAnimated:animated];
-    return vc;
+    UIViewController *viewController = [super popViewControllerAnimated:animated];
+    NSLog(@">>>>>>>>>%@",NSStringFromClass([viewController class]));
+    return viewController;
 }
 
 #pragma mark - push的时候检测是否登录 逻辑判断
@@ -75,7 +83,7 @@
     //未登录则push到登录页
     if (!name) {
         LoginController *login = [[LoginController alloc] init];
-        login.willPushVC = viewController;
+        login.willPushVC = (MTController *)viewController;
         [self aopPushViewController:login animated:YES];
     }
     

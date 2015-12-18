@@ -1,28 +1,27 @@
 //
-//  ContentScrollView.m
+//  HomeContentScrollView.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/3.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "ContentScrollView.h"
+#import "HomeContentScrollView.h"
+
 #import "ThemeScrollView.h"
 #import "ProductController.h"
 #import "CheckInController.h"
 #import "RightsListController.h"
 #import "ChoiceNessRoom.h"
 #import "ShortRentController.h"
-
 #import "ThemeContentView.h"
-
-@interface ContentScrollView ()
+@interface HomeContentScrollView ()
 @property (nonatomic,weak) ThemeScrollView *themeScrollView;
 @property (nonatomic,weak) ThemeContentView *themeContentView;
 @property (nonatomic,weak) UIImageView *what;
 @end
 
-@implementation ContentScrollView
+@implementation HomeContentScrollView
 
 
 - (id)initWithFrame:(CGRect)frame{
@@ -102,17 +101,17 @@
     NSLog(@"%lu",button.tag);
     if (100 == button.tag) {
         ProductController *pc = [[ProductController alloc] init];
-        [self.homeController.navigationController pushViewController:pc animated:YES];
+        [self.controller.navigationController pushViewController:pc animated:YES];
     }
     else if(101 == button.tag){
         CheckInController *checkIn = [[CheckInController alloc] init];
-        [self.homeController.navigationController pushViewController:checkIn animated:YES];
+        [self.controller.navigationController pushViewController:checkIn animated:YES];
     }
     else{
         RightsListController *rightsVC = [[RightsListController alloc] init];
-        [self.homeController.navigationController pushViewController:rightsVC animated:YES];
+        [self.controller.navigationController pushViewController:rightsVC animated:YES];
     }
-
+    
 }
 
 #pragma mark - 默认的两个主题
@@ -177,4 +176,6 @@
     }
     return _choiceNessRoom;
 }
+
+
 @end

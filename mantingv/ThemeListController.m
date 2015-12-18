@@ -26,7 +26,7 @@
     NSArray *urls = @[@"http://down.tutu001.com/d/file/20101129/2f5ca0f1c9b6d02ea87df74fcc_560.jpg",@"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg",@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
     [self.themeListPictuerScrollView setImageWithUrlS:urls];
     
-    [self.themListContentView setValueWithModel:nil];
+    [self.themListContentView setValueWith:nil];
     
     [self.selectView setValue];
     self.selectView.delegate = self;

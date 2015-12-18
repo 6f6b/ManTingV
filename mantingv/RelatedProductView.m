@@ -7,6 +7,8 @@
 //
 
 #import "RelatedProductView.h"
+#import "BookOrderController.h"
+#import "ShortRentDetailContentScrollView.h"
 
 @implementation RelatedProductView
 
@@ -14,7 +16,9 @@
     [self.buyButton setTitle:@"立即预订" forState:UIControlStateNormal];
 }
 - (void)dealBuyBtn{
-    NSLog(@"oh shit");
+    BookOrderController *bookOrderController = [[BookOrderController alloc] init];
+    ShortRentDetailContentScrollView *view = self.superview.superview;
+    [view.controller.navigationController pushViewController:bookOrderController animated:YES];
 }
 
 - (UILabel *)priceLabel{

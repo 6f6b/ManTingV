@@ -2,12 +2,12 @@
 //  ThemeScrollView.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/9.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MTBaseScrollView.h"
 
-@interface ThemeScrollView : UIScrollView
-- (void)setValueWithModel:(MTModel *)model;
+@interface ThemeScrollView : MTBaseScrollView
+
 @end

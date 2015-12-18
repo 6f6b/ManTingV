@@ -2,23 +2,20 @@
 //  ThemeScrollView.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/9.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
 #import "ThemeScrollView.h"
 #import "Theme.h"
 #import "ThemeListController.h"
-#import "ContentScrollView.h"
-
 @interface ThemeScrollView ()
 @property (nonatomic,strong) NSMutableArray *thems;
 @end
 @implementation ThemeScrollView
 
-
-- (void)setValueWithModel:(MTModel *)model{
-    for (int i; i<10; i++) {
+- (void)setValueWith:(id)data{
+        for (int i; i<10; i++) {
         Theme *theme = [[Theme alloc] init];
         theme.tag = 1000+i;
         CGFloat X = i*(ScreenWidth-10*3)/2+10;
@@ -34,8 +31,8 @@
         
         self.contentSize = CGSizeMake(CGRectGetMaxX(theme.frame), 0);
     }
-    
 }
+
 
 - (void)dealThemeTap:(UITapGestureRecognizer *)tap{
     UIView *view = tap.view;
@@ -43,7 +40,8 @@
     ThemeListController *themeListController = [[ThemeListController alloc] init];
     themeListController.title = [NSString stringWithFormat:@"%lu",view.tag];
     
-    ContentScrollView *contentScrollView = self.superview;
-    [contentScrollView.homeController.navigationController pushViewController:themeListController animated:YES];
+    MTBaseScrollView *contentScrollView = self.superview;
+    [contentScrollView.controller.navigationController pushViewController:themeListController animated:YES];
 }
 @end
+

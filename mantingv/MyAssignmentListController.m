@@ -7,16 +7,60 @@
 //
 
 #import "MyAssignmentListController.h"
+#import "MTSwitchView.h"
 
-@interface MyAssignmentListController ()
-
+@interface MyAssignmentListController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,weak) MTSwitchView *switchView;
+@property (nonatomic,weak) UITableView *tableView;
+@property (nonatomic,strong) NSMutableArray *dataArray;
 @end
 
 @implementation MyAssignmentListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"我的转让";
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSArray *titles = @[@"正常",@"失效"];
+    MTSwitchView *switchView = [MTSwitchView switchViewWithTitles:titles];
+    [switchView setClickedAction:^(NSInteger index) {
+        NSLog(@"%lu",index);
+    }];
+    _switchView = switchView;
+    [self.view addSubview:switchView];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+}
+
+- (UITableView *)tableView{
+    if (nil == _tableView) {
+        NSLog(@"%@",self.switchView);
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.switchView.frame), ScreenWidth, Screenheight-CGRectGetMaxY(self.switchView.frame)) style:UITableViewStylePlain];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        _tableView = tableView;
+        [self.view addSubview:tableView];
+    }
+    return _tableView;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = @"我的转让";
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

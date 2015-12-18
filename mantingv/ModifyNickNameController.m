@@ -21,6 +21,8 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)commitBtn:(id)sender {
+    NSString *url = [NSString stringWithFormat:@"tel:%@",self.newnickNameTextFeild.text];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 - (void)didReceiveMemoryWarning {

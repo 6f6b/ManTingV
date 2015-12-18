@@ -10,7 +10,6 @@
 #import "ChoiceTheme.h"
 
 #import "HolidayHouseSearchController.h"
-#import "ContentScrollView.h"
 @implementation ChoiceNessTheme
 
 - (void)setValueWith:(id)data{
@@ -43,7 +42,7 @@
     UIView *view = tap.view;
     HolidayHouseSearchController *holidayHouseSearchController = [[HolidayHouseSearchController alloc] init];
     
-    ContentScrollView *contentScrollView = self.superview;
-    [contentScrollView.homeController.navigationController pushViewController:holidayHouseSearchController animated:YES];
+    MTBaseScrollView *contentScrollView = self.superview;
+    [contentScrollView.controller.navigationController pushViewController:holidayHouseSearchController animated:YES];
 }
 @end

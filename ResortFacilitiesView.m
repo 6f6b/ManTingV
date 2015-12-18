@@ -1,24 +1,22 @@
 //
 //  ResortFacilitiesView.m
-//  test
+//  mantingv
 //
-//  Created by LiuFeng on 15/12/11.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
 #import "ResortFacilitiesView.h"
 
-@interface ResortFacilitiesView ()
-@end
 @implementation ResortFacilitiesView
 
-- (void)setValue{
+- (void)setValueWith:(id)data{
     for(int i=0;i<10;i++){
         CGFloat X = (self.frame.size.width/4)*(i%4);
         CGFloat Y = i/4*30;
         CGFloat W = self.frame.size.width/4;
         CGFloat H = 30;
-    
+        
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor redColor];
         label.textAlignment = NSTextAlignmentCenter;

@@ -1,5 +1,5 @@
 //
-//  ChoiceTheme.h
+//  ResortFacilitiesView.h
 //  mantingv
 //
 //  Created by LiuFeng on 15/12/18.
@@ -8,6 +8,6 @@
 
 #import "MTBaseView.h"
 
-@interface ChoiceTheme : MTBaseView
+@interface ResortFacilitiesView : MTBaseView
 
 @end

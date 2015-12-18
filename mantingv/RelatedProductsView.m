@@ -18,7 +18,7 @@
         CGFloat W = ScreenWidth;
         CGFloat H = 80;
         RelatedProductView *relatedProductView = [[RelatedProductView alloc] init];
-        [relatedProductView setValueWithModel:nil];
+        [relatedProductView setValueWith:nil];
         relatedProductView.backgroundColor = [UIColor yellowColor];
         relatedProductView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:relatedProductView];

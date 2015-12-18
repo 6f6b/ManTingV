@@ -1,19 +1,19 @@
 //
-//  ContentScrollView.h
+//  HomeContentScrollView.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/3.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MTBaseScrollView.h"
 #import "HomeController.h"
 
 #import "LFLoopScrollView.h"
 #import "ChoiceNessRoom.h"
 #import "ChoiceNessTheme.h"
 
-@interface ContentScrollView : UIScrollView
+@interface HomeContentScrollView : MTBaseScrollView
 @property (nonatomic,weak) HomeController *homeController;
 @property (nonatomic,weak) LFLoopScrollView *adScrollView;
 

@@ -7,10 +7,10 @@
 //
 
 #import "HomeController.h"
-#import "ContentScrollView.h"
+#import "HomeContentScrollView.h"
 
 @interface HomeController ()
-@property (weak,nonatomic) ContentScrollView* contentScrollView;
+@property (weak,nonatomic) HomeContentScrollView* homeContentScrollView;
 @end
 
 @implementation HomeController
@@ -37,11 +37,12 @@
     [homeCityListButton addTarget:self action:@selector(dealCityList) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:homeCityListButton];
     
-    ContentScrollView *contentScrollView = [[ContentScrollView alloc] initWithFrame:self.view.bounds];
-    contentScrollView.backgroundColor = [UIColor whiteColor];
-    contentScrollView.homeController = self;
-    _contentScrollView = contentScrollView;
-    [self.view addSubview:contentScrollView];
+    
+    HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:self.view.bounds];
+    homeContentScrollView.backgroundColor = [UIColor whiteColor];
+    homeContentScrollView.controller = self;
+    _homeContentScrollView = homeContentScrollView;
+    [self.view addSubview:homeContentScrollView];
 }
 
 - (void)downLoadData{

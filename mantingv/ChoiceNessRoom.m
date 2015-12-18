@@ -9,7 +9,6 @@
 #import "ChoiceNessRoom.h"
 #import "ChoiceRoom.h"
 #import "ThemeListController.h"
-#import "ContentScrollView.h"
 @implementation ChoiceNessRoom
 
 //+ (instancetype)choiceNessViewWith:(NSString *)title point:(CGPoint)point{
@@ -23,7 +22,6 @@
 //}
 
 - (void)setValueWith:(id)data{
-    NSLog(@"转型了");
     for (int i=0; i<10; i++) {
         float X = i%2*10+(ScreenWidth-10)/2*(i%2);
         float Y = i/2*100+40;
@@ -42,7 +40,6 @@
         
         [self addSubview:choiceRoom];
         
-        NSLog(@"%@",NSStringFromCGRect(choiceRoom.frame));
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(choiceRoom.frame));
     }
     //获取到父视图指针，在数据加载完成之后重新调整父视图的Contentsize
@@ -54,7 +51,7 @@
     UIView *view = tap.view;
     ThemeListController *themeListController = [[ThemeListController alloc] init];
     
-    ContentScrollView *contentScrollView = self.superview;
-    [contentScrollView.homeController.navigationController pushViewController:themeListController animated:YES];
+    MTBaseScrollView *contentScrollView = self.superview;
+    [contentScrollView.controller.navigationController pushViewController:themeListController animated:YES];
 }
 @end

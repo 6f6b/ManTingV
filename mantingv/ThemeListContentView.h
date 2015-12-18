@@ -2,14 +2,12 @@
 //  ThemeListContentView.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/11.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MTBaseView.h"
 
+@interface ThemeListContentView : MTBaseView
 
-@interface ThemeListContentView : UIView
-@property (nonatomic,strong) UIViewController *controller;
-- (void)setValueWithModel:(MTModel *)model;
 @end

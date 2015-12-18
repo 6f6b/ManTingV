@@ -1,12 +1,13 @@
 //
 //  SelectView.m
-//  test
+//  mantingv
 //
-//  Created by LiuFeng on 15/12/11.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
 #import "SelectView.h"
+
 #import "ResortFacilitiesView.h"
 
 @interface SelectView ()
@@ -64,9 +65,9 @@
     frame = self.holidayHomeTextView.frame;
     frame.size.height = size.height;
     self.essentialInformationTextView.frame = frame;
-
+    
     //他自己在内部调节大小
-    [self.resortFacilitiesView setValue];
+    [self.resortFacilitiesView setValueWith:nil];
     
     //赋值过后先选中第一个button
     UIButton *button = self.buttons[0];
@@ -139,7 +140,7 @@
         button.selected = NO;
     }
     button.selected = YES;
-
+    
     //让代理调节自身的大小
     if (!self.delegate) {
         return;

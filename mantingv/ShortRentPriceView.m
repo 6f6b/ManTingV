@@ -7,6 +7,8 @@
 //
 
 #import "ShortRentPriceView.h"
+#import "BookOrderController.h"
+#import "ShortRentDetailContentScrollView.h"
 
 @interface ShortRentPriceView ()
 @property (nonatomic,weak) UILabel *retailPriceLabel;
@@ -180,6 +182,8 @@
 }
 
 - (void)dealBtn:(UIButton *)button{
-    NSLog(@"立即预订");
+    BookOrderController *bookOrderController = [[BookOrderController alloc] init];
+    ShortRentDetailContentScrollView *view = self.superview;
+    [view.controller.navigationController pushViewController:bookOrderController animated:YES];
 }
 @end

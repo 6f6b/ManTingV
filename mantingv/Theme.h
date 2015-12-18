@@ -2,12 +2,12 @@
 //  Theme.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/10.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MTBaseView.h"
 
-@interface Theme : UIView
+@interface Theme : MTBaseView
 
 @end

@@ -78,7 +78,7 @@
 }
 
 - (void)dealSelect:(UIButton *)button{
-    NSInteger *tag = button.tag;
+    NSInteger tag = button.tag;
     
 }
 

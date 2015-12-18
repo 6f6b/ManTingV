@@ -31,7 +31,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    NSLog(@"PPPPPPP");
     [self.mineContentScrollView setValueWith:nil];
 }
 

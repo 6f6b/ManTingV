@@ -24,10 +24,10 @@
 - (IBAction)loginBtn:(id)sender {
     NSString *useraccount = self.phoneNumberTextFeild.text;
     NSString *password = self.passWordTextFeild.text;
-    if (@"" == useraccount) {
+    if (nil == useraccount) {
         return;
     }
-    if (@"" == password) {
+    if (nil == password) {
         return;
     }
     
@@ -35,6 +35,11 @@
     [user setObject:useraccount forKey:USER_ACCOUNT];
     [user setObject:password forKey:USER_PASSWORD];
     
+//    NSLog(@">>>>>>>>>>%@",NSStringFromClass([self.willPushVC class]));
+    if (nil == NSStringFromClass([self.willPushVC class])) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
     [self.navigationController pushViewController:self.willPushVC animated:YES];
     [self removeFromParentViewController];
 }

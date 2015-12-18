@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)modifyIcon:(id)sender {
+    [[UIApplication sharedApplication] openURL:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

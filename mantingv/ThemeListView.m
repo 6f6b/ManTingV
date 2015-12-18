@@ -2,18 +2,15 @@
 //  ThemeListView.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/11.
+//  Created by LiuFeng on 15/12/18.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
 #import "ThemeListView.h"
 #import "MTPayController.h"
 #import "ThemeListContentView.h"
-@interface ThemeListView ()
-
-@end
-
 @implementation ThemeListView
+
 #pragma  mark - 创建约束
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
@@ -186,7 +183,8 @@
     [themeListContentView.controller.navigationController pushViewController:payController animated:YES];
 }
 
-- (void)setValueWithModel:(MTModel *)model{
-    //为子控件赋值
+- (void)setValueWith:(id)data{
+    //
 }
+
 @end

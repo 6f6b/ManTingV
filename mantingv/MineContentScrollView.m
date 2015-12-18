@@ -64,7 +64,7 @@
         [mineSubView addGestureRecognizer:tap];
     }
     
-    MineSubView *mineSubView = self.mineSubViews[self.mineSubViews.count-1];
+    //MineSubView *mineSubView = self.mineSubViews[self.mineSubViews.count-1];
     
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     if (![user objectForKey:USER_ACCOUNT]) {
