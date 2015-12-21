@@ -153,7 +153,7 @@
         choiceNessTheme.backgroundColor = [UIColor greenColor];
         [choiceNessTheme setClickedAction:^{
             ProductController *productController = [[ProductController alloc] init];
-            [self.homeController.navigationController pushViewController:productController animated:YES];
+            [self.controller.navigationController pushViewController:productController animated:YES];
         }];
         [self addSubview:choiceNessTheme];
         _choiceNessTheme = choiceNessTheme;
@@ -168,7 +168,7 @@
         ChoiceNessRoom *choiceNessRoom = [ChoiceNessRoom choiceNessViewWith:@"精选房间" point:CGPointMake(0, CGRectGetMaxY(self.choiceNessTheme.frame))];
         [choiceNessRoom setClickedAction:^{
             ShortRentController *shortController = [[ShortRentController alloc] init];
-            [self.homeController.navigationController pushViewController:shortController animated:YES];
+            [self.controller.navigationController pushViewController:shortController animated:YES];
         }];
         choiceNessRoom.backgroundColor = [UIColor greenColor];
         [self addSubview:choiceNessRoom];

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertyRightCenterController">
@@ -25,16 +25,118 @@
                                 <rect key="frame" x="-89" y="29" width="8" height="27"/>
                             </variation>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1l-OW-nsQ">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="我要交换">
+                                <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="exchange:" destination="-1" eventType="touchUpInside" id="jV6-th-JGX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pub-Xy-8gT">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="我要转让">
+                                <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="transfer:" destination="-1" eventType="touchUpInside" id="SHq-bW-ZDk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48B-zN-DmG">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="帮助">
+                                <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="help:" destination="-1" eventType="touchUpInside" id="TOr-Ce-QCu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCw-WI-cwW">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="我要入住">
+                                <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="checkIn:" destination="-1" eventType="touchUpInside" id="hUQ-8e-JT6"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="48B-zN-DmG" firstAttribute="height" secondItem="uCw-WI-cwW" secondAttribute="height" id="4Tz-as-eWn"/>
+                        <constraint firstItem="f1l-OW-nsQ" firstAttribute="top" secondItem="UbN-xo-yCZ" secondAttribute="top" id="7iu-aY-YwE"/>
+                        <constraint firstAttribute="bottom" secondItem="48B-zN-DmG" secondAttribute="bottom" id="BOR-tE-ORo"/>
+                        <constraint firstItem="uCw-WI-cwW" firstAttribute="leading" secondItem="UbN-xo-yCZ" secondAttribute="leading" id="Bml-z5-JMB"/>
+                        <constraint firstItem="uCw-WI-cwW" firstAttribute="top" secondItem="pub-Xy-8gT" secondAttribute="bottom" constant="50" id="CLd-UU-FZL"/>
+                        <constraint firstItem="pub-Xy-8gT" firstAttribute="leading" secondItem="UbN-xo-yCZ" secondAttribute="leading" id="EV3-y4-V4L"/>
+                        <constraint firstAttribute="trailing" secondItem="f1l-OW-nsQ" secondAttribute="trailing" id="MZQ-pd-BlM"/>
+                        <constraint firstAttribute="trailing" secondItem="uCw-WI-cwW" secondAttribute="trailing" id="Oy9-HU-CUL"/>
+                        <constraint firstAttribute="trailing" secondItem="48B-zN-DmG" secondAttribute="trailing" id="YfO-nd-9iP"/>
+                        <constraint firstItem="48B-zN-DmG" firstAttribute="height" secondItem="f1l-OW-nsQ" secondAttribute="height" id="ZEr-A8-bUq"/>
+                        <constraint firstItem="48B-zN-DmG" firstAttribute="top" secondItem="uCw-WI-cwW" secondAttribute="bottom" constant="50" id="ZYD-D6-Lyu"/>
+                        <constraint firstItem="48B-zN-DmG" firstAttribute="leading" secondItem="UbN-xo-yCZ" secondAttribute="leading" id="Zn4-59-I5N"/>
+                        <constraint firstItem="f1l-OW-nsQ" firstAttribute="leading" secondItem="UbN-xo-yCZ" secondAttribute="leading" id="cDM-di-elu"/>
+                        <constraint firstItem="pub-Xy-8gT" firstAttribute="height" secondItem="f1l-OW-nsQ" secondAttribute="height" id="nMh-ZR-huX"/>
+                        <constraint firstItem="pub-Xy-8gT" firstAttribute="top" secondItem="f1l-OW-nsQ" secondAttribute="bottom" constant="50" id="uIK-Nh-Fly"/>
+                        <constraint firstAttribute="trailing" secondItem="pub-Xy-8gT" secondAttribute="trailing" id="zv5-YV-NPc"/>
+                    </constraints>
                     <variation key="default">
                         <mask key="subviews">
                             <exclude reference="Lue-8Q-7ik"/>
+                            <exclude reference="f1l-OW-nsQ"/>
+                            <exclude reference="pub-Xy-8gT"/>
+                            <exclude reference="48B-zN-DmG"/>
+                            <exclude reference="uCw-WI-cwW"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="7iu-aY-YwE"/>
+                            <exclude reference="MZQ-pd-BlM"/>
+                            <exclude reference="cDM-di-elu"/>
+                            <exclude reference="EV3-y4-V4L"/>
+                            <exclude reference="nMh-ZR-huX"/>
+                            <exclude reference="uIK-Nh-Fly"/>
+                            <exclude reference="zv5-YV-NPc"/>
+                            <exclude reference="Bml-z5-JMB"/>
+                            <exclude reference="CLd-UU-FZL"/>
+                            <exclude reference="Oy9-HU-CUL"/>
+                            <exclude reference="4Tz-as-eWn"/>
+                            <exclude reference="BOR-tE-ORo"/>
+                            <exclude reference="YfO-nd-9iP"/>
+                            <exclude reference="ZEr-A8-bUq"/>
+                            <exclude reference="ZYD-D6-Lyu"/>
+                            <exclude reference="Zn4-59-I5N"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular">
                         <mask key="subviews">
                             <include reference="Lue-8Q-7ik"/>
+                            <include reference="f1l-OW-nsQ"/>
+                            <include reference="pub-Xy-8gT"/>
+                            <include reference="48B-zN-DmG"/>
+                            <include reference="uCw-WI-cwW"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="7iu-aY-YwE"/>
+                            <include reference="MZQ-pd-BlM"/>
+                            <include reference="cDM-di-elu"/>
+                            <include reference="EV3-y4-V4L"/>
+                            <include reference="nMh-ZR-huX"/>
+                            <include reference="uIK-Nh-Fly"/>
+                            <include reference="zv5-YV-NPc"/>
+                            <include reference="Bml-z5-JMB"/>
+                            <include reference="CLd-UU-FZL"/>
+                            <include reference="Oy9-HU-CUL"/>
+                            <include reference="4Tz-as-eWn"/>
+                            <include reference="BOR-tE-ORo"/>
+                            <include reference="YfO-nd-9iP"/>
+                            <include reference="ZEr-A8-bUq"/>
+                            <include reference="ZYD-D6-Lyu"/>
+                            <include reference="Zn4-59-I5N"/>
                         </mask>
                     </variation>
                 </view>

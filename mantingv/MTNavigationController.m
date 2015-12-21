@@ -46,7 +46,7 @@
     if (self.viewControllers.count>0) {
         viewController.hidesBottomBarWhenPushed = YES;
         
-        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrows_slim_left_51.707317073171px_1182560_easyicon.net"] style:UIBarButtonItemStyleDone target:self action:@selector(popToRootViewControllerAnimated:)];
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrows_slim_left_51.707317073171px_1182560_easyicon.net"] style:UIBarButtonItemStyleDone target:self action:@selector(popViewControllerAnimated:)];
         viewController.navigationItem.leftBarButtonItem = leftItem;
     }
     [super pushViewController:viewController animated:animated];
@@ -54,11 +54,11 @@
 
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated{
+    NSLog(@"why");
     if (1 == self.viewControllers.count) {
         self.hidesBottomBarWhenPushed = NO;
     }
     UIViewController *viewController = [super popViewControllerAnimated:animated];
-    NSLog(@">>>>>>>>>%@",NSStringFromClass([viewController class]));
     return viewController;
 }
 

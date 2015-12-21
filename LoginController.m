@@ -35,13 +35,16 @@
     [user setObject:useraccount forKey:USER_ACCOUNT];
     [user setObject:password forKey:USER_PASSWORD];
     
-//    NSLog(@">>>>>>>>>>%@",NSStringFromClass([self.willPushVC class]));
     if (nil == NSStringFromClass([self.willPushVC class])) {
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
     [self.navigationController pushViewController:self.willPushVC animated:YES];
-    [self removeFromParentViewController];
+    
+    NSMutableArray *navArray= [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+    self.navigationController.viewControllers = navArray;
+    [navArray removeObject:self];
+    
 }
 
 //忘记密码按钮

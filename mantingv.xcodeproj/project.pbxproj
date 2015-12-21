@@ -124,6 +124,22 @@
 		03DB9D211C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DB9D201C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png */; };
 		03DB9D231C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DB9D221C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png */; };
 		03DB9D251C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DB9D241C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png */; };
+		03E066451C27929600E85778 /* ExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066441C27929600E85778 /* ExchangeController.m */; };
+		03E066501C279BE100E85778 /* ExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0664F1C279BE100E85778 /* ExchangeListController.m */; };
+		03E066551C279CE700E85778 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066541C279CE700E85778 /* ContentScrollView.m */; };
+		03E066581C279EAD00E85778 /* ExchangeListContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */; };
+		03E0665B1C27A3F800E85778 /* ExchangeListBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0665A1C27A3F800E85778 /* ExchangeListBaseCell.m */; };
+		03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0665F1C27C58100E85778 /* ExchangeDetailController.m */; };
+		03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066631C27C5AC00E85778 /* ExchangeDetailContentScrollView.m */; };
+		03E066671C27C7F400E85778 /* ExchangeDetailDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066661C27C7F400E85778 /* ExchangeDetailDescriptionView.m */; };
+		03E0666A1C27C80E00E85778 /* ExchangeDetailPayMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066691C27C80E00E85778 /* ExchangeDetailPayMessageView.m */; };
+		03E0666D1C27C85000E85778 /* ExchangeDetailBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0666C1C27C85000E85778 /* ExchangeDetailBaseView.m */; };
+		03E066701C27F02400E85778 /* TransferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0666F1C27F02400E85778 /* TransferController.m */; };
+		03E066741C27F0AF00E85778 /* TransferContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066731C27F0AF00E85778 /* TransferContentScrollView.m */; };
+		03E0667D1C27FA3900E85778 /* TransferListBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0667C1C27FA3900E85778 /* TransferListBaseCell.m */; };
+		03E066831C28026400E85778 /* TransferDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066821C28026400E85778 /* TransferDetailContentScrollView.m */; };
+		03E066861C28028700E85778 /* TransferDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066851C28028700E85778 /* TransferDetailController.m */; };
+		03E066891C28099F00E85778 /* TransferDetailTopContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066881C28099F00E85778 /* TransferDetailTopContentView.m */; };
 		03E0A25B1C18274000FCAAAC /* mine.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2561C18274000FCAAAC /* mine.png */; };
 		03E0A25C1C18274000FCAAAC /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2571C18274000FCAAAC /* home.png */; };
 		03E0A25D1C18274000FCAAAC /* property.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2581C18274000FCAAAC /* property.png */; };
@@ -346,6 +362,38 @@
 		03DB9D201C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_48px_1186722_easyicon.net.png; sourceTree = "<group>"; };
 		03DB9D221C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_64px_1186722_easyicon.net.png; sourceTree = "<group>"; };
 		03DB9D241C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_72px_1186722_easyicon.net.png; sourceTree = "<group>"; };
+		03E066431C27929600E85778 /* ExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeController.h; sourceTree = "<group>"; };
+		03E066441C27929600E85778 /* ExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeController.m; sourceTree = "<group>"; };
+		03E0664E1C279BE100E85778 /* ExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListController.h; sourceTree = "<group>"; };
+		03E0664F1C279BE100E85778 /* ExchangeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListController.m; sourceTree = "<group>"; };
+		03E066531C279CE700E85778 /* ContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentScrollView.h; sourceTree = "<group>"; };
+		03E066541C279CE700E85778 /* ContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentScrollView.m; sourceTree = "<group>"; };
+		03E066561C279EAD00E85778 /* ExchangeListContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListContentScrollView.h; sourceTree = "<group>"; };
+		03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListContentScrollView.m; sourceTree = "<group>"; };
+		03E066591C27A3F800E85778 /* ExchangeListBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListBaseCell.h; sourceTree = "<group>"; };
+		03E0665A1C27A3F800E85778 /* ExchangeListBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListBaseCell.m; sourceTree = "<group>"; };
+		03E0665E1C27C58100E85778 /* ExchangeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailController.h; sourceTree = "<group>"; };
+		03E0665F1C27C58100E85778 /* ExchangeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailController.m; sourceTree = "<group>"; };
+		03E066621C27C5AC00E85778 /* ExchangeDetailContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailContentScrollView.h; sourceTree = "<group>"; };
+		03E066631C27C5AC00E85778 /* ExchangeDetailContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailContentScrollView.m; sourceTree = "<group>"; };
+		03E066651C27C7F400E85778 /* ExchangeDetailDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailDescriptionView.h; sourceTree = "<group>"; };
+		03E066661C27C7F400E85778 /* ExchangeDetailDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailDescriptionView.m; sourceTree = "<group>"; };
+		03E066681C27C80E00E85778 /* ExchangeDetailPayMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailPayMessageView.h; sourceTree = "<group>"; };
+		03E066691C27C80E00E85778 /* ExchangeDetailPayMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailPayMessageView.m; sourceTree = "<group>"; };
+		03E0666B1C27C85000E85778 /* ExchangeDetailBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailBaseView.h; sourceTree = "<group>"; };
+		03E0666C1C27C85000E85778 /* ExchangeDetailBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailBaseView.m; sourceTree = "<group>"; };
+		03E0666E1C27F02400E85778 /* TransferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferController.h; sourceTree = "<group>"; };
+		03E0666F1C27F02400E85778 /* TransferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferController.m; sourceTree = "<group>"; };
+		03E066721C27F0AF00E85778 /* TransferContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferContentScrollView.h; sourceTree = "<group>"; };
+		03E066731C27F0AF00E85778 /* TransferContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferContentScrollView.m; sourceTree = "<group>"; };
+		03E0667B1C27FA3900E85778 /* TransferListBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferListBaseCell.h; sourceTree = "<group>"; };
+		03E0667C1C27FA3900E85778 /* TransferListBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferListBaseCell.m; sourceTree = "<group>"; };
+		03E066811C28026400E85778 /* TransferDetailContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDetailContentScrollView.h; sourceTree = "<group>"; };
+		03E066821C28026400E85778 /* TransferDetailContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDetailContentScrollView.m; sourceTree = "<group>"; };
+		03E066841C28028700E85778 /* TransferDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDetailController.h; sourceTree = "<group>"; };
+		03E066851C28028700E85778 /* TransferDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDetailController.m; sourceTree = "<group>"; };
+		03E066871C28099F00E85778 /* TransferDetailTopContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDetailTopContentView.h; sourceTree = "<group>"; };
+		03E066881C28099F00E85778 /* TransferDetailTopContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDetailTopContentView.m; sourceTree = "<group>"; };
 		03E0A2561C18274000FCAAAC /* mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine.png; sourceTree = "<group>"; };
 		03E0A2571C18274000FCAAAC /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		03E0A2581C18274000FCAAAC /* property.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = property.png; sourceTree = "<group>"; };
@@ -457,8 +505,8 @@
 				03775B711C1136E600319C32 /* 短租（ShortRent） */,
 				03775B721C1136E800319C32 /* 产权中心（PropertyRightCenter） */,
 				03775B731C1136EB00319C32 /* 我的（Mine） */,
-				03775B4E1C11368F00319C32 /* Info.plist */,
 				03775B4B1C11368F00319C32 /* LaunchScreen.storyboard */,
+				03775B4E1C11368F00319C32 /* Info.plist */,
 				03775B461C11368F00319C32 /* Main.storyboard */,
 				03775B491C11368F00319C32 /* Assets.xcassets */,
 				03775B3D1C11368F00319C32 /* Supporting Files */,
@@ -545,6 +593,7 @@
 		03775B751C1138F200319C32 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				03E066521C279CB400E85778 /* ContentScrollView */,
 				03775B791C1139EA00319C32 /* MTController.h */,
 				03775B7A1C1139EA00319C32 /* MTController.m */,
 				03775BA41C113E8600319C32 /* MTModel.h */,
@@ -658,6 +707,10 @@
 				03775B9A1C113C1B00319C32 /* PropertyRightCenterController.h */,
 				03775B9B1C113C1B00319C32 /* PropertyRightCenterController.m */,
 				03775B9C1C113C1B00319C32 /* PropertyRightCenterController.xib */,
+				03E066411C27923500E85778 /* 我要交换 */,
+				03E066461C27929A00E85778 /* 我要转让 */,
+				03E066481C2792B400E85778 /* 我要入住 */,
+				03E0664A1C2792C500E85778 /* 帮助 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1325,6 +1378,185 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		03E066411C27923500E85778 /* 我要交换 */ = {
+			isa = PBXGroup;
+			children = (
+				03E066421C27924F00E85778 /* Controllers */,
+			);
+			name = "我要交换";
+			sourceTree = "<group>";
+		};
+		03E066421C27924F00E85778 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E066431C27929600E85778 /* ExchangeController.h */,
+				03E066441C27929600E85778 /* ExchangeController.m */,
+				03E0664C1C279BAD00E85778 /* 我要交换列表 */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E066461C27929A00E85778 /* 我要转让 */ = {
+			isa = PBXGroup;
+			children = (
+				03E066711C27F06300E85778 /* Views */,
+				03E066471C27929C00E85778 /* Controllers */,
+			);
+			name = "我要转让";
+			sourceTree = "<group>";
+		};
+		03E066471C27929C00E85778 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E0666E1C27F02400E85778 /* TransferController.h */,
+				03E0666F1C27F02400E85778 /* TransferController.m */,
+				03E0667E1C2801DC00E85778 /* 转让详情 */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E066481C2792B400E85778 /* 我要入住 */ = {
+			isa = PBXGroup;
+			children = (
+				03E066491C2792BB00E85778 /* viewControllers */,
+			);
+			name = "我要入住";
+			sourceTree = "<group>";
+		};
+		03E066491C2792BB00E85778 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		03E0664A1C2792C500E85778 /* 帮助 */ = {
+			isa = PBXGroup;
+			children = (
+				03E0664B1C2792CA00E85778 /* viewControllers */,
+			);
+			name = "帮助";
+			sourceTree = "<group>";
+		};
+		03E0664B1C2792CA00E85778 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		03E0664C1C279BAD00E85778 /* 我要交换列表 */ = {
+			isa = PBXGroup;
+			children = (
+				03E066511C279BF400E85778 /* Views */,
+				03E0664D1C279BCA00E85778 /* Controllers */,
+			);
+			name = "我要交换列表";
+			sourceTree = "<group>";
+		};
+		03E0664D1C279BCA00E85778 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E0664E1C279BE100E85778 /* ExchangeListController.h */,
+				03E0664F1C279BE100E85778 /* ExchangeListController.m */,
+				03E0665C1C27C54400E85778 /* 交换详情 */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E066511C279BF400E85778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E066561C279EAD00E85778 /* ExchangeListContentScrollView.h */,
+				03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */,
+				03E066591C27A3F800E85778 /* ExchangeListBaseCell.h */,
+				03E0665A1C27A3F800E85778 /* ExchangeListBaseCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03E066521C279CB400E85778 /* ContentScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				03E066531C279CE700E85778 /* ContentScrollView.h */,
+				03E066541C279CE700E85778 /* ContentScrollView.m */,
+			);
+			name = ContentScrollView;
+			sourceTree = "<group>";
+		};
+		03E0665C1C27C54400E85778 /* 交换详情 */ = {
+			isa = PBXGroup;
+			children = (
+				03E066611C27C58300E85778 /* Views */,
+				03E0665D1C27C55900E85778 /* Controllers */,
+			);
+			name = "交换详情";
+			sourceTree = "<group>";
+		};
+		03E0665D1C27C55900E85778 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E0665E1C27C58100E85778 /* ExchangeDetailController.h */,
+				03E0665F1C27C58100E85778 /* ExchangeDetailController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E066611C27C58300E85778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E066621C27C5AC00E85778 /* ExchangeDetailContentScrollView.h */,
+				03E066631C27C5AC00E85778 /* ExchangeDetailContentScrollView.m */,
+				03E066651C27C7F400E85778 /* ExchangeDetailDescriptionView.h */,
+				03E066661C27C7F400E85778 /* ExchangeDetailDescriptionView.m */,
+				03E066681C27C80E00E85778 /* ExchangeDetailPayMessageView.h */,
+				03E066691C27C80E00E85778 /* ExchangeDetailPayMessageView.m */,
+				03E0666B1C27C85000E85778 /* ExchangeDetailBaseView.h */,
+				03E0666C1C27C85000E85778 /* ExchangeDetailBaseView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03E066711C27F06300E85778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E066721C27F0AF00E85778 /* TransferContentScrollView.h */,
+				03E066731C27F0AF00E85778 /* TransferContentScrollView.m */,
+				03E0667B1C27FA3900E85778 /* TransferListBaseCell.h */,
+				03E0667C1C27FA3900E85778 /* TransferListBaseCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03E0667E1C2801DC00E85778 /* 转让详情 */ = {
+			isa = PBXGroup;
+			children = (
+				03E066801C28021900E85778 /* Views */,
+				03E0667F1C2801E700E85778 /* Controllers */,
+			);
+			name = "转让详情";
+			sourceTree = "<group>";
+		};
+		03E0667F1C2801E700E85778 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E066841C28028700E85778 /* TransferDetailController.h */,
+				03E066851C28028700E85778 /* TransferDetailController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E066801C28021900E85778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E066811C28026400E85778 /* TransferDetailContentScrollView.h */,
+				03E066821C28026400E85778 /* TransferDetailContentScrollView.m */,
+				03E066871C28099F00E85778 /* TransferDetailTopContentView.h */,
+				03E066881C28099F00E85778 /* TransferDetailTopContentView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		9D39272C0FD25EC0F26D3446 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1567,10 +1799,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DB9CE61C1FBE0F00A40361 /* HolidayHouseSearchController.m in Sources */,
+				03E066891C28099F00E85778 /* TransferDetailTopContentView.m in Sources */,
 				03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */,
 				03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */,
+				03E066551C279CE700E85778 /* ContentScrollView.m in Sources */,
 				03DA24771C23D4570098FE4B /* ChoiceRoom.m in Sources */,
 				03775BA21C113C3000319C32 /* MineController.m in Sources */,
+				03E066701C27F02400E85778 /* TransferController.m in Sources */,
 				03775B7F1C113AAD00319C32 /* HomeController.m in Sources */,
 				03DB9D1C1C200D1000A40361 /* PayTypeView.m in Sources */,
 				03D6439D1C195B010082F0D4 /* LoginController.m in Sources */,
@@ -1584,6 +1819,8 @@
 				03DB9CDF1C1FAFF100A40361 /* HolidayHouseSearchCell.m in Sources */,
 				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
+				03E066451C27929600E85778 /* ExchangeController.m in Sources */,
+				03E066861C28028700E85778 /* TransferDetailController.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
 				03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */,
 				03DA24831C23D6860098FE4B /* SelectView.m in Sources */,
@@ -1591,11 +1828,13 @@
 				03DB9D131C200C7900A40361 /* FreightView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
 				03775BC01C11874700319C32 /* MTTableController.m in Sources */,
+				03E0665B1C27A3F800E85778 /* ExchangeListBaseCell.m in Sources */,
 				03D7A7E81C21439A003A3A68 /* MineTopContainView.m in Sources */,
 				03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */,
 				03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */,
 				03775B421C11368F00319C32 /* AppDelegate.m in Sources */,
 				03D2518B1C22509900BA9ED7 /* CheckInAndCheckOutView.m in Sources */,
+				03E066501C279BE100E85778 /* ExchangeListController.m in Sources */,
 				03DA246E1C23D0890098FE4B /* HomeContentScrollView.m in Sources */,
 				03DA24871C23D7450098FE4B /* ResortFacilitiesView.m in Sources */,
 				03D7A7E51C214234003A3A68 /* MineContentScrollView.m in Sources */,
@@ -1611,22 +1850,31 @@
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
+				03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */,
 				03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */,
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
 				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
+				03E066831C28026400E85778 /* TransferDetailContentScrollView.m in Sources */,
+				03E0666A1C27C80E00E85778 /* ExchangeDetailPayMessageView.m in Sources */,
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
 				03DA24711C23D3550098FE4B /* ThemeScrollView.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
+				03E066741C27F0AF00E85778 /* TransferContentScrollView.m in Sources */,
 				03DA247D1C23D5470098FE4B /* ThemeListContentView.m in Sources */,
 				03D251BD1C22A46100BA9ED7 /* MyShortRentListController.m in Sources */,
+				03E0667D1C27FA3900E85778 /* TransferListBaseCell.m in Sources */,
+				03E066581C279EAD00E85778 /* ExchangeListContentScrollView.m in Sources */,
 				03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */,
 				03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */,
 				03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */,
 				03D251971C228CF600BA9ED7 /* RelatedProductsView.m in Sources */,
 				03D830AE1C1EBDE1006DBFD9 /* ChoiceNessTheme.m in Sources */,
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
+				03E0666D1C27C85000E85778 /* ExchangeDetailBaseView.m in Sources */,
 				03DB9D161C200CAF00A40361 /* LeaveWordView.m in Sources */,
 				03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */,
+				03E066671C27C7F400E85778 /* ExchangeDetailDescriptionView.m in Sources */,
+				03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */,
 				03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */,
 				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,

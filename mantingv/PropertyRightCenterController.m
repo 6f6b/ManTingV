@@ -7,7 +7,8 @@
 //
 
 #import "PropertyRightCenterController.h"
-
+#import "ExchangeController.h"
+#import "TransferController.h"
 @interface PropertyRightCenterController ()
 
 @end
@@ -17,6 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+////////////////////////////////////////交换////////////////////////////////////////
+- (IBAction)exchange:(id)sender {
+    ExchangeController *exchangeController = [[ExchangeController alloc] init];
+    [self.navigationController pushViewController:exchangeController animated:YES];
+    
+}
+
+////////////////////////////////////////转让////////////////////////////////////////
+- (IBAction)transfer:(id)sender {
+    TransferController *transferController = [[TransferController alloc] init];
+    [self.navigationController pushViewController:transferController animated:YES];
+}
+
+////////////////////////////////////////入住////////////////////////////////////////
+
+- (IBAction)checkIn:(id)sender {
+}
+
+////////////////////////////////////////帮助////////////////////////////////////////
+- (IBAction)help:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {
