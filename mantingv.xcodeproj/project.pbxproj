@@ -124,6 +124,22 @@
 		03DB9D211C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DB9D201C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png */; };
 		03DB9D231C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DB9D221C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png */; };
 		03DB9D251C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DB9D241C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png */; };
+		03DC4FF91C28E9E60040C939 /* INeedCheckInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC4FF81C28E9E60040C939 /* INeedCheckInController.m */; };
+		03DC4FFE1C28EA340040C939 /* INeedCheckInCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC4FFC1C28EA340040C939 /* INeedCheckInCell.m */; };
+		03DC4FFF1C28EA340040C939 /* INeedCheckInCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DC4FFD1C28EA340040C939 /* INeedCheckInCell.xib */; };
+		03DC50011C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DC50001C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png */; };
+		03DC50781C28FC500040C939 /* INeedCheckInDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50771C28FC500040C939 /* INeedCheckInDetailController.m */; };
+		03DC507B1C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC507A1C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.m */; };
+		03DC507E1C28FD740040C939 /* CheckInDetailTopContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC507D1C28FD740040C939 /* CheckInDetailTopContentView.m */; };
+		03DC50841C291B410040C939 /* CheckInDetailTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50831C291B410040C939 /* CheckInDetailTimeView.m */; };
+		03DC50871C291B750040C939 /* CheckInDetailMessageContainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50861C291B750040C939 /* CheckInDetailMessageContainView.m */; };
+		03DC508A1C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50891C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m */; };
+		03DC508D1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC508C1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m */; };
+		03DC50BB1C291CC40040C939 /* add_24px_1138892_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DC508F1C291CC40040C939 /* add_24px_1138892_easyicon.net.png */; };
+		03DC50C11C291CC40040C939 /* LFStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50991C291CC40040C939 /* LFStepper.m */; };
+		03DC50DA1C293AC60040C939 /* CommitSuccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50D81C293AC60040C939 /* CommitSuccessController.m */; };
+		03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DC50D91C293AC60040C939 /* CommitSuccessController.xib */; };
+		03DC51241C294D740040C939 /* LFSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC51231C294D740040C939 /* LFSelectionView.m */; };
 		03E066451C27929600E85778 /* ExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066441C27929600E85778 /* ExchangeController.m */; };
 		03E066501C279BE100E85778 /* ExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0664F1C279BE100E85778 /* ExchangeListController.m */; };
 		03E066551C279CE700E85778 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066541C279CE700E85778 /* ContentScrollView.m */; };
@@ -362,6 +378,34 @@
 		03DB9D201C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_48px_1186722_easyicon.net.png; sourceTree = "<group>"; };
 		03DB9D221C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_64px_1186722_easyicon.net.png; sourceTree = "<group>"; };
 		03DB9D241C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_72px_1186722_easyicon.net.png; sourceTree = "<group>"; };
+		03DC4FF71C28E9E60040C939 /* INeedCheckInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INeedCheckInController.h; sourceTree = "<group>"; };
+		03DC4FF81C28E9E60040C939 /* INeedCheckInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INeedCheckInController.m; sourceTree = "<group>"; };
+		03DC4FFB1C28EA340040C939 /* INeedCheckInCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INeedCheckInCell.h; sourceTree = "<group>"; };
+		03DC4FFC1C28EA340040C939 /* INeedCheckInCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INeedCheckInCell.m; sourceTree = "<group>"; };
+		03DC4FFD1C28EA340040C939 /* INeedCheckInCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INeedCheckInCell.xib; sourceTree = "<group>"; };
+		03DC50001C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_18.63670411985px_1190576_easyicon.net.png; sourceTree = "<group>"; };
+		03DC50761C28FC500040C939 /* INeedCheckInDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INeedCheckInDetailController.h; sourceTree = "<group>"; };
+		03DC50771C28FC500040C939 /* INeedCheckInDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INeedCheckInDetailController.m; sourceTree = "<group>"; };
+		03DC50791C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INeedCheckInDetailContentScrollView.h; sourceTree = "<group>"; };
+		03DC507A1C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INeedCheckInDetailContentScrollView.m; sourceTree = "<group>"; };
+		03DC507C1C28FD740040C939 /* CheckInDetailTopContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInDetailTopContentView.h; sourceTree = "<group>"; };
+		03DC507D1C28FD740040C939 /* CheckInDetailTopContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInDetailTopContentView.m; sourceTree = "<group>"; };
+		03DC50821C291B410040C939 /* CheckInDetailTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInDetailTimeView.h; sourceTree = "<group>"; };
+		03DC50831C291B410040C939 /* CheckInDetailTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInDetailTimeView.m; sourceTree = "<group>"; };
+		03DC50851C291B750040C939 /* CheckInDetailMessageContainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInDetailMessageContainView.h; sourceTree = "<group>"; };
+		03DC50861C291B750040C939 /* CheckInDetailMessageContainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInDetailMessageContainView.m; sourceTree = "<group>"; };
+		03DC50881C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInDetailBaseViewWithRightTextFeild.h; sourceTree = "<group>"; };
+		03DC50891C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInDetailBaseViewWithRightTextFeild.m; sourceTree = "<group>"; };
+		03DC508B1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInDetailBaseViewWithRightStepper.h; sourceTree = "<group>"; };
+		03DC508C1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInDetailBaseViewWithRightStepper.m; sourceTree = "<group>"; };
+		03DC508F1C291CC40040C939 /* add_24px_1138892_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_24px_1138892_easyicon.net.png; sourceTree = "<group>"; };
+		03DC50981C291CC40040C939 /* LFStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFStepper.h; sourceTree = "<group>"; };
+		03DC50991C291CC40040C939 /* LFStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFStepper.m; sourceTree = "<group>"; };
+		03DC50D71C293AC60040C939 /* CommitSuccessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitSuccessController.h; sourceTree = "<group>"; };
+		03DC50D81C293AC60040C939 /* CommitSuccessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitSuccessController.m; sourceTree = "<group>"; };
+		03DC50D91C293AC60040C939 /* CommitSuccessController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitSuccessController.xib; sourceTree = "<group>"; };
+		03DC51221C294D740040C939 /* LFSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSelectionView.h; sourceTree = "<group>"; };
+		03DC51231C294D740040C939 /* LFSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSelectionView.m; sourceTree = "<group>"; };
 		03E066431C27929600E85778 /* ExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeController.h; sourceTree = "<group>"; };
 		03E066441C27929600E85778 /* ExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeController.m; sourceTree = "<group>"; };
 		03E0664E1C279BE100E85778 /* ExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListController.h; sourceTree = "<group>"; };
@@ -435,6 +479,7 @@
 		0376AFD31C1196C30033D2A2 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				03DC50001C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png */,
 				03DA248A1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png */,
 				03DA24881C23DF3C0098FE4B /* arrows_slim_left_103.41463414634px_1182560_easyicon.net.png */,
 				03D7A7EE1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg */,
@@ -707,6 +752,9 @@
 				03775B9A1C113C1B00319C32 /* PropertyRightCenterController.h */,
 				03775B9B1C113C1B00319C32 /* PropertyRightCenterController.m */,
 				03775B9C1C113C1B00319C32 /* PropertyRightCenterController.xib */,
+				03DC50D71C293AC60040C939 /* CommitSuccessController.h */,
+				03DC50D81C293AC60040C939 /* CommitSuccessController.m */,
+				03DC50D91C293AC60040C939 /* CommitSuccessController.xib */,
 				03E066411C27923500E85778 /* 我要交换 */,
 				03E066461C27929A00E85778 /* 我要转让 */,
 				03E066481C2792B400E85778 /* 我要入住 */,
@@ -1282,6 +1330,8 @@
 		03DA24841C23D6E30098FE4B /* SelectView */ = {
 			isa = PBXGroup;
 			children = (
+				03DC51221C294D740040C939 /* LFSelectionView.h */,
+				03DC51231C294D740040C939 /* LFSelectionView.m */,
 				03DA24811C23D6860098FE4B /* SelectView.h */,
 				03DA24821C23D6860098FE4B /* SelectView.m */,
 				03DA24851C23D7450098FE4B /* ResortFacilitiesView.h */,
@@ -1378,6 +1428,65 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		03DC4FFA1C28E9F50040C939 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03DC4FFB1C28EA340040C939 /* INeedCheckInCell.h */,
+				03DC4FFC1C28EA340040C939 /* INeedCheckInCell.m */,
+				03DC4FFD1C28EA340040C939 /* INeedCheckInCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03DC50731C28FBF50040C939 /* 入住详情 */ = {
+			isa = PBXGroup;
+			children = (
+				03DC50751C28FC1F0040C939 /* Views */,
+				03DC50741C28FC0E0040C939 /* Controllers */,
+			);
+			name = "入住详情";
+			sourceTree = "<group>";
+		};
+		03DC50741C28FC0E0040C939 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03DC50761C28FC500040C939 /* INeedCheckInDetailController.h */,
+				03DC50771C28FC500040C939 /* INeedCheckInDetailController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03DC50751C28FC1F0040C939 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03DC508E1C291CC40040C939 /* LFStepper */,
+				03DC50791C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.h */,
+				03DC507A1C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.m */,
+				03DC507C1C28FD740040C939 /* CheckInDetailTopContentView.h */,
+				03DC507D1C28FD740040C939 /* CheckInDetailTopContentView.m */,
+				03DC50821C291B410040C939 /* CheckInDetailTimeView.h */,
+				03DC50831C291B410040C939 /* CheckInDetailTimeView.m */,
+				03DC50851C291B750040C939 /* CheckInDetailMessageContainView.h */,
+				03DC50861C291B750040C939 /* CheckInDetailMessageContainView.m */,
+				03DC50881C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.h */,
+				03DC50891C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m */,
+				03DC508B1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.h */,
+				03DC508C1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03DC508E1C291CC40040C939 /* LFStepper */ = {
+			isa = PBXGroup;
+			children = (
+				03DC50981C291CC40040C939 /* LFStepper.h */,
+				03DC50991C291CC40040C939 /* LFStepper.m */,
+				03DC508F1C291CC40040C939 /* add_24px_1138892_easyicon.net.png */,
+			);
+			name = LFStepper;
+			path = TEST;
+			sourceTree = "<group>";
+		};
 		03E066411C27923500E85778 /* 我要交换 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1418,6 +1527,7 @@
 		03E066481C2792B400E85778 /* 我要入住 */ = {
 			isa = PBXGroup;
 			children = (
+				03DC4FFA1C28E9F50040C939 /* Views */,
 				03E066491C2792BB00E85778 /* viewControllers */,
 			);
 			name = "我要入住";
@@ -1426,6 +1536,9 @@
 		03E066491C2792BB00E85778 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				03DC4FF71C28E9E60040C939 /* INeedCheckInController.h */,
+				03DC4FF81C28E9E60040C939 /* INeedCheckInController.m */,
+				03DC50731C28FBF50040C939 /* 入住详情 */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -1706,11 +1819,14 @@
 				03D643A21C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png in Resources */,
 				03DB9D251C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png in Resources */,
 				03D251E01C22AE9300BA9ED7 /* ModifyNickNameController.xib in Resources */,
+				03DC4FFF1C28EA340040C939 /* INeedCheckInCell.xib in Resources */,
 				03D251CF1C22ACA600BA9ED7 /* ModifyIconController.xib in Resources */,
 				0376AFF01C1196C30033D2A2 /* Welcome_3.0_4.jpg in Resources */,
+				03DC50011C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png in Resources */,
 				03D251C51C22A4AA00BA9ED7 /* AccountConfigController.xib in Resources */,
 				03D650B21C1EB021005856F2 /* ChooserCell.xib in Resources */,
 				0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */,
+				03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */,
 				03E0A25F1C18274000FCAAAC /* product.png in Resources */,
 				0376AFF21C1196C30033D2A2 /* Welcome_3.0_5.jpg in Resources */,
 				0376AFEE1C1196C30033D2A2 /* Welcome_3.0_3.jpg in Resources */,
@@ -1719,6 +1835,7 @@
 				0376AFEB1C1196C30033D2A2 /* Welcome_3.0_1@2x.jpg in Resources */,
 				03DA248B1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png in Resources */,
 				03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */,
+				03DC50BB1C291CC40040C939 /* add_24px_1138892_easyicon.net.png in Resources */,
 				03D7A7EF1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg in Resources */,
 				0376AFE41C1196C30033D2A2 /* Welcome1.jpg in Resources */,
 				03E0A25B1C18274000FCAAAC /* mine.png in Resources */,
@@ -1800,6 +1917,7 @@
 			files = (
 				03DB9CE61C1FBE0F00A40361 /* HolidayHouseSearchController.m in Sources */,
 				03E066891C28099F00E85778 /* TransferDetailTopContentView.m in Sources */,
+				03DC4FFE1C28EA340040C939 /* INeedCheckInCell.m in Sources */,
 				03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */,
 				03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */,
 				03E066551C279CE700E85778 /* ContentScrollView.m in Sources */,
@@ -1812,11 +1930,13 @@
 				03DB9D1F1C2053EC00A40361 /* ThemeContentView.m in Sources */,
 				03DB9D0A1C200B3E00A40361 /* RecipientInformationView.m in Sources */,
 				03D7A7EB1C214776003A3A68 /* MineSubView.m in Sources */,
+				03DC50871C291B750040C939 /* CheckInDetailMessageContainView.m in Sources */,
 				03D251DF1C22AE9300BA9ED7 /* ModifyNickNameController.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
 				03D650B11C1EB021005856F2 /* ChooserCell.m in Sources */,
 				03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */,
 				03DB9CDF1C1FAFF100A40361 /* HolidayHouseSearchCell.m in Sources */,
+				03DC508A1C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m in Sources */,
 				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
 				03E066451C27929600E85778 /* ExchangeController.m in Sources */,
@@ -1838,15 +1958,19 @@
 				03DA246E1C23D0890098FE4B /* HomeContentScrollView.m in Sources */,
 				03DA24871C23D7450098FE4B /* ResortFacilitiesView.m in Sources */,
 				03D7A7E51C214234003A3A68 /* MineContentScrollView.m in Sources */,
+				03DC507E1C28FD740040C939 /* CheckInDetailTopContentView.m in Sources */,
+				03DC50DA1C293AC60040C939 /* CommitSuccessController.m in Sources */,
 				03DA24681C23AB2D0098FE4B /* MTSwitchView.m in Sources */,
 				03D251DA1C22AE4D00BA9ED7 /* ModifyPasswordController.m in Sources */,
 				03DB9D0D1C200B8E00A40361 /* AddAddressView.m in Sources */,
 				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
+				03DC50841C291B410040C939 /* CheckInDetailTimeView.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
 				03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */,
 				03DB9D061C20052000A40361 /* MTPayController.m in Sources */,
 				03D251851C224EB400BA9ED7 /* ShortRentDetailController.m in Sources */,
+				03DC4FF91C28E9E60040C939 /* INeedCheckInController.m in Sources */,
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
@@ -1864,6 +1988,8 @@
 				03D251BD1C22A46100BA9ED7 /* MyShortRentListController.m in Sources */,
 				03E0667D1C27FA3900E85778 /* TransferListBaseCell.m in Sources */,
 				03E066581C279EAD00E85778 /* ExchangeListContentScrollView.m in Sources */,
+				03DC507B1C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.m in Sources */,
+				03DC50781C28FC500040C939 /* INeedCheckInDetailController.m in Sources */,
 				03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */,
 				03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */,
 				03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */,
@@ -1877,9 +2003,12 @@
 				03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */,
 				03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */,
 				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
+				03DC51241C294D740040C939 /* LFSelectionView.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,
+				03DC50C11C291CC40040C939 /* LFStepper.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
+				03DC508D1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m in Sources */,
 				03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */,
 				03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,

@@ -9,6 +9,7 @@
 #import "PropertyRightCenterController.h"
 #import "ExchangeController.h"
 #import "TransferController.h"
+#import "INeedCheckInController.h"
 @interface PropertyRightCenterController ()
 
 @end
@@ -36,6 +37,8 @@
 ////////////////////////////////////////入住////////////////////////////////////////
 
 - (IBAction)checkIn:(id)sender {
+    INeedCheckInController *iNeedCheckInController = [[INeedCheckInController alloc] init];
+    [self.navigationController pushViewController:iNeedCheckInController animated:YES];
 }
 
 ////////////////////////////////////////帮助////////////////////////////////////////

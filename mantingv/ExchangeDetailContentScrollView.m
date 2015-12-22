@@ -10,6 +10,7 @@
 #import "ExchangeDetailDescriptionView.h"
 #import "ExchangeDetailPayMessageView.h"
 #import "ExchangeDetailBaseView.h"
+#import "CommitSuccessController.h"
 
 @interface ExchangeDetailContentScrollView ()
 @property (nonatomic,weak) LFLoopScrollView *pictureScrollView;
@@ -37,7 +38,7 @@
     commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.exchangeDetailPayMessageView.frame)+10, ScreenWidth-20, 50);
     [self addSubview:commitButton];
     _commitButton = commitButton;
-    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.exchangeDetailPayMessageView.frame)+50);
+    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.commitButton.frame));
 }
 
 - (LFLoopScrollView *)pictureScrollView{
@@ -93,11 +94,10 @@
     
     [self.exchangeDetailDescriptionView setValueWith:nil];
     [self.exchangeDetailPayMessageView setValueWith:nil];
-    NSLog(@"》》》》》》%@",NSStringFromCGRect(self.exchangeDetailPayMessageView.frame));
-    
 }
 
 - (void)dealBtn{
-    NSLog(@"提交信息");
+    CommitSuccessController *commitSuccessController = [[CommitSuccessController alloc] init];
+    [self.controller.navigationController pushViewController:commitSuccessController animated:YES];
 }
 @end

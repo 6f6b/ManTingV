@@ -94,6 +94,12 @@
                             <exclude reference="uCw-WI-cwW"/>
                         </mask>
                         <mask key="constraints">
+                            <exclude reference="4Tz-as-eWn"/>
+                            <exclude reference="BOR-tE-ORo"/>
+                            <exclude reference="YfO-nd-9iP"/>
+                            <exclude reference="ZEr-A8-bUq"/>
+                            <exclude reference="ZYD-D6-Lyu"/>
+                            <exclude reference="Zn4-59-I5N"/>
                             <exclude reference="7iu-aY-YwE"/>
                             <exclude reference="MZQ-pd-BlM"/>
                             <exclude reference="cDM-di-elu"/>
@@ -104,12 +110,6 @@
                             <exclude reference="Bml-z5-JMB"/>
                             <exclude reference="CLd-UU-FZL"/>
                             <exclude reference="Oy9-HU-CUL"/>
-                            <exclude reference="4Tz-as-eWn"/>
-                            <exclude reference="BOR-tE-ORo"/>
-                            <exclude reference="YfO-nd-9iP"/>
-                            <exclude reference="ZEr-A8-bUq"/>
-                            <exclude reference="ZYD-D6-Lyu"/>
-                            <exclude reference="Zn4-59-I5N"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular">
@@ -121,6 +121,12 @@
                             <include reference="uCw-WI-cwW"/>
                         </mask>
                         <mask key="constraints">
+                            <include reference="4Tz-as-eWn"/>
+                            <include reference="BOR-tE-ORo"/>
+                            <include reference="YfO-nd-9iP"/>
+                            <include reference="ZEr-A8-bUq"/>
+                            <include reference="ZYD-D6-Lyu"/>
+                            <include reference="Zn4-59-I5N"/>
                             <include reference="7iu-aY-YwE"/>
                             <include reference="MZQ-pd-BlM"/>
                             <include reference="cDM-di-elu"/>
@@ -131,12 +137,6 @@
                             <include reference="Bml-z5-JMB"/>
                             <include reference="CLd-UU-FZL"/>
                             <include reference="Oy9-HU-CUL"/>
-                            <include reference="4Tz-as-eWn"/>
-                            <include reference="BOR-tE-ORo"/>
-                            <include reference="YfO-nd-9iP"/>
-                            <include reference="ZEr-A8-bUq"/>
-                            <include reference="ZYD-D6-Lyu"/>
-                            <include reference="Zn4-59-I5N"/>
                         </mask>
                     </variation>
                 </view>

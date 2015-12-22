@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommitSuccessController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaR-rG-Afv">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4CY-1j-jj7">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="XJf-eo-9wb"/>
+                                <constraint firstAttribute="width" constant="40" id="ZTb-7S-NF0"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="XJf-eo-9wb"/>
+                                    <exclude reference="ZTb-7S-NF0"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular">
+                                <mask key="constraints">
+                                    <include reference="XJf-eo-9wb"/>
+                                    <include reference="ZTb-7S-NF0"/>
+                                </mask>
+                            </variation>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信息提交成功！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy7-qn-G0Q">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Zy7-qn-G0Q" firstAttribute="centerX" secondItem="vaR-rG-Afv" secondAttribute="centerX" id="Jj0-4I-VpE"/>
+                        <constraint firstAttribute="height" constant="200" id="QtA-pw-GFz"/>
+                        <constraint firstItem="Zy7-qn-G0Q" firstAttribute="top" secondItem="4CY-1j-jj7" secondAttribute="bottom" constant="30" id="g30-J7-PPu"/>
+                        <constraint firstItem="4CY-1j-jj7" firstAttribute="top" secondItem="vaR-rG-Afv" secondAttribute="top" constant="20" id="gPC-Sc-rvM"/>
+                        <constraint firstItem="4CY-1j-jj7" firstAttribute="centerX" secondItem="vaR-rG-Afv" secondAttribute="centerX" id="tzz-RB-Lc5"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="4CY-1j-jj7"/>
+                            <exclude reference="Zy7-qn-G0Q"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="QtA-pw-GFz"/>
+                            <exclude reference="gPC-Sc-rvM"/>
+                            <exclude reference="tzz-RB-Lc5"/>
+                            <exclude reference="Jj0-4I-VpE"/>
+                            <exclude reference="g30-J7-PPu"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="subviews">
+                            <include reference="4CY-1j-jj7"/>
+                            <include reference="Zy7-qn-G0Q"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="QtA-pw-GFz"/>
+                            <include reference="gPC-Sc-rvM"/>
+                            <include reference="tzz-RB-Lc5"/>
+                            <include reference="Jj0-4I-VpE"/>
+                            <include reference="g30-J7-PPu"/>
+                        </mask>
+                    </variation>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zX-uW-QsT">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmBtn:" destination="-1" eventType="touchUpInside" id="wOK-Ft-fEA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vaR-rG-Afv" secondAttribute="trailing" id="1PR-4P-V19"/>
+                <constraint firstItem="0zX-uW-QsT" firstAttribute="top" secondItem="vaR-rG-Afv" secondAttribute="bottom" constant="20" id="2kM-UL-X61"/>
+                <constraint firstItem="0zX-uW-QsT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5Sw-Ae-rqg"/>
+                <constraint firstItem="0zX-uW-QsT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Tmp-cM-q9d"/>
+                <constraint firstItem="vaR-rG-Afv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="U25-e2-5TD"/>
+                <constraint firstItem="vaR-rG-Afv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="V5V-BQ-rdW"/>
+                <constraint firstAttribute="trailing" secondItem="0zX-uW-QsT" secondAttribute="trailing" constant="10" id="qaR-i9-AfA"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="vaR-rG-Afv"/>
+                    <exclude reference="0zX-uW-QsT"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="1PR-4P-V19"/>
+                    <exclude reference="U25-e2-5TD"/>
+                    <exclude reference="V5V-BQ-rdW"/>
+                    <exclude reference="2kM-UL-X61"/>
+                    <exclude reference="5Sw-Ae-rqg"/>
+                    <exclude reference="Tmp-cM-q9d"/>
+                    <exclude reference="qaR-i9-AfA"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="subviews">
+                    <include reference="vaR-rG-Afv"/>
+                    <include reference="0zX-uW-QsT"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="1PR-4P-V19"/>
+                    <include reference="U25-e2-5TD"/>
+                    <include reference="V5V-BQ-rdW"/>
+                    <include reference="2kM-UL-X61"/>
+                    <include reference="5Sw-Ae-rqg"/>
+                    <include reference="Tmp-cM-q9d"/>
+                    <include reference="qaR-i9-AfA"/>
+                </mask>
+            </variation>
+        </view>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="VQj-It-v1B">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LRw-vR-sM2">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            </view>
+            <blurEffect style="light"/>
+        </visualEffectView>
+    </objects>
+</document>

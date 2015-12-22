@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModifyIconController">
             <connections>
+                <outlet property="headImage" destination="ple-gp-wTo" id="Dxg-bg-wKu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -142,6 +143,7 @@
                     <include reference="rhi-Da-ag9"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="-8" y="270"/>
         </view>
     </objects>
 </document>

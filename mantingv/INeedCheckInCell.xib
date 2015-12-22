@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="KGk-i7-Jjw" customClass="INeedCheckInCell">
+            <rect key="frame" x="0.0" y="0.0" width="515" height="109"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="515" height="108"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KET-fB-1fZ">
+                        <rect key="frame" x="10" y="10" width="80" height="88"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="k28-cd-baD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3q-c9-ADc">
+                        <rect key="frame" x="10" y="10" width="39" height="21"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1208" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-PU-o6i">
+                        <rect key="frame" x="10" y="31" width="39" height="21"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【旺季周】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5W-l9-llt">
+                        <rect key="frame" x="116" y="10" width="85" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入住时间：2015-9-8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkm-ba-RK3">
+                        <rect key="frame" x="116" y="52" width="160" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：江苏省淮安市洪泽县" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ple-0q-2G0">
+                        <rect key="frame" x="116" y="73" width="204" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老子山温泉山庄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t49-uC-91W">
+                        <rect key="frame" x="201" y="10" width="119" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房型：两房一厅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zv-Ay-m5m">
+                        <rect key="frame" x="116" y="31" width="119" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="H5W-l9-llt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0WK-HK-ihF"/>
+                    <constraint firstItem="KET-fB-1fZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0bu-Qp-wVM"/>
+                    <constraint firstItem="6zv-Ay-m5m" firstAttribute="leading" secondItem="KET-fB-1fZ" secondAttribute="trailing" constant="26" id="23k-Fn-4Va"/>
+                    <constraint firstItem="L3q-c9-ADc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6XK-Hn-POb"/>
+                    <constraint firstItem="F7M-PU-o6i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6fU-qM-Rq4"/>
+                    <constraint firstItem="L3q-c9-ADc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="82d-v2-dtX"/>
+                    <constraint firstItem="F7M-PU-o6i" firstAttribute="top" secondItem="L3q-c9-ADc" secondAttribute="bottom" id="AS6-Eo-ubL"/>
+                    <constraint firstItem="F7M-PU-o6i" firstAttribute="trailing" secondItem="L3q-c9-ADc" secondAttribute="trailing" id="BZ5-bO-vDe"/>
+                    <constraint firstItem="H5W-l9-llt" firstAttribute="leading" secondItem="KET-fB-1fZ" secondAttribute="trailing" constant="26" id="DPr-fu-AwH"/>
+                    <constraint firstItem="KET-fB-1fZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QiP-CC-K5R"/>
+                    <constraint firstItem="6zv-Ay-m5m" firstAttribute="top" secondItem="t49-uC-91W" secondAttribute="bottom" id="ScZ-2W-y3d"/>
+                    <constraint firstItem="Zkm-ba-RK3" firstAttribute="top" secondItem="6zv-Ay-m5m" secondAttribute="bottom" id="YBT-2S-Igz"/>
+                    <constraint firstItem="t49-uC-91W" firstAttribute="leading" secondItem="H5W-l9-llt" secondAttribute="trailing" id="buM-rh-vX7"/>
+                    <constraint firstItem="t49-uC-91W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="d13-lA-pr7"/>
+                    <constraint firstAttribute="bottom" secondItem="KET-fB-1fZ" secondAttribute="bottom" constant="10" id="eqp-Rj-rGF"/>
+                    <constraint firstItem="Zkm-ba-RK3" firstAttribute="leading" secondItem="KET-fB-1fZ" secondAttribute="trailing" constant="26" id="nus-xf-FeY"/>
+                    <constraint firstItem="Ple-0q-2G0" firstAttribute="leading" secondItem="KET-fB-1fZ" secondAttribute="trailing" constant="26" id="qgu-Lr-IRU"/>
+                    <constraint firstItem="Ple-0q-2G0" firstAttribute="top" secondItem="Zkm-ba-RK3" secondAttribute="bottom" id="rnX-pd-4wd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cycle" destination="H5W-l9-llt" id="itw-Fk-vM3"/>
+            </connections>
+            <point key="canvasLocation" x="540.5" y="218.5"/>
+        </tableViewCell>
+    </objects>
+</document>

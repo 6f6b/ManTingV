@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.exchangeDetailContentScrollView setValueWith:nil];
+//    NSLog(@"%@",NSStringFromCGRect(self.exchangeDetailContentScrollView.ex))
     // Do any additional setup after loading the view.
 }
 

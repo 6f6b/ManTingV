@@ -8,8 +8,10 @@
 
 #import "ModifyIconController.h"
 
-@interface ModifyIconController ()
 
+@interface ModifyIconController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @end
 
 @implementation ModifyIconController
@@ -19,7 +21,23 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)modifyIcon:(id)sender {
-    [[UIApplication sharedApplication] openURL:nil];
+    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = sourceType;
+    picker.allowsEditing = YES;
+    picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:^{
+        
+    }];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    self.headImage.image = image;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,8 +16,6 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
-    
-    [self.chooserView setTitlesOfButtonWith:@[@"地点",@"度假屋",@"周次"]];
 }
 
 - (void)setValueWith:(id)data{

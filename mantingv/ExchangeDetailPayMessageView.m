@@ -16,48 +16,64 @@
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     UIView *superView = self;
-//    
-//    [self.payMessageMarkView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(superView);
-//        make.left.equalTo(superView);
-//        make.right.equalTo(superView);
-//        
-//        make.height.equalTo(@50);
-//    }];
-//    
-//    [self.separationOfPowersView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.payMessageMarkView.mas_bottom);
-//        make.left.equalTo(superView);
-//        make.right.equalTo(superView);
-//        
-//        make.height.equalTo(@50);
-//    }];
-//    
-//    [self.propertyManagementFeeView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.separationOfPowersView.mas_bottom);
-//        make.left.equalTo(superView);
-//        make.right.equalTo(superView);
-//        
-//        make.height.equalTo(@50);
-//    }];
+    
+    [self.payMessageMarkView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(superView);
+        make.left.equalTo(superView);
+        make.right.equalTo(superView);
+        
+        make.height.equalTo(@50);
+    }];
+    
+    [self.separationOfPowersView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.payMessageMarkView.mas_bottom);
+        make.left.equalTo(superView);
+        make.right.equalTo(superView);
+        
+        make.height.equalTo(self.payMessageMarkView);
+    }];
+    
+    [self.propertyManagementFeeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.separationOfPowersView.mas_bottom);
+        make.left.equalTo(superView);
+        make.right.equalTo(superView);
+        
+        make.height.equalTo(self.separationOfPowersView);
+    }];
+    
     
     [self.shouldPayLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.propertyManagementFeeView.mas_bottom);
+        
         make.right.equalTo(self.numberOfShouldPayLabel.mas_left);
         
-        make.top.equalTo(self.propertyManagementFeeView.mas_bottom);
+        make.bottom.equalTo(superView);
     }];
     
     [self.numberOfShouldPayLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-
-        make.right.equalTo(superView).with.offset(-10);
-        
         make.top.equalTo(self.propertyManagementFeeView.mas_bottom);
+        make.right.equalTo(superView).with.offset(-10);
+        make.bottom.equalTo(superView);
     }];
+    
+//    [self.managementFeeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.forReceiveMessage.mas_bottom);
+//        
+//        make.right.equalTo(self.managementFee.mas_left);
+//        
+//        make.bottom.equalTo(superView);
+//    }];
+//    
+//    [self.managementFee mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.forReceiveMessage.mas_bottom);
+//        make.right.equalTo(superView).with.offset(-10);
+//        make.bottom.equalTo(superView);
+//    }];
 }
 
 - (ExchangeDetailBaseView *)payMessageMarkView{
     if (nil == _payMessageMarkView) {
-        ExchangeDetailBaseView *payMessageMarkView = [[ExchangeDetailBaseView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 50)];
+        ExchangeDetailBaseView *payMessageMarkView = [[ExchangeDetailBaseView alloc] init];
         payMessageMarkView.leftLabel.text = @"支付信息";
         payMessageMarkView.rightLabel.text = @"";
         payMessageMarkView.backgroundColor = [UIColor grayColor];
@@ -70,7 +86,7 @@
 
 - (ExchangeDetailBaseView *)separationOfPowersView{
     if (nil == _separationOfPowersView) {
-        ExchangeDetailBaseView *separationOfPowersView = [[ExchangeDetailBaseView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.payMessageMarkView.frame), ScreenWidth, 50)];
+        ExchangeDetailBaseView *separationOfPowersView = [[ExchangeDetailBaseView alloc] init];
         separationOfPowersView.leftLabel.text = @"分权周价";
         separationOfPowersView.backgroundColor = [UIColor whiteColor];
         [self addSubview:separationOfPowersView];
@@ -81,7 +97,7 @@
 
 - (ExchangeDetailBaseView *)propertyManagementFeeView{
     if (nil == _propertyManagementFeeView) {
-        ExchangeDetailBaseView *propertyManagementFeeView = [[ExchangeDetailBaseView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.separationOfPowersView.frame), ScreenWidth, 50)];
+        ExchangeDetailBaseView *propertyManagementFeeView = [[ExchangeDetailBaseView alloc] init];
         propertyManagementFeeView.leftLabel.text = @"物业管理费";
         propertyManagementFeeView.backgroundColor = [UIColor whiteColor];
         [self addSubview:propertyManagementFeeView];
@@ -92,8 +108,9 @@
 
 - (UILabel *)shouldPayLabel{
     if (nil == _shouldPayLabel) {
-        UILabel *shouldPayLabel = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth-100, CGRectGetMaxY(self.propertyManagementFeeView.frame), 40, 23)];
+        UILabel *shouldPayLabel = [[UILabel alloc] init];
         shouldPayLabel.text = @"应付金额：";
+        shouldPayLabel.backgroundColor = [UIColor greenColor];
         [self addSubview:shouldPayLabel];
         _shouldPayLabel = shouldPayLabel;
     }
@@ -113,9 +130,6 @@
 - (void)setValueWith:(id)data{
     self.separationOfPowersView.rightLabel.text = @"500";
     self.propertyManagementFeeView.rightLabel.text = @"500";
-    NSLog(@",,,,,,,%@",NSStringFromCGRect(self.shouldPayLabel.frame));
-//    CGRect frame = self.frame;
-//    frame.size.height = CGRectGetMaxY(self.numberOfShouldPayLabel.frame);
-//    self.frame = frame;
+    self.numberOfShouldPayLabel.text = @"100";
 }
 @end

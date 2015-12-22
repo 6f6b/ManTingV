@@ -32,7 +32,7 @@
         make.right.equalTo(superView).with.offset(-10);
         
         make.bottom.equalTo(superView);
-        make.height.equalTo(@5);
+        make.height.equalTo(@1);
     }];
     
 }
@@ -64,6 +64,7 @@
         UIView *separationLine = [[UIView alloc] init];
         separationLine.backgroundColor = [UIColor grayColor];
         [self addSubview:separationLine];
+        _separationLine = separationLine;
     }
     return _separationLine;
 }

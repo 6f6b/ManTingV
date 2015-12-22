@@ -26,6 +26,7 @@
         TransferDetailContentScrollView *transferDetailContentScrollView = [[TransferDetailContentScrollView alloc] initWithFrame:self.view.bounds];
         transferDetailContentScrollView.backgroundColor = [UIColor yellowColor];
         _transferDetailContentScrollView = transferDetailContentScrollView;
+        transferDetailContentScrollView.controller = self;
         [self.view addSubview:transferDetailContentScrollView];
     }
     return _transferDetailContentScrollView;
