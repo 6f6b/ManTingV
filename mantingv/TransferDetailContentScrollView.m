@@ -20,7 +20,7 @@
 
 - (SelectView *)selectView{
     if (nil == _selectView) {
-        SelectView *selectView = [[SelectView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.transferDetailTopContentView.frame), ScreenWidth, 0)];
+        SelectView *selectView = [[SelectView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.transferDetailTopContentView.frame), SCREEN_WIDTH, 0)];
         selectView.backgroundColor = [UIColor greenColor];
         [self addSubview:selectView];
         _selectView = selectView;
@@ -30,7 +30,7 @@
 
 - (TransferDetailTopContentView *)transferDetailTopContentView{
     if (nil == _transferDetailTopContentView) {
-        TransferDetailTopContentView *transferDetailTopContentView = [[TransferDetailTopContentView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 180)];
+        TransferDetailTopContentView *transferDetailTopContentView = [[TransferDetailTopContentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
         [self addSubview:transferDetailTopContentView];
         _transferDetailTopContentView = transferDetailTopContentView;
     }
@@ -42,7 +42,7 @@
         UIButton *commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
         commitButton.backgroundColor = [UIColor orangeColor];
         [commitButton setTitle:@"提交信息" forState:UIControlStateNormal];
-        commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.selectView.frame), ScreenWidth-20, 40);
+        commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.selectView.frame), SCREEN_WIDTH-20, 40);
         [self addSubview:commitButton];
         _commitButton = commitButton;
     }

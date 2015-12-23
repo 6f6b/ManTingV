@@ -7,8 +7,7 @@
 //
 
 #import "ChoiceTheme.h"
-
-#import "ChoiceTheme.h"
+#import "ChoiceThemeModel.h"
 @interface ChoiceTheme ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *titleLabel;
@@ -37,8 +36,6 @@
         make.bottom.equalTo(self.line1.mas_top).with.offset(-5);
         
         
-        make.width.equalTo(@100);
-        make.height.equalTo(@20);
     }];
     
     //line1
@@ -51,6 +48,7 @@
         make.width.equalTo(self.locationLabel);
         //高 等于 2
         make.height.equalTo(@2);
+        make.width.lessThanOrEqualTo(@355);
         
     }];
     
@@ -59,8 +57,6 @@
         //位于 父视图 中心
         make.center.equalTo(superView);
         
-        make.width.equalTo(@300);
-        make.height.equalTo(@20);
     }];
     
     //line2
@@ -73,6 +69,7 @@
         make.width.equalTo(self.locationLabel);
         //高 等于 2
         make.height.equalTo(@2);
+        make.width.lessThanOrEqualTo(@355);
     }];
 }
 
@@ -89,7 +86,7 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.backgroundColor = [UIColor orangeColor];
+        titleLabel.textColor = [UIColor whiteColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -110,7 +107,10 @@
 - (UILabel *)locationLabel{
     if (nil == _locationLabel) {
         UILabel *locationLabel = [[UILabel alloc] init];
-        locationLabel.backgroundColor = [UIColor greenColor];
+        locationLabel.textColor = [UIColor whiteColor];
+        locationLabel.numberOfLines = 0;
+        locationLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        locationLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:locationLabel];
         _locationLabel = locationLabel;
     }
@@ -129,8 +129,12 @@
 }
 
 //为子控件赋值
-- (void)setValueWithModel:(MTModel *)model{
-    
+- (void)setValueWith:(id)data{
+    ChoiceThemeModel *model = [ChoiceThemeModel modelWithDictionary:data];
+    [self.backImage lfSetImageWithURL:model.imageGuids[0]];
+    self.titleLabel.text = model.title;
+    self.locationLabel.text = model.introduction;
+
 }
 @end
 

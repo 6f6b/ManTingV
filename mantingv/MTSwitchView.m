@@ -16,7 +16,7 @@
 + (instancetype)switchViewWithTitles:(NSArray *)titles{
     MTSwitchView *switchView = [[MTSwitchView alloc] init];
     switchView.backgroundColor = [UIColor redColor];
-    switchView.frame = CGRectMake(0, 64, ScreenWidth, 40);
+    switchView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 40);
     NSLog(@"%@",switchView);
     [switchView setTitles:titles];
     return switchView;
@@ -28,9 +28,9 @@
 
 - (void)setTitles:(NSArray *)titles{
     for (int i; i<titles.count; i++) {
-        CGFloat X = (ScreenWidth/titles.count)*i;
+        CGFloat X = (SCREEN_WIDTH/titles.count)*i;
         CGFloat Y = 0;
-        CGFloat W = ScreenWidth/titles.count;
+        CGFloat W = SCREEN_WIDTH/titles.count;
         CGFloat H = 40;
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

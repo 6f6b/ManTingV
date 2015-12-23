@@ -33,34 +33,34 @@
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];    
     //添加地址
-    self.addAddressView.frame = CGRectMake(0, 0, ScreenWidth, 80);
+    self.addAddressView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
     
     
     //收件人信息
-    self.recipientInformationView.frame = CGRectMake(0, 0, ScreenWidth, 80);
+    self.recipientInformationView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
 
     
     //订单
-    self.orderView.frame = CGRectMake(0, 90, ScreenWidth, 200);
+    self.orderView.frame = CGRectMake(0, 90, SCREEN_WIDTH, 200);
 
     
     //购买数量
-    self.purchaseQuantityView.frame = CGRectMake(0, CGRectGetMaxY(self.orderView.frame)+10, ScreenWidth, 50);
+    self.purchaseQuantityView.frame = CGRectMake(0, CGRectGetMaxY(self.orderView.frame)+10, SCREEN_WIDTH, 50);
 
     
     //运费
-    self.freightView.frame = CGRectMake(0, CGRectGetMaxY(self.purchaseQuantityView.frame)+10, ScreenWidth, 50);
+    self.freightView.frame = CGRectMake(0, CGRectGetMaxY(self.purchaseQuantityView.frame)+10, SCREEN_WIDTH, 50);
 
     
     //留言
-    self.leaveWordView.frame = CGRectMake(0, CGRectGetMaxY(self.freightView.frame)+20, ScreenWidth, 50);
+    self.leaveWordView.frame = CGRectMake(0, CGRectGetMaxY(self.freightView.frame)+20, SCREEN_WIDTH, 50);
     
     //合同
-    self.purchaseAgreementView.frame = CGRectMake(0, CGRectGetMaxY(self.leaveWordView.frame)+20, ScreenWidth, 50);
+    self.purchaseAgreementView.frame = CGRectMake(0, CGRectGetMaxY(self.leaveWordView.frame)+20, SCREEN_WIDTH, 50);
 
     
     //支付类型
-    self.payTypeView.frame = CGRectMake(0, CGRectGetMaxY(self.purchaseAgreementView.frame)+20, ScreenWidth, 50);
+    self.payTypeView.frame = CGRectMake(0, CGRectGetMaxY(self.purchaseAgreementView.frame)+20, SCREEN_WIDTH, 50);
     
     self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.payTypeView.frame)+50);
 

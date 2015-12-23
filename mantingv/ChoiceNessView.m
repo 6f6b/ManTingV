@@ -18,7 +18,7 @@ typedef void(^SeeMoreBlock)();
 
 #pragma mark - 创建以及配置视图对象
 + (instancetype)choiceNessViewWith:(NSString *)title point:(CGPoint)point{
-    CGRect frame = CGRectMake(point.x, point.y, ScreenWidth, Screenheight);
+    CGRect frame = CGRectMake(point.x, point.y, SCREEN_WIDTH, SCREEN_HEIGHT);
     ChoiceNessView *choiceNessView = [[self alloc] initWithFrame:frame];
     
     choiceNessView.titleLabel.text = title;
@@ -34,7 +34,7 @@ typedef void(^SeeMoreBlock)();
         self.titleLabel = titleLabel;
         
         UIButton *seeMore = [UIButton buttonWithType:UIButtonTypeCustom];
-        seeMore.frame = CGRectMake(ScreenWidth-100, 0, 100, 30);
+        seeMore.frame = CGRectMake(SCREEN_WIDTH-100, 0, 100, 30);
         _seeMore = seeMore;
         [self addSubview:seeMore];
         [seeMore setTitle:@"查看更多" forState:UIControlStateNormal];

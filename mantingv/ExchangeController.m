@@ -30,7 +30,7 @@
     self.navigationItem.titleView = productSearchBar;
     
     //创建滚动广告视图
-    LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+    LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
     adScrollView.autoScroll = YES;
     adScrollView.backgroundColor = [UIColor greenColor];
     _adScrollView = adScrollView;
@@ -52,7 +52,7 @@
     for (int i=0; i<10; i++) {
         CGFloat X = 0;
         CGFloat Y = CGRectGetMaxY(self.chooserView.frame)+100*i+10;
-        CGFloat W = ScreenWidth;
+        CGFloat W = SCREEN_WIDTH;
         CGFloat H = 90;
         
         ChoiceTheme *choiceTheme = [[ChoiceTheme alloc] initWithFrame:CGRectMake(X, Y, W, H)];

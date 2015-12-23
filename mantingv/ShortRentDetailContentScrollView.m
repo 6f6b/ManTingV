@@ -22,7 +22,7 @@
 
 - (LFLoopScrollView *)shortRentDetailAdScrollView{
     if (nil == _shortRentDetailAdScrollView) {
-        LFLoopScrollView *shortRentDetailAdScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+        LFLoopScrollView *shortRentDetailAdScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         shortRentDetailAdScrollView.autoScroll = YES;
         shortRentDetailAdScrollView.backgroundColor = [UIColor greenColor];
         _shortRentDetailAdScrollView = shortRentDetailAdScrollView;
@@ -76,16 +76,16 @@
     NSArray *urls = @[@"http://down.tutu001.com/d/file/20101129/2f5ca0f1c9b6d02ea87df74fcc_560.jpg",@"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg",@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
     [self.shortRentDetailAdScrollView setImageWithUrlS:urls];
     
-    self.checkInAndCheckOutView.frame = CGRectMake(0, CGRectGetMaxY(self.shortRentDetailAdScrollView.frame), ScreenWidth, 100);
+    self.checkInAndCheckOutView.frame = CGRectMake(0, CGRectGetMaxY(self.shortRentDetailAdScrollView.frame), SCREEN_WIDTH, 100);
     [self.checkInAndCheckOutView setValueWith:nil];
     
     
-    self.shortRentPriceView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInAndCheckOutView.frame)+20, ScreenWidth, 100);
+    self.shortRentPriceView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInAndCheckOutView.frame)+20, SCREEN_WIDTH, 100);
     [self.shortRentPriceView setValueWith:nil];
     
-    self.relatedProductsLabel.frame = CGRectMake(0, CGRectGetMaxY(self.shortRentPriceView.frame), ScreenWidth, 40);
+    self.relatedProductsLabel.frame = CGRectMake(0, CGRectGetMaxY(self.shortRentPriceView.frame), SCREEN_WIDTH, 40);
     
-    self.relatedProductsView.frame = CGRectMake(0, CGRectGetMaxY(self.relatedProductsLabel.frame), ScreenWidth, 0);
+    self.relatedProductsView.frame = CGRectMake(0, CGRectGetMaxY(self.relatedProductsLabel.frame), SCREEN_WIDTH, 0);
     [self.relatedProductsView setValueWith:nil];
     
     self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.relatedProductsView.frame));

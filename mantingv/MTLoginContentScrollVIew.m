@@ -14,7 +14,7 @@
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     
-    self.backImage.frame = CGRectMake(0, 0, ScreenWidth, Screenheight);
+    self.backImage.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     CGPoint center = self.center;
     self.loginModule.center = center;

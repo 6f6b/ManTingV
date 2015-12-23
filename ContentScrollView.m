@@ -17,7 +17,7 @@
 //创建滚动广告视图
 - (LFLoopScrollView *)adScrollView{
     if (nil == _adScrollView) {
-        LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+        LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         adScrollView.autoScroll = YES;
         adScrollView.backgroundColor = [UIColor greenColor];
         _adScrollView = adScrollView;
@@ -31,9 +31,7 @@
 //创建条件选择器
 - (ChooserView *)chooserView{
     if (nil == _chooserView) {
-        NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择主题"];
         ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, CGRectGetMaxY(self.adScrollView.frame))];
-        [chooserView setTitlesOfButtonWith:buttonTitles];
         [chooserView setDataArraysWith:@[@[@"11",@"21",@"31",@"5"],@[@"12",@"22",@"32"],@[@"13",@"23",@"33"]]];
         _chooserView = chooserView;
         [self addSubview:chooserView];

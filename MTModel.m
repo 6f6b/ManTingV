@@ -12,4 +12,9 @@
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
 
 }
++ (instancetype)modelWithDictionary:(NSDictionary<NSString *,id> *)keyedValues{
+    id model = [[self alloc] init];
+    [model setValuesForKeysWithDictionary:keyedValues];
+    return model;
+}
 @end

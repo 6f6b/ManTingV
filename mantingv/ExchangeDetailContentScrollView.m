@@ -23,19 +23,19 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
-    self.pictureScrollView.frame = CGRectMake(0, 0, ScreenWidth, 150);
+    self.pictureScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
     
-    self.titleView.frame = CGRectMake(0, CGRectGetMaxY(self.pictureScrollView.frame), ScreenWidth, 80);
+    self.titleView.frame = CGRectMake(0, CGRectGetMaxY(self.pictureScrollView.frame), SCREEN_WIDTH, 80);
     
-    self.exchangeDetailDescriptionView.frame = CGRectMake(0, CGRectGetMaxY(self.titleView.frame)+10, ScreenWidth, 200);
+    self.exchangeDetailDescriptionView.frame = CGRectMake(0, CGRectGetMaxY(self.titleView.frame)+10, SCREEN_WIDTH, 200);
     
-    self.exchangeDetailPayMessageView.frame = CGRectMake(0, CGRectGetMaxY(self.exchangeDetailDescriptionView.frame), ScreenWidth, 200);
+    self.exchangeDetailPayMessageView.frame = CGRectMake(0, CGRectGetMaxY(self.exchangeDetailDescriptionView.frame), SCREEN_WIDTH, 200);
     
     UIButton *commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
     commitButton.backgroundColor = [UIColor orangeColor];
     [commitButton setTitle:@"提交信息" forState:UIControlStateNormal];
     [commitButton addTarget:self action:@selector(dealBtn) forControlEvents:UIControlEventTouchUpInside];
-    commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.exchangeDetailPayMessageView.frame)+10, ScreenWidth-20, 50);
+    commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.exchangeDetailPayMessageView.frame)+10, SCREEN_WIDTH-20, 50);
     [self addSubview:commitButton];
     _commitButton = commitButton;
     self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.commitButton.frame));
@@ -43,7 +43,7 @@
 
 - (LFLoopScrollView *)pictureScrollView{
     if (nil == _pictureScrollView) {
-        LFLoopScrollView *pictureScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+        LFLoopScrollView *pictureScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         pictureScrollView.autoScroll = YES;
         pictureScrollView.backgroundColor = [UIColor greenColor];
         _pictureScrollView = pictureScrollView;

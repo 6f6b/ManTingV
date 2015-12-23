@@ -7,6 +7,7 @@
 //
 
 #import "Theme.h"
+#import "ThemeModel.h"
 @interface Theme ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *titleLabel;
@@ -43,8 +44,9 @@
         //距 父视图 左边 0
         make.left.equalTo(superView);
         
-        make.width.equalTo(@50);
-        make.height.equalTo(@20);
+        make.height.equalTo(self.priceLabel);
+        make.width.equalTo(self.priceLabel);
+
     }];
     
     //priceLabel
@@ -54,19 +56,23 @@
         //距 父视图 左边 0
         make.left.equalTo(superView);
         
-        make.width.equalTo(@50);
-        make.height.equalTo(@20);
     }];
 }
 
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap)];
+        [backImage addGestureRecognizer:tap];
         backImage.backgroundColor = [UIColor grayColor];
         [self addSubview:backImage];
         _backImage = backImage;
     }
     return _backImage;
+}
+
+- (void)dealTap{
+    NSLog(@"fuck");
 }
 
 - (UILabel *)titleLabel{
@@ -84,6 +90,7 @@
         UILabel *bargainPriceLabel = [[UILabel alloc] init];
         bargainPriceLabel.backgroundColor = [UIColor yellowColor];
         [self addSubview:bargainPriceLabel];
+        bargainPriceLabel.text = @"特价";
         _bargainPriceLabel = bargainPriceLabel;
     }
     return _bargainPriceLabel;
@@ -97,5 +104,14 @@
         _priceLabel = priceLabel;
     }
     return _priceLabel;
+}
+
+- (void)setValueWith:(id)data{
+    
+    ThemeModel *model = [ThemeModel modelWithDictionary:data];
+    self.titleLabel.text = model.name;
+    self.priceLabel.text = model.price;
+    
+    [self.backImage lfSetImageWithURL:model.imageGuids[0]];
 }
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "ChoiceRoom.h"
-
-#import "ChoiceRoom.h"
+#import "ChoiceRoomModel.h"
 @interface ChoiceRoom ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *titleLabel;
@@ -114,7 +113,16 @@
 }
 
 //为子控件赋值
-- (void)setValueWith:(MTModel *)model{
-    
+- (void)setValueWith:(id)data{
+    ChoiceRoomModel *model = [ChoiceRoomModel modelWithDictionary:data];
+    [self.backImage lfSetImageWithURL:model.imageGuids[0]];
+    self.titleLabel.text = model.name;
+    self.sizeLabel.text = model.houseType;
+    self.priceLabel.text = model.price;
+//    @property (nonatomic,weak) UIImageView *backImage;
+//    @property (nonatomic,weak) UILabel *titleLabel;
+//    @property (nonatomic,weak) UILabel *sizeLabel;
+//    @property (nonatomic,weak) UILabel *priceLabel;
 }
+
 @end

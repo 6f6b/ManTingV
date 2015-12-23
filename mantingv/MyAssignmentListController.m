@@ -40,7 +40,7 @@
 - (UITableView *)tableView{
     if (nil == _tableView) {
         NSLog(@"%@",self.switchView);
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.switchView.frame), ScreenWidth, Screenheight-CGRectGetMaxY(self.switchView.frame)) style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.switchView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(self.switchView.frame)) style:UITableViewStylePlain];
         tableView.delegate = self;
         tableView.dataSource = self;
         _tableView = tableView;

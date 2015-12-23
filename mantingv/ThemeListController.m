@@ -48,7 +48,7 @@
 
 - (LFLoopScrollView *)themeListPictuerScrollView{
     if (nil == _themeListPictuerScrollView) {
-        LFLoopScrollView *themeListPictuerScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+        LFLoopScrollView *themeListPictuerScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
 
         themeListPictuerScrollView.autoScroll = YES;
         themeListPictuerScrollView.backgroundColor = [UIColor greenColor];
@@ -73,7 +73,7 @@
 
 - (SelectView *)selectView{
     if (nil == _selectView) {
-        SelectView *selectView = [[SelectView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.themListContentView.frame), ScreenWidth, 0)];
+        SelectView *selectView = [[SelectView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.themListContentView.frame), SCREEN_WIDTH, 0)];
         selectView.backgroundColor = [UIColor greenColor];
         [self.contentScrollView addSubview:selectView];
         _selectView = selectView;

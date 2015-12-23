@@ -15,7 +15,7 @@
     for (int i=0; i<10; i++) {
         CGFloat X = 0;
         CGFloat Y = 87*i;
-        CGFloat W = ScreenWidth;
+        CGFloat W = SCREEN_WIDTH;
         CGFloat H = 80;
         RelatedProductView *relatedProductView = [[RelatedProductView alloc] init];
         [relatedProductView setValueWith:nil];

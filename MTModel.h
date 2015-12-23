@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MTModel : NSObject
-
+@property (nonatomic,copy) NSString *result;
+@property (nonatomic,copy) id data;
++ (instancetype)modelWithDictionary:(NSDictionary<NSString *,id> *)keyedValues;
 @end

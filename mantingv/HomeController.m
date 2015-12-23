@@ -17,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:self.view.bounds];
+    homeContentScrollView.backgroundColor = [UIColor whiteColor];
+    homeContentScrollView.contentSize = CGSizeMake(0, 1000);
+    homeContentScrollView.controller = self;
+    _homeContentScrollView = homeContentScrollView;
+    [self.view addSubview:homeContentScrollView];
     
+    [homeContentScrollView setValueWith:nil];
     //控制器下载数据
     [self downLoadData];
     
@@ -37,16 +44,60 @@
     [homeCityListButton addTarget:self action:@selector(dealCityList) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:homeCityListButton];
     
-    
-    HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:self.view.bounds];
-    homeContentScrollView.backgroundColor = [UIColor whiteColor];
-    homeContentScrollView.controller = self;
-    _homeContentScrollView = homeContentScrollView;
-    [self.view addSubview:homeContentScrollView];
 }
 
+//- (HomeContentScrollView *)homeContentScrollView{
+//    if (nil == _homeContentScrollView) {
+//        HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:self.view.bounds];
+//        homeContentScrollView.backgroundColor = [UIColor whiteColor];
+//        homeContentScrollView.controller = self;
+//        _homeContentScrollView = homeContentScrollView;
+//        [self.view addSubview:homeContentScrollView];
+//    }
+//    return _homeContentScrollView;
+//}
+
 - (void)downLoadData{
-    //[NSThread sleepForTimeInterval:2];
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    
+///////////////////////////////////////////////下载轮播图片数据///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
+//    [manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+//        HomeAdScrollViewModel *model = [HomeAdScrollViewModel modelWithDictionary:dic];
+//        [self.homeContentScrollView.adScrollView setImageWithUrlS:model.data];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//    }];
+//    
+///////////////////////////////////////////////特价房数据///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    NSString *url = [BASE_URL stringByAppendingString:@"/house/special"];
+//    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+//        ThemeContentViewModel *model = [ThemeContentViewModel modelWithDictionary:dic];
+//        [self.homeContentScrollView.themeContentView setValueWith:model];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//    }];
+//    
+///////////////////////////////////////////////第二广告位数据///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////    NSString *whatUrl = [BASE_URL stringByAppendingString:@"/front/banner/second"];
+////    [manager GET:whatUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+////        
+////    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+////        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+////        HomeWhatModel *model = [HomeWhatModel modelWithDictionary:dic];
+////        [self.homeContentScrollView.what lfSetImageWithURL:model.data];
+////    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+////        
+////    }];
     //下载数据
     //处理数据
     //刷新UI

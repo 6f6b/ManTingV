@@ -22,10 +22,12 @@
 //}
 
 - (void)setValueWith:(id)data{
-    for (int i=0; i<10; i++) {
-        float X = i%2*10+(ScreenWidth-10)/2*(i%2);
+    MTModel *model = [MTModel modelWithDictionary:data];
+    NSArray *arr = model.data;
+    for (int i=0; i<arr.count; i++) {
+        float X = i%2*10+(SCREEN_WIDTH-10)/2*(i%2);
         float Y = i/2*100+40;
-        float W = (ScreenWidth-10)/2;
+        float W = (SCREEN_WIDTH-10)/2;
         float H = 90;
         
         ChoiceRoom *choiceRoom = [[ChoiceRoom alloc] initWithFrame:CGRectMake(X, Y, W, H)];
@@ -39,8 +41,9 @@
         [choiceRoom addGestureRecognizer:tap];
         
         [self addSubview:choiceRoom];
-        
+        [choiceRoom setValueWith:arr[i]];
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(choiceRoom.frame));
+        
     }
     //获取到父视图指针，在数据加载完成之后重新调整父视图的Contentsize
     UIScrollView *contentScrollView = self.superview;

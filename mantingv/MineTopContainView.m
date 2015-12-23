@@ -16,7 +16,7 @@
 @implementation MineTopContainView
 
 + (instancetype)mineTopContainView{
-    MineTopContainView *mineTopContainView = [[MineTopContainView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 180)];
+    MineTopContainView *mineTopContainView = [[MineTopContainView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
     return mineTopContainView;
 }
 

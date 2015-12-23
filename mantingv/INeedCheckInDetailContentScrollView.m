@@ -35,7 +35,7 @@
         CheckInDetailMessageContainView *checkInDetailMessageContainView =
         [[CheckInDetailMessageContainView alloc] init];
         checkInDetailMessageContainView.backgroundColor = [UIColor orangeColor];
-        CGRect frame = CGRectMake(0, CGRectGetMaxY(self.checkInDetailTimeView.frame)+10, ScreenWidth, 180);
+        CGRect frame = CGRectMake(0, CGRectGetMaxY(self.checkInDetailTimeView.frame)+10, SCREEN_WIDTH, 180);
         checkInDetailMessageContainView.frame = frame;
         [self addSubview:checkInDetailMessageContainView];
         _checkInDetailMessageContainView = checkInDetailMessageContainView;
@@ -46,7 +46,7 @@
 - (CheckInDetailTimeView *)checkInDetailTimeView{
     if (nil == _checkInDetailTimeView) {
         CheckInDetailTimeView *checkInDetailTimeView = [[CheckInDetailTimeView alloc] init];
-        checkInDetailTimeView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInDetailTopContentView.frame)+10, ScreenWidth, 50);
+        checkInDetailTimeView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInDetailTopContentView.frame)+10, SCREEN_WIDTH, 50);
         checkInDetailTimeView.backgroundColor = [UIColor greenColor];
         [self addSubview:checkInDetailTimeView];
         _checkInDetailTimeView = checkInDetailTimeView;
@@ -74,7 +74,7 @@
     
     [self.checkInDetailMessageContainView setValueWith:nil];
     
-    self.payButton.frame = CGRectMake(10, CGRectGetMaxY(self.checkInDetailMessageContainView.frame)+20, ScreenWidth-20, 50);
+    self.payButton.frame = CGRectMake(10, CGRectGetMaxY(self.checkInDetailMessageContainView.frame)+20, SCREEN_WIDTH-20, 50);
     
     self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.payButton.frame)+20);
 }

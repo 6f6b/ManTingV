@@ -44,9 +44,9 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
-        CGFloat X = ScreenWidth/3*i;
+        CGFloat X = SCREEN_WIDTH/3*i;
         CGFloat Y = 0;
-        CGFloat W = ScreenWidth/3;
+        CGFloat W = SCREEN_WIDTH/3;
         CGFloat H = 40;
         button.frame = CGRectMake(X, Y, W, H);
         [button setTitle:titles[i] forState:UIControlStateNormal];
@@ -69,7 +69,7 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
     if (nil == _tableView) {
         CGFloat X = 0;
         CGFloat Y = BUTTON_HEIGHT;
-        CGFloat W = ScreenWidth;
+        CGFloat W = SCREEN_WIDTH;
         CGFloat H = TABLEVIEW_HEIGHT;
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(X, Y, W, H) style:UITableViewStylePlain];
         _tableView = tableView;

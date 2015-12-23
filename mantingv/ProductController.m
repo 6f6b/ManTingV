@@ -29,7 +29,7 @@
     self.navigationItem.titleView = productSearchBar;
     
     //创建滚动广告视图
-    LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+    LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
     adScrollView.autoScroll = YES;
     adScrollView.backgroundColor = [UIColor greenColor];
     _adScrollView = adScrollView;
@@ -72,7 +72,7 @@
         [self.productContentScrollView addSubview:productContainView];
         [productContainView setValueWith:nil];
         
-        self.productContentScrollView.contentSize = CGSizeMake(ScreenWidth, CGRectGetMaxY(productContainView.frame));
+        self.productContentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, CGRectGetMaxY(productContainView.frame));
     }
     
 }

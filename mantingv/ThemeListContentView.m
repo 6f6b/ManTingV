@@ -21,12 +21,12 @@
         
         CGFloat X = 0;
         CGFloat Y = 82*i;
-        CGFloat W = ScreenWidth;
+        CGFloat W = SCREEN_WIDTH;
         CGFloat H = 80;
         themeListView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:themeListView];
         
-        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, ScreenWidth, CGRectGetMaxY(themeListView.frame));
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, SCREEN_WIDTH, CGRectGetMaxY(themeListView.frame));
     }
 }
 

@@ -52,7 +52,7 @@
 
 - (LFLoopScrollView *)pictureScrollView{
     if (nil == _pictureScrollView) {
-        LFLoopScrollView *pictureScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 150)];
+        LFLoopScrollView *pictureScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         [self addSubview:pictureScrollView];
         _pictureScrollView = pictureScrollView;
     }

@@ -72,7 +72,7 @@
         
         make.bottom.equalTo(superView).with.offset(-5);
         
-        make.left.equalTo(superView).with.offset(ScreenWidth/3);
+        make.left.equalTo(superView).with.offset(SCREEN_WIDTH/3);
     }];
     
     //分割线B
@@ -83,7 +83,7 @@
         
         make.bottom.equalTo(superView).with.offset(-5);
         
-        make.right.equalTo(superView).with.offset(-ScreenWidth/3);
+        make.right.equalTo(superView).with.offset(-SCREEN_WIDTH/3);
 
     }];
     

@@ -76,6 +76,14 @@
 		03D650B21C1EB021005856F2 /* ChooserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D650B01C1EB021005856F2 /* ChooserCell.xib */; };
 		03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */; };
 		03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */; };
+		03D6698F1C2A4635001C4C2C /* ZJModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6698E1C2A4635001C4C2C /* ZJModelTool.m */; };
+		03D669921C2A46B3001C4C2C /* HomeAdScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669911C2A46B3001C4C2C /* HomeAdScrollViewModel.m */; };
+		03D669A11C2A6BD6001C4C2C /* HomeWhatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669A01C2A6BD6001C4C2C /* HomeWhatModel.m */; };
+		03D669A71C2A74DF001C4C2C /* ThemeContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669A61C2A74DF001C4C2C /* ThemeContentViewModel.m */; };
+		03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669A91C2A7A70001C4C2C /* ThemeModel.m */; };
+		03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669AF1C2A7DB3001C4C2C /* UIImageView+LF.m */; };
+		03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669B41C2A98E8001C4C2C /* ChoiceThemeModel.m */; };
+		03D669B81C2AA04D001C4C2C /* ChoiceRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669B71C2AA04D001C4C2C /* ChoiceRoomModel.m */; };
 		03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7D41C210491003A3A68 /* MTLoginController.m */; };
 		03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7D91C210506003A3A68 /* MTLoginContentScrollVIew.m */; };
 		03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7DC1C210772003A3A68 /* MTLoginModule.m */; };
@@ -95,7 +103,6 @@
 		03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8C4FF1C17D24800C71B98 /* LFLoopScrollView.m */; };
 		03DA24681C23AB2D0098FE4B /* MTSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA24671C23AB2D0098FE4B /* MTSwitchView.m */; };
 		03DA246E1C23D0890098FE4B /* HomeContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA246D1C23D0890098FE4B /* HomeContentScrollView.m */; };
-		03DA24711C23D3550098FE4B /* ThemeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA24701C23D3550098FE4B /* ThemeScrollView.m */; };
 		03DA24741C23D3F90098FE4B /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA24731C23D3F90098FE4B /* Theme.m */; };
 		03DA24771C23D4570098FE4B /* ChoiceRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA24761C23D4570098FE4B /* ChoiceRoom.m */; };
 		03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA24791C23D4A60098FE4B /* ChoiceTheme.m */; };
@@ -292,6 +299,22 @@
 		03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceThemeController.m; sourceTree = "<group>"; };
 		03D65DE31C1E697C00E7C679 /* MTBaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBaseScrollView.h; sourceTree = "<group>"; };
 		03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBaseScrollView.m; sourceTree = "<group>"; };
+		03D6698D1C2A4635001C4C2C /* ZJModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJModelTool.h; sourceTree = "<group>"; };
+		03D6698E1C2A4635001C4C2C /* ZJModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJModelTool.m; sourceTree = "<group>"; };
+		03D669901C2A46B3001C4C2C /* HomeAdScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAdScrollViewModel.h; sourceTree = "<group>"; };
+		03D669911C2A46B3001C4C2C /* HomeAdScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAdScrollViewModel.m; sourceTree = "<group>"; };
+		03D6699F1C2A6BD6001C4C2C /* HomeWhatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWhatModel.h; sourceTree = "<group>"; };
+		03D669A01C2A6BD6001C4C2C /* HomeWhatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWhatModel.m; sourceTree = "<group>"; };
+		03D669A51C2A74DF001C4C2C /* ThemeContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeContentViewModel.h; sourceTree = "<group>"; };
+		03D669A61C2A74DF001C4C2C /* ThemeContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeContentViewModel.m; sourceTree = "<group>"; };
+		03D669A81C2A7A70001C4C2C /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeModel.h; sourceTree = "<group>"; };
+		03D669A91C2A7A70001C4C2C /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeModel.m; sourceTree = "<group>"; };
+		03D669AE1C2A7DB3001C4C2C /* UIImageView+LF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LF.h"; sourceTree = "<group>"; };
+		03D669AF1C2A7DB3001C4C2C /* UIImageView+LF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LF.m"; sourceTree = "<group>"; };
+		03D669B31C2A98E8001C4C2C /* ChoiceThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceThemeModel.h; sourceTree = "<group>"; };
+		03D669B41C2A98E8001C4C2C /* ChoiceThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceThemeModel.m; sourceTree = "<group>"; };
+		03D669B61C2AA04D001C4C2C /* ChoiceRoomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceRoomModel.h; sourceTree = "<group>"; };
+		03D669B71C2AA04D001C4C2C /* ChoiceRoomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceRoomModel.m; sourceTree = "<group>"; };
 		03D7A7D31C210491003A3A68 /* MTLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginController.h; sourceTree = "<group>"; };
 		03D7A7D41C210491003A3A68 /* MTLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLoginController.m; sourceTree = "<group>"; };
 		03D7A7D81C210506003A3A68 /* MTLoginContentScrollVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginContentScrollVIew.h; sourceTree = "<group>"; };
@@ -326,8 +349,6 @@
 		03DA24671C23AB2D0098FE4B /* MTSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSwitchView.m; sourceTree = "<group>"; };
 		03DA246C1C23D0890098FE4B /* HomeContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeContentScrollView.h; sourceTree = "<group>"; };
 		03DA246D1C23D0890098FE4B /* HomeContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeContentScrollView.m; sourceTree = "<group>"; };
-		03DA246F1C23D3550098FE4B /* ThemeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeScrollView.h; sourceTree = "<group>"; };
-		03DA24701C23D3550098FE4B /* ThemeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeScrollView.m; sourceTree = "<group>"; };
 		03DA24721C23D3F90098FE4B /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		03DA24731C23D3F90098FE4B /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		03DA24751C23D4570098FE4B /* ChoiceRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceRoom.h; sourceTree = "<group>"; };
@@ -650,6 +671,8 @@
 				03D8AFCE1C1AA5D700B41FF0 /* MTBaseView.m */,
 				03D65DE31C1E697C00E7C679 /* MTBaseScrollView.h */,
 				03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */,
+				03D669AE1C2A7DB3001C4C2C /* UIImageView+LF.h */,
+				03D669AF1C2A7DB3001C4C2C /* UIImageView+LF.m */,
 				03DA24841C23D6E30098FE4B /* SelectView */,
 				03DB9CF61C1FFF4000A40361 /* 支付信息界面 */,
 				03D65DE61C1E6C8400E7C679 /* 选择器 */,
@@ -685,6 +708,18 @@
 		03775B881C113AEC00319C32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03D669901C2A46B3001C4C2C /* HomeAdScrollViewModel.h */,
+				03D669911C2A46B3001C4C2C /* HomeAdScrollViewModel.m */,
+				03D6699F1C2A6BD6001C4C2C /* HomeWhatModel.h */,
+				03D669A01C2A6BD6001C4C2C /* HomeWhatModel.m */,
+				03D669A51C2A74DF001C4C2C /* ThemeContentViewModel.h */,
+				03D669A61C2A74DF001C4C2C /* ThemeContentViewModel.m */,
+				03D669A81C2A7A70001C4C2C /* ThemeModel.h */,
+				03D669A91C2A7A70001C4C2C /* ThemeModel.m */,
+				03D669B31C2A98E8001C4C2C /* ChoiceThemeModel.h */,
+				03D669B41C2A98E8001C4C2C /* ChoiceThemeModel.m */,
+				03D669B61C2AA04D001C4C2C /* ChoiceRoomModel.h */,
+				03D669B71C2AA04D001C4C2C /* ChoiceRoomModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -836,6 +871,7 @@
 		03775BB51C11853700319C32 /* ThirdLibrarys */ = {
 			isa = PBXGroup;
 			children = (
+				03D6698C1C2A4635001C4C2C /* ZJModelTool */,
 				03D8C4FD1C17D24800C71B98 /* LFLoopScrollView */,
 			);
 			name = ThirdLibrarys;
@@ -1121,10 +1157,10 @@
 				03DA24791C23D4A60098FE4B /* ChoiceTheme.m */,
 				03D830A61C1EB88C006DBFD9 /* ChoiceNessView.h */,
 				03D830A71C1EB88C006DBFD9 /* ChoiceNessView.m */,
-				03D830A91C1EBD9B006DBFD9 /* ChoiceNessRoom.h */,
-				03D830AA1C1EBD9B006DBFD9 /* ChoiceNessRoom.m */,
 				03D830AC1C1EBDE1006DBFD9 /* ChoiceNessTheme.h */,
 				03D830AD1C1EBDE1006DBFD9 /* ChoiceNessTheme.m */,
+				03D830A91C1EBD9B006DBFD9 /* ChoiceNessRoom.h */,
+				03D830AA1C1EBD9B006DBFD9 /* ChoiceNessRoom.m */,
 			);
 			name = "精选";
 			sourceTree = "<group>";
@@ -1132,8 +1168,6 @@
 		03D643961C194F900082F0D4 /* 主题轮播（默认两张） */ = {
 			isa = PBXGroup;
 			children = (
-				03DA246F1C23D3550098FE4B /* ThemeScrollView.h */,
-				03DA24701C23D3550098FE4B /* ThemeScrollView.m */,
 				03DA24721C23D3F90098FE4B /* Theme.h */,
 				03DA24731C23D3F90098FE4B /* Theme.m */,
 				03DB9D1D1C2053EC00A40361 /* ThemeContentView.h */,
@@ -1182,6 +1216,15 @@
 				03E25B741C1E9E9B001A2065 /* ChooserView.m */,
 			);
 			name = "选择器";
+			sourceTree = "<group>";
+		};
+		03D6698C1C2A4635001C4C2C /* ZJModelTool */ = {
+			isa = PBXGroup;
+			children = (
+				03D6698D1C2A4635001C4C2C /* ZJModelTool.h */,
+				03D6698E1C2A4635001C4C2C /* ZJModelTool.m */,
+			);
+			path = ZJModelTool;
 			sourceTree = "<group>";
 		};
 		03D7A7D21C210470003A3A68 /* 登录界面 */ = {
@@ -1926,6 +1969,7 @@
 				03E066701C27F02400E85778 /* TransferController.m in Sources */,
 				03775B7F1C113AAD00319C32 /* HomeController.m in Sources */,
 				03DB9D1C1C200D1000A40361 /* PayTypeView.m in Sources */,
+				03D6698F1C2A4635001C4C2C /* ZJModelTool.m in Sources */,
 				03D6439D1C195B010082F0D4 /* LoginController.m in Sources */,
 				03DB9D1F1C2053EC00A40361 /* ThemeContentView.m in Sources */,
 				03DB9D0A1C200B3E00A40361 /* RecipientInformationView.m in Sources */,
@@ -1940,6 +1984,7 @@
 				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
 				03E066451C27929600E85778 /* ExchangeController.m in Sources */,
+				03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */,
 				03E066861C28028700E85778 /* TransferDetailController.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
 				03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */,
@@ -1968,20 +2013,23 @@
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
 				03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */,
+				03D669A11C2A6BD6001C4C2C /* HomeWhatModel.m in Sources */,
 				03DB9D061C20052000A40361 /* MTPayController.m in Sources */,
 				03D251851C224EB400BA9ED7 /* ShortRentDetailController.m in Sources */,
 				03DC4FF91C28E9E60040C939 /* INeedCheckInController.m in Sources */,
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
+				03D669921C2A46B3001C4C2C /* HomeAdScrollViewModel.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
 				03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */,
 				03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */,
+				03D669B81C2AA04D001C4C2C /* ChoiceRoomModel.m in Sources */,
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
 				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
+				03D669A71C2A74DF001C4C2C /* ThemeContentViewModel.m in Sources */,
 				03E066831C28026400E85778 /* TransferDetailContentScrollView.m in Sources */,
 				03E0666A1C27C80E00E85778 /* ExchangeDetailPayMessageView.m in Sources */,
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
-				03DA24711C23D3550098FE4B /* ThemeScrollView.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
 				03E066741C27F0AF00E85778 /* TransferContentScrollView.m in Sources */,
 				03DA247D1C23D5470098FE4B /* ThemeListContentView.m in Sources */,
@@ -2005,12 +2053,14 @@
 				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
 				03DC51241C294D740040C939 /* LFSelectionView.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,
+				03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */,
 				03DC50C11C291CC40040C939 /* LFStepper.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
 				03DC508D1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m in Sources */,
 				03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */,
 				03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */,
+				03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
 				03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */,
 				03DB9CF51C1FF23600A40361 /* ProductView.m in Sources */,

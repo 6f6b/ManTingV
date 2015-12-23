@@ -12,12 +12,17 @@
 
 @implementation ExchangeListContentScrollView
 
+- (void)willMoveToSuperview:(UIView *)newSuperview{
+    [super willMoveToSuperview:newSuperview];
+    NSArray *buttonTitles = @[@"选择目的地",@"选择度假屋",@"周次"];
+    [self.chooserView setTitlesOfButtonWith:buttonTitles];
+}
 
 - (void)setValueWith:(id)data{
     for (int i=0; i<10; i++) {
         CGFloat X = 0;
         CGFloat Y = CGRectGetMaxY(self.chooserView.frame)+100*i;
-        CGFloat W = ScreenWidth;
+        CGFloat W = SCREEN_WIDTH;
         CGFloat H = 90;
         ExchangeListBaseCell *exchangeListBaseCell = [[ExchangeListBaseCell alloc] initWithFrame:CGRectMake(X, Y, W, H)];
         exchangeListBaseCell.backgroundColor = [UIColor greenColor];

@@ -15,7 +15,7 @@
 @implementation MineSubView
 
 + (instancetype)mineSubViewWithLeftImage:(NSString *)leftImage rightImage:(NSString *)rightImage title:(NSString *)title{
-    MineSubView *mineSubView = [[MineSubView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 50)];
+    MineSubView *mineSubView = [[MineSubView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     mineSubView.backgroundColor = [UIColor yellowColor];
     
     mineSubView.leftImage.image = [UIImage imageNamed:leftImage];

@@ -13,6 +13,7 @@
 #import "ChoiceNessRoom.h"
 #import "ChoiceNessTheme.h"
 
+#import "ThemeContentView.h"
 @interface HomeContentScrollView : MTBaseScrollView
 @property (nonatomic,weak) HomeController *homeController;
 @property (nonatomic,weak) LFLoopScrollView *adScrollView;
@@ -20,4 +21,8 @@
 @property (nonatomic,strong) NSMutableArray * fourButtons;
 @property (nonatomic,weak) ChoiceNessTheme *choiceNessTheme;
 @property (nonatomic,weak) ChoiceNessRoom *choiceNessRoom;
+@property (nonatomic,weak) UIImageView *what;
+
+@property (nonatomic,weak) ThemeContentView *themeContentView;
 @end
+
