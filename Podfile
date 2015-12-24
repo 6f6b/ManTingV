@@ -9,3 +9,6 @@ pod 'Masonry', '~> 0.6.3'
 
 platform :ios, '9.1'
 pod 'SDWebImage', '~> 3.7.3'
+
+platform :ios, '9.1'
+pod 'KVNProgress', '~> 2.2.2'

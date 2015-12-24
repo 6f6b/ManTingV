@@ -32,7 +32,6 @@
 - (ChooserView *)chooserView{
     if (nil == _chooserView) {
         ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, CGRectGetMaxY(self.adScrollView.frame))];
-        [chooserView setDataArraysWith:@[@[@"11",@"21",@"31",@"5"],@[@"12",@"22",@"32"],@[@"13",@"23",@"33"]]];
         _chooserView = chooserView;
         [self addSubview:chooserView];
     }

@@ -77,9 +77,6 @@
 		03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */; };
 		03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */; };
 		03D6698F1C2A4635001C4C2C /* ZJModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6698E1C2A4635001C4C2C /* ZJModelTool.m */; };
-		03D669921C2A46B3001C4C2C /* HomeAdScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669911C2A46B3001C4C2C /* HomeAdScrollViewModel.m */; };
-		03D669A11C2A6BD6001C4C2C /* HomeWhatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669A01C2A6BD6001C4C2C /* HomeWhatModel.m */; };
-		03D669A71C2A74DF001C4C2C /* ThemeContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669A61C2A74DF001C4C2C /* ThemeContentViewModel.m */; };
 		03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669A91C2A7A70001C4C2C /* ThemeModel.m */; };
 		03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669AF1C2A7DB3001C4C2C /* UIImageView+LF.m */; };
 		03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669B41C2A98E8001C4C2C /* ChoiceThemeModel.m */; };
@@ -147,6 +144,11 @@
 		03DC50DA1C293AC60040C939 /* CommitSuccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50D81C293AC60040C939 /* CommitSuccessController.m */; };
 		03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DC50D91C293AC60040C939 /* CommitSuccessController.xib */; };
 		03DC51241C294D740040C939 /* LFSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC51231C294D740040C939 /* LFSelectionView.m */; };
+		03DDADF61C2B815B009DC36D /* LFLoopScrollViewForMT.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADF51C2B815B009DC36D /* LFLoopScrollViewForMT.m */; };
+		03DDADFC1C2B8E0B009DC36D /* ProductContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADFB1C2B8E0B009DC36D /* ProductContentScrollView.m */; };
+		03DDADFF1C2BC0CE009DC36D /* ProductContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADFE1C2BC0CE009DC36D /* ProductContentView.m */; };
+		03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDAE011C2BC853009DC36D /* ProductContainViewModel.m */; };
+		03DDAE051C2BCC93009DC36D /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDAE041C2BCC93009DC36D /* ProductViewModel.m */; };
 		03E066451C27929600E85778 /* ExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066441C27929600E85778 /* ExchangeController.m */; };
 		03E066501C279BE100E85778 /* ExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0664F1C279BE100E85778 /* ExchangeListController.m */; };
 		03E066551C279CE700E85778 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066541C279CE700E85778 /* ContentScrollView.m */; };
@@ -301,12 +303,6 @@
 		03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBaseScrollView.m; sourceTree = "<group>"; };
 		03D6698D1C2A4635001C4C2C /* ZJModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJModelTool.h; sourceTree = "<group>"; };
 		03D6698E1C2A4635001C4C2C /* ZJModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJModelTool.m; sourceTree = "<group>"; };
-		03D669901C2A46B3001C4C2C /* HomeAdScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAdScrollViewModel.h; sourceTree = "<group>"; };
-		03D669911C2A46B3001C4C2C /* HomeAdScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAdScrollViewModel.m; sourceTree = "<group>"; };
-		03D6699F1C2A6BD6001C4C2C /* HomeWhatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWhatModel.h; sourceTree = "<group>"; };
-		03D669A01C2A6BD6001C4C2C /* HomeWhatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWhatModel.m; sourceTree = "<group>"; };
-		03D669A51C2A74DF001C4C2C /* ThemeContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeContentViewModel.h; sourceTree = "<group>"; };
-		03D669A61C2A74DF001C4C2C /* ThemeContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeContentViewModel.m; sourceTree = "<group>"; };
 		03D669A81C2A7A70001C4C2C /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeModel.h; sourceTree = "<group>"; };
 		03D669A91C2A7A70001C4C2C /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeModel.m; sourceTree = "<group>"; };
 		03D669AE1C2A7DB3001C4C2C /* UIImageView+LF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LF.h"; sourceTree = "<group>"; };
@@ -427,6 +423,16 @@
 		03DC50D91C293AC60040C939 /* CommitSuccessController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitSuccessController.xib; sourceTree = "<group>"; };
 		03DC51221C294D740040C939 /* LFSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSelectionView.h; sourceTree = "<group>"; };
 		03DC51231C294D740040C939 /* LFSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSelectionView.m; sourceTree = "<group>"; };
+		03DDADF41C2B815B009DC36D /* LFLoopScrollViewForMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoopScrollViewForMT.h; sourceTree = "<group>"; };
+		03DDADF51C2B815B009DC36D /* LFLoopScrollViewForMT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoopScrollViewForMT.m; sourceTree = "<group>"; };
+		03DDADFA1C2B8E0B009DC36D /* ProductContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContentScrollView.h; sourceTree = "<group>"; };
+		03DDADFB1C2B8E0B009DC36D /* ProductContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContentScrollView.m; sourceTree = "<group>"; };
+		03DDADFD1C2BC0CE009DC36D /* ProductContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContentView.h; sourceTree = "<group>"; };
+		03DDADFE1C2BC0CE009DC36D /* ProductContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContentView.m; sourceTree = "<group>"; };
+		03DDAE001C2BC853009DC36D /* ProductContainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContainViewModel.h; sourceTree = "<group>"; };
+		03DDAE011C2BC853009DC36D /* ProductContainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContainViewModel.m; sourceTree = "<group>"; };
+		03DDAE031C2BCC93009DC36D /* ProductViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewModel.h; sourceTree = "<group>"; };
+		03DDAE041C2BCC93009DC36D /* ProductViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewModel.m; sourceTree = "<group>"; };
 		03E066431C27929600E85778 /* ExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeController.h; sourceTree = "<group>"; };
 		03E066441C27929600E85778 /* ExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeController.m; sourceTree = "<group>"; };
 		03E0664E1C279BE100E85778 /* ExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListController.h; sourceTree = "<group>"; };
@@ -659,6 +665,7 @@
 		03775B751C1138F200319C32 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				03DDADF31C2B8133009DC36D /* LFLoopScrollViewForMT */,
 				03E066521C279CB400E85778 /* ContentScrollView */,
 				03775B791C1139EA00319C32 /* MTController.h */,
 				03775B7A1C1139EA00319C32 /* MTController.m */,
@@ -708,12 +715,6 @@
 		03775B881C113AEC00319C32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				03D669901C2A46B3001C4C2C /* HomeAdScrollViewModel.h */,
-				03D669911C2A46B3001C4C2C /* HomeAdScrollViewModel.m */,
-				03D6699F1C2A6BD6001C4C2C /* HomeWhatModel.h */,
-				03D669A01C2A6BD6001C4C2C /* HomeWhatModel.m */,
-				03D669A51C2A74DF001C4C2C /* ThemeContentViewModel.h */,
-				03D669A61C2A74DF001C4C2C /* ThemeContentViewModel.m */,
 				03D669A81C2A7A70001C4C2C /* ThemeModel.h */,
 				03D669A91C2A7A70001C4C2C /* ThemeModel.m */,
 				03D669B31C2A98E8001C4C2C /* ChoiceThemeModel.h */,
@@ -736,6 +737,10 @@
 		03775B8A1C113AF200319C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03DDADFA1C2B8E0B009DC36D /* ProductContentScrollView.h */,
+				03DDADFB1C2B8E0B009DC36D /* ProductContentScrollView.m */,
+				03DDADFD1C2BC0CE009DC36D /* ProductContentView.h */,
+				03DDADFE1C2BC0CE009DC36D /* ProductContentView.m */,
 				03DB9CED1C1FDF8C00A40361 /* ProductContainView.h */,
 				03DB9CEE1C1FDF8C00A40361 /* ProductContainView.m */,
 				03DB9CF31C1FF23600A40361 /* ProductView.h */,
@@ -747,6 +752,10 @@
 		03775B8B1C113AF400319C32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03DDAE001C2BC853009DC36D /* ProductContainViewModel.h */,
+				03DDAE011C2BC853009DC36D /* ProductContainViewModel.m */,
+				03DDAE031C2BCC93009DC36D /* ProductViewModel.h */,
+				03DDAE041C2BCC93009DC36D /* ProductViewModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1530,6 +1539,15 @@
 			path = TEST;
 			sourceTree = "<group>";
 		};
+		03DDADF31C2B8133009DC36D /* LFLoopScrollViewForMT */ = {
+			isa = PBXGroup;
+			children = (
+				03DDADF41C2B815B009DC36D /* LFLoopScrollViewForMT.h */,
+				03DDADF51C2B815B009DC36D /* LFLoopScrollViewForMT.m */,
+			);
+			name = LFLoopScrollViewForMT;
+			sourceTree = "<group>";
+		};
 		03E066411C27923500E85778 /* 我要交换 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1985,6 +2003,7 @@
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
 				03E066451C27929600E85778 /* ExchangeController.m in Sources */,
 				03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */,
+				03DDADFC1C2B8E0B009DC36D /* ProductContentScrollView.m in Sources */,
 				03E066861C28028700E85778 /* TransferDetailController.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
 				03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */,
@@ -1999,6 +2018,7 @@
 				03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */,
 				03775B421C11368F00319C32 /* AppDelegate.m in Sources */,
 				03D2518B1C22509900BA9ED7 /* CheckInAndCheckOutView.m in Sources */,
+				03DDAE051C2BCC93009DC36D /* ProductViewModel.m in Sources */,
 				03E066501C279BE100E85778 /* ExchangeListController.m in Sources */,
 				03DA246E1C23D0890098FE4B /* HomeContentScrollView.m in Sources */,
 				03DA24871C23D7450098FE4B /* ResortFacilitiesView.m in Sources */,
@@ -2011,14 +2031,13 @@
 				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
 				03DC50841C291B410040C939 /* CheckInDetailTimeView.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
+				03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
 				03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */,
-				03D669A11C2A6BD6001C4C2C /* HomeWhatModel.m in Sources */,
 				03DB9D061C20052000A40361 /* MTPayController.m in Sources */,
 				03D251851C224EB400BA9ED7 /* ShortRentDetailController.m in Sources */,
 				03DC4FF91C28E9E60040C939 /* INeedCheckInController.m in Sources */,
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
-				03D669921C2A46B3001C4C2C /* HomeAdScrollViewModel.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
 				03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */,
@@ -2026,7 +2045,6 @@
 				03D669B81C2AA04D001C4C2C /* ChoiceRoomModel.m in Sources */,
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
 				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
-				03D669A71C2A74DF001C4C2C /* ThemeContentViewModel.m in Sources */,
 				03E066831C28026400E85778 /* TransferDetailContentScrollView.m in Sources */,
 				03E0666A1C27C80E00E85778 /* ExchangeDetailPayMessageView.m in Sources */,
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
@@ -2046,6 +2064,7 @@
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
 				03E0666D1C27C85000E85778 /* ExchangeDetailBaseView.m in Sources */,
 				03DB9D161C200CAF00A40361 /* LeaveWordView.m in Sources */,
+				03DDADFF1C2BC0CE009DC36D /* ProductContentView.m in Sources */,
 				03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */,
 				03E066671C27C7F400E85778 /* ExchangeDetailDescriptionView.m in Sources */,
 				03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */,
@@ -2056,6 +2075,7 @@
 				03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */,
 				03DC50C11C291CC40040C939 /* LFStepper.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
+				03DDADF61C2B815B009DC36D /* LFLoopScrollViewForMT.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
 				03DC508D1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m in Sources */,
 				03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */,

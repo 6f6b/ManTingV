@@ -12,11 +12,11 @@
 #import "LFLoopScrollView.h"
 #import "ChoiceNessRoom.h"
 #import "ChoiceNessTheme.h"
-
 #import "ThemeContentView.h"
+
 @interface HomeContentScrollView : MTBaseScrollView
 @property (nonatomic,weak) HomeController *homeController;
-@property (nonatomic,weak) LFLoopScrollView *adScrollView;
+@property (nonatomic,weak) LFLoopScrollViewForMT *adScrollView;
 
 @property (nonatomic,strong) NSMutableArray * fourButtons;
 @property (nonatomic,weak) ChoiceNessTheme *choiceNessTheme;

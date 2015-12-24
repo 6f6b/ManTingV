@@ -48,7 +48,8 @@
         make.width.equalTo(self.locationLabel);
         //高 等于 2
         make.height.equalTo(@2);
-        make.width.lessThanOrEqualTo(@355);
+        NSNumber *num = [NSNumber numberWithDouble:SCREEN_WIDTH-5];
+        make.width.lessThanOrEqualTo(num);
         
     }];
     
@@ -69,7 +70,8 @@
         make.width.equalTo(self.locationLabel);
         //高 等于 2
         make.height.equalTo(@2);
-        make.width.lessThanOrEqualTo(@355);
+        NSNumber *num = [NSNumber numberWithDouble:SCREEN_WIDTH-5];
+        make.width.lessThanOrEqualTo(num);
     }];
 }
 

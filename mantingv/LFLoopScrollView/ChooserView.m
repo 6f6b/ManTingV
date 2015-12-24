@@ -99,7 +99,9 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = self.dataContentArray[self.indexOfDataAndButton][indexPath.row];
+    NSDictionary *dic = self.dataContentArray[self.indexOfDataAndButton][indexPath.row];
+    NSString *title = [dic objectForKey:@"label"];
+    cell.textLabel.text = title;
     cell.backgroundColor = [UIColor orangeColor];
     return cell;
 }

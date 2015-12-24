@@ -10,5 +10,6 @@
 
 @interface MTBaseScrollView : UIScrollView
 @property (nonatomic,strong) UIViewController *controller;
+@property (nonatomic,strong) AFHTTPSessionManager *manager;
 - (void)setValueWith:(id)data;
 @end

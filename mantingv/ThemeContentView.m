@@ -9,15 +9,17 @@
 #import "ThemeContentView.h"
 #import "ThemeListController.h"
 #import "Theme.h"
-#import "ThemeContentViewModel.h"
 
 @implementation ThemeContentView
 
 - (void)setValueWith:(id)data{
-    ThemeContentViewModel *model = [ThemeContentViewModel modelWithDictionary:data];
+    MTModel *model = [MTModel modelWithDictionary:data];
     ;
-    for (int i=0; i<model.data.count; i++) {
+    NSArray *arr = (NSArray *)model.data;
+    for (int i=0; i<arr.count; i++) {
         Theme *theme = [[Theme alloc] init];
+        theme.layer.cornerRadius = 5;
+        theme.clipsToBounds = YES;
         theme.tag = 1000+i;
         CGFloat X = i%2*(SCREEN_WIDTH/2+10);
         CGFloat Y = i/2*(SCREEN_WIDTH/2);
@@ -29,7 +31,6 @@
         //添加手势
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealThemeTap:)];
         [theme addGestureRecognizer:tap];
-        NSLog(@"%lu",theme.gestureRecognizers.count);
         CGRect frame = self.frame;
         frame.size.width = SCREEN_WIDTH;
         frame.size.height = CGRectGetMaxY(theme.frame);

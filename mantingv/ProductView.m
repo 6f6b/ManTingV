@@ -7,6 +7,7 @@
 //
 
 #import "ProductView.h"
+#import "ProductViewModel.h"
 
 @implementation ProductView
 
@@ -17,6 +18,7 @@
 //@property (nonatomic,weak) UILabel *houseTypeAndSizeLabel;
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
+    self.backgroundColor = [UIColor greenColor];
     UIView *superView = self;
     
     //backImage
@@ -54,6 +56,8 @@
         
         //距 backImage 下边 5
         make.top.equalTo(self.backImage.mas_bottom).with.offset(5);
+        
+        make.bottom.equalTo(superView).with.offset(-20);
     }];
     
     [self.houseTypeAndSizeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -121,10 +125,27 @@
 }
 
 - (void)setValueWith:(id)data{
-    self.backImage.backgroundColor = [UIColor greenColor];
-    self.priceLabel.text = @"1200元／份起";
-    self.titleLabel.text = @"太湖";
-    self.houseTypeAndSizeLabel.text = @"三居室／121.97平米";
+    ProductViewModel *model = [ProductViewModel modelWithDictionary:data];
+//    NSLog(@"%@",data);
+//    @property (nonatomic,copy) NSString *houseBaseGuid;
+//    @property (nonatomic,copy) NSString *area;
+//    @property (nonatomic,copy) NSString *personNum;
+//    @property (nonatomic,copy) NSString *buildingArea;
+//    @property (nonatomic,copy) NSString *price;
+//    @property (nonatomic,copy) NSString *extraArea;
+//    @property (nonatomic,copy) NSString *houseType;
+//    @property (nonatomic,copy) NSArray *houseInfoDTOs;
+//    @property (nonatomic,copy) NSArray *imageGuids;
+//    @property (nonatomic,copy) NSString *guid;
+//    @property (nonatomic,copy) NSString *name;
+    NSDictionary *dic = model.houseInfoDTOs[0];
+    NSArray *imageGuids = [dic objectForKey:@"imageGuids"];
+    
+    [self.backImage lfSetImageWithURL:imageGuids[0]];
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@/份起",model.price];
+    self.titleLabel.text = model.name;
+    self.houseTypeAndSizeLabel.text = [NSString stringWithFormat:@"%@/%@平米",model.houseType,model.area];
     self.seeDetailLabel.text = @"查看详情";
+
 }
 @end

@@ -15,10 +15,9 @@
 #import "ChoiceNessRoom.h"
 #import "ShortRentController.h"
 
-#import "HomeAdScrollViewModel.h"
-#import "HomeWhatModel.h"
+#import "MTModel.h"
 @interface HomeContentScrollView ()
-@property (nonatomic,copy) AFHTTPSessionManager *manager;
+//@property (nonatomic,copy) AFHTTPSessionManager *manager;
 @end
 
 @implementation HomeContentScrollView
@@ -32,9 +31,9 @@
 }
 
 #pragma mark - 滚动广告视图
-- (LFLoopScrollView *)adScrollView{
+- (LFLoopScrollViewForMT *)adScrollView{
     if (nil == _adScrollView) {
-        LFLoopScrollView *adScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+        LFLoopScrollViewForMT *adScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH*0.5)];
         adScrollView.autoScroll = YES;
         adScrollView.backgroundColor = [UIColor greenColor];
         _adScrollView = adScrollView;
@@ -51,7 +50,6 @@
 }
 
 - (void)dealButton:(UIButton *)button{
-    NSLog(@"%lu",button.tag);
     if (100 == button.tag) {
         ProductController *pc = [[ProductController alloc] init];
         [self.controller.navigationController pushViewController:pc animated:YES];
@@ -119,14 +117,14 @@
     return _choiceNessRoom;
 }
 
-- (AFHTTPSessionManager *)manager{
-    if (nil == _manager) {
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        _manager = manager;
-    }
-    return _manager;
-}
+//- (AFHTTPSessionManager *)manager{
+//    if (nil == _manager) {
+//        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//        _manager = manager;
+//    }
+//    return _manager;
+//}
 
 - (void)setValueWith:(id)data{
     
@@ -136,7 +134,7 @@
     [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        HomeAdScrollViewModel *model = [HomeAdScrollViewModel modelWithDictionary:dic];
+        MTModel *model = [MTModel modelWithDictionary:dic];
         [self.adScrollView setImageWithUrlS:model.data];
         
         [self setButtons];
@@ -201,7 +199,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        HomeWhatModel *model = [HomeWhatModel modelWithDictionary:dic];
+        MTModel *model = [MTModel modelWithDictionary:dic];
         [self.what lfSetImageWithURL:model.data];
         
         [self loadChoiceNessThemeData];

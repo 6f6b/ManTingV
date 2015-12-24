@@ -7,6 +7,7 @@
 //
 
 #import "UIImageView+LF.h"
+#import "UIImageView+WebCache.h"
 #import "UIKit+AFNetworking.h"
 
 @implementation UIImageView (LF)
@@ -23,7 +24,7 @@
     
     NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/img/%@/%lu/%lu",imageGuid,W,H]];
     NSURL *url = [NSURL URLWithString:urlString];
-    [self setImageWithURL:url];
+    [self sd_setImageWithURL:url];
 }
 
 - (void)lfSetImageWithURL:(NSString *)imageGuid placeholderImage:(UIImage *)placeholderImage{
@@ -32,6 +33,6 @@
     
     NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/img/%@/%lu/%lu",imageGuid,W,H]];
     NSURL *url = [NSURL URLWithString:urlString];
-    [self setImageWithURL:url placeholderImage:placeholderImage];
+    [self sd_setImageWithURL:url placeholderImage:placeholderImage];
 }
 @end
