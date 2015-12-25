@@ -14,5 +14,7 @@
 
 @interface LFSelectionView : UIView
 @property (nonatomic,strong) id<SeclectionViewDelegate> delegate;
-+ (instancetype)selectionViewWith:(NSArray *)titles views:(NSArray *)views origin:(CGPoint)origin;
++ (instancetype)selectionViewWithOrigin:(CGPoint)origin;
+- (void)setTitlesWith:(NSArray *)titles;
+- (void)setViewWith:(NSArray *)views;
 @end

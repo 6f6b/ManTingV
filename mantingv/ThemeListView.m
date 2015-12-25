@@ -8,7 +8,8 @@
 
 #import "ThemeListView.h"
 #import "MTPayController.h"
-#import "ThemeListContentView.h"
+#import "ThemeListViewModel.h"
+
 @implementation ThemeListView
 
 #pragma  mark - 创建约束
@@ -33,8 +34,7 @@
         //距 self.backImage 右边距 5
         make.left.equalTo(self.backImage.mas_right).with.offset(5);
         
-        make.width.equalTo(@50);
-        make.height.equalTo(@20);
+
     }];
     
     [self.houseTypeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -42,9 +42,7 @@
         make.left.equalTo(self.backImage.mas_right).with.offset(5);
         //距 self.timeLabel 下边距 0
         make.top.equalTo(self.timeLabel.mas_bottom);
-        
-        make.width.equalTo(@50);
-        make.height.equalTo(@20);
+
     }];
     
     [self.sizeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -53,8 +51,7 @@
         //距 self.houseTypeLabel 下边距 0
         make.top.equalTo(self.houseTypeLabel.mas_bottom);
         
-        make.width.equalTo(@50);
-        make.height.equalTo(@20);
+
     }];
     
     [self.surplusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,8 +60,7 @@
         //距 self.sizeLabel 上边距 0
         make.top.equalTo(self.sizeLabel);
         
-        make.width.equalTo(@50);
-        make.height.equalTo(@20);
+
     }];
     
     [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -73,8 +69,7 @@
         //距 self.timeLabel 上边距 0
         make.top.equalTo(self.timeLabel);
         
-        make.width.equalTo(@50);
-        make.height.equalTo(@20);
+
     }];
     
     [self.buyButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -176,15 +171,31 @@
 }
 
 - (void)dealBuyBtn{
+    NSLog(@"购买");
     MTPayController *payController = [[MTPayController alloc] init];
     payController.title = @"支付";
     
-    ThemeListContentView *themeListContentView =  self.superview;
+    MTBaseView *themeListContentView =  (MTBaseView *)self.superview;
     [themeListContentView.controller.navigationController pushViewController:payController animated:YES];
 }
 
 - (void)setValueWith:(id)data{
-    //
+//    @property (nonatomic,weak) UIImageView *backImage;
+//    @property (nonatomic,weak) UILabel *timeLabel;
+//    @property (nonatomic,weak) UILabel *houseTypeLabel;
+//    @property (nonatomic,weak) UILabel *sizeLabel;
+//    @property (nonatomic,weak) UILabel *surplusLabel;
+//    @property (nonatomic,weak) UILabel *priceLabel;
+//    @property (nonatomic,weak) UIButton *buyButton;
+    
+    ThemeListViewModel *model = [ThemeListViewModel modelWithDictionary:data];
+    [self.backImage lfSetImageWithURL:self.imageUrl];
+    self.timeLabel.text = [NSString stringWithFormat:@"周期：%@",model.name];
+    self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",self.houseType];
+    self.sizeLabel.text = [NSString stringWithFormat:@"面积：%@",self.buildingSize];
+    self.surplusLabel.text = [NSString stringWithFormat:@"剩余%@份",model.fee];
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
+    
 }
 
 @end

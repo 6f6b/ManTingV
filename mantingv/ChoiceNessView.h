@@ -11,10 +11,12 @@
 @interface ChoiceNessView : MTBaseView
 
 //创建视图对象
-+ (instancetype)choiceNessViewWith:(NSString *)title point:(CGPoint)point;
++ (instancetype)choiceNessViewWithPoint:(CGPoint)point;
 
 //设置“查看更多”的点击事件
 - (void)setClickedAction:(void(^)())action;
+
+- (void)setTitle:(NSString *)title;
 
 //在setValue中自定义创建子视图
 @end

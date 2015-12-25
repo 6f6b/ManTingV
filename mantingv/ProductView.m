@@ -7,7 +7,10 @@
 //
 
 #import "ProductView.h"
+#import "ProductViewFatherModel.h"
 #import "ProductViewModel.h"
+#import "ThemeListController.h"
+
 
 @implementation ProductView
 
@@ -18,8 +21,12 @@
 //@property (nonatomic,weak) UILabel *houseTypeAndSizeLabel;
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
+    
     self.backgroundColor = [UIColor greenColor];
     UIView *superView = self;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
+    [self addGestureRecognizer:tap];
     
     //backImage
     [self.backImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -125,8 +132,8 @@
 }
 
 - (void)setValueWith:(id)data{
-    ProductViewModel *model = [ProductViewModel modelWithDictionary:data];
-//    NSLog(@"%@",data);
+    ProductViewFatherModel *productViewFatherModel = [ProductViewFatherModel modelWithDictionary:data];
+    //按照层级关系来讲，这一层应该为ProductView的数据，但由于服务器给的数据结构，我们不得不再向下剖析几层
 //    @property (nonatomic,copy) NSString *houseBaseGuid;
 //    @property (nonatomic,copy) NSString *area;
 //    @property (nonatomic,copy) NSString *personNum;
@@ -138,14 +145,22 @@
 //    @property (nonatomic,copy) NSArray *imageGuids;
 //    @property (nonatomic,copy) NSString *guid;
 //    @property (nonatomic,copy) NSString *name;
-    NSDictionary *dic = model.houseInfoDTOs[0];
-    NSArray *imageGuids = [dic objectForKey:@"imageGuids"];
+    ProductViewModel *productViewModel = [ProductViewModel modelWithDictionary:productViewFatherModel.houseInfoDTOs[0]];
+    self.model = productViewModel;
     
-    [self.backImage lfSetImageWithURL:imageGuids[0]];
-    self.priceLabel.text = [NSString stringWithFormat:@"￥%@/份起",model.price];
-    self.titleLabel.text = model.name;
-    self.houseTypeAndSizeLabel.text = [NSString stringWithFormat:@"%@/%@平米",model.houseType,model.area];
+    [self.backImage lfSetImageWithURL:productViewModel.imageGuids[0]];
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@/份起",productViewModel.price];
+    self.titleLabel.text = productViewModel.name;
+    self.houseTypeAndSizeLabel.text = [NSString stringWithFormat:@"%@/%@平米",productViewModel.houseType,productViewModel.buildingTypeArea];
     self.seeDetailLabel.text = @"查看详情";
 
+}
+
+- (void)dealTap:(UITapGestureRecognizer *)tap{
+    UIViewController *controller = self.controller;
+    ThemeListController *themeListController = [[ThemeListController alloc] init];
+    ProductViewModel *model = (ProductViewModel *)self.model;
+    themeListController.guid = model.guid;
+    [controller.navigationController pushViewController:themeListController animated:YES];
 }
 @end

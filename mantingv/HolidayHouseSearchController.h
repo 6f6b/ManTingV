@@ -7,7 +7,9 @@
 //
 
 #import "MTTableController.h"
+#import "ChooserView.h"
 
 @interface HolidayHouseSearchController : MTTableController
-
+@property (nonatomic,weak) ChooserView *chooserView;
+@property (nonatomic,copy) NSMutableDictionary *parameters;
 @end

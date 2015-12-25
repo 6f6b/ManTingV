@@ -90,7 +90,8 @@
 #pragma mark - 精选主题
 - (ChoiceNessTheme *)choiceNessTheme{
     if (nil == _choiceNessTheme) {
-        ChoiceNessTheme *choiceNessTheme = [ChoiceNessTheme choiceNessViewWith:@"精选主题" point:CGPointMake(0,CGRectGetMaxY(self.what.frame))];
+        ChoiceNessTheme *choiceNessTheme = [ChoiceNessTheme choiceNessViewWithPoint:CGPointMake(0,CGRectGetMaxY(self.what.frame))];
+        [choiceNessTheme setTitle:@"精选主题"];
         choiceNessTheme.backgroundColor = [UIColor whiteColor];
         [choiceNessTheme setClickedAction:^{
             ProductController *productController = [[ProductController alloc] init];
@@ -105,7 +106,8 @@
 #pragma mark - 精选房间
 - (ChoiceNessRoom *)choiceNessRoom{
     if (nil == _choiceNessRoom) {
-        ChoiceNessRoom *choiceNessRoom = [ChoiceNessRoom choiceNessViewWith:@"精选房间" point:CGPointMake(0, CGRectGetMaxY(self.choiceNessTheme.frame))];
+        ChoiceNessRoom *choiceNessRoom = [ChoiceNessRoom choiceNessViewWithPoint:CGPointMake(0, CGRectGetMaxY(self.choiceNessTheme.frame))];
+        [choiceNessRoom setTitle:@"精选房间"];
         [choiceNessRoom setClickedAction:^{
             ShortRentController *shortController = [[ShortRentController alloc] init];
             [self.controller.navigationController pushViewController:shortController animated:YES];

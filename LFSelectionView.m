@@ -14,19 +14,17 @@
 @end
 @implementation LFSelectionView
 
-+ (instancetype)selectionViewWith:(NSArray *)titles views:(NSArray *)views origin:(CGPoint)origin{
++ (instancetype)selectionViewWithOrigin:(CGPoint)origin{
     LFSelectionView *selectionView = [[LFSelectionView alloc] initWithFrame:CGRectMake(origin.x, origin.y, SCREEN_WIDTH, 40)];
     
     selectionView.buttons = [[NSMutableArray alloc] init];
-    [selectionView setTitlesWith:titles];
-    [selectionView setViewWith:views];
     return selectionView;
 }
 
 - (void)setTitlesWith:(NSArray *)titles{
     for (int i=0; i<titles.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setBackgroundColor:[UIColor redColor]];
+        [button setBackgroundColor:[UIColor grayColor]];
         button.tag = i;
         [self.buttons addObject:button];
         [self addSubview:button];

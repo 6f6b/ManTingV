@@ -11,7 +11,8 @@
 @implementation ResortFacilitiesView
 
 - (void)setValueWith:(id)data{
-    for(int i=0;i<10;i++){
+    NSArray *arr = data;
+    for(int i=0;i<arr.count;i++){
         CGFloat X = (self.frame.size.width/4)*(i%4);
         CGFloat Y = i/4*30;
         CGFloat W = self.frame.size.width/4;
@@ -20,7 +21,8 @@
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor redColor];
         label.textAlignment = NSTextAlignmentCenter;
-        label.text = @"空调";
+        NSDictionary *dic = arr[i];
+        label.text = [dic objectForKey:@"name"];
         label.frame = CGRectMake(X, Y, W, H);
         [self addSubview:label];
         

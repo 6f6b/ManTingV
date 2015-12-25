@@ -16,5 +16,9 @@
 @property (nonatomic,weak) UILabel *surplusLabel;
 @property (nonatomic,weak) UILabel *priceLabel;
 @property (nonatomic,weak) UIButton *buyButton;
+
+@property (nonatomic,copy) NSString *buildingSize;
+@property (nonatomic,weak) NSString *imageUrl;
+@property (nonatomic,copy) NSString *houseType;
 - (void)dealBuyBtn;
 @end

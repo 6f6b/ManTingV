@@ -10,5 +10,6 @@
 
 @interface MTBaseView : UIView
 @property (nonatomic,strong) UIViewController *controller;
+@property (nonatomic,strong) MTModel *model;
 - (void)setValueWith:(id)data;
 @end

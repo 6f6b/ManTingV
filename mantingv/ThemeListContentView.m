@@ -8,16 +8,18 @@
 
 #import "ThemeListContentView.h"
 #import "ThemeListView.h"
+#import "ThemeListContentScrollViewModel.h"
 
 @implementation ThemeListContentView
 
 //创建的同时赋值
 - (void)setValueWith:(id)data{
-    for (int i=0; i<10; i++) {
+    ThemeListContentScrollViewModel *model = data;
+    for (int i=0; i<model.houseWeekDTOs.count; i++) {
         ThemeListView *themeListView = [[ThemeListView alloc] init];
-        [themeListView setValueWith:nil];
+        themeListView.controller = self.controller;
         themeListView.tag = 100+i;
-        themeListView.backgroundColor = [UIColor blueColor];
+        themeListView.backgroundColor = [UIColor whiteColor];
         
         CGFloat X = 0;
         CGFloat Y = 82*i;
@@ -25,7 +27,10 @@
         CGFloat H = 80;
         themeListView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:themeListView];
-        
+        themeListView.buildingSize = model.buildingTypeArea;
+        themeListView.imageUrl = model.imageGuids[i];
+        themeListView.houseType = model.houseType;
+        [themeListView setValueWith:model.houseWeekDTOs[i]];
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, SCREEN_WIDTH, CGRectGetMaxY(themeListView.frame));
     }
 }

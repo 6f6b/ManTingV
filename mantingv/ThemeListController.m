@@ -7,85 +7,49 @@
 //
 
 #import "ThemeListController.h"
-#import "ThemeListContentView.h"
-#import "SelectView.h"
+#import "ThemeListContentScrollView.h"
 
-@interface ThemeListController ()<SeclectViewDelegate>
-@property (nonatomic,weak) UIScrollView *contentScrollView;
-@property (nonatomic,weak) LFLoopScrollView *themeListPictuerScrollView;
-@property (nonatomic,weak) ThemeListContentView *themListContentView;
-@property (nonatomic,weak) SelectView *selectView;
+@interface ThemeListController ()
+@property (nonatomic,weak) ThemeListContentScrollView *themeListContentScrollView;
 @end
 
 @implementation ThemeListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.contentScrollView.frame = self.view.bounds;
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    NSArray *urls = @[@"http://down.tutu001.com/d/file/20101129/2f5ca0f1c9b6d02ea87df74fcc_560.jpg",@"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg",@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
-    [self.themeListPictuerScrollView setImageWithUrlS:urls];
-    
-    [self.themListContentView setValueWith:nil];
-    
-    [self.selectView setValue];
-    self.selectView.delegate = self;
-    
-    //子控件加载完毕后，刷新contentScrollView的contentSize属性
-    self.contentScrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.selectView.frame));
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSString *string = [NSString stringWithFormat:@"/house/house_info/details/%@",self.guid];
+    NSString *url = [BASE_URL stringByAppendingString:string];
+    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        [self.themeListContentScrollView setValueWith:[dic objectForKey:@"data"]];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 
-- (UIScrollView *)contentScrollView{
-    if (nil == _contentScrollView) {
-        UIScrollView *contentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        contentScrollView.backgroundColor = [UIColor whiteColor];
-        [self.view addSubview:contentScrollView];
-        _contentScrollView = contentScrollView;
+- (ThemeListContentScrollView *)themeListContentScrollView{
+    if (nil == _themeListContentScrollView) {
+        ThemeListContentScrollView *themeListContentScrollView = [[ThemeListContentScrollView alloc] initWithFrame:self.view.bounds];
+        themeListContentScrollView.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:themeListContentScrollView];
+        _themeListContentScrollView = themeListContentScrollView;
     }
-    return _contentScrollView;
+    return _themeListContentScrollView;
 }
 
-- (LFLoopScrollView *)themeListPictuerScrollView{
-    if (nil == _themeListPictuerScrollView) {
-        LFLoopScrollView *themeListPictuerScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
 
-        themeListPictuerScrollView.autoScroll = YES;
-        themeListPictuerScrollView.backgroundColor = [UIColor greenColor];
-        _themeListPictuerScrollView = themeListPictuerScrollView;
-        [self.contentScrollView addSubview:_themeListPictuerScrollView];
-    }
-    return _themeListPictuerScrollView;
-}
 
-//主题列表视图
-- (ThemeListContentView *)themListContentView{
-    if (nil == _themListContentView) {
-        ThemeListContentView *themeListContentView = [[ThemeListContentView alloc] init];
-        themeListContentView.frame = CGRectMake(0, CGRectGetMaxY(self.themeListPictuerScrollView.frame), 0, 0);
-        themeListContentView.controller = self;
-        themeListContentView.backgroundColor = [UIColor orangeColor];
-        [self.contentScrollView addSubview:themeListContentView];
-        _themListContentView = themeListContentView;
-    }
-    return _themListContentView;
-}
 
-- (SelectView *)selectView{
-    if (nil == _selectView) {
-        SelectView *selectView = [[SelectView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.themListContentView.frame), SCREEN_WIDTH, 0)];
-        selectView.backgroundColor = [UIColor greenColor];
-        [self.contentScrollView addSubview:selectView];
-        _selectView = selectView;
-    }
-    return _selectView;
-}
 
-- (void)selectView:(UIView *)selectView{
-    NSLog(@"%@",NSStringFromCGRect(selectView.frame));
-    self.contentScrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(selectView.frame));
-    NSLog(@"%@",NSStringFromCGSize(self.contentScrollView.contentSize));
-}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

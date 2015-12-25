@@ -1,21 +1,21 @@
 //
-//  ProductViewModel.h
+//  ThemeListContentScrollViewModel.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/24.
+//  Created by LiuFeng on 15/12/25.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
 #import "MTModel.h"
 
-@interface ProductViewModel : MTModel
+@interface ThemeListContentScrollViewModel : MTModel
 @property (nonatomic,copy) NSArray *supportingDTOs;
 @property (nonatomic,copy) NSString *buildingTypeGuid;
 @property (nonatomic,copy) NSArray *houseExtraFeeDTOs;
 @property (nonatomic,copy) NSString *permits;
 @property (nonatomic,copy) NSArray *imageGuids;
 @property (nonatomic,copy) NSString *province;
-@property (nonatomic,copy) NSString *developers;
+@property (nonatomic,copy) NSArray *developers;
 @property (nonatomic,copy) NSString *price;
 @property (nonatomic,copy) NSArray *houseWeekDTOs;
 @property (nonatomic,copy) NSString *houseType;

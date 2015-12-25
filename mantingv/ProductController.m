@@ -9,7 +9,7 @@
 #import "ProductController.h"
 #import "ProductContentScrollView.h"
 
-@interface ProductController ()
+@interface ProductController ()<UISearchBarDelegate>
 @property (nonatomic,weak) ProductContentScrollView *productContentScrollView;
 @property (nonatomic,weak) LFLoopScrollView *adScrollView;
 @end
@@ -22,6 +22,7 @@
     //创建顶部搜索框
     UISearchBar *productSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 10, 80, 40)];
     productSearchBar.placeholder = @"请输入关键词";
+    productSearchBar.delegate = self;
     self.navigationItem.titleView = productSearchBar;
     
     [self.productContentScrollView setValueWith:nil];
@@ -36,6 +37,13 @@
         [self.view addSubview:productContentScrollView];
     }
     return _productContentScrollView;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+    NSString *searchString  = searchBar.text;
+    searchBar.text = @"";
+    [self.productContentScrollView setValueWith:searchString];
 }
 
 - (void)didReceiveMemoryWarning {

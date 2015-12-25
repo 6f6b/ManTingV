@@ -37,7 +37,7 @@
                                      @"pageSize":@"100",
                                      @"currentPage":@"1"
                                      };
-        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:dictionary];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
         _parameters = dic;
     }
     return _parameters;
@@ -54,6 +54,12 @@
 - (void)setValueWith:(id)data{
 /////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    if (data) {
+        [self resetParameters];
+        [self.parameters setValue:data forKey:@"houseBaseName"];
+        [self loadDataForProductContentView];
+        return;
+    }
     NSString *url = [BASE_URL stringByAppendingString:@"/house/area_enum"];
     
     
@@ -105,17 +111,22 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadDataForProductContentView{
     NSString *url = [BASE_URL stringByAppendingString:@"/house/list"];
-
+    [KVNProgress showWithStatus:@"正在加载.."];
     [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         
+        [self.productContentView removeFromSuperview];
+        self.productContentView = nil;
+        [KVNProgress dismiss];
+
         [self.productContentView setValueWith:dic];
         NSArray *arr = [dic objectForKey:@"data"];
         if (0 == arr.count) {
+            [KVNProgress dismiss];
             [KVNProgress showErrorWithStatus:@"查找失败"];
         }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -129,33 +140,39 @@
     [self.chooserView setTitlesOfButtonWith:buttonTitles];
     [self.chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
         NSDictionary *dic = self.chooserViewData[indexOfDataAndButtons][indexPath.row];
+        [self resetParameters];
         NSString *value = [dic objectForKey:@"name"];
         if (0 == indexOfDataAndButtons) {
             if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseArea"]]) {
-                return ;
+                //return ;
             }
             [self.parameters setValue:value forKey:@"houseBaseArea"];
         }
         if (1 == indexOfDataAndButtons) {
             if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseTheme"]]) {
-                return ;
+                //return ;
             }
             [self.parameters setValue:value forKey:@"houseBaseTheme"];
         }
         if (2 == indexOfDataAndButtons) {
             if ([value isEqualToString:[self.parameters objectForKey:@"houseBasePrice"]]) {
-                return ;
+                //return ;
             }
             [self.parameters setValue:value forKey:@"houseBasePrice"];
         }
-        [self.productContentView removeFromSuperview];
-        self.productContentView = nil;
+        NSLog(@"%@",self.parameters);
         [self loadDataForProductContentView];
         
-//        NSLog(@"%@",self.chooserViewData);
-//        NSDictionary *dic = self.chooserViewData[indexOfDataAndButtons][indexPath.row];
-//        NSLog(@"%@",[dic objectForKey:@"label"]);
-//        NSLog(@"%@",indexPath);
     }];
+}
+
+- (void)resetParameters{
+    [_parameters setValue:@"" forKey:@"houseBaseName"];
+    [_parameters setValue:@"NOT_LIMIT" forKey:@"houseBaseArea"];
+    [_parameters setValue:@"NOT_LIMIT" forKey:@"houseBaseTheme"];
+    [_parameters setValue:@"NOT_LIMIT" forKey:@"houseBasePrice"];
+    [_parameters setValue:@"HOUSEBASE" forKey:@"productType"];
+    [_parameters setValue:@"100" forKey:@"pageSize"];
+    [_parameters setValue:@"1" forKey:@"currentPage"];
 }
 @end

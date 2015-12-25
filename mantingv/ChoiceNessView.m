@@ -10,19 +10,17 @@
 typedef void(^SeeMoreBlock)();
 @interface ChoiceNessView ()
 @property (nonatomic,copy) SeeMoreBlock seeMoreBlock;
-@property (nonatomic,weak) UILabel *titleLabel;
 @property (nonatomic,weak) UIButton *seeMore;
 @property (nonatomic,strong) NSMutableArray *contents;
+@property (nonatomic,weak) UILabel *titleLabel;
+
 @end
 @implementation ChoiceNessView
 
 #pragma mark - 创建以及配置视图对象
-+ (instancetype)choiceNessViewWith:(NSString *)title point:(CGPoint)point{
++ (instancetype)choiceNessViewWithPoint:(CGPoint)point{
     CGRect frame = CGRectMake(point.x, point.y, SCREEN_WIDTH, SCREEN_HEIGHT);
     ChoiceNessView *choiceNessView = [[self alloc] initWithFrame:frame];
-    
-    choiceNessView.titleLabel.text = title;
-    choiceNessView.titleLabel.sizeToFit;
     
     return choiceNessView;
 }
@@ -58,6 +56,10 @@ typedef void(^SeeMoreBlock)();
     self.seeMoreBlock = action;
 }
 
+- (void)setTitle:(NSString *)title{
+    self.titleLabel.text = title;
+    self.titleLabel.sizeToFit;
+}
 
 - (void)setValueWith:(id)data{
     //创建自定义视图

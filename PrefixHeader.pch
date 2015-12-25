@@ -22,6 +22,7 @@
 #import "Masonry.h"
 #import "LFLoopScrollView.h"
 #import "KVNProgress.h"
+#import "LFSelectionView.h"
 //#import "UIImageView+WebCache.h"
 #import "MTBaseScrollView.h"
 #import "MTBaseView.h"
