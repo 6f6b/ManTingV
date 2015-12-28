@@ -64,7 +64,6 @@
         [mineSubView addGestureRecognizer:tap];
     }
     
-    //MineSubView *mineSubView = self.mineSubViews[self.mineSubViews.count-1];
     
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     if (![user objectForKey:USER_ACCOUNT]) {
@@ -90,6 +89,7 @@
     if ([user objectForKey:USER_ACCOUNT]) {
         [user setObject:nil forKey:USER_ACCOUNT];
         [user setObject:nil forKey:USER_PASSWORD];
+        [user setObject:nil forKey:USER_GUID];
         [button setTitle:@"登录" forState:UIControlStateNormal];
         [self setValueWith:nil];
         return;
@@ -174,6 +174,4 @@
     vc.isNeedToCheckLogin = YES;
     [self.controller.navigationController pushViewController:vc animated:YES];
 }
-
-
 @end

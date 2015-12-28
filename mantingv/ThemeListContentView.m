@@ -28,7 +28,7 @@
         themeListView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:themeListView];
         themeListView.buildingSize = model.buildingTypeArea;
-        themeListView.imageUrl = model.imageGuids[i];
+        themeListView.imageUrl = model.imageGuids[0];
         themeListView.houseType = model.houseType;
         [themeListView setValueWith:model.houseWeekDTOs[i]];
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, SCREEN_WIDTH, CGRectGetMaxY(themeListView.frame));

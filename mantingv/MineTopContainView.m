@@ -80,7 +80,10 @@
     return _accountLabel;
 }
 - (void)setValueWith:(id)data{
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    self.accountLabel.text = [user objectForKey:USER_ACCOUNT];
+//    UserAccount *userAccount = [UserAccount shareInstance];
+//    NSLog(@"%@",userAccount);
+//    NSLog(@"%@",userAccount.phoneNum);
+
+//    self.accountLabel.text = [NSString stringWithFormat:@"%@/%@",userAccount.username,userAccount.phoneNum];
 }
 @end

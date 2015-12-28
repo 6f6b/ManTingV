@@ -9,6 +9,8 @@
 #import "ProductContainView.h"
 #import "ProductView.h"
 #import "ProductContainViewModel.h"
+#import "HolidayHouseSearchController.h"
+
 @interface ProductContainView ()
 @end
 @implementation ProductContainView
@@ -16,6 +18,12 @@
 - (void)setValueWith:(id)data{
     ProductContainViewModel *model = [ProductContainViewModel modelWithDictionary:data];
     
+    __weak __typeof(self) ws = self;
+    [self setClickedAction:^{
+        HolidayHouseSearchController *holidayHouseSearchController = [[HolidayHouseSearchController alloc] init];
+        holidayHouseSearchController.houseBaseName = model.title;
+        [ws.controller.navigationController pushViewController:holidayHouseSearchController animated:YES];
+    }];
     [self setTitle:model.title];
     for (int i=0; i<model.buildingTypeDTOs.count; i++) {
         CGFloat X = 0;

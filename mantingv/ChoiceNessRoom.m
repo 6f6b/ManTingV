@@ -31,14 +31,11 @@
         float H = 90;
         
         ChoiceRoom *choiceRoom = [[ChoiceRoom alloc] initWithFrame:CGRectMake(X, Y, W, H)];
+        choiceRoom.controller = self.controller;
         choiceRoom.layer.cornerRadius = 5;
         choiceRoom.clipsToBounds = YES;
         choiceRoom.backgroundColor = [UIColor grayColor];
         choiceRoom.tag = 100+i;
-        
-        //添加手势
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
-        [choiceRoom addGestureRecognizer:tap];
         
         [self addSubview:choiceRoom];
         [choiceRoom setValueWith:arr[i]];
@@ -46,15 +43,8 @@
         
     }
     //获取到父视图指针，在数据加载完成之后重新调整父视图的Contentsize
-    UIScrollView *contentScrollView = self.superview;
+    UIScrollView *contentScrollView = (UIScrollView *)self.superview;
     contentScrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.frame));
 }
 
-- (void)dealTap:(UITapGestureRecognizer *)tap{
-    UIView *view = tap.view;
-    ThemeListController *themeListController = [[ThemeListController alloc] init];
-    
-    MTBaseScrollView *contentScrollView = self.superview;
-    [contentScrollView.controller.navigationController pushViewController:themeListController animated:YES];
-}
 @end

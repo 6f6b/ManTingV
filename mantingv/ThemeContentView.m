@@ -18,6 +18,7 @@
     NSArray *arr = (NSArray *)model.data;
     for (int i=0; i<arr.count; i++) {
         Theme *theme = [[Theme alloc] init];
+        theme.controller = self.controller;
         theme.layer.cornerRadius = 5;
         theme.clipsToBounds = YES;
         theme.tag = 1000+i;
@@ -28,9 +29,7 @@
         theme.frame = CGRectMake(X, Y, W, H);
         [self addSubview:theme];
         
-        //添加手势
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealThemeTap:)];
-        [theme addGestureRecognizer:tap];
+
         CGRect frame = self.frame;
         frame.size.width = SCREEN_WIDTH;
         frame.size.height = CGRectGetMaxY(theme.frame);

@@ -7,14 +7,29 @@
 //
 
 #import "MTBaseScrollView.h"
-
+@interface MTBaseScrollView()<UIScrollViewDelegate>
+@end
 @implementation MTBaseScrollView
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        self.manager = [AFHTTPSessionManager manager];
-        self.manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        self.delegate = self;
     }
     return self;
+}
+
+- (AFHTTPSessionManager *)manager{
+    if (nil == _manager) {
+        _manager = [AFHTTPSessionManager manager];
+        _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    }
+    return _manager;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (scrollView.contentOffset.y<=-50) {
+        //[self setValueWith:nil];
+        NSLog(@"刷新");
+    }
 }
 
 - (void)setValueWith:(id)data{

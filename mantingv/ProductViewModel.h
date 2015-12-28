@@ -25,4 +25,5 @@
 @property (nonatomic,copy) NSArray *equipmentDTOs;
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,copy) NSString *buildingTypeArea;
+
 @end

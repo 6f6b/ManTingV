@@ -113,9 +113,6 @@
 		03DA24871C23D7450098FE4B /* ResortFacilitiesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA24861C23D7450098FE4B /* ResortFacilitiesView.m */; };
 		03DA24891C23DF3C0098FE4B /* arrows_slim_left_103.41463414634px_1182560_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DA24881C23DF3C0098FE4B /* arrows_slim_left_103.41463414634px_1182560_easyicon.net.png */; };
 		03DA248B1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DA248A1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png */; };
-		03DB9CDF1C1FAFF100A40361 /* HolidayHouseSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB9CDD1C1FAFF100A40361 /* HolidayHouseSearchCell.m */; };
-		03DB9CE01C1FAFF100A40361 /* HolidayHouseSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DB9CDE1C1FAFF100A40361 /* HolidayHouseSearchCell.xib */; };
-		03DB9CE61C1FBE0F00A40361 /* HolidayHouseSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB9CE51C1FBE0F00A40361 /* HolidayHouseSearchController.m */; };
 		03DB9CEF1C1FDF8C00A40361 /* ProductContainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB9CEE1C1FDF8C00A40361 /* ProductContainView.m */; };
 		03DB9CF51C1FF23600A40361 /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB9CF41C1FF23600A40361 /* ProductView.m */; };
 		03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB9CFE1C1FFFC600A40361 /* MTPayContentScrollView.m */; };
@@ -149,10 +146,16 @@
 		03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DC50D91C293AC60040C939 /* CommitSuccessController.xib */; };
 		03DC51241C294D740040C939 /* LFSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC51231C294D740040C939 /* LFSelectionView.m */; };
 		03DDADF61C2B815B009DC36D /* LFLoopScrollViewForMT.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADF51C2B815B009DC36D /* LFLoopScrollViewForMT.m */; };
-		03DDADFC1C2B8E0B009DC36D /* ProductContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADFB1C2B8E0B009DC36D /* ProductContentScrollView.m */; };
 		03DDADFF1C2BC0CE009DC36D /* ProductContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADFE1C2BC0CE009DC36D /* ProductContentView.m */; };
 		03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDAE011C2BC853009DC36D /* ProductContainViewModel.m */; };
 		03DDAE051C2BCC93009DC36D /* ProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDAE041C2BCC93009DC36D /* ProductViewModel.m */; };
+		03DEF34C1C30E979000F25F0 /* ProductContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF34B1C30E979000F25F0 /* ProductContentScrollView.m */; };
+		03DEF3521C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF3511C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.m */; };
+		03DEF3551C30FE46000F25F0 /* BaseContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF3541C30FE46000F25F0 /* BaseContentScrollView.m */; };
+		03DEF3581C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF3571C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.m */; };
+		03DEF35B1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF35A1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m */; };
+		03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF35D1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m */; };
+		03DEF3611C31023F000F25F0 /* HolidayHouseSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */; };
 		03E066451C27929600E85778 /* ExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066441C27929600E85778 /* ExchangeController.m */; };
 		03E066501C279BE100E85778 /* ExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0664F1C279BE100E85778 /* ExchangeListController.m */; };
 		03E066551C279CE700E85778 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066541C279CE700E85778 /* ContentScrollView.m */; };
@@ -373,11 +376,6 @@
 		03DA24861C23D7450098FE4B /* ResortFacilitiesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResortFacilitiesView.m; sourceTree = "<group>"; };
 		03DA24881C23DF3C0098FE4B /* arrows_slim_left_103.41463414634px_1182560_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrows_slim_left_103.41463414634px_1182560_easyicon.net.png; sourceTree = "<group>"; };
 		03DA248A1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrows_slim_left_51.707317073171px_1182560_easyicon.net.png; sourceTree = "<group>"; };
-		03DB9CDC1C1FAFF100A40361 /* HolidayHouseSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HolidayHouseSearchCell.h; sourceTree = "<group>"; };
-		03DB9CDD1C1FAFF100A40361 /* HolidayHouseSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HolidayHouseSearchCell.m; sourceTree = "<group>"; };
-		03DB9CDE1C1FAFF100A40361 /* HolidayHouseSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HolidayHouseSearchCell.xib; sourceTree = "<group>"; };
-		03DB9CE41C1FBE0F00A40361 /* HolidayHouseSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HolidayHouseSearchController.h; sourceTree = "<group>"; };
-		03DB9CE51C1FBE0F00A40361 /* HolidayHouseSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HolidayHouseSearchController.m; sourceTree = "<group>"; };
 		03DB9CED1C1FDF8C00A40361 /* ProductContainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContainView.h; sourceTree = "<group>"; };
 		03DB9CEE1C1FDF8C00A40361 /* ProductContainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContainView.m; sourceTree = "<group>"; };
 		03DB9CF31C1FF23600A40361 /* ProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductView.h; sourceTree = "<group>"; };
@@ -437,14 +435,26 @@
 		03DC51231C294D740040C939 /* LFSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSelectionView.m; sourceTree = "<group>"; };
 		03DDADF41C2B815B009DC36D /* LFLoopScrollViewForMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoopScrollViewForMT.h; sourceTree = "<group>"; };
 		03DDADF51C2B815B009DC36D /* LFLoopScrollViewForMT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoopScrollViewForMT.m; sourceTree = "<group>"; };
-		03DDADFA1C2B8E0B009DC36D /* ProductContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContentScrollView.h; sourceTree = "<group>"; };
-		03DDADFB1C2B8E0B009DC36D /* ProductContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContentScrollView.m; sourceTree = "<group>"; };
 		03DDADFD1C2BC0CE009DC36D /* ProductContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContentView.h; sourceTree = "<group>"; };
 		03DDADFE1C2BC0CE009DC36D /* ProductContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContentView.m; sourceTree = "<group>"; };
 		03DDAE001C2BC853009DC36D /* ProductContainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContainViewModel.h; sourceTree = "<group>"; };
 		03DDAE011C2BC853009DC36D /* ProductContainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContainViewModel.m; sourceTree = "<group>"; };
 		03DDAE031C2BCC93009DC36D /* ProductViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewModel.h; sourceTree = "<group>"; };
 		03DDAE041C2BCC93009DC36D /* ProductViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewModel.m; sourceTree = "<group>"; };
+		03DEF34A1C30E979000F25F0 /* ProductContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContentScrollView.h; sourceTree = "<group>"; };
+		03DEF34B1C30E979000F25F0 /* ProductContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductContentScrollView.m; sourceTree = "<group>"; };
+		03DEF3501C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HolidayHouseSearchContentScrollView.h; sourceTree = "<group>"; };
+		03DEF3511C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HolidayHouseSearchContentScrollView.m; sourceTree = "<group>"; };
+		03DEF3531C30FE46000F25F0 /* BaseContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseContentScrollView.h; sourceTree = "<group>"; };
+		03DEF3541C30FE46000F25F0 /* BaseContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseContentScrollView.m; sourceTree = "<group>"; };
+		03DEF3561C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentScrollViewWithLoopScrollView.h; sourceTree = "<group>"; };
+		03DEF3571C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentScrollViewWithLoopScrollView.m; sourceTree = "<group>"; };
+		03DEF3591C30FEC4000F25F0 /* ContentScrollViewWithChooserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentScrollViewWithChooserView.h; sourceTree = "<group>"; };
+		03DEF35A1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentScrollViewWithChooserView.m; sourceTree = "<group>"; };
+		03DEF35C1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentScrollViewWithLoopScrollViewAndChooserView.h; sourceTree = "<group>"; };
+		03DEF35D1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentScrollViewWithLoopScrollViewAndChooserView.m; sourceTree = "<group>"; };
+		03DEF35F1C31023F000F25F0 /* HolidayHouseSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HolidayHouseSearchController.h; sourceTree = "<group>"; };
+		03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HolidayHouseSearchController.m; sourceTree = "<group>"; };
 		03E066431C27929600E85778 /* ExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeController.h; sourceTree = "<group>"; };
 		03E066441C27929600E85778 /* ExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeController.m; sourceTree = "<group>"; };
 		03E0664E1C279BE100E85778 /* ExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListController.h; sourceTree = "<group>"; };
@@ -705,7 +715,6 @@
 			children = (
 				03775B7C1C113AAD00319C32 /* HomeController.h */,
 				03775B7D1C113AAD00319C32 /* HomeController.m */,
-				03DB9CD51C1FAE5F00A40361 /* 度假屋搜索页 */,
 				03D65DD31C1E5EF900E7C679 /* 精选主题 */,
 				03D8AFB51C1A678200B41FF0 /* 入住 */,
 			);
@@ -741,6 +750,7 @@
 			children = (
 				03775B811C113AE100319C32 /* ProductController.h */,
 				03775B821C113AE100319C32 /* ProductController.m */,
+				03DB9CD51C1FAE5F00A40361 /* 度假屋搜索页 */,
 				03D8AFB41C1A675200B41FF0 /* 主题房间列表 */,
 			);
 			name = Controllers;
@@ -749,8 +759,8 @@
 		03775B8A1C113AF200319C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03DDADFA1C2B8E0B009DC36D /* ProductContentScrollView.h */,
-				03DDADFB1C2B8E0B009DC36D /* ProductContentScrollView.m */,
+				03DEF34A1C30E979000F25F0 /* ProductContentScrollView.h */,
+				03DEF34B1C30E979000F25F0 /* ProductContentScrollView.m */,
 				03DDADFD1C2BC0CE009DC36D /* ProductContentView.h */,
 				03DDADFE1C2BC0CE009DC36D /* ProductContentView.m */,
 				03DB9CED1C1FDF8C00A40361 /* ProductContainView.h */,
@@ -1425,8 +1435,8 @@
 		03DB9CD61C1FAE6E00A40361 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03DB9CE41C1FBE0F00A40361 /* HolidayHouseSearchController.h */,
-				03DB9CE51C1FBE0F00A40361 /* HolidayHouseSearchController.m */,
+				03DEF35F1C31023F000F25F0 /* HolidayHouseSearchController.h */,
+				03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1434,9 +1444,8 @@
 		03DB9CD71C1FAE7100A40361 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03DB9CDC1C1FAFF100A40361 /* HolidayHouseSearchCell.h */,
-				03DB9CDD1C1FAFF100A40361 /* HolidayHouseSearchCell.m */,
-				03DB9CDE1C1FAFF100A40361 /* HolidayHouseSearchCell.xib */,
+				03DEF3501C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.h */,
+				03DEF3511C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1674,6 +1683,14 @@
 			children = (
 				03E066531C279CE700E85778 /* ContentScrollView.h */,
 				03E066541C279CE700E85778 /* ContentScrollView.m */,
+				03DEF3531C30FE46000F25F0 /* BaseContentScrollView.h */,
+				03DEF3541C30FE46000F25F0 /* BaseContentScrollView.m */,
+				03DEF3561C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.h */,
+				03DEF3571C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.m */,
+				03DEF3591C30FEC4000F25F0 /* ContentScrollViewWithChooserView.h */,
+				03DEF35A1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m */,
+				03DEF35C1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.h */,
+				03DEF35D1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m */,
 			);
 			name = ContentScrollView;
 			sourceTree = "<group>";
@@ -1875,7 +1892,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DB9CE01C1FAFF100A40361 /* HolidayHouseSearchCell.xib in Resources */,
 				03E0A25E1C18274000FCAAAC /* short.png in Resources */,
 				0376AFE81C1196C30033D2A2 /* Welcome3.jpg in Resources */,
 				0376AFEC1C1196C30033D2A2 /* Welcome_3.0_2.jpg in Resources */,
@@ -1996,7 +2012,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DB9CE61C1FBE0F00A40361 /* HolidayHouseSearchController.m in Sources */,
 				03E066891C28099F00E85778 /* TransferDetailTopContentView.m in Sources */,
 				03DC4FFE1C28EA340040C939 /* INeedCheckInCell.m in Sources */,
 				03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */,
@@ -2017,13 +2032,12 @@
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
 				03D650B11C1EB021005856F2 /* ChooserCell.m in Sources */,
 				03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */,
-				03DB9CDF1C1FAFF100A40361 /* HolidayHouseSearchCell.m in Sources */,
+				03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */,
 				03DC508A1C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m in Sources */,
 				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
 				03E066451C27929600E85778 /* ExchangeController.m in Sources */,
 				03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */,
-				03DDADFC1C2B8E0B009DC36D /* ProductContentScrollView.m in Sources */,
 				03E066861C28028700E85778 /* TransferDetailController.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
 				03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */,
@@ -2041,11 +2055,13 @@
 				03DDAE051C2BCC93009DC36D /* ProductViewModel.m in Sources */,
 				03E066501C279BE100E85778 /* ExchangeListController.m in Sources */,
 				03DA246E1C23D0890098FE4B /* HomeContentScrollView.m in Sources */,
+				03DEF3521C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.m in Sources */,
 				03DA24871C23D7450098FE4B /* ResortFacilitiesView.m in Sources */,
 				03D7A7E51C214234003A3A68 /* MineContentScrollView.m in Sources */,
 				03DC507E1C28FD740040C939 /* CheckInDetailTopContentView.m in Sources */,
 				03DC50DA1C293AC60040C939 /* CommitSuccessController.m in Sources */,
 				03DA24681C23AB2D0098FE4B /* MTSwitchView.m in Sources */,
+				03DEF3611C31023F000F25F0 /* HolidayHouseSearchController.m in Sources */,
 				03D251DA1C22AE4D00BA9ED7 /* ModifyPasswordController.m in Sources */,
 				03DB9D0D1C200B8E00A40361 /* AddAddressView.m in Sources */,
 				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
@@ -2066,6 +2082,7 @@
 				03D669B81C2AA04D001C4C2C /* ChoiceRoomModel.m in Sources */,
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
 				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
+				03DEF3581C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.m in Sources */,
 				03E066831C28026400E85778 /* TransferDetailContentScrollView.m in Sources */,
 				03E0666A1C27C80E00E85778 /* ExchangeDetailPayMessageView.m in Sources */,
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
@@ -2096,12 +2113,15 @@
 				03DC51241C294D740040C939 /* LFSelectionView.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,
 				03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */,
+				03DEF34C1C30E979000F25F0 /* ProductContentScrollView.m in Sources */,
 				03DC50C11C291CC40040C939 /* LFStepper.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03DDADF61C2B815B009DC36D /* LFLoopScrollViewForMT.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
 				03DC508D1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m in Sources */,
+				03DEF3551C30FE46000F25F0 /* BaseContentScrollView.m in Sources */,
 				03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */,
+				03DEF35B1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m in Sources */,
 				03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */,
 				03D0929F1C2D1DE80057182F /* ThemeListContentScrollView.m in Sources */,
 				03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */,

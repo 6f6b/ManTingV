@@ -7,7 +7,8 @@
 //
 
 #import "MTController.h"
+#import "ProductContentScrollView.h"
 
 @interface ProductController : MTController
-
+@property (nonatomic,weak) ProductContentScrollView *productContentScrollView;
 @end

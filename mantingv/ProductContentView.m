@@ -23,12 +23,6 @@
             ProductContainView *productContainView = [ProductContainView choiceNessViewWithPoint:CGPointMake(productViewX, productViewY)];
             productContainView.controller = self.controller;
 
-            [productContainView setClickedAction:^{
-                HolidayHouseSearchController *holidayHouseSearchController = [[HolidayHouseSearchController alloc] init];
-                
-                [self.controller.navigationController pushViewController:holidayHouseSearchController animated:YES];
-            }];
-
             previewsProductContainView = productContainView;
             [self addSubview:productContainView];
             [productContainView setValueWith:arr[i]];

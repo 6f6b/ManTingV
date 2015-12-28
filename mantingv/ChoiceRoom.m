@@ -8,6 +8,7 @@
 
 #import "ChoiceRoom.h"
 #import "ChoiceRoomModel.h"
+#import "ThemeListController.h"
 @interface ChoiceRoom ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *titleLabel;
@@ -70,6 +71,9 @@
         make.width.equalTo(@80);
         
     }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
+    [self addGestureRecognizer:tap];
 }
 
 - (UIImageView *)backImage{
@@ -115,6 +119,7 @@
 //为子控件赋值
 - (void)setValueWith:(id)data{
     ChoiceRoomModel *model = [ChoiceRoomModel modelWithDictionary:data];
+    self.model = model;
     [self.backImage lfSetImageWithURL:model.imageGuids[0]];
     self.titleLabel.text = model.name;
     self.sizeLabel.text = model.houseType;
@@ -125,4 +130,12 @@
 //    @property (nonatomic,weak) UILabel *priceLabel;
 }
 
+
+- (void)dealTap:(UITapGestureRecognizer *)tap{
+    UIView *view = tap.view;
+    ChoiceRoomModel *model = self.model;
+    ThemeListController *themeListController = [[ThemeListController alloc] init];
+    themeListController.guid = model.guid;
+    [self.controller.navigationController pushViewController:themeListController animated:YES];
+}
 @end

@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.themeListContentScrollView setValueWith:Nil];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -37,6 +38,7 @@
 - (ThemeListContentScrollView *)themeListContentScrollView{
     if (nil == _themeListContentScrollView) {
         ThemeListContentScrollView *themeListContentScrollView = [[ThemeListContentScrollView alloc] initWithFrame:self.view.bounds];
+        themeListContentScrollView.controller = self;
         themeListContentScrollView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:themeListContentScrollView];
         _themeListContentScrollView = themeListContentScrollView;

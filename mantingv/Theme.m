@@ -8,6 +8,7 @@
 
 #import "Theme.h"
 #import "ThemeModel.h"
+#import "ThemeListController.h"
 @interface Theme ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *titleLabel;
@@ -57,13 +58,15 @@
         make.left.equalTo(superView);
         
     }];
+    
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealThemeTap:)];
+    [self addGestureRecognizer:tap];
 }
 
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap)];
-        [backImage addGestureRecognizer:tap];
         backImage.backgroundColor = [UIColor grayColor];
         [self addSubview:backImage];
         _backImage = backImage;
@@ -71,9 +74,6 @@
     return _backImage;
 }
 
-- (void)dealTap{
-    NSLog(@"fuck");
-}
 
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
@@ -109,9 +109,18 @@
 - (void)setValueWith:(id)data{
     
     ThemeModel *model = [ThemeModel modelWithDictionary:data];
+    self.model = model;
     self.titleLabel.text = model.name;
     self.priceLabel.text = model.price;
     
     [self.backImage lfSetImageWithURL:model.imageGuids[0]];
+}
+
+- (void)dealThemeTap:(UITapGestureRecognizer *)tap{
+    ThemeListController *themeListController = [[ThemeListController alloc] init];
+    ThemeModel *model = self.model;
+    themeListController.guid = model.guid;
+    
+    [self.controller.navigationController pushViewController:themeListController animated:YES];
 }
 @end

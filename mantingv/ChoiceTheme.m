@@ -8,6 +8,7 @@
 
 #import "ChoiceTheme.h"
 #import "ChoiceThemeModel.h"
+#import "HolidayHouseSearchController.h"
 @interface ChoiceTheme ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *titleLabel;
@@ -73,6 +74,10 @@
         NSNumber *num = [NSNumber numberWithDouble:SCREEN_WIDTH-5];
         make.width.lessThanOrEqualTo(num);
     }];
+    
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
+    [self addGestureRecognizer:tap];
 }
 
 - (UIImageView *)backImage{
@@ -133,10 +138,20 @@
 //为子控件赋值
 - (void)setValueWith:(id)data{
     ChoiceThemeModel *model = [ChoiceThemeModel modelWithDictionary:data];
+    self.model = model;
     [self.backImage lfSetImageWithURL:model.imageGuids[0]];
     self.titleLabel.text = model.title;
     self.locationLabel.text = model.introduction;
 
+}
+
+- (void)dealTap:(UITapGestureRecognizer *)tap{
+    HolidayHouseSearchController *holidayHouseSearchController = [[HolidayHouseSearchController alloc] init];
+    
+    ChoiceThemeModel *model = self.model;
+    NSLog(@"%@",model.title);
+    holidayHouseSearchController.houseBaseName = model.title;
+    [self.controller.navigationController pushViewController:holidayHouseSearchController animated:YES];
 }
 @end
 

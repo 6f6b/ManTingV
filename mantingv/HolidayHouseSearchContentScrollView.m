@@ -1,32 +1,18 @@
 //
-//  ProductContentScrollView.m
+//  HolidayHouseSearchContentScrollView.m
 //  mantingv
 //
 //  Created by LiuFeng on 15/12/28.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "ProductContentScrollView.h"
-#import "HolidayHouseSearchController.h"
-#import "ProductContentView.h"
-
-@interface ProductContentScrollView ()
+#import "HolidayHouseSearchContentScrollView.h"
+#import "ProductView.h"
+@interface HolidayHouseSearchContentScrollView ()
 @property (nonatomic,strong) NSMutableArray *chooserViewData;
-@property (nonatomic,weak) ProductContentView *productContentView;
 @end
-@implementation ProductContentScrollView
 
-- (ProductContentView *)productContentView{
-    if (nil == _productContentView) {
-        ProductContentView *productContentView = [[ProductContentView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.chooserView.frame), SCREEN_WIDTH, 0)];
-        [self addSubview:productContentView];
-        productContentView.controller = self.controller;
-        _productContentView = productContentView;
-    }
-    return _productContentView;
-}
-
-
+@implementation HolidayHouseSearchContentScrollView
 - (NSMutableArray *)chooserViewData{
     if (nil == _chooserViewData) {
         NSMutableArray *chooserViewData = [[NSMutableArray alloc] init];
@@ -38,30 +24,12 @@
 - (void)setValueWith:(id)data{
     /////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    if (data) {
-        [self resetParameters];
-        [self.parameters setValue:data forKey:@"houseBaseName"];
-        [self loadDataForProductContentView];
-        return;
-    }
-    [self loadPicturesForAdScrollView];
+    [self.parameters setValue:data forKey:@"houseBaseName"];
+
+    [self loadAreaListForChooserView];
     
 }
 
-
-- (void)loadPicturesForAdScrollView{
-     NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
-    [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        MTModel *model = [MTModel modelWithDictionary:dic];
-        [self.adScrollView setImageWithUrlS:model.data];
-        [self loadAreaListForChooserView];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
-}
 
 /////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -105,7 +73,7 @@
         NSArray *arr = [dic objectForKey:@"data"];
         [self.chooserViewData addObject:arr];
         [self.chooserView setDataArraysWith:self.chooserViewData];
-        [self loadDataForProductContentView];
+        [self loadDataForProductView];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -113,28 +81,51 @@
 
 /////////////////////////////////////////////请求产品列表数据///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadDataForProductContentView{
+- (void)loadDataForProductView{
     NSString *url = [BASE_URL stringByAppendingString:@"/house/list"];
     [KVNProgress showWithStatus:@"正在加载.."];
     [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //先清空所有产品
+        for (int i=0; i<self.subviews.count-1; i++) {
+            UIView *view = [self viewWithTag:i+1000];
+            [view removeFromSuperview];
+            view = nil;
+        }
+        
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        
-        [self.productContentView removeFromSuperview];
-        self.productContentView = nil;
-        [KVNProgress dismiss];
-        
-        [self.productContentView setValueWith:dic];
         NSArray *arr = [dic objectForKey:@"data"];
         if (0 == arr.count) {
             [KVNProgress dismiss];
             [KVNProgress showErrorWithStatus:@"查找失败"];
+            return ;
         }
+        NSArray *arr2 = [arr[0] objectForKey:@"buildingTypeDTOs"];
+        [KVNProgress dismiss];
+
+        for (int i=0; i<arr2.count; i++) {
+            CGFloat X = 0;
+            CGFloat Y = CGRectGetMaxY(self.chooserView.frame)+160*i;
+            CGFloat W = SCREEN_WIDTH;
+            CGFloat H = 150;
+            
+            ProductView *productView = [[ProductView alloc] initWithFrame:CGRectMake(X, Y, W, H)];
+            productView.tag = 1000+i;
+            productView.controller = self.controller;
+            [productView setValueWith:arr2[i]];
+            [self addSubview:productView];
+            
+            self.contentSize = CGSizeMake(0, CGRectGetMaxY(productView.frame));
+        };
+        
+
+
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
 }
+
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
@@ -164,8 +155,7 @@
             }
             [self.parameters setValue:value forKey:@"houseBasePrice"];
         }
-        NSLog(@"%@",self.parameters);
-        [self loadDataForProductContentView];
+        [self loadDataForProductView];
         
     }];
 }

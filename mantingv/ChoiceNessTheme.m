@@ -18,14 +18,11 @@
     NSArray *arr = model.data;
     for(int i=0;i<arr.count;i++){
         ChoiceTheme *choiceTheme = [[ChoiceTheme alloc] init];
+        choiceTheme.controller = self.controller;
         choiceTheme.backgroundColor = [UIColor brownColor];
         choiceTheme.layer.cornerRadius = 5;
         choiceTheme.clipsToBounds = YES;
         choiceTheme.tag = 100+i;
-        
-        //添加手势
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
-        [choiceTheme addGestureRecognizer:tap];
         
         float X = 0;
         float Y = 30+155*i;
@@ -43,11 +40,4 @@
     contentScrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.frame));
 }
 
-- (void)dealTap:(UITapGestureRecognizer *)tap{
-    UIView *view = tap.view;
-    HolidayHouseSearchController *holidayHouseSearchController = [[HolidayHouseSearchController alloc] init];
-    
-    MTBaseScrollView *contentScrollView = self.superview;
-    [contentScrollView.controller.navigationController pushViewController:holidayHouseSearchController animated:YES];
-}
 @end

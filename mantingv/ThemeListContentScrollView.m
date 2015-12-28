@@ -62,22 +62,25 @@
 }
 
 - (void)setValueWith:(id)data{
+    if(!data){
+        return;
+    }
     ThemeListContentScrollViewModel *model = [ThemeListContentScrollViewModel modelWithDictionary:data];
     
 //////////////////////////////////////为滚动视图赋值////////////////////////////////////////////////////////////////////////////
     [self.themeListPictuerScrollView setImageWithUrlS:model.imageGuids];
-    NSLog(@"-------->%@",NSStringFromCGRect(self.themListContentView.frame));
 //////////////////////////////////////为themeListContentView赋值////////////////////////////////////////////////////////////////////////////
-//    [self.themListContentView setValueWith:model];
+    [self.themListContentView setValueWith:model];
     
 //////////////////////////////////////为SelectView赋值////////////////////////////////////////////////////////////////////////////
-//    [self.selectView setTitlesWith:@[@"度假屋介绍",@"基本信息",@"度假屋设施"]];
+    [self.selectView setTitlesWith:@[@"度假屋介绍",@"基本信息",@"度假屋设施"]];
     /***********度假屋介绍View***************/
     UILabel *holidayHomeIntroductionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0)];
     holidayHomeIntroductionLabel.text = model.houseFeature;
     holidayHomeIntroductionLabel.lineBreakMode = NSLineBreakByWordWrapping;
     holidayHomeIntroductionLabel.numberOfLines = 0;
     holidayHomeIntroductionLabel.font = [UIFont systemFontOfSize:15];
+    
     //动态调节label的高度
     NSDictionary *attribute1 = @{NSFontAttributeName: [UIFont systemFontOfSize:15]};
     CGSize size1 = [holidayHomeIntroductionLabel.text boundingRectWithSize:holidayHomeIntroductionLabel.frame.size options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute1 context:nil].size;
@@ -105,7 +108,7 @@
     [resortFacilitiesView setValueWith:arr];
     
     NSArray *views = @[holidayHomeIntroductionLabel,baseMessageLabel,resortFacilitiesView];
-//    [self.selectView setViewWith:views];
+    [self.selectView setViewWith:views];
     
 }
 @end

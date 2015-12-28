@@ -33,7 +33,7 @@
 #pragma mark - 滚动广告视图
 - (LFLoopScrollViewForMT *)adScrollView{
     if (nil == _adScrollView) {
-        LFLoopScrollViewForMT *adScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH*0.5)];
+        LFLoopScrollViewForMT *adScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         adScrollView.autoScroll = YES;
         adScrollView.backgroundColor = [UIColor greenColor];
         _adScrollView = adScrollView;
@@ -69,6 +69,7 @@
 - (ThemeContentView *)themeContentView{
     if (nil == _themeContentView) {
         ThemeContentView *themeContentView = [[ThemeContentView alloc] init];
+        themeContentView.controller = self.controller;
         [self addSubview:themeContentView];
         themeContentView.backgroundColor = [UIColor blueColor];
         _themeContentView = themeContentView;
@@ -91,6 +92,7 @@
 - (ChoiceNessTheme *)choiceNessTheme{
     if (nil == _choiceNessTheme) {
         ChoiceNessTheme *choiceNessTheme = [ChoiceNessTheme choiceNessViewWithPoint:CGPointMake(0,CGRectGetMaxY(self.what.frame))];
+        choiceNessTheme.controller = self.controller;
         [choiceNessTheme setTitle:@"精选主题"];
         choiceNessTheme.backgroundColor = [UIColor whiteColor];
         [choiceNessTheme setClickedAction:^{
@@ -107,6 +109,7 @@
 - (ChoiceNessRoom *)choiceNessRoom{
     if (nil == _choiceNessRoom) {
         ChoiceNessRoom *choiceNessRoom = [ChoiceNessRoom choiceNessViewWithPoint:CGPointMake(0, CGRectGetMaxY(self.choiceNessTheme.frame))];
+        choiceNessRoom.controller = self.controller;
         [choiceNessRoom setTitle:@"精选房间"];
         [choiceNessRoom setClickedAction:^{
             ShortRentController *shortController = [[ShortRentController alloc] init];
@@ -119,14 +122,6 @@
     return _choiceNessRoom;
 }
 
-//- (AFHTTPSessionManager *)manager{
-//    if (nil == _manager) {
-//        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//        _manager = manager;
-//    }
-//    return _manager;
-//}
 
 - (void)setValueWith:(id)data{
     

@@ -171,7 +171,6 @@
 }
 
 - (void)dealBuyBtn{
-    NSLog(@"购买");
     MTPayController *payController = [[MTPayController alloc] init];
     payController.title = @"支付";
     

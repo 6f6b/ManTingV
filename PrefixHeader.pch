@@ -13,6 +13,7 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define USER_ACCOUNT @"E80A6DE3440C2706D2D9BF5231454182"
 #define USER_PASSWORD @"1F6D7763FF8C7B37625210A4D95317D1"
+#define USER_GUID @"3D26DDCA4C0EA0E728A2B76DE965BB45"
 #define BASE_URL @"http://120.132.57.125:8000"
 //创建顶部滚动广告栏
 #import "MTModel.h"
@@ -27,4 +28,5 @@
 #import "MTBaseScrollView.h"
 #import "MTBaseView.h"
 #import "ZJModelTool.h"
+#import "UserAccount.h"
 #endif /* PrefixHeader_pch */

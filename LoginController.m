@@ -8,32 +8,65 @@
 
 #import "LoginController.h"
 
-@interface LoginController ()
+@interface LoginController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextFeild;
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextFeild;
+@property (nonatomic,strong) AFHTTPSessionManager *manager;
 @end
 
 @implementation LoginController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@",self.phoneNumberTextFeild);
+    self.phoneNumberTextFeild.delegate = self;
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    NSLog(@"okkkk");
+    [textField resignFirstResponder];
+}
+
+- (AFHTTPSessionManager *)manager{
+    if (nil == _manager) {
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _manager = manager;
+    }
+    return _manager;
 }
 
 //登录相关操作
 - (IBAction)loginBtn:(id)sender {
+    [self.passWordTextFeild resignFirstResponder];
     NSString *useraccount = self.phoneNumberTextFeild.text;
     NSString *password = self.passWordTextFeild.text;
-    if (nil == useraccount) {
-        return;
-    }
-    if (nil == password) {
+    NSDictionary *parameters = @{@"username":useraccount,
+                                 @"password":password};
+    NSString *url = [BASE_URL stringByAppendingString:@"/login/in"];
+    [self.manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        [self loginWith:dic];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+- (void)loginWith:(id)data{
+    NSString *guid = [data objectForKey:@"data"];
+    if (nil == guid) {
         return;
     }
     
+    NSString *useraccount = self.phoneNumberTextFeild.text;
+    NSString *password = self.passWordTextFeild.text;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     [user setObject:useraccount forKey:USER_ACCOUNT];
     [user setObject:password forKey:USER_PASSWORD];
+    [user setObject:guid forKey:USER_GUID];
     
     if (nil == NSStringFromClass([self.willPushVC class])) {
         [self.navigationController popToRootViewControllerAnimated:YES];
@@ -45,6 +78,7 @@
     self.navigationController.viewControllers = navArray;
     [navArray removeObject:self];
     
+
 }
 
 //忘记密码按钮

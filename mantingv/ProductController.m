@@ -7,11 +7,8 @@
 //
 
 #import "ProductController.h"
-#import "ProductContentScrollView.h"
 
 @interface ProductController ()<UISearchBarDelegate>
-@property (nonatomic,weak) ProductContentScrollView *productContentScrollView;
-@property (nonatomic,weak) LFLoopScrollView *adScrollView;
 @end
 
 @implementation ProductController

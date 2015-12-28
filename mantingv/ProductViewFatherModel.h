@@ -20,4 +20,5 @@
 @property (nonatomic,copy) NSArray *imageGuids;
 @property (nonatomic,copy) NSString *guid;
 @property (nonatomic,copy) NSString *name;
+
 @end

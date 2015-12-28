@@ -20,4 +20,5 @@
 @property (nonatomic,copy) NSArray *buildingTypeDTOs;
 @property (nonatomic,copy) NSArray *imageGuids;
 @property (nonatomic,copy) NSString *guid;
+
 @end

@@ -9,5 +9,4 @@
 #import "ChoiceNessView.h"
 
 @interface ProductContainView : ChoiceNessView
-@property (nonatomic,strong) UIViewController *controller;
 @end

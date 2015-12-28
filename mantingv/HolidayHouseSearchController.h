@@ -2,14 +2,12 @@
 //  HolidayHouseSearchController.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/15.
+//  Created by LiuFeng on 15/12/28.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTTableController.h"
-#import "ChooserView.h"
+#import "MTController.h"
 
-@interface HolidayHouseSearchController : MTTableController
-@property (nonatomic,weak) ChooserView *chooserView;
-@property (nonatomic,copy) NSMutableDictionary *parameters;
+@interface HolidayHouseSearchController : MTController
+@property (nonatomic,copy) NSString *houseBaseName;
 @end
