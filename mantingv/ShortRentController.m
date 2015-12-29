@@ -2,79 +2,39 @@
 //  ShortRentController.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/4.
+//  Created by LiuFeng on 15/12/29.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
 #import "ShortRentController.h"
-#import "ShortRentCell.h"
-#import "ChooserCell.h"
-#import "ChooserView.h"
+#import "ShortRentContentScrollView.h"
 
-#import "ShortRentDetailController.h"
 @interface ShortRentController ()
-
+@property (nonatomic,weak) ShortRentContentScrollView *shortRentContentScrollView;
 @end
 
 @implementation ShortRentController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"短租";
-    
-    //创建条件选择器
-    NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择主题"];
-    ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, 0)];
-    [chooserView setTitlesOfButtonWith:buttonTitles];
-    [chooserView setDataArraysWith:@[@[@"11",@"21",@"31",@"5"],@[@"12",@"22",@"32"],@[@"13",@"23",@"33"]]];
-    [chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
-        
-    }];
-    [self.tableView addSubview:chooserView];
-    
-    [self.tableView registerNib:[UINib nibWithNibName:@"ShortRentCell" bundle:nil] forCellReuseIdentifier:@"shortRentCell"];
-    
-    [self.tableView registerNib:[UINib nibWithNibName:@"ChooserCell" bundle:nil] forCellReuseIdentifier:@"chooserCell"];
-    // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.999 blue:0.938 alpha:1.000];
+    [self.shortRentContentScrollView setValueWith:nil];
+    // Do any additional setup after loading the view.
+}
+
+- (ShortRentContentScrollView *)shortRentContentScrollView{
+    if (nil == _shortRentContentScrollView) {
+        ShortRentContentScrollView *shortRentContentScrollView = [[ShortRentContentScrollView alloc] initWithFrame:self.view.bounds];
+        [self.view addSubview:shortRentContentScrollView];
+        shortRentContentScrollView.controller = self;
+        _shortRentContentScrollView = shortRentContentScrollView;
+    }
+    return _shortRentContentScrollView;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (!indexPath.row) {
-        return 40;
-    }
-    return 120;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell ;
-    if (!indexPath.row) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"chooserCell"];
-    }
-    if (indexPath.row) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"shortRentCell"];
-    }
-    
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%lu",indexPath.row);
-    ShortRentDetailController *shortRentDetailController = [[ShortRentDetailController alloc] init];
-    [self.navigationController pushViewController:shortRentDetailController animated:YES];
 }
 
 /*

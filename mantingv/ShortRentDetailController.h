@@ -9,5 +9,5 @@
 #import "MTController.h"
 
 @interface ShortRentDetailController : MTController
-
+@property (nonatomic,copy) NSString *guid;
 @end

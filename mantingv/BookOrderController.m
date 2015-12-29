@@ -10,6 +10,8 @@
 #import "BookOrderController.h"
 
 @interface BookOrderController ()
+@property (weak, nonatomic) IBOutlet UILabel *advancePaymentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *earnestMoneyLabel;
 
 @end
 
@@ -17,6 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.advancePaymentLabel.text = [NSString stringWithFormat:@"预付价：￥%@",self.earnestMoney];
+    self.earnestMoneyLabel.text = [NSString stringWithFormat:@"%@",self.earnestMoney];
+
     // Do any additional setup after loading the view from its nib.
 }
 

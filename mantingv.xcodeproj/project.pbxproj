@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		009CFA1BCBE4B569916C9AFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EC7ED67ED18BE89D8F1137 /* libPods.a */; };
-		0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0376AFC51C118D8F0033D2A2 /* ShortRentCell.m */; };
-		0376AFC81C118D8F0033D2A2 /* ShortRentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0376AFC61C118D8F0033D2A2 /* ShortRentCell.xib */; };
 		0376AFE41C1196C30033D2A2 /* Welcome1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0376AFD41C1196C30033D2A2 /* Welcome1.jpg */; };
 		0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0376AFD51C1196C30033D2A2 /* Welcome1@2x.jpg */; };
 		0376AFE61C1196C30033D2A2 /* Welcome2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0376AFD61C1196C30033D2A2 /* Welcome2.jpg */; };
@@ -36,7 +34,6 @@
 		03775B7B1C1139EA00319C32 /* MTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775B7A1C1139EA00319C32 /* MTController.m */; };
 		03775B7F1C113AAD00319C32 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775B7D1C113AAD00319C32 /* HomeController.m */; };
 		03775B841C113AE100319C32 /* ProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775B821C113AE100319C32 /* ProductController.m */; };
-		03775B981C113BF100319C32 /* ShortRentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775B961C113BF100319C32 /* ShortRentController.m */; };
 		03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775B9B1C113C1B00319C32 /* PropertyRightCenterController.m */; };
 		03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03775B9C1C113C1B00319C32 /* PropertyRightCenterController.xib */; };
 		03775BA21C113C3000319C32 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA01C113C3000319C32 /* MineController.m */; };
@@ -44,16 +41,24 @@
 		03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA91C11406000319C32 /* MTTabBarController.m */; };
 		03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BAF1C1140B800319C32 /* MTNavigationController.m */; };
 		03775BC01C11874700319C32 /* MTTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BBF1C11874700319C32 /* MTTableController.m */; };
+		03CFAEC61C321C2A009C80EB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CFAEC51C321C2A009C80EB /* Icon.png */; };
+		03CFAEC91C321F42009C80EB /* ShortRentContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAEC81C321F42009C80EB /* ShortRentContentScrollView.m */; };
+		03CFAECC1C321F68009C80EB /* ShortRentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAECB1C321F68009C80EB /* ShortRentController.m */; };
+		03CFAECF1C3228E0009C80EB /* ShortRentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAECE1C3228E0009C80EB /* ShortRentContentView.m */; };
+		03CFAED21C3228EF009C80EB /* ShortRentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAED11C3228EF009C80EB /* ShortRentView.m */; };
+		03CFAED51C322DFA009C80EB /* ShortRentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAED41C322DFA009C80EB /* ShortRentViewModel.m */; };
+		03CFAED81C326745009C80EB /* ShortRentDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAED71C326745009C80EB /* ShortRentDetailContentScrollView.m */; };
+		03CFAEDB1C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAEDA1C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.m */; };
+		03CFAEDE1C327EE5009C80EB /* RelatedProductContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAEDD1C327EE5009C80EB /* RelatedProductContentView.m */; };
+		03CFAEE11C328354009C80EB /* RelatedProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAEE01C328354009C80EB /* RelatedProductViewModel.m */; };
 		03D0929C1C2D07840057182F /* ProductViewFatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D0929B1C2D07840057182F /* ProductViewFatherModel.m */; };
 		03D0929F1C2D1DE80057182F /* ThemeListContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D0929E1C2D1DE80057182F /* ThemeListContentScrollView.m */; };
 		03D092A21C2D21300057182F /* ThemeListContentScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D092A11C2D21300057182F /* ThemeListContentScrollViewModel.m */; };
 		03D092A51C2D24C80057182F /* ThemeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D092A41C2D24C80057182F /* ThemeListViewModel.m */; };
 		03D092A81C2D37090057182F /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D092A71C2D37090057182F /* SelectView.m */; };
 		03D251851C224EB400BA9ED7 /* ShortRentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */; };
-		03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251871C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m */; };
 		03D2518B1C22509900BA9ED7 /* CheckInAndCheckOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2518A1C22509900BA9ED7 /* CheckInAndCheckOutView.m */; };
 		03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2518D1C22510700BA9ED7 /* ShortRentPriceView.m */; };
-		03D251971C228CF600BA9ED7 /* RelatedProductsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251961C228CF600BA9ED7 /* RelatedProductsView.m */; };
 		03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2519C1C22924100BA9ED7 /* RelatedProductView.m */; };
 		03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251B91C22A43F00BA9ED7 /* MyAssignmentListController.m */; };
 		03D251BD1C22A46100BA9ED7 /* MyShortRentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251BC1C22A46100BA9ED7 /* MyShortRentListController.m */; };
@@ -77,8 +82,6 @@
 		03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643BD1C198A9F0082F0D4 /* CheckInController.m */; };
 		03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643C01C1992A00082F0D4 /* UserAccount.m */; };
 		03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643C31C1994BB0082F0D4 /* RightsListController.m */; };
-		03D650B11C1EB021005856F2 /* ChooserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D650AF1C1EB021005856F2 /* ChooserCell.m */; };
-		03D650B21C1EB021005856F2 /* ChooserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D650B01C1EB021005856F2 /* ChooserCell.xib */; };
 		03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */; };
 		03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */; };
 		03D6698F1C2A4635001C4C2C /* ZJModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6698E1C2A4635001C4C2C /* ZJModelTool.m */; };
@@ -198,9 +201,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0376AFC41C118D8F0033D2A2 /* ShortRentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentCell.h; sourceTree = "<group>"; };
-		0376AFC51C118D8F0033D2A2 /* ShortRentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentCell.m; sourceTree = "<group>"; };
-		0376AFC61C118D8F0033D2A2 /* ShortRentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortRentCell.xib; sourceTree = "<group>"; };
 		0376AFD41C1196C30033D2A2 /* Welcome1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Welcome1.jpg; sourceTree = "<group>"; };
 		0376AFD51C1196C30033D2A2 /* Welcome1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Welcome1@2x.jpg"; sourceTree = "<group>"; };
 		0376AFD61C1196C30033D2A2 /* Welcome2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Welcome2.jpg; sourceTree = "<group>"; };
@@ -237,8 +237,6 @@
 		03775B7D1C113AAD00319C32 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		03775B811C113AE100319C32 /* ProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductController.h; sourceTree = "<group>"; };
 		03775B821C113AE100319C32 /* ProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductController.m; sourceTree = "<group>"; };
-		03775B951C113BF100319C32 /* ShortRentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentController.h; sourceTree = "<group>"; };
-		03775B961C113BF100319C32 /* ShortRentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentController.m; sourceTree = "<group>"; };
 		03775B9A1C113C1B00319C32 /* PropertyRightCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyRightCenterController.h; sourceTree = "<group>"; };
 		03775B9B1C113C1B00319C32 /* PropertyRightCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyRightCenterController.m; sourceTree = "<group>"; };
 		03775B9C1C113C1B00319C32 /* PropertyRightCenterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyRightCenterController.xib; sourceTree = "<group>"; };
@@ -253,6 +251,25 @@
 		03775BB41C11670F00319C32 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		03775BBE1C11874700319C32 /* MTTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableController.h; sourceTree = "<group>"; };
 		03775BBF1C11874700319C32 /* MTTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableController.m; sourceTree = "<group>"; };
+		03CFAEC51C321C2A009C80EB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		03CFAEC71C321F42009C80EB /* ShortRentContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentContentScrollView.h; sourceTree = "<group>"; };
+		03CFAEC81C321F42009C80EB /* ShortRentContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentContentScrollView.m; sourceTree = "<group>"; };
+		03CFAECA1C321F68009C80EB /* ShortRentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentController.h; sourceTree = "<group>"; };
+		03CFAECB1C321F68009C80EB /* ShortRentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentController.m; sourceTree = "<group>"; };
+		03CFAECD1C3228E0009C80EB /* ShortRentContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentContentView.h; sourceTree = "<group>"; };
+		03CFAECE1C3228E0009C80EB /* ShortRentContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentContentView.m; sourceTree = "<group>"; };
+		03CFAED01C3228EF009C80EB /* ShortRentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentView.h; sourceTree = "<group>"; };
+		03CFAED11C3228EF009C80EB /* ShortRentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentView.m; sourceTree = "<group>"; };
+		03CFAED31C322DFA009C80EB /* ShortRentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentViewModel.h; sourceTree = "<group>"; };
+		03CFAED41C322DFA009C80EB /* ShortRentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentViewModel.m; sourceTree = "<group>"; };
+		03CFAED61C326745009C80EB /* ShortRentDetailContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentDetailContentScrollView.h; sourceTree = "<group>"; };
+		03CFAED71C326745009C80EB /* ShortRentDetailContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentDetailContentScrollView.m; sourceTree = "<group>"; };
+		03CFAED91C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentDetailContentScrollViewModel.h; sourceTree = "<group>"; };
+		03CFAEDA1C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentDetailContentScrollViewModel.m; sourceTree = "<group>"; };
+		03CFAEDC1C327EE5009C80EB /* RelatedProductContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedProductContentView.h; sourceTree = "<group>"; };
+		03CFAEDD1C327EE5009C80EB /* RelatedProductContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedProductContentView.m; sourceTree = "<group>"; };
+		03CFAEDF1C328354009C80EB /* RelatedProductViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedProductViewModel.h; sourceTree = "<group>"; };
+		03CFAEE01C328354009C80EB /* RelatedProductViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedProductViewModel.m; sourceTree = "<group>"; };
 		03D0929A1C2D07840057182F /* ProductViewFatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewFatherModel.h; sourceTree = "<group>"; };
 		03D0929B1C2D07840057182F /* ProductViewFatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewFatherModel.m; sourceTree = "<group>"; };
 		03D0929D1C2D1DE80057182F /* ThemeListContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeListContentScrollView.h; sourceTree = "<group>"; };
@@ -265,14 +282,10 @@
 		03D092A71C2D37090057182F /* SelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
 		03D251831C224EB400BA9ED7 /* ShortRentDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentDetailController.h; sourceTree = "<group>"; };
 		03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentDetailController.m; sourceTree = "<group>"; };
-		03D251861C224EF200BA9ED7 /* ShortRentDetailContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentDetailContentScrollView.h; sourceTree = "<group>"; };
-		03D251871C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentDetailContentScrollView.m; sourceTree = "<group>"; };
 		03D251891C22509900BA9ED7 /* CheckInAndCheckOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInAndCheckOutView.h; sourceTree = "<group>"; };
 		03D2518A1C22509900BA9ED7 /* CheckInAndCheckOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInAndCheckOutView.m; sourceTree = "<group>"; };
 		03D2518C1C22510700BA9ED7 /* ShortRentPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentPriceView.h; sourceTree = "<group>"; };
 		03D2518D1C22510700BA9ED7 /* ShortRentPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentPriceView.m; sourceTree = "<group>"; };
-		03D251951C228CF600BA9ED7 /* RelatedProductsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedProductsView.h; sourceTree = "<group>"; };
-		03D251961C228CF600BA9ED7 /* RelatedProductsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedProductsView.m; sourceTree = "<group>"; };
 		03D2519B1C22924100BA9ED7 /* RelatedProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedProductView.h; sourceTree = "<group>"; };
 		03D2519C1C22924100BA9ED7 /* RelatedProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedProductView.m; sourceTree = "<group>"; };
 		03D251B81C22A43F00BA9ED7 /* MyAssignmentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAssignmentListController.h; sourceTree = "<group>"; };
@@ -311,9 +324,6 @@
 		03D643C01C1992A00082F0D4 /* UserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserAccount.m; path = ../UserAccount.m; sourceTree = "<group>"; };
 		03D643C21C1994BB0082F0D4 /* RightsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightsListController.h; sourceTree = "<group>"; };
 		03D643C31C1994BB0082F0D4 /* RightsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightsListController.m; sourceTree = "<group>"; };
-		03D650AE1C1EB021005856F2 /* ChooserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooserCell.h; sourceTree = "<group>"; };
-		03D650AF1C1EB021005856F2 /* ChooserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooserCell.m; sourceTree = "<group>"; };
-		03D650B01C1EB021005856F2 /* ChooserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooserCell.xib; sourceTree = "<group>"; };
 		03D65DD71C1E5F7500E7C679 /* ChoiceThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceThemeController.h; sourceTree = "<group>"; };
 		03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceThemeController.m; sourceTree = "<group>"; };
 		03D65DE31C1E697C00E7C679 /* MTBaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBaseScrollView.h; sourceTree = "<group>"; };
@@ -603,6 +613,7 @@
 				03775B4E1C11368F00319C32 /* Info.plist */,
 				03775B461C11368F00319C32 /* Main.storyboard */,
 				03775B491C11368F00319C32 /* Assets.xcassets */,
+				03CFAEC51C321C2A009C80EB /* Icon.png */,
 				03775B3D1C11368F00319C32 /* Supporting Files */,
 			);
 			path = mantingv;
@@ -787,8 +798,8 @@
 		03775B8C1C113AF600319C32 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03775B951C113BF100319C32 /* ShortRentController.h */,
-				03775B961C113BF100319C32 /* ShortRentController.m */,
+				03CFAECA1C321F68009C80EB /* ShortRentController.h */,
+				03CFAECB1C321F68009C80EB /* ShortRentController.m */,
 				03D2517F1C224E7000BA9ED7 /* 短租详情 */,
 			);
 			name = Controllers;
@@ -797,12 +808,12 @@
 		03775B8D1C113AF800319C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0376AFC41C118D8F0033D2A2 /* ShortRentCell.h */,
-				0376AFC51C118D8F0033D2A2 /* ShortRentCell.m */,
-				0376AFC61C118D8F0033D2A2 /* ShortRentCell.xib */,
-				03D650AE1C1EB021005856F2 /* ChooserCell.h */,
-				03D650AF1C1EB021005856F2 /* ChooserCell.m */,
-				03D650B01C1EB021005856F2 /* ChooserCell.xib */,
+				03CFAEC71C321F42009C80EB /* ShortRentContentScrollView.h */,
+				03CFAEC81C321F42009C80EB /* ShortRentContentScrollView.m */,
+				03CFAECD1C3228E0009C80EB /* ShortRentContentView.h */,
+				03CFAECE1C3228E0009C80EB /* ShortRentContentView.m */,
+				03CFAED01C3228EF009C80EB /* ShortRentView.h */,
+				03CFAED11C3228EF009C80EB /* ShortRentView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -810,6 +821,8 @@
 		03775B8E1C113AF900319C32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03CFAED31C322DFA009C80EB /* ShortRentViewModel.h */,
+				03CFAED41C322DFA009C80EB /* ShortRentViewModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -923,9 +936,9 @@
 		03D251801C224E7F00BA9ED7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03D251E11C22BD4800BA9ED7 /* 预订订单 */,
 				03D251831C224EB400BA9ED7 /* ShortRentDetailController.h */,
 				03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */,
+				03D251E11C22BD4800BA9ED7 /* 预订订单 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -933,14 +946,14 @@
 		03D251811C224E8100BA9ED7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03D251861C224EF200BA9ED7 /* ShortRentDetailContentScrollView.h */,
-				03D251871C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m */,
+				03CFAED61C326745009C80EB /* ShortRentDetailContentScrollView.h */,
+				03CFAED71C326745009C80EB /* ShortRentDetailContentScrollView.m */,
 				03D251891C22509900BA9ED7 /* CheckInAndCheckOutView.h */,
 				03D2518A1C22509900BA9ED7 /* CheckInAndCheckOutView.m */,
 				03D2518C1C22510700BA9ED7 /* ShortRentPriceView.h */,
 				03D2518D1C22510700BA9ED7 /* ShortRentPriceView.m */,
-				03D251951C228CF600BA9ED7 /* RelatedProductsView.h */,
-				03D251961C228CF600BA9ED7 /* RelatedProductsView.m */,
+				03CFAEDC1C327EE5009C80EB /* RelatedProductContentView.h */,
+				03CFAEDD1C327EE5009C80EB /* RelatedProductContentView.m */,
 				03D2519B1C22924100BA9ED7 /* RelatedProductView.h */,
 				03D2519C1C22924100BA9ED7 /* RelatedProductView.m */,
 			);
@@ -950,6 +963,10 @@
 		03D251821C224E8300BA9ED7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03CFAED91C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.h */,
+				03CFAEDA1C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.m */,
+				03CFAEDF1C328354009C80EB /* RelatedProductViewModel.h */,
+				03CFAEE01C328354009C80EB /* RelatedProductViewModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1909,8 +1926,8 @@
 				03D251DB1C22AE4D00BA9ED7 /* ModifyPasswordController.xib in Resources */,
 				03E0A25C1C18274000FCAAAC /* home.png in Resources */,
 				03D6439E1C195B010082F0D4 /* LoginController.xib in Resources */,
-				0376AFC81C118D8F0033D2A2 /* ShortRentCell.xib in Resources */,
 				03D8C4FA1C17B9A700C71B98 /* down.png in Resources */,
+				03CFAEC61C321C2A009C80EB /* Icon.png in Resources */,
 				03DA24891C23DF3C0098FE4B /* arrows_slim_left_103.41463414634px_1182560_easyicon.net.png in Resources */,
 				03775B4A1C11368F00319C32 /* Assets.xcassets in Resources */,
 				03D643A21C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png in Resources */,
@@ -1921,7 +1938,6 @@
 				0376AFF01C1196C30033D2A2 /* Welcome_3.0_4.jpg in Resources */,
 				03DC50011C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png in Resources */,
 				03D251C51C22A4AA00BA9ED7 /* AccountConfigController.xib in Resources */,
-				03D650B21C1EB021005856F2 /* ChooserCell.xib in Resources */,
 				0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */,
 				03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */,
 				03E0A25F1C18274000FCAAAC /* product.png in Resources */,
@@ -2017,6 +2033,7 @@
 				03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */,
 				03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */,
 				03E066551C279CE700E85778 /* ContentScrollView.m in Sources */,
+				03CFAECC1C321F68009C80EB /* ShortRentController.m in Sources */,
 				03DA24771C23D4570098FE4B /* ChoiceRoom.m in Sources */,
 				03775BA21C113C3000319C32 /* MineController.m in Sources */,
 				03E066701C27F02400E85778 /* TransferController.m in Sources */,
@@ -2030,7 +2047,6 @@
 				03DC50871C291B750040C939 /* CheckInDetailMessageContainView.m in Sources */,
 				03D251DF1C22AE9300BA9ED7 /* ModifyNickNameController.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
-				03D650B11C1EB021005856F2 /* ChooserCell.m in Sources */,
 				03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */,
 				03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */,
 				03DC508A1C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m in Sources */,
@@ -2040,7 +2056,6 @@
 				03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */,
 				03E066861C28028700E85778 /* TransferDetailController.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
-				03D251881C224EF200BA9ED7 /* ShortRentDetailContentScrollView.m in Sources */,
 				03DA24741C23D3F90098FE4B /* Theme.m in Sources */,
 				03DB9D131C200C7900A40361 /* FreightView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
@@ -2076,18 +2091,21 @@
 				03D0929C1C2D07840057182F /* ProductViewFatherModel.m in Sources */,
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
+				03CFAEC91C321F42009C80EB /* ShortRentContentScrollView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
 				03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */,
 				03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */,
 				03D669B81C2AA04D001C4C2C /* ChoiceRoomModel.m in Sources */,
 				03775B841C113AE100319C32 /* ProductController.m in Sources */,
 				03D8C5001C17D24800C71B98 /* LFLoopScrollView.m in Sources */,
+				03CFAEDE1C327EE5009C80EB /* RelatedProductContentView.m in Sources */,
 				03DEF3581C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.m in Sources */,
 				03E066831C28026400E85778 /* TransferDetailContentScrollView.m in Sources */,
 				03E0666A1C27C80E00E85778 /* ExchangeDetailPayMessageView.m in Sources */,
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
 				03D092A21C2D21300057182F /* ThemeListContentScrollViewModel.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
+				03CFAED81C326745009C80EB /* ShortRentDetailContentScrollView.m in Sources */,
 				03E066741C27F0AF00E85778 /* TransferContentScrollView.m in Sources */,
 				03DA247D1C23D5470098FE4B /* ThemeListContentView.m in Sources */,
 				03D251BD1C22A46100BA9ED7 /* MyShortRentListController.m in Sources */,
@@ -2098,7 +2116,7 @@
 				03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */,
 				03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */,
 				03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */,
-				03D251971C228CF600BA9ED7 /* RelatedProductsView.m in Sources */,
+				03CFAEDB1C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.m in Sources */,
 				03D830AE1C1EBDE1006DBFD9 /* ChoiceNessTheme.m in Sources */,
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
 				03E0666D1C27C85000E85778 /* ExchangeDetailBaseView.m in Sources */,
@@ -2109,7 +2127,6 @@
 				03E066671C27C7F400E85778 /* ExchangeDetailDescriptionView.m in Sources */,
 				03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */,
 				03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */,
-				0376AFC71C118D8F0033D2A2 /* ShortRentCell.m in Sources */,
 				03DC51241C294D740040C939 /* LFSelectionView.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,
 				03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */,
@@ -2120,18 +2137,21 @@
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
 				03DC508D1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m in Sources */,
 				03DEF3551C30FE46000F25F0 /* BaseContentScrollView.m in Sources */,
+				03CFAED21C3228EF009C80EB /* ShortRentView.m in Sources */,
 				03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */,
 				03DEF35B1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m in Sources */,
 				03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */,
 				03D0929F1C2D1DE80057182F /* ThemeListContentScrollView.m in Sources */,
 				03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */,
+				03CFAED51C322DFA009C80EB /* ShortRentViewModel.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
+				03CFAECF1C3228E0009C80EB /* ShortRentContentView.m in Sources */,
 				03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */,
 				03DB9CF51C1FF23600A40361 /* ProductView.m in Sources */,
 				03DB9CEF1C1FDF8C00A40361 /* ProductContainView.m in Sources */,
 				03775BA61C113E8600319C32 /* MTModel.m in Sources */,
+				03CFAEE11C328354009C80EB /* RelatedProductViewModel.m in Sources */,
 				03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */,
-				03775B981C113BF100319C32 /* ShortRentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -84,6 +84,7 @@
 - (void)loadDataForProductView{
     NSString *url = [BASE_URL stringByAppendingString:@"/house/list"];
     [KVNProgress showWithStatus:@"正在加载.."];
+    NSLog(@"------------>%@",self.parameters);
     [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //先清空所有产品
@@ -135,7 +136,7 @@
     [self.chooserView setTitlesOfButtonWith:buttonTitles];
     [self.chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
         NSDictionary *dic = self.chooserViewData[indexOfDataAndButtons][indexPath.row];
-        [self resetParameters];
+//        [self resetParameters];
         NSString *value = [dic objectForKey:@"name"];
         if (0 == indexOfDataAndButtons) {
             if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseArea"]]) {
@@ -155,6 +156,7 @@
             }
             [self.parameters setValue:value forKey:@"houseBasePrice"];
         }
+        
         [self loadDataForProductView];
         
     }];

@@ -20,4 +20,11 @@
     return _chooserView;
 }
 
+- (NSMutableArray *)chooserViewDataArray{
+    if (nil == _chooserViewDataArray) {
+        NSMutableArray *chooserViewDataArray = [[NSMutableArray alloc] init];
+        _chooserViewDataArray = chooserViewDataArray;
+    }
+    return _chooserViewDataArray;
+}
 @end

@@ -1,13 +1,13 @@
 //
-//  ShortRentController.h
+//  ShortRentContentView.h
 //  mantingv
 //
 //  Created by LiuFeng on 15/12/29.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "MTBaseView.h"
 
-@interface ShortRentController : MTController
+@interface ShortRentContentView : MTBaseView
 
 @end

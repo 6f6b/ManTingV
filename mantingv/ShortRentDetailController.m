@@ -17,16 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.shortRentDetailContentScrollView setValueWith:nil];
+//    [self.shortRentDetailContentScrollView setValueWith:nil];
+    [self.shortRentDetailContentScrollView setValueWith:self.guid];
 }
 
 - (ShortRentDetailContentScrollView *)shortRentDetailContentScrollView{
     if (nil == _shortRentDetailContentScrollView) {
         ShortRentDetailContentScrollView *shortRentDetailContentScrollView = [[ShortRentDetailContentScrollView alloc] initWithFrame:self.view.bounds];
         shortRentDetailContentScrollView.backgroundColor = [UIColor whiteColor];
-        [self.view addSubview:shortRentDetailContentScrollView];
         shortRentDetailContentScrollView.controller = self;
+        [self.view addSubview:shortRentDetailContentScrollView];
         _shortRentDetailContentScrollView = shortRentDetailContentScrollView;
     }
     return _shortRentDetailContentScrollView;

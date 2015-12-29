@@ -8,7 +8,7 @@
 
 #import "ShortRentPriceView.h"
 #import "BookOrderController.h"
-#import "ShortRentDetailContentScrollView.h"
+#import "ShortRentDetailContentScrollViewModel.h"
 
 @interface ShortRentPriceView ()
 @property (nonatomic,weak) UILabel *retailPriceLabel;
@@ -182,8 +182,27 @@
 }
 
 - (void)dealBtn:(UIButton *)button{
+    NSLog(@"%@",self.controller);
     BookOrderController *bookOrderController = [[BookOrderController alloc] init];
-    ShortRentDetailContentScrollView *view = self.superview;
-    [view.controller.navigationController pushViewController:bookOrderController animated:YES];
+    ShortRentDetailContentScrollViewModel *model = (ShortRentDetailContentScrollViewModel *)self.model;
+    bookOrderController.earnestMoney = model.price;
+    [self.controller.navigationController pushViewController:bookOrderController animated:YES];
+}
+
+- (void)setValueWith:(id)data{
+    ShortRentDetailContentScrollViewModel *model = (ShortRentDetailContentScrollViewModel *)data;
+    self.model = model;
+//    @property (nonatomic,weak) UILabel *retailPriceLabel;
+//    @property (nonatomic,weak) UILabel *retailPrice;
+//    
+//    @property (nonatomic,weak) UILabel *memberPriceLabel;
+//    @property (nonatomic,weak) UILabel *memberPrice;
+//    
+//    @property (nonatomic,weak) UIView *segementationA;
+//    @property (nonatomic,weak) UIView *segementationB;
+    self.retailPrice.text = model.price;
+    self.memberPrice.text = model.price;
+    
+    
 }
 @end

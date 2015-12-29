@@ -9,5 +9,5 @@
 #import "MTController.h"
 
 @interface BookOrderController : MTController
-
+@property (nonatomic,copy) NSString *earnestMoney;
 @end

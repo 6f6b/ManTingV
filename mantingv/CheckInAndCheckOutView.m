@@ -7,6 +7,7 @@
 //
 
 #import "CheckInAndCheckOutView.h"
+#import "ShortRentDetailContentScrollViewModel.h"
 @interface CheckInAndCheckOutView ()
 @property (nonatomic,weak) UILabel *checkInLabel;
 @property (nonatomic,weak) UILabel *checkOutLabel;
@@ -144,7 +145,6 @@
     if (nil == _checkInDayLabel) {
         UILabel *checkInDayLabel = [[UILabel alloc] init];
         checkInDayLabel.backgroundColor = [UIColor redColor];
-        checkInDayLabel.text = @"入住";
         [self addSubview:checkInDayLabel];
         _checkInDayLabel = checkInDayLabel;
     }
@@ -157,7 +157,6 @@
         checkOutDayLabel.backgroundColor = [UIColor redColor];
 
         [self addSubview:checkOutDayLabel];
-        checkOutDayLabel.text = @"入住";
         _checkOutDayLabel = checkOutDayLabel;
     }
     return _checkOutDayLabel;
@@ -169,7 +168,6 @@
         checkInMonthLabel.backgroundColor = [UIColor redColor];
 
         [self addSubview:checkInMonthLabel];
-        checkInMonthLabel.text = @"入住";
         _checkInMonthLabel = checkInMonthLabel;
     }
     return _checkInMonthLabel;
@@ -181,7 +179,6 @@
         checkOutMonthLabel.backgroundColor = [UIColor redColor];
 
         [self addSubview:checkOutMonthLabel];
-        checkOutMonthLabel.text = @"入住";
         _checkOutMonthLabel = checkOutMonthLabel;
     }
     return _checkOutMonthLabel;
@@ -194,7 +191,6 @@
         checkInWeekDayLabel.backgroundColor = [UIColor redColor];
 
         [self addSubview:checkInWeekDayLabel];
-        checkInWeekDayLabel.text = @"入住";
         _checkInWeekDayLabel = checkInWeekDayLabel;
     }
     return _checkInWeekDayLabel;
@@ -206,7 +202,6 @@
         checkOutWeekDayLabel.backgroundColor = [UIColor redColor];
 
         [self addSubview:checkOutWeekDayLabel];
-        checkOutWeekDayLabel.text = @"入住";
         _checkOutWeekDayLabel = checkOutWeekDayLabel;
     }
     return _checkOutWeekDayLabel;
@@ -230,5 +225,33 @@
         _horizontalSegementationLine = horizontalSegementationLine;
     }
     return _horizontalSegementationLine;
+}
+
+- (void)setValueWith:(id)data{
+    ShortRentDetailContentScrollViewModel *model = (ShortRentDetailContentScrollViewModel *)data;
+//    @property (nonatomic,weak) UILabel *checkInLabel;
+//    @property (nonatomic,weak) UILabel *checkOutLabel;
+//    
+//    @property (nonatomic,weak) UILabel *checkInDayLabel;
+//    @property (nonatomic,weak) UILabel *checkOutDayLabel;
+//    
+//    @property (nonatomic,weak) UILabel *checkInMonthLabel;
+//    @property (nonatomic,weak) UILabel *checkOutMonthLabel;
+//    
+//    @property (nonatomic,weak) UILabel *checkInWeekDayLabel;
+//    @property (nonatomic,weak) UILabel *checkOutWeekDayLabel;
+//    
+//    @property (nonatomic,weak) UIView *segementationLine;
+//    @property (nonatomic,weak) UIView *horizontalSegementationLine;
+    
+    NSLog(@"实现");
+    self.checkInDayLabel.text = model.checkInDate;
+    self.checkOutDayLabel.text = model.leaveDate;
+    
+    self.checkInMonthLabel.text = model.checkInDate;
+    self.checkOutMonthLabel.text = model.leaveDate;
+    
+    self.checkInWeekDayLabel.text = model.checkInDate;
+    self.checkOutWeekDayLabel.text = model.leaveDate;
 }
 @end

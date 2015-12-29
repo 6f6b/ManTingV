@@ -11,4 +11,5 @@
 
 @interface ContentScrollViewWithChooserView : BaseContentScrollView
 @property (nonatomic,weak) ChooserView *chooserView;
+@property (nonatomic,strong) NSMutableArray *chooserViewDataArray;
 @end
