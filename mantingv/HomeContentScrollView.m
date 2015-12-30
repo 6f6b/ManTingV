@@ -112,7 +112,6 @@
 
 
 - (void)setValueWith:(id)data{
-    
     /////////////////////////////////////////////下载轮播图片数据///////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
@@ -219,6 +218,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         [self.choiceNessRoom setValueWith:dic];
+        [KVNProgress dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];

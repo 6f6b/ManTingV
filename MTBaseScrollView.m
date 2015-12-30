@@ -7,6 +7,7 @@
 //
 
 #import "MTBaseScrollView.h"
+
 @interface MTBaseScrollView()<UIScrollViewDelegate>
 @end
 @implementation MTBaseScrollView
@@ -17,9 +18,9 @@
     return self;
 }
 
-- (AFHTTPSessionManager *)manager{
+- (AFHTTPSessionManagerForMT *)manager{
     if (nil == _manager) {
-        _manager = [AFHTTPSessionManager manager];
+        _manager = [AFHTTPSessionManagerForMT manager];
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
     return _manager;

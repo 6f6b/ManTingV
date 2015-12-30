@@ -22,7 +22,7 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     
-    self.backgroundColor = [UIColor greenColor];
+    self.backgroundColor = [UIColor colorWithRed:0.894 green:1.000 blue:0.819 alpha:1.000];
     UIView *superView = self;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
@@ -93,7 +93,7 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.backgroundColor = [UIColor orangeColor];
+        priceLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
@@ -103,7 +103,7 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.backgroundColor = [UIColor orangeColor];
+        titleLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -113,7 +113,7 @@
 - (UILabel *)seeDetailLabel{
     if (nil == _seeDetailLabel) {
         UILabel *seeDetailLabel = [[UILabel alloc] init];
-        seeDetailLabel.backgroundColor = [UIColor orangeColor];
+        seeDetailLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:seeDetailLabel];
         _seeDetailLabel = seeDetailLabel;
     }
@@ -124,7 +124,7 @@
     if (nil == _houseTypeAndSizeLabel) {
         UILabel *houseTypeAndSizeLabel = [[UILabel alloc] init];
         houseTypeAndSizeLabel.font = [UIFont systemFontOfSize:12];
-        houseTypeAndSizeLabel.backgroundColor = [UIColor orangeColor];
+        houseTypeAndSizeLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:houseTypeAndSizeLabel];
         _houseTypeAndSizeLabel = houseTypeAndSizeLabel;
     }

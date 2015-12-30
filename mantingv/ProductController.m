@@ -28,7 +28,7 @@
 - (ProductContentScrollView *)productContentScrollView{
     if (nil == _productContentScrollView) {
         ProductContentScrollView *productContentScrollView = [[ProductContentScrollView alloc] initWithFrame:self.view.bounds];
-        productContentScrollView.backgroundColor = [UIColor yellowColor];
+        productContentScrollView.backgroundColor = [UIColor whiteColor];
         _productContentScrollView = productContentScrollView;
         productContentScrollView.controller = self;
         [self.view addSubview:productContentScrollView];

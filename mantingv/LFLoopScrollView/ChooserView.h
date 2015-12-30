@@ -9,6 +9,7 @@
 #import "MTBaseView.h"
 
 @interface ChooserView : MTBaseView
+@property (nonatomic,strong) NSArray *dataContentArray;
 
 //点击事件
 - (void)setClickedAction:(void(^)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPath))action;

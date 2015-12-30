@@ -34,7 +34,7 @@
         productView.controller = self.controller;
         productView.layer.cornerRadius = 5;
         productView.clipsToBounds = YES;
-        productView.backgroundColor = [UIColor whiteColor];
+        productView.backgroundColor = [UIColor colorWithRed:1.000 green:0.990 blue:0.931 alpha:1.000];
         productView.tag = 100+i;
         
 

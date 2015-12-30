@@ -11,15 +11,7 @@
 #import "ShortRentDetailController.h"
 
 @interface ShortRentView ()
-@property (weak, nonatomic) UILabel *numOfRoomLabel;
-@property (weak, nonatomic) UILabel *numOfRoom;
-@property (weak, nonatomic) UIImageView *backImage;
 
-@property (weak, nonatomic) UILabel *titleLabel;
-@property (weak, nonatomic) UILabel *houseTypeLabel;
-@property (weak, nonatomic) UILabel *weeklyLabel;
-@property (weak, nonatomic) UILabel *addressLabel;
-@property (weak, nonatomic) UILabel *priceLabel;
 @end
 @implementation ShortRentView
 /**

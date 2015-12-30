@@ -83,7 +83,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadDataForProductView{
     NSString *url = [BASE_URL stringByAppendingString:@"/house/list"];
-    [KVNProgress showWithStatus:@"正在加载.."];
     NSLog(@"------------>%@",self.parameters);
     [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -97,12 +96,9 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSArray *arr = [dic objectForKey:@"data"];
         if (0 == arr.count) {
-            [KVNProgress dismiss];
-            [KVNProgress showErrorWithStatus:@"查找失败"];
             return ;
         }
         NSArray *arr2 = [arr[0] objectForKey:@"buildingTypeDTOs"];
-        [KVNProgress dismiss];
 
         for (int i=0; i<arr2.count; i++) {
             CGFloat X = 0;

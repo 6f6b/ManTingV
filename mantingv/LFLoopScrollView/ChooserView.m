@@ -15,7 +15,6 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
 @interface ChooserView ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,copy) ChooseBlock chooseBlock;
 @property (nonatomic,weak) UITableView *tableView;
-@property (nonatomic,strong) NSArray *dataContentArray;
 @property (nonatomic,assign) NSInteger indexOfDataAndButton;
 @end
 @implementation ChooserView
@@ -36,6 +35,41 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
     frame.size.height = BUTTON_HEIGHT;
     ChooserView *chooserView = [[ChooserView alloc] initWithFrame:frame];
     
+    //目的
+    NSDictionary *dicDestination1 = @{@"name":@"NOT_LIMIT",@"label":@"不限"};
+    NSDictionary *dicDestination2 = @{@"name":@"SANYA",@"label":@"三亚"};
+    NSDictionary *dicDestination3 = @{@"name":@"LIJIANG",@"label":@"丽江"};
+    NSDictionary *dicDestination4 = @{@"name":@"XISHUANGBANNA",@"label":@"西双版纳"};
+    NSDictionary *dicDestination5 = @{@"name":@"SHENZHEN",@"label":@"深圳"};
+    NSDictionary *dicDestination6 = @{@"name":@"GUANGZHOU",@"label":@"广州"};
+    NSDictionary *dicDestination7 = @{@"name":@"CHENGDU",@"label":@"成都"};
+    NSDictionary *dicDestination8 = @{@"name":@"SUZHOU",@"label":@"苏州"};
+    NSDictionary *dicDestination9 = @{@"name":@"KUNMING",@"label":@"昆明"};
+
+    //主题
+    NSDictionary *dicTheme1 = @{@"name":@"NOT_LIMIT",@"label":@"不限"};
+    NSDictionary *dicTheme2 = @{@"name":@"GAOERFU",@"label":@"高尔夫"};
+    NSDictionary *dicTheme3 = @{@"name":@"SHATAN",@"label":@"沙滩"};
+    NSDictionary *dicTheme4 = @{@"name":@"HUJING",@"label":@"湖景"};
+    NSDictionary *dicTheme5 = @{@"name":@"XUESHAN",@"label":@"雪山"};
+    NSDictionary *dicTheme6 = @{@"name":@"GUZHEN",@"label":@"古镇"};
+    NSDictionary *dicTheme7 = @{@"name":@"BIHAN",@"label":@"避寒"};
+    NSDictionary *dicTheme8 = @{@"name":@"BISHU",@"label":@"避暑"};
+    NSDictionary *dicTheme9 = @{@"name":@"WENQUAN",@"label":@"温泉"};
+    
+    //价格
+    NSDictionary *dicPrice1 = @{@"name":@"NOT_LIMIT",@"label":@"不限"};
+    NSDictionary *dicPrice2 = @{@"name":@"ZERO_TO_FIVE",@"label":@"5万以下"};
+    NSDictionary *dicPrice3 = @{@"name":@"FIVE_TO_TEN",@"label":@"5-10万"};
+    NSDictionary *dicPrice4 = @{@"name":@"TEN_TO_FIFTEEN",@"label":@"10-15万"};
+    NSDictionary *dicPrice5 = @{@"name":@"FIFTEEN_TO_TWENTY",@"label":@"15-20万"};
+
+    NSArray *chooserViewData = @[
+  @[dicDestination1,dicDestination2,dicDestination3,dicDestination4,dicDestination5,dicDestination6,dicDestination7,dicDestination8,dicDestination9],
+  @[dicTheme1,dicTheme2,dicTheme3,dicTheme4,dicTheme5,dicTheme6,dicTheme7,dicTheme8,dicTheme9],
+  @[dicPrice1,dicPrice2,dicPrice3,dicPrice4,dicPrice5]];
+    
+    [chooserView setDataArraysWith:chooserViewData];
     return chooserView;
 }
 

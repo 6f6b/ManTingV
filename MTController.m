@@ -30,6 +30,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     NSLog(@"收到内存警告");
+    [KVNProgress showErrorWithStatus:@"内存警告！"];
     // Dispose of any resources that can be recreated.
 }
 

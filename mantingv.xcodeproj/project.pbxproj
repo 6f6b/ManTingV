@@ -55,7 +55,6 @@
 		03D0929F1C2D1DE80057182F /* ThemeListContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D0929E1C2D1DE80057182F /* ThemeListContentScrollView.m */; };
 		03D092A21C2D21300057182F /* ThemeListContentScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D092A11C2D21300057182F /* ThemeListContentScrollViewModel.m */; };
 		03D092A51C2D24C80057182F /* ThemeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D092A41C2D24C80057182F /* ThemeListViewModel.m */; };
-		03D092A81C2D37090057182F /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D092A71C2D37090057182F /* SelectView.m */; };
 		03D251851C224EB400BA9ED7 /* ShortRentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */; };
 		03D2518B1C22509900BA9ED7 /* CheckInAndCheckOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2518A1C22509900BA9ED7 /* CheckInAndCheckOutView.m */; };
 		03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2518D1C22510700BA9ED7 /* ShortRentPriceView.m */; };
@@ -160,9 +159,6 @@
 		03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF35D1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m */; };
 		03DEF3611C31023F000F25F0 /* HolidayHouseSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */; };
 		03E066451C27929600E85778 /* ExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066441C27929600E85778 /* ExchangeController.m */; };
-		03E066501C279BE100E85778 /* ExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0664F1C279BE100E85778 /* ExchangeListController.m */; };
-		03E066581C279EAD00E85778 /* ExchangeListContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */; };
-		03E0665B1C27A3F800E85778 /* ExchangeListBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0665A1C27A3F800E85778 /* ExchangeListBaseCell.m */; };
 		03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0665F1C27C58100E85778 /* ExchangeDetailController.m */; };
 		03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066631C27C5AC00E85778 /* ExchangeDetailContentScrollView.m */; };
 		03E066671C27C7F400E85778 /* ExchangeDetailDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066661C27C7F400E85778 /* ExchangeDetailDescriptionView.m */; };
@@ -180,6 +176,9 @@
 		03E0A25E1C18274000FCAAAC /* short.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2591C18274000FCAAAC /* short.png */; };
 		03E0A25F1C18274000FCAAAC /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A25A1C18274000FCAAAC /* product.png */; };
 		03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E25B741C1E9E9B001A2065 /* ChooserView.m */; };
+		03FB248C1C33A8360049CADB /* AFHTTPSessionManagerForMT.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FB248B1C33A8360049CADB /* AFHTTPSessionManagerForMT.m */; };
+		03FB24901C33D1BA0049CADB /* ExchangeContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FB248F1C33D1BA0049CADB /* ExchangeContentScrollView.m */; };
+		03FB24991C33DA550049CADB /* ExchangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FB24981C33DA550049CADB /* ExchangeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,8 +276,6 @@
 		03D092A11C2D21300057182F /* ThemeListContentScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeListContentScrollViewModel.m; sourceTree = "<group>"; };
 		03D092A31C2D24C80057182F /* ThemeListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeListViewModel.h; sourceTree = "<group>"; };
 		03D092A41C2D24C80057182F /* ThemeListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeListViewModel.m; sourceTree = "<group>"; };
-		03D092A61C2D37090057182F /* SelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
-		03D092A71C2D37090057182F /* SelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
 		03D251831C224EB400BA9ED7 /* ShortRentDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentDetailController.h; sourceTree = "<group>"; };
 		03D251841C224EB400BA9ED7 /* ShortRentDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentDetailController.m; sourceTree = "<group>"; };
 		03D251891C22509900BA9ED7 /* CheckInAndCheckOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInAndCheckOutView.h; sourceTree = "<group>"; };
@@ -466,12 +463,6 @@
 		03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HolidayHouseSearchController.m; sourceTree = "<group>"; };
 		03E066431C27929600E85778 /* ExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeController.h; sourceTree = "<group>"; };
 		03E066441C27929600E85778 /* ExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeController.m; sourceTree = "<group>"; };
-		03E0664E1C279BE100E85778 /* ExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListController.h; sourceTree = "<group>"; };
-		03E0664F1C279BE100E85778 /* ExchangeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListController.m; sourceTree = "<group>"; };
-		03E066561C279EAD00E85778 /* ExchangeListContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListContentScrollView.h; sourceTree = "<group>"; };
-		03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListContentScrollView.m; sourceTree = "<group>"; };
-		03E066591C27A3F800E85778 /* ExchangeListBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListBaseCell.h; sourceTree = "<group>"; };
-		03E0665A1C27A3F800E85778 /* ExchangeListBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListBaseCell.m; sourceTree = "<group>"; };
 		03E0665E1C27C58100E85778 /* ExchangeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailController.h; sourceTree = "<group>"; };
 		03E0665F1C27C58100E85778 /* ExchangeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailController.m; sourceTree = "<group>"; };
 		03E066621C27C5AC00E85778 /* ExchangeDetailContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailContentScrollView.h; sourceTree = "<group>"; };
@@ -501,6 +492,12 @@
 		03E0A25A1C18274000FCAAAC /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product.png; sourceTree = "<group>"; };
 		03E25B731C1E9E9B001A2065 /* ChooserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooserView.h; path = mantingv/LFLoopScrollView/ChooserView.h; sourceTree = "<group>"; };
 		03E25B741C1E9E9B001A2065 /* ChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooserView.m; path = mantingv/LFLoopScrollView/ChooserView.m; sourceTree = "<group>"; };
+		03FB248A1C33A8360049CADB /* AFHTTPSessionManagerForMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManagerForMT.h; sourceTree = "<group>"; };
+		03FB248B1C33A8360049CADB /* AFHTTPSessionManagerForMT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManagerForMT.m; sourceTree = "<group>"; };
+		03FB248E1C33D1BA0049CADB /* ExchangeContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeContentScrollView.h; sourceTree = "<group>"; };
+		03FB248F1C33D1BA0049CADB /* ExchangeContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeContentScrollView.m; sourceTree = "<group>"; };
+		03FB24971C33DA550049CADB /* ExchangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeView.h; sourceTree = "<group>"; };
+		03FB24981C33DA550049CADB /* ExchangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeView.m; sourceTree = "<group>"; };
 		58EC7ED67ED18BE89D8F1137 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C933A41749C4C07835044EA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DCB1BD81C0C01DCDA3E11FDE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -710,6 +707,8 @@
 				03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */,
 				03D669AE1C2A7DB3001C4C2C /* UIImageView+LF.h */,
 				03D669AF1C2A7DB3001C4C2C /* UIImageView+LF.m */,
+				03FB248A1C33A8360049CADB /* AFHTTPSessionManagerForMT.h */,
+				03FB248B1C33A8360049CADB /* AFHTTPSessionManagerForMT.m */,
 				03DA24841C23D6E30098FE4B /* SelectView */,
 				03DB9CF61C1FFF4000A40361 /* 支付信息界面 */,
 				03D65DE61C1E6C8400E7C679 /* 选择器 */,
@@ -1428,8 +1427,6 @@
 			children = (
 				03DC51221C294D740040C939 /* LFSelectionView.h */,
 				03DC51231C294D740040C939 /* LFSelectionView.m */,
-				03D092A61C2D37090057182F /* SelectView.h */,
-				03D092A71C2D37090057182F /* SelectView.m */,
 				03DA24851C23D7450098FE4B /* ResortFacilitiesView.h */,
 				03DA24861C23D7450098FE4B /* ResortFacilitiesView.m */,
 			);
@@ -1594,6 +1591,7 @@
 		03E066411C27923500E85778 /* 我要交换 */ = {
 			isa = PBXGroup;
 			children = (
+				03FB248D1C33D16E0049CADB /* Views */,
 				03E066421C27924F00E85778 /* Controllers */,
 			);
 			name = "我要交换";
@@ -1604,7 +1602,7 @@
 			children = (
 				03E066431C27929600E85778 /* ExchangeController.h */,
 				03E066441C27929600E85778 /* ExchangeController.m */,
-				03E0664C1C279BAD00E85778 /* 我要交换列表 */,
+				03E0665C1C27C54400E85778 /* 交换详情 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1660,36 +1658,6 @@
 			children = (
 			);
 			name = viewControllers;
-			sourceTree = "<group>";
-		};
-		03E0664C1C279BAD00E85778 /* 我要交换列表 */ = {
-			isa = PBXGroup;
-			children = (
-				03E066511C279BF400E85778 /* Views */,
-				03E0664D1C279BCA00E85778 /* Controllers */,
-			);
-			name = "我要交换列表";
-			sourceTree = "<group>";
-		};
-		03E0664D1C279BCA00E85778 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				03E0664E1C279BE100E85778 /* ExchangeListController.h */,
-				03E0664F1C279BE100E85778 /* ExchangeListController.m */,
-				03E0665C1C27C54400E85778 /* 交换详情 */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		03E066511C279BF400E85778 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				03E066561C279EAD00E85778 /* ExchangeListContentScrollView.h */,
-				03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */,
-				03E066591C27A3F800E85778 /* ExchangeListBaseCell.h */,
-				03E0665A1C27A3F800E85778 /* ExchangeListBaseCell.m */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		03E066521C279CB400E85778 /* ContentScrollView */ = {
@@ -1776,6 +1744,17 @@
 				03E066821C28026400E85778 /* TransferDetailContentScrollView.m */,
 				03E066871C28099F00E85778 /* TransferDetailTopContentView.h */,
 				03E066881C28099F00E85778 /* TransferDetailTopContentView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03FB248D1C33D16E0049CADB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03FB248E1C33D1BA0049CADB /* ExchangeContentScrollView.h */,
+				03FB248F1C33D1BA0049CADB /* ExchangeContentScrollView.m */,
+				03FB24971C33DA550049CADB /* ExchangeView.h */,
+				03FB24981C33DA550049CADB /* ExchangeView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1867,7 +1846,7 @@
 				TargetAttributes = {
 					03775B391C11368F00319C32 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = T6A5794LJU;
+						DevelopmentTeam = J686B49RDD;
 					};
 					03775B521C11368F00319C32 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -2054,7 +2033,6 @@
 				03DB9D131C200C7900A40361 /* FreightView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
 				03775BC01C11874700319C32 /* MTTableController.m in Sources */,
-				03E0665B1C27A3F800E85778 /* ExchangeListBaseCell.m in Sources */,
 				03D7A7E81C21439A003A3A68 /* MineTopContainView.m in Sources */,
 				03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */,
 				03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */,
@@ -2062,7 +2040,6 @@
 				03D2518B1C22509900BA9ED7 /* CheckInAndCheckOutView.m in Sources */,
 				03D092A51C2D24C80057182F /* ThemeListViewModel.m in Sources */,
 				03DDAE051C2BCC93009DC36D /* ProductViewModel.m in Sources */,
-				03E066501C279BE100E85778 /* ExchangeListController.m in Sources */,
 				03DA246E1C23D0890098FE4B /* HomeContentScrollView.m in Sources */,
 				03DEF3521C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.m in Sources */,
 				03DA24871C23D7450098FE4B /* ResortFacilitiesView.m in Sources */,
@@ -2071,6 +2048,7 @@
 				03DC50DA1C293AC60040C939 /* CommitSuccessController.m in Sources */,
 				03DA24681C23AB2D0098FE4B /* MTSwitchView.m in Sources */,
 				03DEF3611C31023F000F25F0 /* HolidayHouseSearchController.m in Sources */,
+				03FB24991C33DA550049CADB /* ExchangeView.m in Sources */,
 				03D251DA1C22AE4D00BA9ED7 /* ModifyPasswordController.m in Sources */,
 				03DB9D0D1C200B8E00A40361 /* AddAddressView.m in Sources */,
 				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
@@ -2104,7 +2082,6 @@
 				03DA247D1C23D5470098FE4B /* ThemeListContentView.m in Sources */,
 				03D251BD1C22A46100BA9ED7 /* MyShortRentListController.m in Sources */,
 				03E0667D1C27FA3900E85778 /* TransferListBaseCell.m in Sources */,
-				03E066581C279EAD00E85778 /* ExchangeListContentScrollView.m in Sources */,
 				03DC507B1C28FCBD0040C939 /* INeedCheckInDetailContentScrollView.m in Sources */,
 				03DC50781C28FC500040C939 /* INeedCheckInDetailController.m in Sources */,
 				03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */,
@@ -2115,7 +2092,6 @@
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
 				03E0666D1C27C85000E85778 /* ExchangeDetailBaseView.m in Sources */,
 				03DB9D161C200CAF00A40361 /* LeaveWordView.m in Sources */,
-				03D092A81C2D37090057182F /* SelectView.m in Sources */,
 				03DDADFF1C2BC0CE009DC36D /* ProductContentView.m in Sources */,
 				03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */,
 				03E066671C27C7F400E85778 /* ExchangeDetailDescriptionView.m in Sources */,
@@ -2138,11 +2114,13 @@
 				03D0929F1C2D1DE80057182F /* ThemeListContentScrollView.m in Sources */,
 				03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */,
 				03CFAED51C322DFA009C80EB /* ShortRentViewModel.m in Sources */,
+				03FB24901C33D1BA0049CADB /* ExchangeContentScrollView.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
 				03CFAECF1C3228E0009C80EB /* ShortRentContentView.m in Sources */,
 				03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */,
 				03DB9CF51C1FF23600A40361 /* ProductView.m in Sources */,
 				03DB9CEF1C1FDF8C00A40361 /* ProductContainView.m in Sources */,
+				03FB248C1C33A8360049CADB /* AFHTTPSessionManagerForMT.m in Sources */,
 				03775BA61C113E8600319C32 /* MTModel.m in Sources */,
 				03CFAEE11C328354009C80EB /* RelatedProductViewModel.m in Sources */,
 				03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */,
@@ -2200,6 +2178,83 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		036BA3FB1C3386FB00B7DE0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		036BA3FC1C3386FB00B7DE0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C933A41749C4C07835044EA0 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
+				INFOPLIST_FILE = mantingv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.manting.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+			};
+			name = AdHoc;
+		};
+		036BA3FD1C3386FB00B7DE0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mantingvTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.mantingvTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mantingv.app/mantingv";
+			};
+			name = AdHoc;
+		};
+		036BA3FE1C3386FB00B7DE0F /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mantingvUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.mantingvUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mantingv;
+				USES_XCTRUNNER = YES;
+			};
+			name = AdHoc;
+		};
 		03775B651C11368F00319C32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2291,7 +2346,7 @@
 				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
 				INFOPLIST_FILE = mantingv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = www.mantingv;
+				PRODUCT_BUNDLE_IDENTIFIER = www.manting.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -2306,7 +2361,7 @@
 				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
 				INFOPLIST_FILE = mantingv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = www.mantingv;
+				PRODUCT_BUNDLE_IDENTIFIER = www.manting.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -2368,6 +2423,7 @@
 			buildConfigurations = (
 				03775B651C11368F00319C32 /* Debug */,
 				03775B661C11368F00319C32 /* Release */,
+				036BA3FB1C3386FB00B7DE0F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2377,6 +2433,7 @@
 			buildConfigurations = (
 				03775B681C11368F00319C32 /* Debug */,
 				03775B691C11368F00319C32 /* Release */,
+				036BA3FC1C3386FB00B7DE0F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2386,6 +2443,7 @@
 			buildConfigurations = (
 				03775B6B1C11368F00319C32 /* Debug */,
 				03775B6C1C11368F00319C32 /* Release */,
+				036BA3FD1C3386FB00B7DE0F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2395,6 +2453,7 @@
 			buildConfigurations = (
 				03775B6E1C11368F00319C32 /* Debug */,
 				03775B6F1C11368F00319C32 /* Release */,
+				036BA3FE1C3386FB00B7DE0F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

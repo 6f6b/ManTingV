@@ -99,7 +99,6 @@
  */
 - (void)loadDataForShortRentView{
     NSString *url = [BASE_URL stringByAppendingString:@"/rent/list"];
-    [KVNProgress showWithStatus:@"正在加载.."];
     [self.manager POST:url parameters:self.parameter progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.shortRentContentView removeFromSuperview];
@@ -112,11 +111,8 @@
             NSArray *arr = [dic objectForKey:@"data"];
             [self.shortRentContentView setValueWith:arr];
             if (0 == arr.count) {
-                [KVNProgress dismiss];
-                [KVNProgress showErrorWithStatus:@"查找失败"];
                 return ;
             }
-            [KVNProgress dismiss];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
         }];

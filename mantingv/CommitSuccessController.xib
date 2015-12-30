@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -60,10 +60,10 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="QtA-pw-GFz"/>
-                            <exclude reference="gPC-Sc-rvM"/>
-                            <exclude reference="tzz-RB-Lc5"/>
                             <exclude reference="Jj0-4I-VpE"/>
                             <exclude reference="g30-J7-PPu"/>
+                            <exclude reference="gPC-Sc-rvM"/>
+                            <exclude reference="tzz-RB-Lc5"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular">
@@ -73,10 +73,10 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="QtA-pw-GFz"/>
-                            <include reference="gPC-Sc-rvM"/>
-                            <include reference="tzz-RB-Lc5"/>
                             <include reference="Jj0-4I-VpE"/>
                             <include reference="g30-J7-PPu"/>
+                            <include reference="gPC-Sc-rvM"/>
+                            <include reference="tzz-RB-Lc5"/>
                         </mask>
                     </variation>
                 </view>
@@ -107,13 +107,13 @@
                     <exclude reference="0zX-uW-QsT"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="1PR-4P-V19"/>
-                    <exclude reference="U25-e2-5TD"/>
-                    <exclude reference="V5V-BQ-rdW"/>
                     <exclude reference="2kM-UL-X61"/>
                     <exclude reference="5Sw-Ae-rqg"/>
                     <exclude reference="Tmp-cM-q9d"/>
                     <exclude reference="qaR-i9-AfA"/>
+                    <exclude reference="1PR-4P-V19"/>
+                    <exclude reference="U25-e2-5TD"/>
+                    <exclude reference="V5V-BQ-rdW"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -122,13 +122,13 @@
                     <include reference="0zX-uW-QsT"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="1PR-4P-V19"/>
-                    <include reference="U25-e2-5TD"/>
-                    <include reference="V5V-BQ-rdW"/>
                     <include reference="2kM-UL-X61"/>
                     <include reference="5Sw-Ae-rqg"/>
                     <include reference="Tmp-cM-q9d"/>
                     <include reference="qaR-i9-AfA"/>
+                    <include reference="1PR-4P-V19"/>
+                    <include reference="U25-e2-5TD"/>
+                    <include reference="V5V-BQ-rdW"/>
                 </mask>
             </variation>
         </view>

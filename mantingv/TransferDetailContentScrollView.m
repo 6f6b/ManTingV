@@ -7,20 +7,20 @@
 //
 
 #import "TransferDetailContentScrollView.h"
-#import "SelectView.h"
+#import "LFSelectionView.h"
 #import "TransferDetailTopContentView.h"
 #import "CommitSuccessController.h"
-@interface TransferDetailContentScrollView ()<SeclectViewDelegate>
+@interface TransferDetailContentScrollView ()<SeclectionViewDelegate>
 @property (nonatomic,weak) TransferDetailTopContentView *transferDetailTopContentView;
-@property (nonatomic,weak) SelectView *selectView;
+@property (nonatomic,weak) LFSelectionView *selectView;
 @property (nonatomic,weak) UIButton *commitButton;
 @end
 
 @implementation TransferDetailContentScrollView
 
-- (SelectView *)selectView{
+- (LFSelectionView *)selectView{
     if (nil == _selectView) {
-        SelectView *selectView = [[SelectView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.transferDetailTopContentView.frame), SCREEN_WIDTH, 0)];
+        LFSelectionView *selectView = [[LFSelectionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.transferDetailTopContentView.frame), SCREEN_WIDTH, 0)];
         selectView.backgroundColor = [UIColor greenColor];
         [self addSubview:selectView];
         _selectView = selectView;
@@ -60,7 +60,7 @@
 - (void)setValueWith:(id)data{
     [self.transferDetailTopContentView setValueWith:nil];
     
-    [self.selectView setValue];
+//    [self.selectView setValue];
     [self.commitButton addTarget:self action:@selector(dealCommit) forControlEvents:UIControlEventTouchUpInside];
     self.selectView.delegate = self;
 }

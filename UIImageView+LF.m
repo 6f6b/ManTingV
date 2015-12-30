@@ -22,7 +22,7 @@
         H =375;
     }
     
-    NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/img/%@/%lu/%lu",imageGuid,W,H]];
+    NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/image/%@/%lu/%lu",imageGuid,W,H]];
     NSURL *url = [NSURL URLWithString:urlString];
     [self sd_setImageWithURL:url];
 }
@@ -31,7 +31,7 @@
     NSInteger W = (NSInteger)self.frame.size.width;
     NSInteger H = (NSInteger)self.frame.size.height;
     
-    NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/img/%@/%lu/%lu",imageGuid,W,H]];
+    NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/image/%@/%lu/%lu",imageGuid,W,H]];
     NSURL *url = [NSURL URLWithString:urlString];
     [self sd_setImageWithURL:url placeholderImage:placeholderImage];
 }

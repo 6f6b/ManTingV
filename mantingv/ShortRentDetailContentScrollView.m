@@ -17,7 +17,7 @@
 @property (nonatomic,weak) ShortRentPriceView *shortRentPriceView;
 @property (nonatomic,weak) UILabel *relatedProductsLabel;
 @property (nonatomic,weak) RelatedProductContentView *relatedProductContentView;
-@property (nonnull,strong) MTModel *model;
+@property (nonatomic,strong) MTModel *model;
 @end
 @implementation ShortRentDetailContentScrollView
 
@@ -123,11 +123,20 @@
 - (void)loadDataForRelatedContentView{
     ShortRentDetailContentScrollViewModel *model = (ShortRentDetailContentScrollViewModel *)self.model;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSDictionary *parameter = @{@"houseBaseName":model.houseBaseName,
-                                @"userGuid":[user objectForKey:USER_GUID]
-                                };
-    NSLog(@"%@",[user objectForKey:USER_GUID]);
+    NSString *userGuid = [user objectForKey:USER_GUID];
+    
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
+    [parameter setObject:model.houseBaseName forKey:@"houseBaseName"];
+    if (userGuid) {
+        [parameter setObject:userGuid forKey:@"userGuid"];
+    }
+    if (!userGuid) {
+        [parameter setObject:@""forKey:@"userGuid"];
+
+    }
+
     NSString *url = [BASE_URL stringByAppendingString:@"/rent/list/matching"];
+
     [self.manager POST:url parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -138,4 +147,17 @@
         
     }];
 }
+
+- (NSMutableDictionary *)parameters{
+    NSMutableDictionary *dic = [super parameters];
+    if (nil == dic) {
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        NSDictionary *dictionary = @{@"houseBaseName":@"老子山•温泉养生社区",
+                                     @"userGuid":[user objectForKey:USER_GUID]
+                                     };
+        dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
+    }
+    return dic;
+}
+
 @end

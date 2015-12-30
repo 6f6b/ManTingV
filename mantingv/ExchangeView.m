@@ -1,13 +1,15 @@
 //
-//  ExchangeListBaseCell.m
+//  ExchangeView.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/21.
+//  Created by LiuFeng on 15/12/30.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "ExchangeListBaseCell.h"
-@interface ExchangeListBaseCell ()
+#import "ExchangeView.h"
+#import "ExchangeDetailController.h"
+
+@interface ExchangeView ()
 //@property (nonatomic,weak) UIImageView *backImage;
 //@property (nonatomic,weak) UILabel *roomNumberLabel;
 //@property (nonatomic,weak) UILabel *roomNumber;
@@ -17,14 +19,13 @@
 //@property (nonatomic,weak) UILabel *exchangeNumberOfDaysLabel;
 //@property (nonatomic,weak) UILabel *addressLabel;
 //@property (nonatomic,weak) UILabel *priceLabel;
-
 @end
-@implementation ExchangeListBaseCell
+@implementation ExchangeView
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     UIView *superView = self;
-
+    
     //背景图
     [self.backImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(superView).with.offset(10);
@@ -51,7 +52,7 @@
         make.left.equalTo(self.backImage.mas_right).with.offset(10);
         make.top.equalTo(superView).with.offset(10);
     }];
-
+    
     //主题
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(superView).with.offset(10);
@@ -82,6 +83,13 @@
         make.top.equalTo(self.addressLabel.mas_bottom);
     }];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap)];
+    [self addGestureRecognizer:tap];
+}
+
+- (void)dealTap{
+    ExchangeDetailController *exchangeDetailController = [[ExchangeDetailController alloc] init];
+    [self.controller.navigationController pushViewController:exchangeDetailController animated:YES];
 }
 
 - (UIImageView *)backImage{
@@ -184,6 +192,7 @@
 }
 
 - (void)setValueWith:(id)data{
-    
+
 }
+
 @end

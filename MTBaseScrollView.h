@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AFHTTPSessionManagerForMT.h"
 @interface MTBaseScrollView : UIScrollView
 @property (nonatomic,strong) UIViewController *controller;
-@property (nonatomic,strong) AFHTTPSessionManager *manager;
+@property (nonatomic,strong) AFHTTPSessionManagerForMT *manager;
 - (void)setValueWith:(id)data;
 @end

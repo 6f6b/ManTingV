@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "ExchangeListBaseCell.h"
+#import "ExchangeView.h"
 
-@interface TransferListBaseCell : ExchangeListBaseCell
+@interface TransferListBaseCell : ExchangeView
 
 @end
