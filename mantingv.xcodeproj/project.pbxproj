@@ -161,7 +161,6 @@
 		03DEF3611C31023F000F25F0 /* HolidayHouseSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */; };
 		03E066451C27929600E85778 /* ExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066441C27929600E85778 /* ExchangeController.m */; };
 		03E066501C279BE100E85778 /* ExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0664F1C279BE100E85778 /* ExchangeListController.m */; };
-		03E066551C279CE700E85778 /* ContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066541C279CE700E85778 /* ContentScrollView.m */; };
 		03E066581C279EAD00E85778 /* ExchangeListContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */; };
 		03E0665B1C27A3F800E85778 /* ExchangeListBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0665A1C27A3F800E85778 /* ExchangeListBaseCell.m */; };
 		03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0665F1C27C58100E85778 /* ExchangeDetailController.m */; };
@@ -469,8 +468,6 @@
 		03E066441C27929600E85778 /* ExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeController.m; sourceTree = "<group>"; };
 		03E0664E1C279BE100E85778 /* ExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListController.h; sourceTree = "<group>"; };
 		03E0664F1C279BE100E85778 /* ExchangeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListController.m; sourceTree = "<group>"; };
-		03E066531C279CE700E85778 /* ContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentScrollView.h; sourceTree = "<group>"; };
-		03E066541C279CE700E85778 /* ContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentScrollView.m; sourceTree = "<group>"; };
 		03E066561C279EAD00E85778 /* ExchangeListContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListContentScrollView.h; sourceTree = "<group>"; };
 		03E066571C279EAD00E85778 /* ExchangeListContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeListContentScrollView.m; sourceTree = "<group>"; };
 		03E066591C27A3F800E85778 /* ExchangeListBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeListBaseCell.h; sourceTree = "<group>"; };
@@ -1698,8 +1695,6 @@
 		03E066521C279CB400E85778 /* ContentScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				03E066531C279CE700E85778 /* ContentScrollView.h */,
-				03E066541C279CE700E85778 /* ContentScrollView.m */,
 				03DEF3531C30FE46000F25F0 /* BaseContentScrollView.h */,
 				03DEF3541C30FE46000F25F0 /* BaseContentScrollView.m */,
 				03DEF3561C30FE70000F25F0 /* ContentScrollViewWithLoopScrollView.h */,
@@ -2032,7 +2027,6 @@
 				03DC4FFE1C28EA340040C939 /* INeedCheckInCell.m in Sources */,
 				03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */,
 				03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */,
-				03E066551C279CE700E85778 /* ContentScrollView.m in Sources */,
 				03CFAECC1C321F68009C80EB /* ShortRentController.m in Sources */,
 				03DA24771C23D4570098FE4B /* ChoiceRoom.m in Sources */,
 				03775BA21C113C3000319C32 /* MineController.m in Sources */,

@@ -13,7 +13,7 @@
 //创建条件选择器
 - (ChooserView *)chooserView{
     if (nil == _chooserView) {
-        ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, CGRectGetMaxY(self.adScrollView.frame))];
+        ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, CGRectGetMaxY(self.loopScrollView.frame))];
         _chooserView = chooserView;
         [self addSubview:chooserView];
     }

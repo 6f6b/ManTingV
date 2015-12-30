@@ -33,7 +33,7 @@
 //}
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
-    self.checkInAndCheckOutView.frame = CGRectMake(0, CGRectGetMaxY(self.adScrollView.frame), SCREEN_WIDTH, 100);
+    self.checkInAndCheckOutView.frame = CGRectMake(0, CGRectGetMaxY(self.loopScrollView.frame), SCREEN_WIDTH, 100);
 
     self.shortRentPriceView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInAndCheckOutView.frame)+20, SCREEN_WIDTH, 100);
 
@@ -113,7 +113,7 @@
  */
 - (void)loadAdScrollViewData{
     ShortRentDetailContentScrollViewModel *model = (ShortRentDetailContentScrollViewModel *)self.model;
-    [self.adScrollView setImageWithUrlS:model.imageGuid];
+    [self.loopScrollView setImageWithUrlS:model.imageGuid];
 }
 
 /**

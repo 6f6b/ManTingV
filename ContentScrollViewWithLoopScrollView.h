@@ -10,5 +10,5 @@
 #import "LFLoopScrollViewForMT.h"
 
 @interface ContentScrollViewWithLoopScrollView : BaseContentScrollView
-@property (nonatomic,weak) LFLoopScrollViewForMT *adScrollView;
+@property (nonatomic,weak) LFLoopScrollViewForMT *loopScrollView;
 @end

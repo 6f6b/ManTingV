@@ -13,31 +13,31 @@
 #import "ResortFacilitiesView.h"
 
 @interface ThemeListContentScrollView ()<SeclectionViewDelegate>
-@property (nonatomic,weak) LFLoopScrollViewForMT *themeListPictuerScrollView;
+//@property (nonatomic,weak) LFLoopScrollViewForMT *themeListPictuerScrollView;
 @property (nonatomic,weak) ThemeListContentView *themListContentView;
 @property (nonatomic,weak) LFSelectionView *selectView;
 @end
 
 @implementation ThemeListContentScrollView
 
-- (LFLoopScrollViewForMT *)themeListPictuerScrollView{
-    if (nil == _themeListPictuerScrollView) {
-        LFLoopScrollViewForMT *themeListPictuerScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-        
-        themeListPictuerScrollView.autoScroll = YES;
-        themeListPictuerScrollView.backgroundColor = [UIColor greenColor];
-        _themeListPictuerScrollView = themeListPictuerScrollView;
-        [self addSubview:_themeListPictuerScrollView];
-    }
-    return _themeListPictuerScrollView;
-}
+//- (LFLoopScrollViewForMT *)themeListPictuerScrollView{
+//    if (nil == _themeListPictuerScrollView) {
+//        LFLoopScrollViewForMT *themeListPictuerScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+//        
+//        themeListPictuerScrollView.autoScroll = YES;
+//        themeListPictuerScrollView.backgroundColor = [UIColor greenColor];
+//        _themeListPictuerScrollView = themeListPictuerScrollView;
+//        [self addSubview:_themeListPictuerScrollView];
+//    }
+//    return _themeListPictuerScrollView;
+//}
 
 
 //主题列表视图
 - (ThemeListContentView *)themListContentView{
     if (nil == _themListContentView) {
         ThemeListContentView *themeListContentView = [[ThemeListContentView alloc] init];
-        themeListContentView.frame = CGRectMake(0, CGRectGetMaxY(self.themeListPictuerScrollView.frame), 0, 0);
+        themeListContentView.frame = CGRectMake(0, CGRectGetMaxY(self.loopScrollView.frame), 0, 0);
         themeListContentView.controller = self.controller;
         themeListContentView.backgroundColor = [UIColor orangeColor];
         [self addSubview:themeListContentView];
@@ -68,7 +68,7 @@
     ThemeListContentScrollViewModel *model = [ThemeListContentScrollViewModel modelWithDictionary:data];
     
 //////////////////////////////////////为滚动视图赋值////////////////////////////////////////////////////////////////////////////
-    [self.themeListPictuerScrollView setImageWithUrlS:model.imageGuids];
+    [self.loopScrollView setImageWithUrlS:model.imageGuids];
 //////////////////////////////////////为themeListContentView赋值////////////////////////////////////////////////////////////////////////////
     [self.themListContentView setValueWith:model];
     

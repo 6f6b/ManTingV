@@ -9,7 +9,7 @@
 #import "CheckInDetailTopContentView.h"
 
 @interface CheckInDetailTopContentView ()
-@property (nonatomic,weak) LFLoopScrollView *pictureScrollView;
+@property (nonatomic,weak) LFLoopScrollViewForMT *pictureScrollView;
 @property (nonatomic,weak) UILabel *titleLabel;
 @property (nonatomic,weak) UILabel *locationLabel;
 @end
@@ -47,7 +47,7 @@
 
 - (LFLoopScrollView *)pictureScrollView{
 if (nil == _pictureScrollView) {
-        LFLoopScrollView *pictureScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+        LFLoopScrollViewForMT *pictureScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         [self addSubview:pictureScrollView];
         _pictureScrollView = pictureScrollView;
     }

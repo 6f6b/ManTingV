@@ -11,16 +11,16 @@
 @implementation ContentScrollViewWithLoopScrollView
 
 //创建滚动广告视图
-- (LFLoopScrollViewForMT *)adScrollView{
-    if (nil == _adScrollView) {
-        LFLoopScrollViewForMT *adScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-        adScrollView.autoScroll = YES;
-        adScrollView.backgroundColor = [UIColor greenColor];
-        _adScrollView = adScrollView;
+- (LFLoopScrollViewForMT *)loopScrollView{
+    if (nil == _loopScrollView) {
+        LFLoopScrollViewForMT *loopScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+        loopScrollView.autoScroll = YES;
+        loopScrollView.backgroundColor = [UIColor greenColor];
+        _loopScrollView = loopScrollView;
         
-        [self addSubview:_adScrollView];
+        [self addSubview:_loopScrollView];
     }
-    return _adScrollView;
+    return _loopScrollView;
 }
 
 @end

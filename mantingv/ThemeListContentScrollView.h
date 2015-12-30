@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTBaseScrollView.h"
+#import "ContentScrollViewWithLoopScrollView.h"
 
-@interface ThemeListContentScrollView : MTBaseScrollView
+@interface ThemeListContentScrollView : ContentScrollViewWithLoopScrollView
 
 @end

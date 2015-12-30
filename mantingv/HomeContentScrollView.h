@@ -6,7 +6,7 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTBaseScrollView.h"
+#import "ContentScrollViewWithLoopScrollView.h"
 #import "HomeController.h"
 
 #import "LFLoopScrollView.h"
@@ -14,10 +14,7 @@
 #import "ChoiceNessTheme.h"
 #import "ThemeContentView.h"
 
-@interface HomeContentScrollView : MTBaseScrollView
-@property (nonatomic,weak) HomeController *homeController;
-@property (nonatomic,weak) LFLoopScrollViewForMT *adScrollView;
-
+@interface HomeContentScrollView : ContentScrollViewWithLoopScrollView
 @property (nonatomic,strong) NSMutableArray * fourButtons;
 @property (nonatomic,weak) ChoiceNessTheme *choiceNessTheme;
 @property (nonatomic,weak) ChoiceNessRoom *choiceNessRoom;

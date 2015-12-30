@@ -8,7 +8,7 @@
 
 #import "UIImageView+LF.h"
 #import "UIImageView+WebCache.h"
-#import "UIKit+AFNetworking.h"
+//#import "UIKit+AFNetworking.h"
 
 @implementation UIImageView (LF)
 - (void)lfSetImageWithURL:(NSString *)imageGuid{

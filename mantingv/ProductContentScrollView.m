@@ -57,7 +57,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         MTModel *model = [MTModel modelWithDictionary:dic];
-        [self.adScrollView setImageWithUrlS:model.data];
+        [self.loopScrollView setImageWithUrlS:model.data];
         [self loadAreaListForChooserView];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

@@ -30,18 +30,6 @@
     return self;
 }
 
-#pragma mark - 滚动广告视图
-- (LFLoopScrollViewForMT *)adScrollView{
-    if (nil == _adScrollView) {
-        LFLoopScrollViewForMT *adScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-        adScrollView.autoScroll = YES;
-        adScrollView.backgroundColor = [UIColor greenColor];
-        _adScrollView = adScrollView;
-        [self addSubview:_adScrollView];
-    }
-    return _adScrollView;
-}
-
 - (void)setButtonWithImage:(UIImage *)image frame:(CGRect)frame{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:image forState:UIControlStateNormal];
@@ -132,7 +120,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         MTModel *model = [MTModel modelWithDictionary:dic];
-        [self.adScrollView setImageWithUrlS:model.data];
+        [self.loopScrollView setImageWithUrlS:model.data];
         
         [self setButtons];
         
@@ -151,7 +139,7 @@
     //NSArray *images = @[];
     for (int i=0; i<4; i++) {
         float btnX = i*SCREEN_WIDTH/4;
-        float btnY = CGRectGetMaxY(self.adScrollView.frame);
+        float btnY = CGRectGetMaxY(self.loopScrollView.frame);
         float btnW = SCREEN_WIDTH/4;
         float btnH = 50;
         
@@ -218,7 +206,7 @@
         self.choiceNessRoom.frame = CGRectMake(0, CGRectGetMaxY(self.choiceNessTheme.frame), SCREEN_WIDTH, 0);
         [self loadChoiceNessRoomData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+
     }];
 }
 
