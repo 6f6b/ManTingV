@@ -2,14 +2,17 @@
 //  UserAccount.h
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/10.
+//  Created by LiuFeng on 15/12/31.
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MTModel.h"
+typedef enum {
+    MAN,
+    WOMAN
+}SEX;
 
-@interface UserAccount : NSObject
-+ (instancetype)shareInstance;
+@interface UserAccount : MTModel
 @property (nonatomic,copy) NSString *realName;
 @property (nonatomic,copy) NSString *position;
 @property (nonatomic,copy) NSString *userGuid;
@@ -28,4 +31,6 @@
 @property (nonatomic,copy) NSString *email;
 @property (nonatomic,copy) NSString *gender;
 @property (nonatomic,copy) NSString *provinces;
+
+@property (nonatomic,strong) NSMutableDictionary *parameter;
 @end

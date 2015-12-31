@@ -25,10 +25,15 @@
     [self.view addSubview:mineContentScrollView];
     self.mineContentScrollView = mineContentScrollView;
     self.mineContentScrollView.controller = self;
-    [self.mineContentScrollView setValueWith:nil];
+//    [self.mineContentScrollView setValueWith:nil];
     // Do any additional setup after loading the view from its nib.
 }
 
+/**
+ *  每次界面出现的时候刷新用户数据
+ *
+ *  @param animated
+ */
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.mineContentScrollView setValueWith:nil];

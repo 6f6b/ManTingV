@@ -10,4 +10,5 @@
 
 @interface MTController : UIViewController
 @property (nonatomic,assign) BOOL isNeedToCheckLogin;
+@property (nonatomic,strong) AFHTTPSessionManagerForMT *manager;
 @end

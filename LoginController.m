@@ -7,18 +7,17 @@
 //
 
 #import "LoginController.h"
+#import "RegisterController.h"
 
 @interface LoginController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextFeild;
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextFeild;
-@property (nonatomic,strong) AFHTTPSessionManager *manager;
 @end
 
 @implementation LoginController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.phoneNumberTextFeild);
     self.phoneNumberTextFeild.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
@@ -28,14 +27,6 @@
     [textField resignFirstResponder];
 }
 
-- (AFHTTPSessionManager *)manager{
-    if (nil == _manager) {
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        _manager = manager;
-    }
-    return _manager;
-}
 
 //登录相关操作
 - (IBAction)loginBtn:(id)sender {
@@ -43,7 +34,8 @@
     NSString *useraccount = self.phoneNumberTextFeild.text;
     NSString *password = self.passWordTextFeild.text;
     NSDictionary *parameters = @{@"username":useraccount,
-                                 @"password":password};
+                                 @"password":password
+                                 };
     NSString *url = [BASE_URL stringByAppendingString:@"/login/in"];
     [self.manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -57,15 +49,12 @@
 
 - (void)loginWith:(id)data{
     NSString *guid = [data objectForKey:@"data"];
+    NSLog(@"------->%@<",guid);
     if (nil == guid) {
+        NSLog(@"waht");
         return;
     }
-    
-    NSString *useraccount = self.phoneNumberTextFeild.text;
-    NSString *password = self.passWordTextFeild.text;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    [user setObject:useraccount forKey:USER_ACCOUNT];
-    [user setObject:password forKey:USER_PASSWORD];
     [user setObject:guid forKey:USER_GUID];
     
     if (nil == NSStringFromClass([self.willPushVC class])) {
@@ -77,7 +66,6 @@
     NSMutableArray *navArray= [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
     self.navigationController.viewControllers = navArray;
     [navArray removeObject:self];
-    
 
 }
 
@@ -87,6 +75,8 @@
 
 //注册按钮
 - (IBAction)registerBtn:(id)sender {
+    RegisterController *registerController = [[RegisterController alloc] init];
+    [self.navigationController pushViewController:registerController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

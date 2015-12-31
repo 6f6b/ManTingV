@@ -40,7 +40,6 @@
 		03775BA61C113E8600319C32 /* MTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA51C113E8600319C32 /* MTModel.m */; };
 		03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BA91C11406000319C32 /* MTTabBarController.m */; };
 		03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BAF1C1140B800319C32 /* MTNavigationController.m */; };
-		03775BC01C11874700319C32 /* MTTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03775BBF1C11874700319C32 /* MTTableController.m */; };
 		03CFAEC61C321C2A009C80EB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CFAEC51C321C2A009C80EB /* Icon.png */; };
 		03CFAEC91C321F42009C80EB /* ShortRentContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAEC81C321F42009C80EB /* ShortRentContentScrollView.m */; };
 		03CFAECC1C321F68009C80EB /* ShortRentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFAECB1C321F68009C80EB /* ShortRentController.m */; };
@@ -73,13 +72,15 @@
 		03D251E01C22AE9300BA9ED7 /* ModifyNickNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251DE1C22AE9300BA9ED7 /* ModifyNickNameController.xib */; };
 		03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251E41C22BDDA00BA9ED7 /* BookOrderController.m */; };
 		03D251E71C22BDDA00BA9ED7 /* BookOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251E51C22BDDA00BA9ED7 /* BookOrderController.xib */; };
+		03D5BC421C34C25E00B92A72 /* UserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D5BC411C34C25E00B92A72 /* UserAccount.m */; };
+		03D5BC491C34CCE900B92A72 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D5BC471C34CCE900B92A72 /* RegisterController.m */; };
+		03D5BC4A1C34CCE900B92A72 /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D5BC481C34CCE900B92A72 /* RegisterController.xib */; };
 		03D6439D1C195B010082F0D4 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6439B1C195B010082F0D4 /* LoginController.m */; };
 		03D6439E1C195B010082F0D4 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6439C1C195B010082F0D4 /* LoginController.xib */; };
 		03D643A01C195C590082F0D4 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D6439F1C195C590082F0D4 /* login.png */; };
 		03D643A21C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D643A11C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png */; };
 		03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643B21C197E1B0082F0D4 /* NSObject+AOP.m */; };
 		03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643BD1C198A9F0082F0D4 /* CheckInController.m */; };
-		03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643C01C1992A00082F0D4 /* UserAccount.m */; };
 		03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643C31C1994BB0082F0D4 /* RightsListController.m */; };
 		03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */; };
 		03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */; };
@@ -247,8 +248,6 @@
 		03775BAE1C1140B800319C32 /* MTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNavigationController.h; sourceTree = "<group>"; };
 		03775BAF1C1140B800319C32 /* MTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNavigationController.m; sourceTree = "<group>"; };
 		03775BB41C11670F00319C32 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		03775BBE1C11874700319C32 /* MTTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableController.h; sourceTree = "<group>"; };
-		03775BBF1C11874700319C32 /* MTTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableController.m; sourceTree = "<group>"; };
 		03CFAEC51C321C2A009C80EB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		03CFAEC71C321F42009C80EB /* ShortRentContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortRentContentScrollView.h; sourceTree = "<group>"; };
 		03CFAEC81C321F42009C80EB /* ShortRentContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortRentContentScrollView.m; sourceTree = "<group>"; };
@@ -307,6 +306,11 @@
 		03D251E31C22BDDA00BA9ED7 /* BookOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookOrderController.h; sourceTree = "<group>"; };
 		03D251E41C22BDDA00BA9ED7 /* BookOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOrderController.m; sourceTree = "<group>"; };
 		03D251E51C22BDDA00BA9ED7 /* BookOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookOrderController.xib; sourceTree = "<group>"; };
+		03D5BC401C34C25E00B92A72 /* UserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccount.h; sourceTree = "<group>"; };
+		03D5BC411C34C25E00B92A72 /* UserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccount.m; sourceTree = "<group>"; };
+		03D5BC461C34CCE900B92A72 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
+		03D5BC471C34CCE900B92A72 /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
+		03D5BC481C34CCE900B92A72 /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		03D6439A1C195B010082F0D4 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = ../LoginController.h; sourceTree = "<group>"; };
 		03D6439B1C195B010082F0D4 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = ../LoginController.m; sourceTree = "<group>"; };
 		03D6439C1C195B010082F0D4 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = ../LoginController.xib; sourceTree = "<group>"; };
@@ -316,8 +320,6 @@
 		03D643B21C197E1B0082F0D4 /* NSObject+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AOP.m"; sourceTree = "<group>"; };
 		03D643BC1C198A9F0082F0D4 /* CheckInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInController.h; sourceTree = "<group>"; };
 		03D643BD1C198A9F0082F0D4 /* CheckInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInController.m; sourceTree = "<group>"; };
-		03D643BF1C1992A00082F0D4 /* UserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserAccount.h; path = ../UserAccount.h; sourceTree = "<group>"; };
-		03D643C01C1992A00082F0D4 /* UserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserAccount.m; path = ../UserAccount.m; sourceTree = "<group>"; };
 		03D643C21C1994BB0082F0D4 /* RightsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightsListController.h; sourceTree = "<group>"; };
 		03D643C31C1994BB0082F0D4 /* RightsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightsListController.m; sourceTree = "<group>"; };
 		03D65DD71C1E5F7500E7C679 /* ChoiceThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceThemeController.h; sourceTree = "<group>"; };
@@ -699,8 +701,6 @@
 				03775BA41C113E8600319C32 /* MTModel.h */,
 				03775BA51C113E8600319C32 /* MTModel.m */,
 				03775BB41C11670F00319C32 /* PrefixHeader.pch */,
-				03775BBE1C11874700319C32 /* MTTableController.h */,
-				03775BBF1C11874700319C32 /* MTTableController.m */,
 				03D8AFCD1C1AA5D700B41FF0 /* MTBaseView.h */,
 				03D8AFCE1C1AA5D700B41FF0 /* MTBaseView.m */,
 				03D65DE31C1E697C00E7C679 /* MTBaseScrollView.h */,
@@ -859,6 +859,7 @@
 			children = (
 				03775B9F1C113C3000319C32 /* MineController.h */,
 				03775BA01C113C3000319C32 /* MineController.m */,
+				03D5BC431C34CCA200B92A72 /* 登录 */,
 				03D8AFB61C1A67BE00B41FF0 /* 权益中心 */,
 				03D2519E1C22A2A600BA9ED7 /* 我的短租 */,
 				03D251A81C22A31D00BA9ED7 /* 我的转让 */,
@@ -885,6 +886,8 @@
 		03775B941C113B0500319C32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03D5BC401C34C25E00B92A72 /* UserAccount.h */,
+				03D5BC411C34C25E00B92A72 /* UserAccount.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -892,11 +895,6 @@
 		03775BA71C11401900319C32 /* Applications */ = {
 			isa = PBXGroup;
 			children = (
-				03D6439A1C195B010082F0D4 /* LoginController.h */,
-				03D6439B1C195B010082F0D4 /* LoginController.m */,
-				03D6439C1C195B010082F0D4 /* LoginController.xib */,
-				03D643BF1C1992A00082F0D4 /* UserAccount.h */,
-				03D643C01C1992A00082F0D4 /* UserAccount.m */,
 				03775B401C11368F00319C32 /* AppDelegate.h */,
 				03775B411C11368F00319C32 /* AppDelegate.m */,
 				03775BA81C11406000319C32 /* MTTabBarController.h */,
@@ -1192,6 +1190,35 @@
 				03D251E51C22BDDA00BA9ED7 /* BookOrderController.xib */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D5BC431C34CCA200B92A72 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				03D5BC441C34CCBA00B92A72 /* 注册 */,
+				03D5BC451C34CCC900B92A72 /* 忘记密码 */,
+				03D6439A1C195B010082F0D4 /* LoginController.h */,
+				03D6439B1C195B010082F0D4 /* LoginController.m */,
+				03D6439C1C195B010082F0D4 /* LoginController.xib */,
+			);
+			name = "登录";
+			sourceTree = "<group>";
+		};
+		03D5BC441C34CCBA00B92A72 /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				03D5BC461C34CCE900B92A72 /* RegisterController.h */,
+				03D5BC471C34CCE900B92A72 /* RegisterController.m */,
+				03D5BC481C34CCE900B92A72 /* RegisterController.xib */,
+			);
+			name = "注册";
+			sourceTree = "<group>";
+		};
+		03D5BC451C34CCC900B92A72 /* 忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "忘记密码";
 			sourceTree = "<group>";
 		};
 		03D643951C194F3B0082F0D4 /* 精选 */ = {
@@ -1915,6 +1942,7 @@
 				0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */,
 				03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */,
 				03E0A25F1C18274000FCAAAC /* product.png in Resources */,
+				03D5BC4A1C34CCE900B92A72 /* RegisterController.xib in Resources */,
 				0376AFF21C1196C30033D2A2 /* Welcome_3.0_5.jpg in Resources */,
 				0376AFEE1C1196C30033D2A2 /* Welcome_3.0_3.jpg in Resources */,
 				0376AFE71C1196C30033D2A2 /* Welcome2@2x.jpg in Resources */,
@@ -2006,6 +2034,7 @@
 				03DC4FFE1C28EA340040C939 /* INeedCheckInCell.m in Sources */,
 				03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */,
 				03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */,
+				03D5BC421C34C25E00B92A72 /* UserAccount.m in Sources */,
 				03CFAECC1C321F68009C80EB /* ShortRentController.m in Sources */,
 				03DA24771C23D4570098FE4B /* ChoiceRoom.m in Sources */,
 				03775BA21C113C3000319C32 /* MineController.m in Sources */,
@@ -2015,6 +2044,7 @@
 				03D6698F1C2A4635001C4C2C /* ZJModelTool.m in Sources */,
 				03D6439D1C195B010082F0D4 /* LoginController.m in Sources */,
 				03DB9D1F1C2053EC00A40361 /* ThemeContentView.m in Sources */,
+				03D5BC491C34CCE900B92A72 /* RegisterController.m in Sources */,
 				03DB9D0A1C200B3E00A40361 /* RecipientInformationView.m in Sources */,
 				03D7A7EB1C214776003A3A68 /* MineSubView.m in Sources */,
 				03DC50871C291B750040C939 /* CheckInDetailMessageContainView.m in Sources */,
@@ -2032,7 +2062,6 @@
 				03DA24741C23D3F90098FE4B /* Theme.m in Sources */,
 				03DB9D131C200C7900A40361 /* FreightView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
-				03775BC01C11874700319C32 /* MTTableController.m in Sources */,
 				03D7A7E81C21439A003A3A68 /* MineTopContainView.m in Sources */,
 				03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */,
 				03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */,
@@ -2117,7 +2146,6 @@
 				03FB24901C33D1BA0049CADB /* ExchangeContentScrollView.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
 				03CFAECF1C3228E0009C80EB /* ShortRentContentView.m in Sources */,
-				03D643C11C1992A00082F0D4 /* UserAccount.m in Sources */,
 				03DB9CF51C1FF23600A40361 /* ProductView.m in Sources */,
 				03DB9CEF1C1FDF8C00A40361 /* ProductContainView.m in Sources */,
 				03FB248C1C33A8360049CADB /* AFHTTPSessionManagerForMT.m in Sources */,

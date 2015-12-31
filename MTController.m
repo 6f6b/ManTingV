@@ -27,6 +27,15 @@
     // Do any additional setup after loading the view.
 }
 
+
+- (AFHTTPSessionManagerForMT *)manager{
+    if (nil == _manager) {
+        _manager = [AFHTTPSessionManagerForMT manager];
+        _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    }
+    return _manager;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     NSLog(@"收到内存警告");

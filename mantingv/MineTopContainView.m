@@ -7,6 +7,8 @@
 //
 
 #import "MineTopContainView.h"
+#import "UserAccount.h"
+
 @interface MineTopContainView ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UIImageView *icon;
@@ -80,10 +82,10 @@
     return _accountLabel;
 }
 - (void)setValueWith:(id)data{
-//    UserAccount *userAccount = [UserAccount shareInstance];
-//    NSLog(@"%@",userAccount);
-//    NSLog(@"%@",userAccount.phoneNum);
-
+    UserAccount *model = [UserAccount modelWithDictionary:data];
+    self.model = model;
+    [self.icon lfSetImageWithURL:model.imageGuid];
+    self.accountLabel.text = model.realName;
 //    self.accountLabel.text = [NSString stringWithFormat:@"%@/%@",userAccount.username,userAccount.phoneNum];
 }
 @end

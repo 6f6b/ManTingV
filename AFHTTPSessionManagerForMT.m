@@ -17,10 +17,8 @@
     void (^myblock) (NSURLSessionDataTask *task, id _Nullable responseObject);
     myblock = ^(NSURLSessionDataTask *task, id _Nullable responseObject){
         success(task,responseObject);
-        NSLog(@"加载成功");
         [KVNProgress dismiss];
     };
-    NSLog(@"加载中。。");
     [KVNProgress showWithStatus:@"加载中.."];
     NSURLSessionDataTask *task = [super GET:URLString parameters:parameters progress:downloadProgress success:myblock failure:failure];
     return task;
@@ -31,9 +29,9 @@
     myblock = ^(NSURLSessionDataTask *task, id _Nullable responseObject){
         success(task,responseObject);
 //        NSLog(@"加载成功");
-        [KVNProgress dismiss];
+//        [KVNProgress dismiss];
     };
-    [KVNProgress showWithStatus:@"加载中.."];
+//    [KVNProgress showWithStatus:@"加载中.."];
     NSURLSessionDataTask *task = [super POST:URLString parameters:parameters progress:uploadProgress success:myblock failure:failure];
     return task;
 }

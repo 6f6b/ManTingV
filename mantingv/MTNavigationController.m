@@ -54,7 +54,6 @@
 
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated{
-    NSLog(@"why");
     if (1 == self.viewControllers.count) {
         self.hidesBottomBarWhenPushed = NO;
     }
@@ -74,7 +73,7 @@
     
     //检测是否登录，已经登录则正常push
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    id name = [user objectForKey:USER_ACCOUNT];
+    id name = [user objectForKey:USER_GUID];
     if (name) {
         [self aopPushViewController:viewController animated:YES];
         return;
