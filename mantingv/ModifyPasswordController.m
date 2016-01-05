@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *repeatNewPasswordTextFeild;
 
+@property (nonatomic,strong) NSMutableDictionary *parameters;
+
 @end
 
 @implementation ModifyPasswordController
@@ -24,6 +26,33 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)commitBtn:(id)sender {
+    //设置userGuid
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userGuid = [user objectForKey:USER_GUID];
+    [self.parameters setValue:userGuid forKey:@"userGuid"];
+    
+    //原密码
+    [self.parameters setValue:self.originalPasswordTextFeild.text forKey:@"oldPassword"];
+    
+    //新秘密
+    [self.parameters setValue:self.newpasswordTextFeild.text forKey:@"newPassword"];
+    
+    //重复新密码
+    [self.parameters setValue:self.repeatNewPasswordTextFeild.text forKey:@"rePassword"];
+    
+    NSLog(@"%@",self.parameters);
+    //发起修改请求
+    NSString *url = [BASE_URL stringByAppendingString:@"/user/modify_pwd"];
+    [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dic);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +60,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSMutableDictionary *)parameters{
+    if (nil == _parameters) {
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        NSString *userGuid = [user objectForKey:USER_GUID];
+        NSDictionary *dic = @{@"userGuid":@"",
+                              @"oldPassword":@"",
+                              @"newPassword":@"",
+                              @"rePassword":@"",
+                              };
+        NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:dic];
+        _parameters = parameters;
+    }
+    return _parameters;
+}
 /*
 #pragma mark - Navigation
 

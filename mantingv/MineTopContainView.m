@@ -84,8 +84,9 @@
 - (void)setValueWith:(id)data{
     UserAccount *model = [UserAccount modelWithDictionary:data];
     self.model = model;
+    NSLog(@"我的-->%@",model.imageGuid);
     [self.icon lfSetImageWithURL:model.imageGuid];
-    self.accountLabel.text = model.realName;
+    self.accountLabel.text = model.username;
 //    self.accountLabel.text = [NSString stringWithFormat:@"%@/%@",userAccount.username,userAccount.phoneNum];
 }
 @end

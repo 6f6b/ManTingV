@@ -12,3 +12,6 @@ pod 'SDWebImage', '~> 3.7.3'
 
 platform :ios, '9.1'
 pod 'KVNProgress', '~> 2.2.2'
+
+platform :ios, '9.1'
+pod 'MJExtension', '~> 3.0.7'

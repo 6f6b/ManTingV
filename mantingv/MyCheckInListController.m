@@ -10,6 +10,7 @@
 
 @interface MyCheckInListController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,weak) UITableView *tableView;
+@property (nonatomic,strong) NSArray *dataArray;
 @end
 
 @implementation MyCheckInListController
@@ -17,6 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的入住";
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userGuid = [user objectForKey:USER_GUID];
+    NSString *urlWithOutGuid = [BASE_URL stringByAppendingString:@"/reserve/list/"];
+    NSString *url = [urlWithOutGuid stringByAppendingString:userGuid];
+    
+    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        self.dataArray = arr;
+        if (0 == arr.count) {
+            [KVNProgress showErrorWithStatus:@"sorr！you have no vacation house yet"];
+        }
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
     // Do any additional setup after loading the view.
 }
 
@@ -38,12 +59,12 @@
 
 #pragma mark - 代理方法
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

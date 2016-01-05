@@ -106,11 +106,29 @@
 
 - (void)refreshDataInServerWith:(id )data{
     UserAccount *userAccount = [UserAccount modelWithDictionary:data];
-    NSDictionary *parameter = @{@"image":self.imageGuid};
-    userAccount.imageGuid = self.imageGuid;
+    [ZJModelTool createModelWithDictionary:data modelName:nil];
+    NSMutableDictionary *dic = [userAccount mj_keyValues];
+    [dic setValue:self.imageGuid forKey:@"image"];
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userGuid = [user objectForKey:USER_GUID];
+    [dic setValue:userGuid forKey:@"userGuid"];
+
     NSString *url = [BASE_URL stringByAppendingString:@"/user/update"];
-    NSLog(@"%@",userAccount.parameter);
-    [self.manager POST:url parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+    
+    [dic removeObjectForKey:@"phoneNum"];
+    [dic removeObjectForKey:@"imageGuid"];
+    [dic removeObjectForKey:@"birthday"];
+//    [dic removeObjectForKey:@"city"];
+//    [dic removeObjectForKey:@"district"];
+    [dic removeObjectForKey:@"email"];
+    [dic removeObjectForKey:@"gender"];
+    [dic removeObjectForKey:@"position"];
+//    [dic removeObjectForKey:@"province"];
+    [dic removeObjectForKey:@"username"];
+    
+    NSLog(@"%@",dic);
+    [self.manager POST:url parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];

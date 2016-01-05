@@ -47,5 +47,6 @@
 #import "MTBaseScrollView.h"
 #import "ZJModelTool.h"
 #import "UserAccount.h"
+#import "MJExtension.h"
 
 #endif /* PrefixHeader_pch */

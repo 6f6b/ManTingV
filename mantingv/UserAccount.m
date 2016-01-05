@@ -9,62 +9,62 @@
 #import "UserAccount.h"
 
 @implementation UserAccount
-- (NSMutableDictionary *)parameter{
-    if (nil == _parameter) {
-        NSDictionary *dic = @{@"userGuid":@"",
-                              @"username":@"",
-                              @"realName":@"",
-                              @"gender":@"",
-                              @"IDCard":@"",
-                              @"email":@"",
-                              @"province":@"",
-                              @"city":@"",
-                              @"district":@"",
-                              @"area":@"",
-                              @"position":@"",
-                              @"image":@"",};
-        NSMutableDictionary *parameter = [[NSMutableDictionary alloc] initWithDictionary:dic];
-        
-//        @property (nonatomic,copy) NSString *realName;
-//        @property (nonatomic,copy) NSString *position;
-//        @property (nonatomic,copy) NSString *userGuid;
-//        @property (nonatomic,copy) NSString *province;
-//        @property (nonatomic,copy) NSString *area;
-//        @property (nonatomic,copy) NSString *cities;
-//        @property (nonatomic,copy) NSString *imageGuid;
-//        @property (nonatomic,copy) NSString *idcard;
-//        @property (nonatomic,copy) NSString *districts;
-//        @property (nonatomic,copy) NSString *birthday;
-//        @property (nonatomic,copy) NSString *phoneNum;
-//        @property (nonatomic,copy) NSString *username;
-//        @property (nonatomic,copy) NSString *city;
-//        @property (nonatomic,copy) NSString *district;
-//        @property (nonatomic,copy) NSString *image;
-//        @property (nonatomic,copy) NSString *email;
-//        @property (nonatomic,assign) SEX gender;
-//        @property (nonatomic,copy) NSString *provinces;
-
-        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-        NSString *userGuid = [user objectForKey:USER_GUID];
-        [parameter setValue:userGuid forKey:@"userGuid"];
-        [parameter setValue:self.username forKey:@"username"];
-//        [parameter setValue:self.realName forKey:@"realName"];
-        [parameter setValue:self.gender forKey:@"gender"];
-//        [parameter setValue:self.idcard forKey:@"IDCard"];
-        [parameter setValue:self.email forKey:@"email"];
-        [parameter setValue:self.province forKey:@"province"];
-        [parameter setValue:self.city forKey:@"city"];
-        [parameter setValue:self.district forKey:@"district"];
-//        [parameter setValue:self.area forKey:@"area"];
-        [parameter setValue:self.position forKey:@"position"];
-        [parameter setValue:self.imageGuid forKey:@"image"];
-        
-        _parameter = parameter;
-        
-    }
-    NSLog(@"%@",_parameter);
-    return _parameter;
-}
+//- (NSMutableDictionary *)parameter{
+//    if (nil == _parameter) {
+//        NSDictionary *dic = @{@"userGuid":@"",
+//                              @"username":@"",
+//                              @"realName":@"",
+//                              @"gender":@"",
+//                              @"IDCard":@"",
+//                              @"email":@"",
+//                              @"province":@"",
+//                              @"city":@"",
+//                              @"district":@"",
+//                              @"area":@"",
+//                              @"position":@"",
+//                              @"image":@"",};
+//        NSMutableDictionary *parameter = [[NSMutableDictionary alloc] initWithDictionary:dic];
+//        
+////        @property (nonatomic,copy) NSString *realName;
+////        @property (nonatomic,copy) NSString *position;
+////        @property (nonatomic,copy) NSString *userGuid;
+////        @property (nonatomic,copy) NSString *province;
+////        @property (nonatomic,copy) NSString *area;
+////        @property (nonatomic,copy) NSString *cities;
+////        @property (nonatomic,copy) NSString *imageGuid;
+////        @property (nonatomic,copy) NSString *idcard;
+////        @property (nonatomic,copy) NSString *districts;
+////        @property (nonatomic,copy) NSString *birthday;
+////        @property (nonatomic,copy) NSString *phoneNum;
+////        @property (nonatomic,copy) NSString *username;
+////        @property (nonatomic,copy) NSString *city;
+////        @property (nonatomic,copy) NSString *district;
+////        @property (nonatomic,copy) NSString *image;
+////        @property (nonatomic,copy) NSString *email;
+////        @property (nonatomic,assign) SEX gender;
+////        @property (nonatomic,copy) NSString *provinces;
+//
+//        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+//        NSString *userGuid = [user objectForKey:USER_GUID];
+//        [parameter setValue:userGuid forKey:@"userGuid"];
+//        [parameter setValue:self.username forKey:@"username"];
+////        [parameter setValue:self.realName forKey:@"realName"];
+//        [parameter setValue:self.gender forKey:@"gender"];
+////        [parameter setValue:self.idcard forKey:@"IDCard"];
+//        [parameter setValue:self.email forKey:@"email"];
+//        [parameter setValue:self.province forKey:@"province"];
+//        [parameter setValue:self.city forKey:@"city"];
+//        [parameter setValue:self.district forKey:@"district"];
+////        [parameter setValue:self.area forKey:@"area"];
+//        [parameter setValue:self.position forKey:@"position"];
+//        [parameter setValue:self.imageGuid forKey:@"image"];
+//        
+//        _parameter = parameter;
+//        
+//    }
+//    NSLog(@"%@",_parameter);
+//    return _parameter;
+//}
 
 //- (void)setUserGuid:(NSString *)userGuid{
 //    _userGuid = userGuid;

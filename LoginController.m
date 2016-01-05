@@ -8,6 +8,7 @@
 
 #import "LoginController.h"
 #import "RegisterController.h"
+#import "ResettingController.h"
 
 @interface LoginController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextFeild;
@@ -71,6 +72,8 @@
 
 //忘记密码按钮
 - (IBAction)forgetPassWordBtn:(id)sender {
+    ResettingController *resettingController = [[ResettingController alloc] init];
+    [self.navigationController pushViewController:resettingController animated:YES];
 }
 
 //注册按钮
