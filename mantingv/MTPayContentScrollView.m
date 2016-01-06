@@ -8,8 +8,9 @@
 
 #import "MTPayContentScrollView.h"
 
-#import "AddAddressView.h"
-#import "RecipientInformationView.h"
+#import "AddressContentView.h"
+//#import "AddAddressView.h"
+//#import "RecipientInformationView.h"
 #import "OrderView.h"
 #import "PurchaseQuantityView.h"
 #import "FreightView.h"
@@ -18,8 +19,7 @@
 #import "PayTypeView.h"
 
 @interface MTPayContentScrollView ()
-@property (nonatomic,weak) AddAddressView *addAddressView;
-@property (nonatomic,weak) RecipientInformationView *recipientInformationView;
+@property (nonatomic,weak) AddressContentView *addressContentView;
 @property (nonatomic,weak) OrderView *orderView;
 @property (nonatomic,weak) PurchaseQuantityView *purchaseQuantityView;
 @property (nonatomic,weak) FreightView *freightView;
@@ -31,13 +31,7 @@
 
 //设置约束
 - (void)willMoveToSuperview:(UIView *)newSuperview{
-    [super willMoveToSuperview:newSuperview];    
-    //添加地址
-    self.addAddressView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
-    
-    
-    //收件人信息
-    self.recipientInformationView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
+    [super willMoveToSuperview:newSuperview];
 
     
     //订单
@@ -66,24 +60,15 @@
 
 }
 
-- (AddAddressView *)addAddressView{
-    if (nil == _addAddressView) {
-        AddAddressView *addAddressView = [[AddAddressView alloc] init];
-        addAddressView.backgroundColor = [UIColor greenColor];
-        [self addSubview:addAddressView];
-        _addAddressView = addAddressView;
+- (AddressContentView *)addressContentView{
+    if (nil == _addressContentView) {
+        AddressContentView *addressContentView = [[AddressContentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
+        addressContentView.controller = self.controller;
+        addressContentView.backgroundColor = [UIColor greenColor];
+        [self addSubview:addressContentView];
+        _addressContentView = addressContentView;
     }
-    return _addAddressView;
-}
-
-- (RecipientInformationView *)recipientInformationView{
-    if (nil == _recipientInformationView) {
-        RecipientInformationView *recipientInformationView = [[RecipientInformationView alloc] init];
-        recipientInformationView.backgroundColor = [UIColor greenColor];
-        [self addSubview:recipientInformationView];
-        _recipientInformationView = recipientInformationView;
-    }
-    return _recipientInformationView;
+    return _addressContentView;
 }
 
 - (OrderView *)orderView{
@@ -148,7 +133,7 @@
 
 - (void)setValueWith:(id)data{
     //刷新控件数据
-    [self.recipientInformationView setValueWith:nil];
+    [self.addressContentView setValueWith:nil];
     [self.orderView setValueWith:nil];
 }
 @end

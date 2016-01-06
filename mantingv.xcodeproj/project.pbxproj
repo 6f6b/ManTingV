@@ -190,6 +190,20 @@
 		03E0A25E1C18274000FCAAAC /* short.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2591C18274000FCAAAC /* short.png */; };
 		03E0A25F1C18274000FCAAAC /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A25A1C18274000FCAAAC /* product.png */; };
 		03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E25B741C1E9E9B001A2065 /* ChooserView.m */; };
+		03E6BB3A1C3CB3B80008D68B /* AddressContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB391C3CB3B80008D68B /* AddressContentView.m */; };
+		03E6BB3D1C3CB8300008D68B /* AddressDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB3C1C3CB8300008D68B /* AddressDTOModel.m */; };
+		03E6BB401C3CC00E0008D68B /* AddressListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB3F1C3CC00E0008D68B /* AddressListController.m */; };
+		03E6BB471C3CC3DC0008D68B /* AddressListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB451C3CC3DC0008D68B /* AddressListCell.m */; };
+		03E6BB481C3CC3DC0008D68B /* AddressListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E6BB461C3CC3DC0008D68B /* AddressListCell.xib */; };
+		03E6BB4C1C3CE1A50008D68B /* AddAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB4A1C3CE1A50008D68B /* AddAddressCell.m */; };
+		03E6BB4D1C3CE1A50008D68B /* AddAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E6BB4B1C3CE1A50008D68B /* AddAddressCell.xib */; };
+		03E6BB531C3CE4C00008D68B /* AddAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB521C3CE4C00008D68B /* AddAddressController.m */; };
+		03E6BB561C3CE8190008D68B /* AddAddressContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB551C3CE8190008D68B /* AddAddressContentScrollView.m */; };
+		03E6BB5F1C3CEEA80008D68B /* AddAdressContentViewWithTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB5E1C3CEEA80008D68B /* AddAdressContentViewWithTitle.m */; };
+		03E6BB651C3CEF370008D68B /* ContactPersonEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB641C3CEF370008D68B /* ContactPersonEditView.m */; };
+		03E6BB681C3CEF530008D68B /* ContactAddressEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB671C3CEF530008D68B /* ContactAddressEditView.m */; };
+		03E6BB6B1C3CF05F0008D68B /* EditViewWithTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB6A1C3CF05F0008D68B /* EditViewWithTextFiled.m */; };
+		03E6BB6E1C3CF06F0008D68B /* EditViewWithButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB6D1C3CF06F0008D68B /* EditViewWithButton.m */; };
 		03FB248C1C33A8360049CADB /* AFHTTPSessionManagerForMT.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FB248B1C33A8360049CADB /* AFHTTPSessionManagerForMT.m */; };
 		03FB24901C33D1BA0049CADB /* ExchangeContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FB248F1C33D1BA0049CADB /* ExchangeContentScrollView.m */; };
 		03FB24991C33DA550049CADB /* ExchangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FB24981C33DA550049CADB /* ExchangeView.m */; };
@@ -530,6 +544,32 @@
 		03E0A25A1C18274000FCAAAC /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product.png; sourceTree = "<group>"; };
 		03E25B731C1E9E9B001A2065 /* ChooserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooserView.h; path = mantingv/LFLoopScrollView/ChooserView.h; sourceTree = "<group>"; };
 		03E25B741C1E9E9B001A2065 /* ChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooserView.m; path = mantingv/LFLoopScrollView/ChooserView.m; sourceTree = "<group>"; };
+		03E6BB381C3CB3B80008D68B /* AddressContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressContentView.h; sourceTree = "<group>"; };
+		03E6BB391C3CB3B80008D68B /* AddressContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressContentView.m; sourceTree = "<group>"; };
+		03E6BB3B1C3CB8300008D68B /* AddressDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressDTOModel.h; sourceTree = "<group>"; };
+		03E6BB3C1C3CB8300008D68B /* AddressDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressDTOModel.m; sourceTree = "<group>"; };
+		03E6BB3E1C3CC00E0008D68B /* AddressListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListController.h; sourceTree = "<group>"; };
+		03E6BB3F1C3CC00E0008D68B /* AddressListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListController.m; sourceTree = "<group>"; };
+		03E6BB441C3CC3DC0008D68B /* AddressListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListCell.h; sourceTree = "<group>"; };
+		03E6BB451C3CC3DC0008D68B /* AddressListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListCell.m; sourceTree = "<group>"; };
+		03E6BB461C3CC3DC0008D68B /* AddressListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressListCell.xib; sourceTree = "<group>"; };
+		03E6BB491C3CE1A50008D68B /* AddAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressCell.h; sourceTree = "<group>"; };
+		03E6BB4A1C3CE1A50008D68B /* AddAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressCell.m; sourceTree = "<group>"; };
+		03E6BB4B1C3CE1A50008D68B /* AddAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAddressCell.xib; sourceTree = "<group>"; };
+		03E6BB511C3CE4C00008D68B /* AddAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressController.h; sourceTree = "<group>"; };
+		03E6BB521C3CE4C00008D68B /* AddAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressController.m; sourceTree = "<group>"; };
+		03E6BB541C3CE8190008D68B /* AddAddressContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressContentScrollView.h; sourceTree = "<group>"; };
+		03E6BB551C3CE8190008D68B /* AddAddressContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressContentScrollView.m; sourceTree = "<group>"; };
+		03E6BB5D1C3CEEA80008D68B /* AddAdressContentViewWithTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAdressContentViewWithTitle.h; sourceTree = "<group>"; };
+		03E6BB5E1C3CEEA80008D68B /* AddAdressContentViewWithTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAdressContentViewWithTitle.m; sourceTree = "<group>"; };
+		03E6BB631C3CEF370008D68B /* ContactPersonEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPersonEditView.h; sourceTree = "<group>"; };
+		03E6BB641C3CEF370008D68B /* ContactPersonEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPersonEditView.m; sourceTree = "<group>"; };
+		03E6BB661C3CEF530008D68B /* ContactAddressEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactAddressEditView.h; sourceTree = "<group>"; };
+		03E6BB671C3CEF530008D68B /* ContactAddressEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactAddressEditView.m; sourceTree = "<group>"; };
+		03E6BB691C3CF05F0008D68B /* EditViewWithTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewWithTextFiled.h; sourceTree = "<group>"; };
+		03E6BB6A1C3CF05F0008D68B /* EditViewWithTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewWithTextFiled.m; sourceTree = "<group>"; };
+		03E6BB6C1C3CF06F0008D68B /* EditViewWithButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewWithButton.h; sourceTree = "<group>"; };
+		03E6BB6D1C3CF06F0008D68B /* EditViewWithButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewWithButton.m; sourceTree = "<group>"; };
 		03FB248A1C33A8360049CADB /* AFHTTPSessionManagerForMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManagerForMT.h; sourceTree = "<group>"; };
 		03FB248B1C33A8360049CADB /* AFHTTPSessionManagerForMT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManagerForMT.m; sourceTree = "<group>"; };
 		03FB248E1C33D1BA0049CADB /* ExchangeContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeContentScrollView.h; sourceTree = "<group>"; };
@@ -1559,6 +1599,7 @@
 		03DB9CF71C1FFF5800A40361 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				03E6BB411C3CC3930008D68B /* 地址列表 */,
 				03DB9D031C20052000A40361 /* MTPayController.h */,
 				03DB9D041C20052000A40361 /* MTPayController.m */,
 			);
@@ -1570,6 +1611,8 @@
 			children = (
 				03DB9CFD1C1FFFC600A40361 /* MTPayContentScrollView.h */,
 				03DB9CFE1C1FFFC600A40361 /* MTPayContentScrollView.m */,
+				03E6BB381C3CB3B80008D68B /* AddressContentView.h */,
+				03E6BB391C3CB3B80008D68B /* AddressContentView.m */,
 				03DB9D0B1C200B8E00A40361 /* AddAddressView.h */,
 				03DB9D0C1C200B8E00A40361 /* AddAddressView.m */,
 				03DB9D081C200B3E00A40361 /* RecipientInformationView.h */,
@@ -1593,6 +1636,8 @@
 		03DB9CF91C1FFF5B00A40361 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03E6BB3B1C3CB8300008D68B /* AddressDTOModel.h */,
+				03E6BB3C1C3CB8300008D68B /* AddressDTOModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1899,6 +1944,75 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		03E6BB411C3CC3930008D68B /* 地址列表 */ = {
+			isa = PBXGroup;
+			children = (
+				03E6BB431C3CC3A70008D68B /* Views */,
+				03E6BB421C3CC3A50008D68B /* Controllers */,
+			);
+			name = "地址列表";
+			sourceTree = "<group>";
+		};
+		03E6BB421C3CC3A50008D68B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E6BB4E1C3CE3A70008D68B /* 添加地址 */,
+				03E6BB3E1C3CC00E0008D68B /* AddressListController.h */,
+				03E6BB3F1C3CC00E0008D68B /* AddressListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E6BB431C3CC3A70008D68B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E6BB441C3CC3DC0008D68B /* AddressListCell.h */,
+				03E6BB451C3CC3DC0008D68B /* AddressListCell.m */,
+				03E6BB461C3CC3DC0008D68B /* AddressListCell.xib */,
+				03E6BB491C3CE1A50008D68B /* AddAddressCell.h */,
+				03E6BB4A1C3CE1A50008D68B /* AddAddressCell.m */,
+				03E6BB4B1C3CE1A50008D68B /* AddAddressCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03E6BB4E1C3CE3A70008D68B /* 添加地址 */ = {
+			isa = PBXGroup;
+			children = (
+				03E6BB501C3CE3C60008D68B /* Views */,
+				03E6BB4F1C3CE3C30008D68B /* Controllers */,
+			);
+			name = "添加地址";
+			sourceTree = "<group>";
+		};
+		03E6BB4F1C3CE3C30008D68B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E6BB511C3CE4C00008D68B /* AddAddressController.h */,
+				03E6BB521C3CE4C00008D68B /* AddAddressController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E6BB501C3CE3C60008D68B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E6BB541C3CE8190008D68B /* AddAddressContentScrollView.h */,
+				03E6BB551C3CE8190008D68B /* AddAddressContentScrollView.m */,
+				03E6BB5D1C3CEEA80008D68B /* AddAdressContentViewWithTitle.h */,
+				03E6BB5E1C3CEEA80008D68B /* AddAdressContentViewWithTitle.m */,
+				03E6BB631C3CEF370008D68B /* ContactPersonEditView.h */,
+				03E6BB641C3CEF370008D68B /* ContactPersonEditView.m */,
+				03E6BB661C3CEF530008D68B /* ContactAddressEditView.h */,
+				03E6BB671C3CEF530008D68B /* ContactAddressEditView.m */,
+				03E6BB691C3CF05F0008D68B /* EditViewWithTextFiled.h */,
+				03E6BB6A1C3CF05F0008D68B /* EditViewWithTextFiled.m */,
+				03E6BB6C1C3CF06F0008D68B /* EditViewWithButton.h */,
+				03E6BB6D1C3CF06F0008D68B /* EditViewWithButton.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		03FB248D1C33D16E0049CADB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -2044,6 +2158,7 @@
 				03DEED101C3BA89C00EE518F /* EntrustRentalController.xib in Resources */,
 				03D7A7ED1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg in Resources */,
 				0376AFEA1C1196C30033D2A2 /* Welcome_3.0_1.jpg in Resources */,
+				03E6BB481C3CC3DC0008D68B /* AddressListCell.xib in Resources */,
 				0376AFF31C1196C30033D2A2 /* Welcome_3.0_5@2x.jpg in Resources */,
 				03775B4D1C11368F00319C32 /* LaunchScreen.storyboard in Resources */,
 				0376AFEF1C1196C30033D2A2 /* Welcome_3.0_3@2x.jpg in Resources */,
@@ -2078,6 +2193,7 @@
 				03DA248B1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png in Resources */,
 				03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */,
 				03DC50BB1C291CC40040C939 /* add_24px_1138892_easyicon.net.png in Resources */,
+				03E6BB4D1C3CE1A50008D68B /* AddAddressCell.xib in Resources */,
 				03D7A7EF1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg in Resources */,
 				0376AFE41C1196C30033D2A2 /* Welcome1.jpg in Resources */,
 				03E0A25B1C18274000FCAAAC /* mine.png in Resources */,
@@ -2169,6 +2285,7 @@
 				03775B7F1C113AAD00319C32 /* HomeController.m in Sources */,
 				03DB9D1C1C200D1000A40361 /* PayTypeView.m in Sources */,
 				03D6698F1C2A4635001C4C2C /* ZJModelTool.m in Sources */,
+				03E6BB401C3CC00E0008D68B /* AddressListController.m in Sources */,
 				03D6439D1C195B010082F0D4 /* LoginController.m in Sources */,
 				03DB9D1F1C2053EC00A40361 /* ThemeContentView.m in Sources */,
 				03DEECEA1C3B63F900EE518F /* MyHouseListCell.m in Sources */,
@@ -2179,6 +2296,7 @@
 				03DEECF11C3B6CB600EE518F /* HouseInfoDTOModel.m in Sources */,
 				03D251DF1C22AE9300BA9ED7 /* ModifyNickNameController.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
+				03E6BB6E1C3CF06F0008D68B /* EditViewWithButton.m in Sources */,
 				03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */,
 				03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */,
 				03DC508A1C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m in Sources */,
@@ -2186,12 +2304,15 @@
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
 				03E066451C27929600E85778 /* ExchangeController.m in Sources */,
 				03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */,
+				03E6BB3A1C3CB3B80008D68B /* AddressContentView.m in Sources */,
 				03E066861C28028700E85778 /* TransferDetailController.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
 				03DA24741C23D3F90098FE4B /* Theme.m in Sources */,
 				03DB9D131C200C7900A40361 /* FreightView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
 				03DEECF41C3B6E3E00EE518F /* HouseWeekDTOModel.m in Sources */,
+				03E6BB5F1C3CEEA80008D68B /* AddAdressContentViewWithTitle.m in Sources */,
+				03E6BB681C3CEF530008D68B /* ContactAddressEditView.m in Sources */,
 				03D7A7E81C21439A003A3A68 /* MineTopContainView.m in Sources */,
 				03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */,
 				03D830A81C1EB88C006DBFD9 /* ChoiceNessView.m in Sources */,
@@ -2205,6 +2326,7 @@
 				03DEED001C3B738C00EE518F /* MyHouseListDetailDescriptionView.m in Sources */,
 				03DEECFD1C3B734100EE518F /* MyHouseListDetailContentScrollView.m in Sources */,
 				03D7A7E51C214234003A3A68 /* MineContentScrollView.m in Sources */,
+				03E6BB4C1C3CE1A50008D68B /* AddAddressCell.m in Sources */,
 				03DEECEE1C3B6B3F00EE518F /* MyHouseListModel.m in Sources */,
 				03DC507E1C28FD740040C939 /* CheckInDetailTopContentView.m in Sources */,
 				03DC50DA1C293AC60040C939 /* CommitSuccessController.m in Sources */,
@@ -2215,8 +2337,10 @@
 				03DB9D0D1C200B8E00A40361 /* AddAddressView.m in Sources */,
 				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
 				03DC50841C291B410040C939 /* CheckInDetailTimeView.m in Sources */,
+				03E6BB561C3CE8190008D68B /* AddAddressContentScrollView.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */,
+				03E6BB471C3CC3DC0008D68B /* AddressListCell.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
 				03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */,
 				03DB9D061C20052000A40361 /* MTPayController.m in Sources */,
@@ -2252,13 +2376,16 @@
 				03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */,
 				03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */,
 				03CFAEDB1C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.m in Sources */,
+				03E6BB651C3CEF370008D68B /* ContactPersonEditView.m in Sources */,
 				03D830AE1C1EBDE1006DBFD9 /* ChoiceNessTheme.m in Sources */,
+				03E6BB6B1C3CF05F0008D68B /* EditViewWithTextFiled.m in Sources */,
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
 				03E0666D1C27C85000E85778 /* ExchangeDetailBaseView.m in Sources */,
 				03DB9D161C200CAF00A40361 /* LeaveWordView.m in Sources */,
 				03DDADFF1C2BC0CE009DC36D /* ProductContentView.m in Sources */,
 				03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */,
 				03E066671C27C7F400E85778 /* ExchangeDetailDescriptionView.m in Sources */,
+				03E6BB531C3CE4C00008D68B /* AddAddressController.m in Sources */,
 				03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */,
 				03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */,
 				03DC51241C294D740040C939 /* LFSelectionView.m in Sources */,
@@ -2266,6 +2393,7 @@
 				03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */,
 				03DEF34C1C30E979000F25F0 /* ProductContentScrollView.m in Sources */,
 				03DC50C11C291CC40040C939 /* LFStepper.m in Sources */,
+				03E6BB3D1C3CB8300008D68B /* AddressDTOModel.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03DDADF61C2B815B009DC36D /* LFLoopScrollViewForMT.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,

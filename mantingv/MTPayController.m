@@ -16,26 +16,36 @@
 
 @implementation MTPayController
 
+- (id)init{
+    if(self = [super init]){
+        _addressTag = 0;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadData];
 }
 
 - (void)loadData{
-    //下载数据
-    
-    //数据下载完毕，刷新UI
     [self.payContentScrollView setValueWith:nil];
 }
 
 - (MTPayContentScrollView *)payContentScrollView{
     if (nil == _payContentScrollView) {
         MTPayContentScrollView *payContentScrollView = [[MTPayContentScrollView alloc] initWithFrame:self.view.bounds];
+        payContentScrollView.controller = self;
         payContentScrollView.backgroundColor = [UIColor whiteColor];
         _payContentScrollView = payContentScrollView;
         [self.view addSubview:_payContentScrollView];
     }
     return _payContentScrollView;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.payContentScrollView setValueWith:nil];
 }
 
 - (void)didReceiveMemoryWarning {

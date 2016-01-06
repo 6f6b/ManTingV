@@ -15,14 +15,15 @@
     NSInteger W = (NSInteger)self.frame.size.width;
     NSInteger H = (NSInteger)self.frame.size.height;
 
-    if (0 == W) {
-        W = 375;
-    }
-    if (0 == H) {
-        H =375;
-    }
+//    if (0 == W) {
+//        W = 375;
+//    }
+//    if (0 == H) {
+//        H =375;
+//    }
     
-    NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/image/%@/%lu/%lu",imageGuid,W,H]];
+//    NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/image/%@/%lu/%lu",imageGuid,W,H]];
+    NSString *urlString = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/src_img/%@",imageGuid]];
     NSURL *url = [NSURL URLWithString:urlString];
     [self sd_setImageWithURL:url];
 }

@@ -9,5 +9,5 @@
 #import "MTController.h"
 
 @interface MTPayController : MTController
-
+@property (nonatomic,assign) NSInteger addressTag;
 @end

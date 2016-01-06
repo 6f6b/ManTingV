@@ -43,7 +43,7 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"---->%@",dic);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        NSLog(@"%@",error);
+        NSLog(@"错误");
     }];
 }
 

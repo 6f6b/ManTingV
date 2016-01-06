@@ -13,7 +13,7 @@
 - (void)setImageWithUrlS:(NSArray *)urls{
     NSMutableArray *arr = [[NSMutableArray alloc] init];
     for (int i=0; i<urls.count; i++) {
-        NSString *url = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/img/%@/375/375",urls[i]]];
+        NSString *url = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/public/src_img/%@",urls[i]]];
         [arr addObject:url];
     }
     [super setImageWithUrlS:arr];

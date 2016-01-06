@@ -7,6 +7,7 @@
 //
 
 #import "AddAddressView.h"
+#import "AddressListController.h"
 
 @interface AddAddressView ()
 @property (nonatomic,weak) UIButton *addAddressButton;
@@ -22,6 +23,8 @@
         make.bottom.equalTo(superView);
         make.top.equalTo(superView);
     }];
+    
+    [self.addAddressButton addTarget:self action:@selector(dealTap) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (UIButton *)addAddressButton{
@@ -32,5 +35,14 @@
         _addAddressButton = addAddressButton;
     }
     return _addAddressButton;
+}
+
+- (void)dealTap{
+    NSLog(@"点击%@",self.controller);
+    AddressListController *addressListController = [[AddressListController alloc] init];
+    [self.controller.navigationController pushViewController:addressListController animated:YES];
+}
+- (void)setValueWith:(id)data{
+    NSLog(@"添加地址");
 }
 @end
