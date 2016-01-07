@@ -7,9 +7,9 @@
 //
 
 #import "PurchaseQuantityView.h"
+#import "MTPayController.h"
 @interface PurchaseQuantityView ()
 @property (nonatomic,weak) UILabel *purchaseQuantityLabel;
-@property (nonatomic,weak) UIStepper *purchaseQuantityStepper;
 @property (nonatomic,weak) UILabel *purchaseQuantityShowLabel;
 @end
 @implementation PurchaseQuantityView
@@ -59,6 +59,7 @@
     if(nil == _purchaseQuantityStepper){
         UIStepper *purchaseQuantityStepper = [[UIStepper alloc] init];
         [purchaseQuantityStepper addTarget:self action:@selector(dealPurchaseQuantityStepper:) forControlEvents:UIControlEventValueChanged];
+        purchaseQuantityStepper.minimumValue = 1;
         purchaseQuantityStepper.backgroundColor = [UIColor whiteColor];
         [self addSubview:purchaseQuantityStepper];
         _purchaseQuantityStepper = purchaseQuantityStepper;
@@ -79,5 +80,8 @@
 
 - (void)dealPurchaseQuantityStepper:(UIStepper *)stepper{
     self.purchaseQuantityShowLabel.text = [NSString stringWithFormat:@"%d",(int)stepper.value];
+    MTPayController *payController = self.controller;
+    double totalPrice = stepper.value*[payController.themeListViewModel.price doubleValue];
+    payController.totalPrice = totalPrice;
 }
 @end

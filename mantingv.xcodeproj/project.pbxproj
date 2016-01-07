@@ -148,6 +148,8 @@
 		03DC50DA1C293AC60040C939 /* CommitSuccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC50D81C293AC60040C939 /* CommitSuccessController.m */; };
 		03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DC50D91C293AC60040C939 /* CommitSuccessController.xib */; };
 		03DC51241C294D740040C939 /* LFSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC51231C294D740040C939 /* LFSelectionView.m */; };
+		03DC95DD1C3E2AC30071D764 /* Left_Arrow_31.015384615385px_1190911_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DC95DC1C3E2AC30071D764 /* Left_Arrow_31.015384615385px_1190911_easyicon.net.png */; };
+		03DC95E31C3E4CA80071D764 /* AgreementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DC95E21C3E4CA80071D764 /* AgreementController.m */; };
 		03DDADF61C2B815B009DC36D /* LFLoopScrollViewForMT.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADF51C2B815B009DC36D /* LFLoopScrollViewForMT.m */; };
 		03DDADFF1C2BC0CE009DC36D /* ProductContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDADFE1C2BC0CE009DC36D /* ProductContentView.m */; };
 		03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDAE011C2BC853009DC36D /* ProductContainViewModel.m */; };
@@ -468,6 +470,9 @@
 		03DC50D91C293AC60040C939 /* CommitSuccessController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitSuccessController.xib; sourceTree = "<group>"; };
 		03DC51221C294D740040C939 /* LFSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSelectionView.h; sourceTree = "<group>"; };
 		03DC51231C294D740040C939 /* LFSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSelectionView.m; sourceTree = "<group>"; };
+		03DC95DC1C3E2AC30071D764 /* Left_Arrow_31.015384615385px_1190911_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Left_Arrow_31.015384615385px_1190911_easyicon.net.png; sourceTree = "<group>"; };
+		03DC95E11C3E4CA80071D764 /* AgreementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementController.h; sourceTree = "<group>"; };
+		03DC95E21C3E4CA80071D764 /* AgreementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementController.m; sourceTree = "<group>"; };
 		03DDADF41C2B815B009DC36D /* LFLoopScrollViewForMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoopScrollViewForMT.h; sourceTree = "<group>"; };
 		03DDADF51C2B815B009DC36D /* LFLoopScrollViewForMT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoopScrollViewForMT.m; sourceTree = "<group>"; };
 		03DDADFD1C2BC0CE009DC36D /* ProductContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductContentView.h; sourceTree = "<group>"; };
@@ -610,6 +615,7 @@
 		0376AFD31C1196C30033D2A2 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				03DC95DC1C3E2AC30071D764 /* Left_Arrow_31.015384615385px_1190911_easyicon.net.png */,
 				03DC50001C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png */,
 				03DA248A1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png */,
 				03DA24881C23DF3C0098FE4B /* arrows_slim_left_103.41463414634px_1182560_easyicon.net.png */,
@@ -1599,6 +1605,7 @@
 		03DB9CF71C1FFF5800A40361 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				03DC95DE1C3E4C270071D764 /* 合同预览 */,
 				03E6BB411C3CC3930008D68B /* 地址列表 */,
 				03DB9D031C20052000A40361 /* MTPayController.h */,
 				03DB9D041C20052000A40361 /* MTPayController.m */,
@@ -1699,6 +1706,31 @@
 			);
 			name = LFStepper;
 			path = TEST;
+			sourceTree = "<group>";
+		};
+		03DC95DE1C3E4C270071D764 /* 合同预览 */ = {
+			isa = PBXGroup;
+			children = (
+				03DC95E01C3E4C430071D764 /* Views */,
+				03DC95DF1C3E4C3A0071D764 /* Controllers */,
+			);
+			name = "合同预览";
+			sourceTree = "<group>";
+		};
+		03DC95DF1C3E4C3A0071D764 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03DC95E11C3E4CA80071D764 /* AgreementController.h */,
+				03DC95E21C3E4CA80071D764 /* AgreementController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03DC95E01C3E4C430071D764 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		03DDADF31C2B8133009DC36D /* LFLoopScrollViewForMT */ = {
@@ -2173,6 +2205,7 @@
 				03775B4A1C11368F00319C32 /* Assets.xcassets in Resources */,
 				03D643A21C196D590082F0D4 /* RSS_button_48px_1104904_easyicon.net.png in Resources */,
 				03DB9D251C205A8B00A40361 /* alipay_72px_1186722_easyicon.net.png in Resources */,
+				03DC95DD1C3E2AC30071D764 /* Left_Arrow_31.015384615385px_1190911_easyicon.net.png in Resources */,
 				03D251E01C22AE9300BA9ED7 /* ModifyNickNameController.xib in Resources */,
 				03DC4FFF1C28EA340040C939 /* INeedCheckInCell.xib in Resources */,
 				03D251CF1C22ACA600BA9ED7 /* ModifyIconController.xib in Resources */,
@@ -2417,6 +2450,7 @@
 				03CFAEE11C328354009C80EB /* RelatedProductViewModel.m in Sources */,
 				03DEED0F1C3BA89C00EE518F /* EntrustRentalController.m in Sources */,
 				03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */,
+				03DC95E31C3E4CA80071D764 /* AgreementController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -172,6 +172,7 @@
 
 - (void)dealBuyBtn{
     MTPayController *payController = [[MTPayController alloc] init];
+    payController.themeListViewModel = (ThemeListViewModel *)self.model;
     payController.title = @"支付";
     
     MTBaseView *themeListContentView =  (MTBaseView *)self.superview;
@@ -188,10 +189,11 @@
 //    @property (nonatomic,weak) UIButton *buyButton;
     
     ThemeListViewModel *model = [ThemeListViewModel modelWithDictionary:data];
-    [self.backImage lfSetImageWithURL:self.imageUrl];
+    self.model = model;
+    [self.backImage lfSetImageWithURL:model.imageUrl];
     self.timeLabel.text = [NSString stringWithFormat:@"周期：%@",model.name];
-    self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",self.houseType];
-    self.sizeLabel.text = [NSString stringWithFormat:@"面积：%@",self.buildingSize];
+    self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",model.houseType];
+    self.sizeLabel.text = [NSString stringWithFormat:@"面积：%@",model.buildingTypeArea];
     self.surplusLabel.text = [NSString stringWithFormat:@"剩余%@份",model.fee];
     self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
     

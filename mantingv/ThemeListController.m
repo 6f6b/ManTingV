@@ -17,14 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self.themeListContentScrollView setValueWith:Nil];
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [self.themeListContentScrollView setValueWith:Nil];
+    [self loadDataFromServer];
+    
+}
+
+
+- (void)loadDataFromServer{
     NSString *string = [NSString stringWithFormat:@"/house/house_info/details/%@",self.guid];
     NSString *url = [BASE_URL stringByAppendingString:string];
-    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
@@ -33,7 +36,6 @@
         
     }];
 }
-
 
 - (ThemeListContentScrollView *)themeListContentScrollView{
     if (nil == _themeListContentScrollView) {

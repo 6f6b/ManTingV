@@ -7,7 +7,10 @@
 //
 
 #import "MTBaseScrollView.h"
+#import "PurchaseQuantityView.h"
+#import "AddressContentView.h"
 
 @interface MTPayContentScrollView : MTBaseScrollView
-
+@property (nonatomic,weak) PurchaseQuantityView *purchaseQuantityView;
+@property (nonatomic,weak) AddressContentView *addressContentView;
 @end

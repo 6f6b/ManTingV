@@ -20,12 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.phoneNumberTextFeild.delegate = self;
+    self.passWordTextFeild.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-    NSLog(@"okkkk");
-    [textField resignFirstResponder];
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSLog(@"@@@@");
+    [self.phoneNumberTextFeild resignFirstResponder];
+    [self.passWordTextFeild resignFirstResponder];
+    return YES;
 }
 
 

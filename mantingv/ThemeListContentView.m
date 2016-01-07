@@ -27,10 +27,13 @@
         CGFloat H = 80;
         themeListView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:themeListView];
-        themeListView.buildingSize = model.buildingTypeArea;
-        themeListView.imageUrl = model.imageGuids[0];
-        themeListView.houseType = model.houseType;
-        [themeListView setValueWith:model.houseWeekDTOs[i]];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:model.houseWeekDTOs[i]];
+        [dic setValue:model.buildingTypeArea forKey:@"buildingTypeArea"];
+        [dic setValue:model.imageGuids[0] forKey:@"imageUrl"];
+        [dic setValue:model.houseType forKey:@"houseType"];
+        [dic setValue:model.name forKey:@"title"];
+        
+        [themeListView setValueWith:dic];
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, SCREEN_WIDTH, CGRectGetMaxY(themeListView.frame));
     }
 }

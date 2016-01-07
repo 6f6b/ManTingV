@@ -67,6 +67,7 @@
         //如果不为空,默认设置第一个联系地址
         if (0 != arr.count) {
             MTPayController *payController = (MTPayController *)self.controller;
+            self.addressGuid = [arr[payController.addressTag] objectForKey:@"guid"];
             [self.recipientInformationView setValueWith:arr[payController.addressTag]];
         }
         

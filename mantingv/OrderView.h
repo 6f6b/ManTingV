@@ -9,5 +9,4 @@
 #import "MTBaseView.h"
 
 @interface OrderView : MTBaseView
-
 @end

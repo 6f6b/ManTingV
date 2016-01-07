@@ -9,5 +9,5 @@
 #import "MTBaseView.h"
 
 @interface PurchaseQuantityView : MTBaseView
-
+@property (nonatomic,weak) UIStepper *purchaseQuantityStepper;
 @end

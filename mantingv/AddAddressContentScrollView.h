@@ -14,4 +14,5 @@
 @property (nonatomic,weak) ContactPersonEditView *contactPersonEditView;
 @property (nonatomic,weak) ContactAddressEditView *contactAddressEditView;
 @property (nonatomic,weak) UITextField *addressForDetailTextFiled;
+@property (nonatomic,weak) UIButton *commitButton;
 @end

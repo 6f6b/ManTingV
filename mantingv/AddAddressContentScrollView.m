@@ -8,16 +8,23 @@
 
 #import "AddAddressContentScrollView.h"
 
+@interface AddAddressContentScrollView ()<UITextFieldDelegate>
+@end
 @implementation AddAddressContentScrollView
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     self.contactPersonEditView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
     self.contactAddressEditView.frame = CGRectMake(0, CGRectGetMaxY(self.contactPersonEditView.frame), SCREEN_WIDTH, 200);
+    self.addressForDetailTextFiled.frame = CGRectMake(0, CGRectGetMaxY(self.contactAddressEditView.frame), SCREEN_WIDTH, 50);
+    self.commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.addressForDetailTextFiled.frame)+10, SCREEN_WIDTH-20, 40);
+    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.commitButton.frame));
 }
 
 - (ContactPersonEditView *)contactPersonEditView{
     if (nil == _contactPersonEditView) {
         ContactPersonEditView *contactPersonEditView = [[ContactPersonEditView alloc] init];
+        contactPersonEditView.nameEditView.rightTextFiled.delegate = self;
+        contactPersonEditView.phoneNumEditView.rightTextFiled.delegate = self;
         contactPersonEditView.titleLabel.text = @"联系人";
         contactPersonEditView.backgroundColor = [UIColor redColor];
         [self addSubview:contactPersonEditView];
@@ -36,5 +43,65 @@
         _contactAddressEditView = contactAddressEditView;
     }
     return _contactAddressEditView;
+}
+
+- (UITextField *)addressForDetailTextFiled{
+    if (nil == _addressForDetailTextFiled) {
+        UITextField *addressForDetailTextFiled = [[UITextField alloc] init];
+        addressForDetailTextFiled.delegate = self;
+        [self addSubview:addressForDetailTextFiled];
+        _addressForDetailTextFiled = addressForDetailTextFiled;
+        addressForDetailTextFiled.placeholder = @"请输入详细地址";
+    }
+    return _addressForDetailTextFiled;
+}
+
+- (UIButton *)commitButton{
+    if (nil == _commitButton) {
+        UIButton *commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [commitButton setTitle:@"提交" forState:UIControlStateNormal];
+        [commitButton addTarget:self action:@selector(commitAddressInformation) forControlEvents:UIControlEventTouchUpInside];
+        commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.addressForDetailTextFiled.frame)+10, SCREEN_WIDTH-20, 40);
+        [commitButton setBackgroundColor:[UIColor orangeColor]];
+        [self addSubview:commitButton];
+        _commitButton = commitButton;
+    }
+    return _commitButton;
+}
+
+- (void)commitAddressInformation{
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userGuid = [user objectForKey:USER_GUID];
+    
+    [parameter setValue:userGuid forKey:@"userGuid"];
+    [parameter setValue:self.contactPersonEditView.nameEditView.rightTextFiled.text forKey:@"username"];
+    [parameter setValue:self.contactPersonEditView.phoneNumEditView.rightTextFiled.text forKey:@"phoneNum"];
+    [parameter setValue:self.contactAddressEditView.proviceEditView.Id forKey:@"province"];
+    [parameter setValue:self.contactAddressEditView.cityEditView.Id forKey:@"city"];
+    [parameter setValue:self.contactAddressEditView.countyEditView.Id forKey:@"district"];
+    [parameter setValue:self.addressForDetailTextFiled.text forKey:@"area"];
+    
+    NSString *url = [BASE_URL stringByAppendingString:@"/order/add_address"];
+    [self.manager POST:url parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        [self.controller.navigationController popViewControllerAnimated:YES];
+        NSLog(@"%@",dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+}
+
+/**
+ *  textField代理事件
+ */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.addressForDetailTextFiled resignFirstResponder];
+    [self.contactPersonEditView.nameEditView.rightTextFiled resignFirstResponder];
+    [self.contactPersonEditView.phoneNumEditView.rightTextFiled resignFirstResponder];
+    return YES;
 }
 @end

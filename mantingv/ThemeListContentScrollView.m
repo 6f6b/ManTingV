@@ -7,30 +7,16 @@
 //
 
 #import "ThemeListContentScrollView.h"
-#import "LFLoopScrollViewForMT.h"
 #import "ThemeListContentView.h"
 #import "ThemeListContentScrollViewModel.h"
 #import "ResortFacilitiesView.h"
 
 @interface ThemeListContentScrollView ()<SeclectionViewDelegate>
-//@property (nonatomic,weak) LFLoopScrollViewForMT *themeListPictuerScrollView;
 @property (nonatomic,weak) ThemeListContentView *themListContentView;
 @property (nonatomic,weak) LFSelectionView *selectView;
 @end
 
 @implementation ThemeListContentScrollView
-
-//- (LFLoopScrollViewForMT *)themeListPictuerScrollView{
-//    if (nil == _themeListPictuerScrollView) {
-//        LFLoopScrollViewForMT *themeListPictuerScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-//        
-//        themeListPictuerScrollView.autoScroll = YES;
-//        themeListPictuerScrollView.backgroundColor = [UIColor greenColor];
-//        _themeListPictuerScrollView = themeListPictuerScrollView;
-//        [self addSubview:_themeListPictuerScrollView];
-//    }
-//    return _themeListPictuerScrollView;
-//}
 
 
 //主题列表视图

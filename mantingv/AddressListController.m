@@ -36,6 +36,10 @@
     [self loadDataFromServer];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self loadDataFromServer];
+}
+
 /**
  *  从服务器加载地址列表
  */

@@ -7,6 +7,7 @@
 //
 
 #import "OrderView.h"
+#import "ThemeListViewModel.h"
 
 @interface OrderView ()
 @property (nonatomic,weak) UILabel *topCycleLabel;
@@ -138,10 +139,13 @@
 }
 
 - (void)setValueWith:(id)data{
-    self.topCycleLabel.text = @"黄金周";
-    self.titleLabel.text = @"太湖东山天景";
-    self.cycleLabel.text = @"周期：黄金周";
-    self.houseTypeLabel.text = @"房型:十居室";
-    self.sizeLabel.text = @"总面积：500.27平米";
+    
+    ThemeListViewModel *model = data;
+    [self.backImage lfSetImageWithURL:model.imageUrl];
+    self.topCycleLabel.text = [NSString stringWithFormat:@"周期：%@",model.name];
+    self.titleLabel.text = model.title;
+    self.cycleLabel.text = [NSString stringWithFormat:@"周期：%@",model.name];
+    self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",model.houseType];
+    self.sizeLabel.text = [NSString stringWithFormat:@"面积：%@",model.buildingTypeArea];
 }
 @end

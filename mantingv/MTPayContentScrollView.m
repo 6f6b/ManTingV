@@ -8,20 +8,15 @@
 
 #import "MTPayContentScrollView.h"
 
-#import "AddressContentView.h"
-//#import "AddAddressView.h"
-//#import "RecipientInformationView.h"
+#import "MTPayController.h"
 #import "OrderView.h"
-#import "PurchaseQuantityView.h"
 #import "FreightView.h"
 #import "LeaveWordView.h"
 #import "PurchaseAgreementView.h"
 #import "PayTypeView.h"
 
 @interface MTPayContentScrollView ()
-@property (nonatomic,weak) AddressContentView *addressContentView;
 @property (nonatomic,weak) OrderView *orderView;
-@property (nonatomic,weak) PurchaseQuantityView *purchaseQuantityView;
 @property (nonatomic,weak) FreightView *freightView;
 @property (nonatomic,weak) LeaveWordView *leaveWordView;
 @property (nonatomic,weak) PurchaseAgreementView *purchaseAgreementView;
@@ -84,6 +79,7 @@
 - (PurchaseQuantityView *)purchaseQuantityView{
     if (nil == _purchaseQuantityView) {
         PurchaseQuantityView *purchaseQuantityView = [[PurchaseQuantityView alloc] init];
+        purchaseQuantityView.controller = self.controller;
         purchaseQuantityView.backgroundColor = [UIColor greenColor];
         [self addSubview:purchaseQuantityView];
         _purchaseQuantityView = purchaseQuantityView;
@@ -114,6 +110,7 @@
 - (PurchaseAgreementView *)purchaseAgreementView{
     if (nil == _purchaseAgreementView) {
         PurchaseAgreementView *purchaseAgreementView = [[PurchaseAgreementView alloc] init];
+        purchaseAgreementView.controller = self.controller;
         purchaseAgreementView.backgroundColor = [UIColor greenColor];
         [self addSubview:purchaseAgreementView];
         _purchaseAgreementView = purchaseAgreementView;
@@ -132,8 +129,10 @@
 }
 
 - (void)setValueWith:(id)data{
+    MTPayController *payController = self.controller;
+    
     //刷新控件数据
     [self.addressContentView setValueWith:nil];
-    [self.orderView setValueWith:nil];
+    [self.orderView setValueWith:data];
 }
 @end

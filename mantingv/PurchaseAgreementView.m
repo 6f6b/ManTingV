@@ -7,6 +7,8 @@
 //
 
 #import "PurchaseAgreementView.h"
+#import "AgreementController.h"
+#import "MTPayController.h"
 
 @interface PurchaseAgreementView ()
 @property (nonatomic,weak) UILabel *purchaseAgreementLabel;
@@ -51,6 +53,9 @@
         //宽 20
         make.width.equalTo(@20);
     }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap)];
+    [self addGestureRecognizer:tap];
 }
 
 - (UILabel *)purchaseAgreementLabel{
@@ -81,5 +86,13 @@
         _indicateImage = indicateImage;
     }
     return _indicateImage;
+}
+
+- (void)dealTap{
+    AgreementController *agreementController = [[AgreementController alloc] init];
+    MTPayController *payController = (MTPayController *)self.controller;
+    NSLog(@"_______>%@",payController);
+    agreementController.houseInfoGuid = payController.themeListViewModel.houseInfoGuid;
+    [payController.navigationController pushViewController:agreementController animated:YES];
 }
 @end

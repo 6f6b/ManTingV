@@ -10,7 +10,7 @@
 #import "AFHTTPSessionManagerForMT.h"
 @interface MTBaseScrollView : UIScrollView
 @property (nonatomic,strong) MTModel *model;
-@property (nonatomic,strong) UIViewController *controller;
+@property (nonatomic,weak) UIViewController *controller;
 @property (nonatomic,strong) AFHTTPSessionManagerForMT *manager;
 - (void)setValueWith:(id)data;
 @end

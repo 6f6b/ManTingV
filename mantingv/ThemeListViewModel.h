@@ -19,4 +19,10 @@
 @property (nonatomic,copy) NSString *guid;
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,copy) NSString *houseInfoGuid;
+
+//=================自己添加的属性,服务器在对应的字典中本应给出=======================
+@property (nonatomic,copy) NSString *houseType;
+@property (nonatomic,copy) NSString *buildingTypeArea;
+@property (nonatomic,copy) NSString *imageUrl;
+@property (nonatomic,copy) NSString *title;
 @end

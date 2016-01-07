@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MTBaseView : UIView
-@property (nonatomic,strong) UIViewController *controller;
+@property (nonatomic,weak) UIViewController *controller;
 @property (nonatomic,strong) MTModel *model;
 - (void)setValueWith:(id)data;
 @end

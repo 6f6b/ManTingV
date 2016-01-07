@@ -45,6 +45,7 @@
 - (UIPickerView *)pickerView{
     if (nil == _pickerView) {
         UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-200, SCREEN_WIDTH, 200)];
+        pickerView.backgroundColor = [UIColor colorWithRed:0.962 green:0.879 blue:1.000 alpha:1.000];
         [self.view addSubview:pickerView];
         _pickerView = pickerView;
         pickerView.dataSource = self;
@@ -71,6 +72,7 @@
 - (AddAddressContentScrollView *)addAddressContentScrollView{
     if (nil == _addAddressContentScrollView) {
         AddAddressContentScrollView *addAddressContentScrollView = [[AddAddressContentScrollView alloc] initWithFrame:self.view.bounds];
+        addAddressContentScrollView.controller = self;
         [self.view addSubview:addAddressContentScrollView];
         _addAddressContentScrollView = addAddressContentScrollView;
     }
@@ -130,6 +132,10 @@
  */
 - (void)loadAreasFromServer{
     self.pickerView.tag = 1002;
+    if (nil == self.addAddressContentScrollView.contactAddressEditView.cityEditView.Id) {
+        [KVNProgress showErrorWithStatus:@"请选择城市"];
+        return;
+    }
     NSDictionary *parameter = @{@"cityId":self.addAddressContentScrollView.contactAddressEditView.cityEditView.Id};
     NSString *url = [BASE_URL stringByAppendingString:@"/user/find_district"];
     [self.manager POST:url parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {

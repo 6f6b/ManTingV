@@ -23,7 +23,7 @@
 @implementation MTTabBarController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];    
     
     //创建首页
     HomeController *home = [[HomeController alloc] init];

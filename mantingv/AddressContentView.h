@@ -9,5 +9,5 @@
 #import "MTBaseView.h"
 
 @interface AddressContentView : MTBaseView
-
+@property (nonatomic,copy) NSString *addressGuid;
 @end

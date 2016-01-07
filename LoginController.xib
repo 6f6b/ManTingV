@@ -34,6 +34,9 @@
                             <include reference="M7a-Lw-bA3"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="5Pm-tj-TDo"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-PB-nPD">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -159,6 +162,9 @@
                             <include reference="BXQ-QM-Zxr"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="sat-Dz-8Ex"/>
+                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,7 +178,7 @@
                 <constraint firstItem="H70-lX-gWV" firstAttribute="leading" secondItem="4Jx-be-Mjr" secondAttribute="trailing" constant="5" id="CHZ-0P-uqh">
                     <variation key="heightClass=regular" constant="10"/>
                 </constraint>
-                <constraint firstItem="91a-VL-Qwn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="164" id="DJk-k4-Zem"/>
+                <constraint firstItem="91a-VL-Qwn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="114" id="DJk-k4-Zem"/>
                 <constraint firstItem="H70-lX-gWV" firstAttribute="top" secondItem="nGr-PB-nPD" secondAttribute="bottom" constant="30" id="LSg-uf-3Pb"/>
                 <constraint firstItem="iQm-OW-XuY" firstAttribute="top" secondItem="91a-VL-Qwn" secondAttribute="bottom" constant="20" id="Peb-fa-wo1"/>
                 <constraint firstItem="JUL-wZ-zEz" firstAttribute="centerY" secondItem="4Jx-be-Mjr" secondAttribute="centerY" id="X4B-iv-QDD"/>
