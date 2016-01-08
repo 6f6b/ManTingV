@@ -67,7 +67,7 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor grayColor];
+//        backImage.backgroundColor = [UIColor grayColor];
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -78,7 +78,8 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.backgroundColor = [UIColor orangeColor];
+        titleLabel.textColor = [UIColor whiteColor];
+//        titleLabel.backgroundColor = [UIColor orangeColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -88,7 +89,8 @@
 - (UILabel *)bargainPriceLabel{
     if (nil == _bargainPriceLabel) {
         UILabel *bargainPriceLabel = [[UILabel alloc] init];
-        bargainPriceLabel.backgroundColor = [UIColor yellowColor];
+        bargainPriceLabel.textColor = [UIColor whiteColor];
+        bargainPriceLabel.backgroundColor = [UIColor colorWithRed:0.996 green:0.665 blue:0.166 alpha:1.000];
         [self addSubview:bargainPriceLabel];
         bargainPriceLabel.text = @"特价";
         _bargainPriceLabel = bargainPriceLabel;
@@ -99,7 +101,8 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.backgroundColor = [UIColor greenColor];
+        priceLabel.textColor = [UIColor whiteColor];
+        priceLabel.backgroundColor = [UIColor colorWithWhite:0.316 alpha:1.000];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }

@@ -38,6 +38,15 @@
     self.tableView.dataSource = self;
     
     [self loadDataFromServer];
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 #pragma mark - 从服务器下载数据

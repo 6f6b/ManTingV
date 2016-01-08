@@ -26,15 +26,15 @@
     NSArray *arr = model.data;
     for (int i=0; i<arr.count; i++) {
         float X = i%2*10+(SCREEN_WIDTH-10)/2*(i%2);
-        float Y = i/2*100+40;
+        float Y = i/2*160+40;
         float W = (SCREEN_WIDTH-10)/2;
-        float H = 90;
+        float H = 150;
         
         ChoiceRoom *choiceRoom = [[ChoiceRoom alloc] initWithFrame:CGRectMake(X, Y, W, H)];
         choiceRoom.controller = self.controller;
         choiceRoom.layer.cornerRadius = 5;
         choiceRoom.clipsToBounds = YES;
-        choiceRoom.backgroundColor = [UIColor grayColor];
+        choiceRoom.backgroundColor = [UIColor whiteColor];
         choiceRoom.tag = 100+i;
         
         [self addSubview:choiceRoom];

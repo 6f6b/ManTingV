@@ -38,6 +38,7 @@
     BookOrderController *bookOrderController = [[BookOrderController alloc] init];
     RelatedProductViewModel *model = (RelatedProductViewModel *)self.model;
     bookOrderController.earnestMoney = model.price;
+    bookOrderController.rentGuid = model.guid;
     [self.controller.navigationController pushViewController:bookOrderController animated:YES];
 }
 

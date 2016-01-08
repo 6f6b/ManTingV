@@ -12,6 +12,7 @@
 #import "LoginController.h"
 
 #import "RightsListController.h"
+#import "MyExchangeListController.h"
 #import "MyShortRentListController.h"
 #import "MyAssignmentListController.h"
 #import "MyCheckInListController.h"
@@ -32,7 +33,7 @@
         
         self.mineTopContainView.frame = CGRectMake(0, 0, self.mineTopContainView.frame.size.width, self.mineTopContainView.frame.size.height);
         
-        NSArray *titles = @[@"权益中心",@"我的短租",@"我的转让",@"我的入住",@"帐号设置",@"关于我们"];
+        NSArray *titles = @[@"权益中心",@"我的交换",@"我的短租",@"我的转让",@"我的入住",@"帐号设置",@"关于我们"];
         for (int i=0; i<6; i++) {
             MineSubView *mineSubView = [MineSubView mineSubViewWithLeftImage:@"arrow_right_12.81592039801px_1197003_easyicon.net"rightImage:@"arrow_right_12.81592039801px_1197003_easyicon.net" title:titles[i]];
             mineSubView.tag = 1000+i;
@@ -65,7 +66,6 @@
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *guid = [user objectForKey:USER_GUID];
 
-    NSLog(@"---------->guid%@",guid);
     if (!guid) {
         [self.loginOrResignButton setTitle:@"登录" forState:UIControlStateNormal];
         [self.mineTopContainView setValueWith:nil];
@@ -120,34 +120,40 @@
         }
             break;
         case 1001:{
+            //我的交换
+            MyExchangeListController *myExchangeListController = [[MyExchangeListController alloc] init];
+            vc = myExchangeListController;
+        }
+            break;
+        case 1002:{
             //我的短租
             MyShortRentListController *myShortRentListController = [[MyShortRentListController alloc] init];
             vc = myShortRentListController;
         }
             
             break;
-        case 1002:{
+        case 1003:{
             //我的转让
             MyAssignmentListController *myAssignmentListController = [[MyAssignmentListController alloc] init];
             vc = myAssignmentListController;
         }
             
             break;
-        case 1003:{
+        case 1004:{
             //我的入住
             MyCheckInListController *myCheckInListController = [[MyCheckInListController alloc] init];
             vc = myCheckInListController;
         }
             
             break;
-        case 1004:{
+        case 1005:{
             //账号设置
             AccountConfigController *accountConfigController = [[AccountConfigController alloc] init];
             vc = accountConfigController;
         }
             
             break;
-        case 1005:{
+        case 1006:{
             //关于我们
             AboutUsController *aboutUsController = [[AboutUsController alloc] init];
             vc = aboutUsController;

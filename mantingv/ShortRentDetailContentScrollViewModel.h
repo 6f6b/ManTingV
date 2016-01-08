@@ -9,7 +9,7 @@
 #import "MTModel.h"
 
 @interface ShortRentDetailContentScrollViewModel : MTModel
-@property (nonatomic,copy) NSString *description;
+@property (nonatomic,copy) NSString *desc;
 @property (nonatomic,copy) NSString *houseGuid;
 @property (nonatomic,copy) NSString *guid;
 @property (nonatomic,copy) NSString *personNum;

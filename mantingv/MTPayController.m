@@ -117,7 +117,7 @@
 - (NSDictionary *)getParameter{
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
     [parameter setValue:self.themeListViewModel.guid forKey:@"houseWeekGuid"];
-    NSString *buyNum = [NSString stringWithFormat:@"%lu",(NSInteger)self.payContentScrollView.purchaseQuantityView.purchaseQuantityStepper.value];
+    NSString *buyNum = [NSString stringWithFormat:@"%lu",(long)self.payContentScrollView.purchaseQuantityView.purchaseQuantityStepper.value];
     [parameter setValue:buyNum forKey:@"buyNum"];
     
     [parameter setValue:[NSString stringWithFormat:@"%f",self.totalPrice] forKey:@"totalPrice"];

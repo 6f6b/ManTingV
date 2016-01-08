@@ -42,7 +42,7 @@
     _scrollView.userInteractionEnabled = YES;
     _scrollView.pagingEnabled = YES;
     _scrollView.delegate = self;
-    _scrollView.backgroundColor = [UIColor greenColor];
+    _scrollView.backgroundColor = [UIColor whiteColor];
     [self addSubview:scrollView];
     return _scrollView;
 }

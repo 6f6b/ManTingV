@@ -9,5 +9,9 @@
 #import "ShortRentDetailContentScrollViewModel.h"
 
 @implementation ShortRentDetailContentScrollViewModel
-
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    if ([key isEqualToString:@"description"]) {
+        self.desc = value;
+    }
+}
 @end

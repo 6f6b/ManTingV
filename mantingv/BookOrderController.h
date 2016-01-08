@@ -10,4 +10,5 @@
 
 @interface BookOrderController : MTController
 @property (nonatomic,copy) NSString *earnestMoney;
+@property (nonatomic,weak) NSString *rentGuid;
 @end

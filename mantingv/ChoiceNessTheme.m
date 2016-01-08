@@ -25,9 +25,9 @@
         choiceTheme.tag = 100+i;
         
         float X = 0;
-        float Y = 30+155*i;
+        float Y = 30+(SCREEN_WIDTH*0.5+10)*i;
         float W = SCREEN_WIDTH;
-        float H = 150;
+        float H = SCREEN_WIDTH*0.5;
         choiceTheme.frame = CGRectMake(X, Y, W, H);
         [self addSubview:choiceTheme];
         [choiceTheme setValueWith:arr[i]];

@@ -10,12 +10,14 @@
 #import "HomeController.h"
 
 #import "LFLoopScrollView.h"
+#import "FunctionButtonsView.h"
 #import "ChoiceNessRoom.h"
 #import "ChoiceNessTheme.h"
 #import "ThemeContentView.h"
 
 @interface HomeContentScrollView : ContentScrollViewWithLoopScrollView
 @property (nonatomic,strong) NSMutableArray * fourButtons;
+@property (nonatomic,weak) FunctionButtonsView *functionButtonsView;
 @property (nonatomic,weak) ChoiceNessTheme *choiceNessTheme;
 @property (nonatomic,weak) ChoiceNessRoom *choiceNessRoom;
 @property (nonatomic,weak) UIImageView *what;

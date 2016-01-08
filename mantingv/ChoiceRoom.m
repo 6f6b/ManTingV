@@ -79,7 +79,6 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor redColor];
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -89,7 +88,8 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.backgroundColor = [UIColor orangeColor];
+        titleLabel.textColor = [UIColor whiteColor];
+        titleLabel.backgroundColor = [UIColor colorWithRed:0.054 green:0.027 blue:0.000 alpha:0.550];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -99,7 +99,7 @@
 - (UILabel *)sizeLabel{
     if (nil == _sizeLabel) {
         UILabel *sizeLabel = [[UILabel alloc] init];
-        sizeLabel.backgroundColor = [UIColor yellowColor];
+//        sizeLabel.backgroundColor = [UIColor yellowColor];
         [self addSubview:sizeLabel];
         _sizeLabel = sizeLabel;
     }
@@ -109,7 +109,8 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.backgroundColor = [UIColor greenColor];
+        priceLabel.textColor = [UIColor colorWithRed:1.000 green:0.086 blue:0.174 alpha:1.000];
+//        priceLabel.backgroundColor = [UIColor greenColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
@@ -123,7 +124,7 @@
     [self.backImage lfSetImageWithURL:model.imageGuids[0]];
     self.titleLabel.text = model.name;
     self.sizeLabel.text = model.houseType;
-    self.priceLabel.text = model.price;
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
 //    @property (nonatomic,weak) UIImageView *backImage;
 //    @property (nonatomic,weak) UILabel *titleLabel;
 //    @property (nonatomic,weak) UILabel *sizeLabel;

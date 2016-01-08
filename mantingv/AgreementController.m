@@ -7,6 +7,7 @@
 //
 
 #import "AgreementController.h"
+#import "YYLabel.h"
 
 @interface AgreementController ()
 @property (nonatomic,weak) UITextView *agreementLabel;
@@ -23,12 +24,11 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSDictionary *agreementDTO = [dic objectForKey:@"data"];
-        [self.agreementLabel setText:[agreementDTO objectForKey:@"content"]];
-//        self.agreementLabel.text = [agreementDTO objectForKey:@"content"];
-        
-        [ZJModelTool createModelWithDictionary:[dic objectForKey:@"data"] modelName:nil];
+        NSString *webString = [agreementDTO objectForKey:@"content"];
+        UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [web loadHTMLString:webString baseURL:nil];
+        [self.view addSubview:web];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
     }];
     // Do any additional setup after loading the view.
 }

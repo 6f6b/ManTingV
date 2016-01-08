@@ -11,12 +11,11 @@
 @implementation FunctionButtonsView
 
 + (instancetype)functionButtonsViewWithOrigin:(CGPoint)origin{
-    FunctionButtonsView *functionButtonsView = [[FunctionButtonsView alloc] initWithFrame:CGRectMake(origin.x, origin.y, SCREEN_WIDTH, 60)];
+    FunctionButtonsView *functionButtonsView = [[FunctionButtonsView alloc] initWithFrame:CGRectMake(origin.x, origin.y, SCREEN_WIDTH, 100)];
     return functionButtonsView;
 }
 
 - (void)setImages:(NSArray *)images titles:(NSArray *)titles{
-    NSLog(@"设置图片");
     [self setImages:images];
     [self setTitles:titles];
 }
@@ -45,6 +44,7 @@
         CGFloat H = 20;
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(X,Y, W, H)];
+        label.font = [UIFont systemFontOfSize:13];
         label.textAlignment = NSTextAlignmentCenter;
         [self addSubview:label];
         label.text = titles[i];

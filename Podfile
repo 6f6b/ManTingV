@@ -15,3 +15,6 @@ pod 'KVNProgress', '~> 2.2.2'
 
 platform :ios, '9.1'
 pod 'MJExtension', '~> 3.0.7'
+
+platform :ios, '9.1'
+pod 'YYText', '~> 0.9.16'

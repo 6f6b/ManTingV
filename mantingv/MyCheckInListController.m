@@ -10,7 +10,7 @@
 
 @interface MyCheckInListController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,weak) UITableView *tableView;
-@property (nonatomic,strong) NSArray *dataArray;
+@property (nonatomic,copy) NSArray *dataArray;
 @end
 
 @implementation MyCheckInListController
@@ -21,15 +21,17 @@
     
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *userGuid = [user objectForKey:USER_GUID];
-    NSString *urlWithOutGuid = [BASE_URL stringByAppendingString:@"/reserve/list/"];
+    NSString *urlWithOutGuid = [BASE_URL stringByAppendingString:@"/my_house/reserve_list/"];
     NSString *url = [urlWithOutGuid stringByAppendingString:userGuid];
     
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSArray *arr = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *arr = [dic objectForKey:@"data"];
         self.dataArray = arr;
+//        [ZJModelTool createModelWithDictionary:arr[0] modelName:nil];
         if (0 == arr.count) {
             [KVNProgress showErrorWithStatus:@"sorr！you have no vacation house yet"];
         }
@@ -69,7 +71,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = @"我的入驻";
+    cell.textLabel.text = @"我的入住";
     return cell;
 }
 

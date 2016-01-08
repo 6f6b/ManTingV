@@ -89,6 +89,17 @@
 		03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669AF1C2A7DB3001C4C2C /* UIImageView+LF.m */; };
 		03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669B41C2A98E8001C4C2C /* ChoiceThemeModel.m */; };
 		03D669B81C2AA04D001C4C2C /* ChoiceRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D669B71C2AA04D001C4C2C /* ChoiceRoomModel.m */; };
+		03D6E5181C3F87DD0068142C /* MyRentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5161C3F87DD0068142C /* MyRentListCell.m */; };
+		03D6E5191C3F87DD0068142C /* MyRentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6E5171C3F87DD0068142C /* MyRentListCell.xib */; };
+		03D6E51C1C3F87F70068142C /* RentListDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E51B1C3F87F70068142C /* RentListDTOModel.m */; };
+		03D6E5201C3F91B50068142C /* MyAssignmentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E51E1C3F91B50068142C /* MyAssignmentListCell.m */; };
+		03D6E5211C3F91B50068142C /* MyAssignmentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6E51F1C3F91B50068142C /* MyAssignmentListCell.xib */; };
+		03D6E5241C3F93840068142C /* AssignmentDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5231C3F93840068142C /* AssignmentDTOModel.m */; };
+		03D6E52A1C3F97810068142C /* MyhouseDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5291C3F97810068142C /* MyhouseDTOModel.m */; };
+		03D6E5311C3FA10D0068142C /* MyExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5301C3FA10D0068142C /* MyExchangeListController.m */; };
+		03D6E5351C3FA5040068142C /* MyExchangeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5331C3FA5040068142C /* MyExchangeListCell.m */; };
+		03D6E5361C3FA5040068142C /* MyExchangeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6E5341C3FA5040068142C /* MyExchangeListCell.xib */; };
+		03D6E5391C3FA6700068142C /* ExchangePoolDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5381C3FA6700068142C /* ExchangePoolDTOModel.m */; };
 		03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7D41C210491003A3A68 /* MTLoginController.m */; };
 		03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7D91C210506003A3A68 /* MTLoginContentScrollVIew.m */; };
 		03D7A7DD1C210772003A3A68 /* MTLoginModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D7A7DC1C210772003A3A68 /* MTLoginModule.m */; };
@@ -365,6 +376,25 @@
 		03D669B41C2A98E8001C4C2C /* ChoiceThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceThemeModel.m; sourceTree = "<group>"; };
 		03D669B61C2AA04D001C4C2C /* ChoiceRoomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceRoomModel.h; sourceTree = "<group>"; };
 		03D669B71C2AA04D001C4C2C /* ChoiceRoomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceRoomModel.m; sourceTree = "<group>"; };
+		03D6E5151C3F87DD0068142C /* MyRentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRentListCell.h; sourceTree = "<group>"; };
+		03D6E5161C3F87DD0068142C /* MyRentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRentListCell.m; sourceTree = "<group>"; };
+		03D6E5171C3F87DD0068142C /* MyRentListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRentListCell.xib; sourceTree = "<group>"; };
+		03D6E51A1C3F87F70068142C /* RentListDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentListDTOModel.h; sourceTree = "<group>"; };
+		03D6E51B1C3F87F70068142C /* RentListDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentListDTOModel.m; sourceTree = "<group>"; };
+		03D6E51D1C3F91B50068142C /* MyAssignmentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAssignmentListCell.h; sourceTree = "<group>"; };
+		03D6E51E1C3F91B50068142C /* MyAssignmentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAssignmentListCell.m; sourceTree = "<group>"; };
+		03D6E51F1C3F91B50068142C /* MyAssignmentListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAssignmentListCell.xib; sourceTree = "<group>"; };
+		03D6E5221C3F93840068142C /* AssignmentDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentDTOModel.h; sourceTree = "<group>"; };
+		03D6E5231C3F93840068142C /* AssignmentDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentDTOModel.m; sourceTree = "<group>"; };
+		03D6E5281C3F97810068142C /* MyhouseDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyhouseDTOModel.h; sourceTree = "<group>"; };
+		03D6E5291C3F97810068142C /* MyhouseDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyhouseDTOModel.m; sourceTree = "<group>"; };
+		03D6E52F1C3FA10D0068142C /* MyExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExchangeListController.h; sourceTree = "<group>"; };
+		03D6E5301C3FA10D0068142C /* MyExchangeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyExchangeListController.m; sourceTree = "<group>"; };
+		03D6E5321C3FA5040068142C /* MyExchangeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExchangeListCell.h; sourceTree = "<group>"; };
+		03D6E5331C3FA5040068142C /* MyExchangeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyExchangeListCell.m; sourceTree = "<group>"; };
+		03D6E5341C3FA5040068142C /* MyExchangeListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyExchangeListCell.xib; sourceTree = "<group>"; };
+		03D6E5371C3FA6700068142C /* ExchangePoolDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangePoolDTOModel.h; sourceTree = "<group>"; };
+		03D6E5381C3FA6700068142C /* ExchangePoolDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangePoolDTOModel.m; sourceTree = "<group>"; };
 		03D7A7D31C210491003A3A68 /* MTLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginController.h; sourceTree = "<group>"; };
 		03D7A7D41C210491003A3A68 /* MTLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLoginController.m; sourceTree = "<group>"; };
 		03D7A7D81C210506003A3A68 /* MTLoginContentScrollVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginContentScrollVIew.h; sourceTree = "<group>"; };
@@ -940,15 +970,16 @@
 		03775B921C113B0200319C32 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03775B9F1C113C3000319C32 /* MineController.h */,
-				03775BA01C113C3000319C32 /* MineController.m */,
 				03D5BC431C34CCA200B92A72 /* 登录 */,
 				03D8AFB61C1A67BE00B41FF0 /* 权益中心 */,
+				03D6E52B1C3FA05E0068142C /* 我的交换 */,
 				03D2519E1C22A2A600BA9ED7 /* 我的短租 */,
 				03D251A81C22A31D00BA9ED7 /* 我的转让 */,
 				03D251A71C22A31B00BA9ED7 /* 我的入住 */,
 				03D251A61C22A31A00BA9ED7 /* 账号设置 */,
 				03D251A51C22A31800BA9ED7 /* 关于我们 */,
+				03775B9F1C113C3000319C32 /* MineController.h */,
+				03775BA01C113C3000319C32 /* MineController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1072,6 +1103,9 @@
 			children = (
 				03DA24661C23AB2D0098FE4B /* MTSwitchView.h */,
 				03DA24671C23AB2D0098FE4B /* MTSwitchView.m */,
+				03D6E5151C3F87DD0068142C /* MyRentListCell.h */,
+				03D6E5161C3F87DD0068142C /* MyRentListCell.m */,
+				03D6E5171C3F87DD0068142C /* MyRentListCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1079,6 +1113,8 @@
 		03D251A11C22A2C100BA9ED7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03D6E51A1C3F87F70068142C /* RentListDTOModel.h */,
+				03D6E51B1C3F87F70068142C /* RentListDTOModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1114,8 +1150,8 @@
 		03D251A81C22A31D00BA9ED7 /* 我的转让 */ = {
 			isa = PBXGroup;
 			children = (
-				03D251AB1C22A39500BA9ED7 /* models */,
-				03D251AA1C22A39300BA9ED7 /* New Group1 */,
+				03D251AB1C22A39500BA9ED7 /* Models */,
+				03D251AA1C22A39300BA9ED7 /* Views */,
 				03D251A91C22A39100BA9ED7 /* Controllers */,
 			);
 			name = "我的转让";
@@ -1130,18 +1166,25 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		03D251AA1C22A39300BA9ED7 /* New Group1 */ = {
+		03D251AA1C22A39300BA9ED7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03D6E51D1C3F91B50068142C /* MyAssignmentListCell.h */,
+				03D6E51E1C3F91B50068142C /* MyAssignmentListCell.m */,
+				03D6E51F1C3F91B50068142C /* MyAssignmentListCell.xib */,
 			);
-			name = "New Group1";
+			name = Views;
 			sourceTree = "<group>";
 		};
-		03D251AB1C22A39500BA9ED7 /* models */ = {
+		03D251AB1C22A39500BA9ED7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03D6E5221C3F93840068142C /* AssignmentDTOModel.h */,
+				03D6E5231C3F93840068142C /* AssignmentDTOModel.m */,
+				03D6E5281C3F97810068142C /* MyhouseDTOModel.h */,
+				03D6E5291C3F97810068142C /* MyhouseDTOModel.m */,
 			);
-			name = models;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		03D251AC1C22A39700BA9ED7 /* Controllers */ = {
@@ -1384,6 +1427,44 @@
 				03D6698E1C2A4635001C4C2C /* ZJModelTool.m */,
 			);
 			path = ZJModelTool;
+			sourceTree = "<group>";
+		};
+		03D6E52B1C3FA05E0068142C /* 我的交换 */ = {
+			isa = PBXGroup;
+			children = (
+				03D6E52E1C3FA0D90068142C /* Models */,
+				03D6E52D1C3FA0D60068142C /* Views */,
+				03D6E52C1C3FA0D30068142C /* Controllers */,
+			);
+			name = "我的交换";
+			sourceTree = "<group>";
+		};
+		03D6E52C1C3FA0D30068142C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03D6E52F1C3FA10D0068142C /* MyExchangeListController.h */,
+				03D6E5301C3FA10D0068142C /* MyExchangeListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03D6E52D1C3FA0D60068142C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03D6E5321C3FA5040068142C /* MyExchangeListCell.h */,
+				03D6E5331C3FA5040068142C /* MyExchangeListCell.m */,
+				03D6E5341C3FA5040068142C /* MyExchangeListCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03D6E52E1C3FA0D90068142C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03D6E5371C3FA6700068142C /* ExchangePoolDTOModel.h */,
+				03D6E5381C3FA6700068142C /* ExchangePoolDTOModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		03D7A7D21C210470003A3A68 /* 登录界面 */ = {
@@ -2184,6 +2265,7 @@
 				0376AFE81C1196C30033D2A2 /* Welcome3.jpg in Resources */,
 				0376AFEC1C1196C30033D2A2 /* Welcome_3.0_2.jpg in Resources */,
 				0376AFED1C1196C30033D2A2 /* Welcome_3.0_2@2x.jpg in Resources */,
+				03D6E5211C3F91B50068142C /* MyAssignmentListCell.xib in Resources */,
 				03DB9D211C20596D00A40361 /* alipay_48px_1186722_easyicon.net.png in Resources */,
 				03E0A25D1C18274000FCAAAC /* property.png in Resources */,
 				03D643A01C195C590082F0D4 /* login.png in Resources */,
@@ -2212,6 +2294,7 @@
 				0376AFF01C1196C30033D2A2 /* Welcome_3.0_4.jpg in Resources */,
 				03DC50011C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png in Resources */,
 				03D251C51C22A4AA00BA9ED7 /* AccountConfigController.xib in Resources */,
+				03D6E5191C3F87DD0068142C /* MyRentListCell.xib in Resources */,
 				0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */,
 				03DC50DB1C293AC60040C939 /* CommitSuccessController.xib in Resources */,
 				03DEECEB1C3B63F900EE518F /* MyHouseListCell.xib in Resources */,
@@ -2225,6 +2308,7 @@
 				0376AFEB1C1196C30033D2A2 /* Welcome_3.0_1@2x.jpg in Resources */,
 				03DA248B1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png in Resources */,
 				03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */,
+				03D6E5361C3FA5040068142C /* MyExchangeListCell.xib in Resources */,
 				03DC50BB1C291CC40040C939 /* add_24px_1138892_easyicon.net.png in Resources */,
 				03E6BB4D1C3CE1A50008D68B /* AddAddressCell.xib in Resources */,
 				03D7A7EF1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg in Resources */,
@@ -2326,6 +2410,7 @@
 				03DB9D0A1C200B3E00A40361 /* RecipientInformationView.m in Sources */,
 				03D7A7EB1C214776003A3A68 /* MineSubView.m in Sources */,
 				03DC50871C291B750040C939 /* CheckInDetailMessageContainView.m in Sources */,
+				03D6E52A1C3F97810068142C /* MyhouseDTOModel.m in Sources */,
 				03DEECF11C3B6CB600EE518F /* HouseInfoDTOModel.m in Sources */,
 				03D251DF1C22AE9300BA9ED7 /* ModifyNickNameController.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
@@ -2334,12 +2419,14 @@
 				03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */,
 				03DC508A1C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m in Sources */,
 				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
+				03D6E5181C3F87DD0068142C /* MyRentListCell.m in Sources */,
 				03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */,
 				03E066451C27929600E85778 /* ExchangeController.m in Sources */,
 				03D669AA1C2A7A70001C4C2C /* ThemeModel.m in Sources */,
 				03E6BB3A1C3CB3B80008D68B /* AddressContentView.m in Sources */,
 				03E066861C28028700E85778 /* TransferDetailController.m in Sources */,
 				03D8AFCF1C1AA5D700B41FF0 /* MTBaseView.m in Sources */,
+				03D6E5351C3FA5040068142C /* MyExchangeListCell.m in Sources */,
 				03DA24741C23D3F90098FE4B /* Theme.m in Sources */,
 				03DB9D131C200C7900A40361 /* FreightView.m in Sources */,
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
@@ -2373,6 +2460,7 @@
 				03E6BB561C3CE8190008D68B /* AddAddressContentScrollView.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */,
+				03D6E5241C3F93840068142C /* AssignmentDTOModel.m in Sources */,
 				03E6BB471C3CC3DC0008D68B /* AddressListCell.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
 				03D251E61C22BDDA00BA9ED7 /* BookOrderController.m in Sources */,
@@ -2381,9 +2469,11 @@
 				03DC4FF91C28E9E60040C939 /* INeedCheckInController.m in Sources */,
 				03D0929C1C2D07840057182F /* ProductViewFatherModel.m in Sources */,
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
+				03D6E5391C3FA6700068142C /* ExchangePoolDTOModel.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
 				03CFAEC91C321F42009C80EB /* ShortRentContentScrollView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
+				03D6E5311C3FA10D0068142C /* MyExchangeListController.m in Sources */,
 				03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */,
 				03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */,
 				03DEECF91C3B72EE00EE518F /* MyHouseListDetailController.m in Sources */,
@@ -2395,6 +2485,7 @@
 				03DEED041C3B91FA00EE518F /* FunctionButtonsView.m in Sources */,
 				03E066831C28026400E85778 /* TransferDetailContentScrollView.m in Sources */,
 				03E0666A1C27C80E00E85778 /* ExchangeDetailPayMessageView.m in Sources */,
+				03D6E51C1C3F87F70068142C /* RentListDTOModel.m in Sources */,
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
 				03D092A21C2D21300057182F /* ThemeListContentScrollViewModel.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
@@ -2444,6 +2535,7 @@
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
 				03CFAECF1C3228E0009C80EB /* ShortRentContentView.m in Sources */,
 				03DB9CF51C1FF23600A40361 /* ProductView.m in Sources */,
+				03D6E5201C3F91B50068142C /* MyAssignmentListCell.m in Sources */,
 				03DB9CEF1C1FDF8C00A40361 /* ProductContainView.m in Sources */,
 				03FB248C1C33A8360049CADB /* AFHTTPSessionManagerForMT.m in Sources */,
 				03775BA61C113E8600319C32 /* MTModel.m in Sources */,

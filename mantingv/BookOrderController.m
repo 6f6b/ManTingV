@@ -13,6 +13,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *advancePaymentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *earnestMoneyLabel;
 
+@property (weak, nonatomic) IBOutlet UITextField *reservationPerson;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNum;
+
+@property (weak, nonatomic) IBOutlet UITextField *leaveWord;
 @end
 
 @implementation BookOrderController
@@ -23,6 +27,29 @@
     self.earnestMoneyLabel.text = [NSString stringWithFormat:@"%@",self.earnestMoney];
 
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)commitButton:(id)sender {
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
+    
+    [parameter setValue:self.rentGuid forKey:@"rentGuid"];
+    [parameter setValue:self.reservationPerson.text forKey:@"username"];
+    [parameter setValue:self.phoneNum.text forKey:@"phoneNum"];
+    [parameter setValue:self.leaveWord.text forKey:@"message"];
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userGuid = [user objectForKey:USER_GUID];
+    [parameter setValue:userGuid forKey:@"userGuid"];
+    
+    NSString *url = [BASE_URL stringByAppendingString:@"/rent/pay"];
+    NSLog(@"%@",parameter);
+    [self.manager POST:url parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"---->%@",dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

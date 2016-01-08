@@ -20,6 +20,7 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - YYText (0.9.17)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0-beta.3)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Masonry (~> 0.6.3)
   - MJExtension (~> 3.0.7)
   - SDWebImage (~> 3.7.3)
+  - YYText (~> 0.9.16)
 
 SPEC CHECKSUMS:
   AFNetworking: 4bbf9c2993fe416e02093128f3be1bfe20c6e847
@@ -34,5 +36,6 @@ SPEC CHECKSUMS:
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MJExtension: 12d2875959b4a0f936ae86b22a1eb6b0251c50ba
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  YYText: af9b51c4891abeb5fc77fa8cb663ff9177c332b2
 
 COCOAPODS: 0.39.0

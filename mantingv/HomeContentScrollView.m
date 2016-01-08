@@ -15,9 +15,9 @@
 #import "ChoiceNessRoom.h"
 #import "ShortRentController.h"
 
+
 #import "MTModel.h"
-@interface HomeContentScrollView ()
-//@property (nonatomic,copy) AFHTTPSessionManager *manager;
+@interface HomeContentScrollView ()<FunctionButtonsViewDelegate>
 @end
 
 @implementation HomeContentScrollView
@@ -37,12 +37,28 @@
     [self addSubview:button];
 }
 
-- (void)dealButton:(UIButton *)button{
-    if (100 == button.tag) {
+
+
+#pragma mark - 四个按钮
+- (FunctionButtonsView *)functionButtonsView{
+    if (nil == _functionButtonsView) {
+        FunctionButtonsView *functionButtonsView = [FunctionButtonsView functionButtonsViewWithOrigin:CGPointMake(0, CGRectGetMaxY(self.loopScrollView.frame))];
+        functionButtonsView.delegate = self;
+        NSArray *titles = @[@"委托出租",@"我要入驻",@"我要交换",@"我要转让"];
+        NSArray *images = @[@"alipay_72px_1186722_easyicon.net",@"alipay_72px_1186722_easyicon.net",@"alipay_72px_1186722_easyicon.net",@"alipay_72px_1186722_easyicon.net"];
+        [functionButtonsView setImages:images titles:titles];
+        [self addSubview:functionButtonsView];
+        _functionButtonsView = functionButtonsView;
+    }
+    return _functionButtonsView;
+}
+
+- (void)clickedAtIndexOfButton:(NSInteger)index{
+    if (0 == index) {
         ProductController *pc = [[ProductController alloc] init];
         [self.controller.navigationController pushViewController:pc animated:YES];
     }
-    else if(101 == button.tag){
+    else if(1 == index){
         CheckInController *checkIn = [[CheckInController alloc] init];
         [self.controller.navigationController pushViewController:checkIn animated:YES];
     }
@@ -50,7 +66,6 @@
         RightsListController *rightsVC = [[RightsListController alloc] init];
         [self.controller.navigationController pushViewController:rightsVC animated:YES];
     }
-    
 }
 
 #pragma mark - 默认的两个主题
@@ -59,7 +74,7 @@
         ThemeContentView *themeContentView = [[ThemeContentView alloc] init];
         themeContentView.controller = self.controller;
         [self addSubview:themeContentView];
-        themeContentView.backgroundColor = [UIColor blueColor];
+        themeContentView.backgroundColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:1.000];
         _themeContentView = themeContentView;
     }
     return _themeContentView;
@@ -121,10 +136,7 @@
         MTModel *model = [MTModel modelWithDictionary:dic];
         [self.loopScrollView setImageWithUrlS:model.data];
         
-        [self setButtons];
-        
-        UIButton *button = self.fourButtons[0];
-        self.themeContentView.frame = CGRectMake(0, CGRectGetMaxY(button.frame), SCREEN_WIDTH, 0);
+        self.themeContentView.frame = CGRectMake(0, CGRectGetMaxY(self.functionButtonsView.frame)+20, SCREEN_WIDTH, 0);
         [self loadThemeContentViewData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -133,29 +145,29 @@
 
 /////////////////////////////////////////////设置四个按钮///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)setButtons{
-    NSArray *titles = @[@"我要买房",@"我要入住",@"我要交换",@"我要转让"];
-    //NSArray *images = @[];
-    for (int i=0; i<4; i++) {
-        float btnX = i*SCREEN_WIDTH/4;
-        float btnY = CGRectGetMaxY(self.loopScrollView.frame);
-        float btnW = SCREEN_WIDTH/4;
-        float btnH = 50;
-        
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setBackgroundColor:[UIColor blackColor]];
-        [button setTitle:titles[i] forState:UIControlStateNormal];
-        button.frame = CGRectMake(btnX, btnY, btnW, btnH);
-        [button setBackgroundImage:[UIImage imageNamed:@"RSS_button_48px_1104904_easyicon.net"] forState:UIControlStateNormal];
-        [button setImageEdgeInsets:UIEdgeInsetsMake(10, 20, -20, -10)];
-        [button setTitleEdgeInsets:UIEdgeInsetsMake(20, 0, -20, 0)];
-        
-        button.tag = 100+i;
-        [button addTarget:self action:@selector(dealButton:) forControlEvents:UIControlEventTouchUpInside];
-        [self.fourButtons addObject:button];
-        [self addSubview:button];
-    }
-}
+//- (void)setButtons{
+//    NSArray *titles = @[@"我要买房",@"我要入住",@"我要交换",@"我要转让"];
+//    //NSArray *images = @[];
+//    for (int i=0; i<4; i++) {
+//        float btnX = i*SCREEN_WIDTH/4;
+//        float btnY = CGRectGetMaxY(self.loopScrollView.frame);
+//        float btnW = SCREEN_WIDTH/4;
+//        float btnH = 50;
+//        
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [button setBackgroundColor:[UIColor blackColor]];
+//        [button setTitle:titles[i] forState:UIControlStateNormal];
+//        button.frame = CGRectMake(btnX, btnY, btnW, btnH);
+//        [button setBackgroundImage:[UIImage imageNamed:@"RSS_button_48px_1104904_easyicon.net"] forState:UIControlStateNormal];
+//        [button setImageEdgeInsets:UIEdgeInsetsMake(10, 20, -20, -10)];
+//        [button setTitleEdgeInsets:UIEdgeInsetsMake(20, 0, -20, 0)];
+//        
+//        button.tag = 100+i;
+//        [button addTarget:self action:@selector(dealButton:) forControlEvents:UIControlEventTouchUpInside];
+//        [self.fourButtons addObject:button];
+//        [self addSubview:button];
+//    }
+//}
 
 /////////////////////////////////////////////下载特价房间数据///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
