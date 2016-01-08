@@ -29,4 +29,5 @@
  *  @param titles title数据
  */
 - (void)setImages:(NSArray *)images titles:(NSArray *)titles;
+- (void)setImagesWithUrls:(NSArray *)images titles:(NSArray *)titles;
 @end
