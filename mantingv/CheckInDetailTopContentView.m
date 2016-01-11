@@ -7,6 +7,7 @@
 //
 
 #import "CheckInDetailTopContentView.h"
+#import "HouseInfoDTOModel.h"
 
 @interface CheckInDetailTopContentView ()
 @property (nonatomic,weak) LFLoopScrollViewForMT *pictureScrollView;
@@ -41,6 +42,8 @@
     [self.locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(superView).with.offset(10);
         make.top.equalTo(self.titleLabel.mas_bottom).with.offset(10);
+        make.right.equalTo(superView).with.offset(-10);
+//        make.bottom.equalTo(superView).with.offset(-10);
     }];
     
 }
@@ -68,6 +71,8 @@ if (nil == _pictureScrollView) {
     if (nil == _locationLabel) {
         UILabel *locationLabel = [[UILabel alloc] init];
         locationLabel.backgroundColor = [UIColor greenColor];
+        locationLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        locationLabel.numberOfLines = 0;
         locationLabel.textColor = [UIColor grayColor];
         locationLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:locationLabel];
@@ -77,12 +82,15 @@ if (nil == _pictureScrollView) {
 }
 
 - (void)setValueWith:(id)data{
-    NSArray *urls = @[@"http://down.tutu001.com/d/file/20101129/2f5ca0f1c9b6d02ea87df74fcc_560.jpg",@"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg",@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
-    [self.pictureScrollView setImageWithUrlS:urls];
+    HouseInfoDTOModel *houseInfoDTOModel = [HouseInfoDTOModel modelWithDictionary:data];
     
-    self.titleLabel.text = @"老子山公园";
-    self.locationLabel.text = @"位于德天大瀑布旁边";
+    [self.pictureScrollView setImageWithUrlS:houseInfoDTOModel.imageGuids];
     
+    self.titleLabel.text = houseInfoDTOModel.name;
+    self.locationLabel.text = houseInfoDTOModel.houseFeature;
+//    CGRect frame = self.frame;
+//    frame.size.height = CGRectGetMaxY(self.locationLabel.frame)+10;
+//    self.frame = frame;
 //    for (int i=0; i<3; i++) {
 //        CGFloat X = 10
 //        CGFloat X

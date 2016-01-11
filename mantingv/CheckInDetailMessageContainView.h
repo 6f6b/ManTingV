@@ -7,7 +7,12 @@
 //
 
 #import "MTBaseView.h"
-
+#import "CheckInDetailBaseViewWithRightStepper.h"
+#import "CheckInDetailBaseViewWithRightTextFeild.h"
 @interface CheckInDetailMessageContainView : MTBaseView
 @property (nonatomic,weak) UILabel *managementFeeLabel;
+
+@property (nonatomic,weak) CheckInDetailBaseViewWithRightStepper *numberOfPeopleCheckIn;
+@property (nonatomic,weak) CheckInDetailBaseViewWithRightTextFeild *contactPerson;
+@property (nonatomic,weak) CheckInDetailBaseViewWithRightTextFeild *forReceiveMessage;
 @end

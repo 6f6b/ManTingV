@@ -7,10 +7,12 @@
 //
 
 #import "MyCheckInListController.h"
+#import "MTSwitchView.h"
 
 @interface MyCheckInListController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,weak) UITableView *tableView;
 @property (nonatomic,copy) NSArray *dataArray;
+@property (nonatomic,weak) MTSwitchView *switchView;
 @end
 
 @implementation MyCheckInListController
@@ -19,8 +21,60 @@
     [super viewDidLoad];
     self.title = @"我的入住";
     
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *userGuid = [user objectForKey:USER_GUID];
+}
+
+- (MTSwitchView *)switchView{
+    if (nil == _switchView) {
+        NSArray *titles = @[@"正常",@"失效"];
+        MTSwitchView *switchView = [MTSwitchView switchViewWithTitles:titles];
+        [switchView setClickedAction:^(NSInteger index) {
+            NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+            NSString *userGuid = [user objectForKey:USER_GUID];
+            if (1000 == index) {
+                [self loadReserveListWithUserGuid:userGuid];
+            }
+            if (1001 == index) {
+                [self loadMyHouseReserveListWithUserGuid:userGuid];
+            }
+        }];
+        _switchView = switchView;
+        [self.view addSubview:switchView];
+    }
+    return _switchView;
+}
+
+/**
+ *  可入住列表数据
+ *
+ *  @return
+ */
+- (void)loadReserveListWithUserGuid:(NSString *)userGuid{
+    NSString *urlWithOutGuid = [BASE_URL stringByAppendingString:@"/reserve/list/"];
+    NSString *url = [urlWithOutGuid stringByAppendingString:userGuid];
+    
+    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        self.dataArray = arr;
+        if (0 == arr.count) {
+            [KVNProgress showErrorWithStatus:@"sorr！you have no vacation house yet"];
+        }
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+
+/**
+ *  已入住列表数据
+ *
+ *  @param animated
+ */
+- (void)loadMyHouseReserveListWithUserGuid:(NSString *)userGuid{
     NSString *urlWithOutGuid = [BASE_URL stringByAppendingString:@"/my_house/reserve_list/"];
     NSString *url = [urlWithOutGuid stringByAppendingString:userGuid];
     
@@ -31,7 +85,6 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSArray *arr = [dic objectForKey:@"data"];
         self.dataArray = arr;
-//        [ZJModelTool createModelWithDictionary:arr[0] modelName:nil];
         if (0 == arr.count) {
             [KVNProgress showErrorWithStatus:@"sorr！you have no vacation house yet"];
         }
@@ -40,8 +93,8 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    // Do any additional setup after loading the view.
 }
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -50,7 +103,7 @@
 
 - (UITableView *)tableView{
     if (nil == _tableView) {
-        UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.switchView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-self.switchView.frame.size.height) style:UITableViewStylePlain];
         tableView.delegate = self;
         tableView.dataSource = self;
         [self.view addSubview:tableView];

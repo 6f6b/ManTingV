@@ -30,13 +30,6 @@
     return self;
 }
 
-- (void)setButtonWithImage:(UIImage *)image frame:(CGRect)frame{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:image forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(dealButton:) forControlEvents:UIControlEventTouchDown];
-    [self addSubview:button];
-}
-
 
 
 #pragma mark - 四个按钮

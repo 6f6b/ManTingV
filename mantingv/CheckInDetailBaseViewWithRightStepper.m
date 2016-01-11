@@ -7,10 +7,7 @@
 //
 
 #import "CheckInDetailBaseViewWithRightStepper.h"
-#import "LFStepper.h"
-
 @interface CheckInDetailBaseViewWithRightStepper ()
-@property (nonatomic,weak) LFStepper *lfStepper;
 @end
 @implementation CheckInDetailBaseViewWithRightStepper
 

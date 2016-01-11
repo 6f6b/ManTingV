@@ -44,8 +44,7 @@
  *  从服务器加载地址列表
  */
 - (void)loadDataFromServer{
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *userGuid = [user objectForKey:USER_GUID];
+    NSString *userGuid = [MTTools userGuid];
     
     NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:@"/order/find_address/"];
     NSString *url = [urlWithOutUserGuid stringByAppendingString:userGuid];

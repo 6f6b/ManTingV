@@ -9,5 +9,6 @@
 #import "MTController.h"
 
 @interface INeedCheckInDetailController : MTController
-
+@property (nonatomic,copy) NSString *myHouseGuid;
+@property (nonatomic,assign) NSInteger indexOfhouseWeekGuid;
 @end

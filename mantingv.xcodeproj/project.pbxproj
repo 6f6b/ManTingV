@@ -95,7 +95,6 @@
 		03D6E5201C3F91B50068142C /* MyAssignmentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E51E1C3F91B50068142C /* MyAssignmentListCell.m */; };
 		03D6E5211C3F91B50068142C /* MyAssignmentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6E51F1C3F91B50068142C /* MyAssignmentListCell.xib */; };
 		03D6E5241C3F93840068142C /* AssignmentDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5231C3F93840068142C /* AssignmentDTOModel.m */; };
-		03D6E52A1C3F97810068142C /* MyhouseDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5291C3F97810068142C /* MyhouseDTOModel.m */; };
 		03D6E5311C3FA10D0068142C /* MyExchangeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5301C3FA10D0068142C /* MyExchangeListController.m */; };
 		03D6E5351C3FA5040068142C /* MyExchangeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6E5331C3FA5040068142C /* MyExchangeListCell.m */; };
 		03D6E5361C3FA5040068142C /* MyExchangeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6E5341C3FA5040068142C /* MyExchangeListCell.xib */; };
@@ -203,6 +202,17 @@
 		03E0A25E1C18274000FCAAAC /* short.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2591C18274000FCAAAC /* short.png */; };
 		03E0A25F1C18274000FCAAAC /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A25A1C18274000FCAAAC /* product.png */; };
 		03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E25B741C1E9E9B001A2065 /* ChooserView.m */; };
+		03E4EE441C4381D700C59D17 /* MyShortRentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE421C4381D700C59D17 /* MyShortRentDetailController.m */; };
+		03E4EE451C4381D700C59D17 /* MyShortRentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E4EE431C4381D700C59D17 /* MyShortRentDetailController.xib */; };
+		03E4EE491C438F1A00C59D17 /* CheckInMessageCommitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE471C438F1A00C59D17 /* CheckInMessageCommitController.m */; };
+		03E4EE4A1C438F1A00C59D17 /* CheckInMessageCommitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E4EE481C438F1A00C59D17 /* CheckInMessageCommitController.xib */; };
+		03E4EE4E1C43902F00C59D17 /* MTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE4D1C43902F00C59D17 /* MTTools.m */; };
+		03E4EE551C4397BE00C59D17 /* MyHouseDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE541C4397BE00C59D17 /* MyHouseDTOModel.m */; };
+		03E4EE581C439FA200C59D17 /* HouseWeekTimeDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE571C439FA200C59D17 /* HouseWeekTimeDTOModel.m */; };
+		03E4EE5B1C43A02500C59D17 /* HoseWeekDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE5A1C43A02500C59D17 /* HoseWeekDTOModel.m */; };
+		03E4EE611C43A2B900C59D17 /* HouseWeekListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE601C43A2B900C59D17 /* HouseWeekListController.m */; };
+		03E4EE651C43A3C100C59D17 /* HouseWeekListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE631C43A3C100C59D17 /* HouseWeekListCell.m */; };
+		03E4EE661C43A3C100C59D17 /* HouseWeekListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E4EE641C43A3C100C59D17 /* HouseWeekListCell.xib */; };
 		03E6BB3A1C3CB3B80008D68B /* AddressContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB391C3CB3B80008D68B /* AddressContentView.m */; };
 		03E6BB3D1C3CB8300008D68B /* AddressDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB3C1C3CB8300008D68B /* AddressDTOModel.m */; };
 		03E6BB401C3CC00E0008D68B /* AddressListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6BB3F1C3CC00E0008D68B /* AddressListController.m */; };
@@ -386,8 +396,6 @@
 		03D6E51F1C3F91B50068142C /* MyAssignmentListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAssignmentListCell.xib; sourceTree = "<group>"; };
 		03D6E5221C3F93840068142C /* AssignmentDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentDTOModel.h; sourceTree = "<group>"; };
 		03D6E5231C3F93840068142C /* AssignmentDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentDTOModel.m; sourceTree = "<group>"; };
-		03D6E5281C3F97810068142C /* MyhouseDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyhouseDTOModel.h; sourceTree = "<group>"; };
-		03D6E5291C3F97810068142C /* MyhouseDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyhouseDTOModel.m; sourceTree = "<group>"; };
 		03D6E52F1C3FA10D0068142C /* MyExchangeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExchangeListController.h; sourceTree = "<group>"; };
 		03D6E5301C3FA10D0068142C /* MyExchangeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyExchangeListController.m; sourceTree = "<group>"; };
 		03D6E5321C3FA5040068142C /* MyExchangeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExchangeListCell.h; sourceTree = "<group>"; };
@@ -425,8 +433,8 @@
 		03D8C4F91C17B9A700C71B98 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down.png; path = ../down.png; sourceTree = "<group>"; };
 		03D8C4FE1C17D24800C71B98 /* LFLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoopScrollView.h; sourceTree = "<group>"; };
 		03D8C4FF1C17D24800C71B98 /* LFLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoopScrollView.m; sourceTree = "<group>"; };
-		03DA24661C23AB2D0098FE4B /* MTSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSwitchView.h; sourceTree = "<group>"; };
-		03DA24671C23AB2D0098FE4B /* MTSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSwitchView.m; sourceTree = "<group>"; };
+		03DA24661C23AB2D0098FE4B /* MTSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTSwitchView.h; path = mantingv/MTSwitchView.h; sourceTree = "<group>"; };
+		03DA24671C23AB2D0098FE4B /* MTSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTSwitchView.m; path = mantingv/MTSwitchView.m; sourceTree = "<group>"; };
 		03DA246C1C23D0890098FE4B /* HomeContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeContentScrollView.h; sourceTree = "<group>"; };
 		03DA246D1C23D0890098FE4B /* HomeContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeContentScrollView.m; sourceTree = "<group>"; };
 		03DA24721C23D3F90098FE4B /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
@@ -579,6 +587,25 @@
 		03E0A25A1C18274000FCAAAC /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product.png; sourceTree = "<group>"; };
 		03E25B731C1E9E9B001A2065 /* ChooserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooserView.h; path = mantingv/LFLoopScrollView/ChooserView.h; sourceTree = "<group>"; };
 		03E25B741C1E9E9B001A2065 /* ChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooserView.m; path = mantingv/LFLoopScrollView/ChooserView.m; sourceTree = "<group>"; };
+		03E4EE411C4381D700C59D17 /* MyShortRentDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShortRentDetailController.h; sourceTree = "<group>"; };
+		03E4EE421C4381D700C59D17 /* MyShortRentDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShortRentDetailController.m; sourceTree = "<group>"; };
+		03E4EE431C4381D700C59D17 /* MyShortRentDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyShortRentDetailController.xib; sourceTree = "<group>"; };
+		03E4EE461C438F1A00C59D17 /* CheckInMessageCommitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInMessageCommitController.h; sourceTree = "<group>"; };
+		03E4EE471C438F1A00C59D17 /* CheckInMessageCommitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInMessageCommitController.m; sourceTree = "<group>"; };
+		03E4EE481C438F1A00C59D17 /* CheckInMessageCommitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckInMessageCommitController.xib; sourceTree = "<group>"; };
+		03E4EE4C1C43902F00C59D17 /* MTTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTools.h; sourceTree = "<group>"; };
+		03E4EE4D1C43902F00C59D17 /* MTTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTools.m; sourceTree = "<group>"; };
+		03E4EE531C4397BE00C59D17 /* MyHouseDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHouseDTOModel.h; sourceTree = "<group>"; };
+		03E4EE541C4397BE00C59D17 /* MyHouseDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHouseDTOModel.m; sourceTree = "<group>"; };
+		03E4EE561C439FA200C59D17 /* HouseWeekTimeDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseWeekTimeDTOModel.h; sourceTree = "<group>"; };
+		03E4EE571C439FA200C59D17 /* HouseWeekTimeDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseWeekTimeDTOModel.m; sourceTree = "<group>"; };
+		03E4EE591C43A02500C59D17 /* HoseWeekDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoseWeekDTOModel.h; sourceTree = "<group>"; };
+		03E4EE5A1C43A02500C59D17 /* HoseWeekDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoseWeekDTOModel.m; sourceTree = "<group>"; };
+		03E4EE5F1C43A2B900C59D17 /* HouseWeekListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseWeekListController.h; sourceTree = "<group>"; };
+		03E4EE601C43A2B900C59D17 /* HouseWeekListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseWeekListController.m; sourceTree = "<group>"; };
+		03E4EE621C43A3C100C59D17 /* HouseWeekListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseWeekListCell.h; sourceTree = "<group>"; };
+		03E4EE631C43A3C100C59D17 /* HouseWeekListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseWeekListCell.m; sourceTree = "<group>"; };
+		03E4EE641C43A3C100C59D17 /* HouseWeekListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseWeekListCell.xib; sourceTree = "<group>"; };
 		03E6BB381C3CB3B80008D68B /* AddressContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressContentView.h; sourceTree = "<group>"; };
 		03E6BB391C3CB3B80008D68B /* AddressContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressContentView.m; sourceTree = "<group>"; };
 		03E6BB3B1C3CB8300008D68B /* AddressDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressDTOModel.h; sourceTree = "<group>"; };
@@ -806,6 +833,7 @@
 		03775B751C1138F200319C32 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				03E4EE4B1C438FFA00C59D17 /* 工具类 */,
 				03DDADF31C2B8133009DC36D /* LFLoopScrollViewForMT */,
 				03E066521C279CB400E85778 /* ContentScrollView */,
 				03DEED011C3B919900EE518F /* FunctionButtonsView */,
@@ -822,6 +850,8 @@
 				03D669AF1C2A7DB3001C4C2C /* UIImageView+LF.m */,
 				03FB248A1C33A8360049CADB /* AFHTTPSessionManagerForMT.h */,
 				03FB248B1C33A8360049CADB /* AFHTTPSessionManagerForMT.m */,
+				03DA24661C23AB2D0098FE4B /* MTSwitchView.h */,
+				03DA24671C23AB2D0098FE4B /* MTSwitchView.m */,
 				03DA24841C23D6E30098FE4B /* SelectView */,
 				03DB9CF61C1FFF4000A40361 /* 支付信息界面 */,
 				03D65DE61C1E6C8400E7C679 /* 选择器 */,
@@ -1092,6 +1122,7 @@
 		03D2519F1C22A2BD00BA9ED7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				03E4EE401C4381A700C59D17 /* 我的短租详情 */,
 				03D251BB1C22A46100BA9ED7 /* MyShortRentListController.h */,
 				03D251BC1C22A46100BA9ED7 /* MyShortRentListController.m */,
 			);
@@ -1101,8 +1132,6 @@
 		03D251A01C22A2C000BA9ED7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03DA24661C23AB2D0098FE4B /* MTSwitchView.h */,
-				03DA24671C23AB2D0098FE4B /* MTSwitchView.m */,
 				03D6E5151C3F87DD0068142C /* MyRentListCell.h */,
 				03D6E5161C3F87DD0068142C /* MyRentListCell.m */,
 				03D6E5171C3F87DD0068142C /* MyRentListCell.xib */,
@@ -1181,8 +1210,8 @@
 			children = (
 				03D6E5221C3F93840068142C /* AssignmentDTOModel.h */,
 				03D6E5231C3F93840068142C /* AssignmentDTOModel.m */,
-				03D6E5281C3F97810068142C /* MyhouseDTOModel.h */,
-				03D6E5291C3F97810068142C /* MyhouseDTOModel.m */,
+				03E4EE531C4397BE00C59D17 /* MyHouseDTOModel.h */,
+				03E4EE541C4397BE00C59D17 /* MyHouseDTOModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1743,6 +1772,7 @@
 		03DC50731C28FBF50040C939 /* 入住详情 */ = {
 			isa = PBXGroup;
 			children = (
+				03E4EE4F1C43968B00C59D17 /* Models */,
 				03DC50751C28FC1F0040C939 /* Views */,
 				03DC50741C28FC0E0040C939 /* Controllers */,
 			);
@@ -1752,6 +1782,7 @@
 		03DC50741C28FC0E0040C939 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				03E4EE5C1C43A24200C59D17 /* 周次列表 */,
 				03DC50761C28FC500040C939 /* INeedCheckInDetailController.h */,
 				03DC50771C28FC500040C939 /* INeedCheckInDetailController.m */,
 			);
@@ -1879,6 +1910,9 @@
 		03DEED091C3BA7C600EE518F /* 我要入住 */ = {
 			isa = PBXGroup;
 			children = (
+				03E4EE461C438F1A00C59D17 /* CheckInMessageCommitController.h */,
+				03E4EE471C438F1A00C59D17 /* CheckInMessageCommitController.m */,
+				03E4EE481C438F1A00C59D17 /* CheckInMessageCommitController.xib */,
 			);
 			name = "我要入住";
 			sourceTree = "<group>";
@@ -2053,6 +2087,64 @@
 				03E066821C28026400E85778 /* TransferDetailContentScrollView.m */,
 				03E066871C28099F00E85778 /* TransferDetailTopContentView.h */,
 				03E066881C28099F00E85778 /* TransferDetailTopContentView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		03E4EE401C4381A700C59D17 /* 我的短租详情 */ = {
+			isa = PBXGroup;
+			children = (
+				03E4EE411C4381D700C59D17 /* MyShortRentDetailController.h */,
+				03E4EE421C4381D700C59D17 /* MyShortRentDetailController.m */,
+				03E4EE431C4381D700C59D17 /* MyShortRentDetailController.xib */,
+			);
+			name = "我的短租详情";
+			sourceTree = "<group>";
+		};
+		03E4EE4B1C438FFA00C59D17 /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				03E4EE4C1C43902F00C59D17 /* MTTools.h */,
+				03E4EE4D1C43902F00C59D17 /* MTTools.m */,
+			);
+			name = "工具类";
+			sourceTree = "<group>";
+		};
+		03E4EE4F1C43968B00C59D17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03E4EE561C439FA200C59D17 /* HouseWeekTimeDTOModel.h */,
+				03E4EE571C439FA200C59D17 /* HouseWeekTimeDTOModel.m */,
+				03E4EE591C43A02500C59D17 /* HoseWeekDTOModel.h */,
+				03E4EE5A1C43A02500C59D17 /* HoseWeekDTOModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		03E4EE5C1C43A24200C59D17 /* 周次列表 */ = {
+			isa = PBXGroup;
+			children = (
+				03E4EE5E1C43A26100C59D17 /* Views */,
+				03E4EE5D1C43A25900C59D17 /* Controllers */,
+			);
+			name = "周次列表";
+			sourceTree = "<group>";
+		};
+		03E4EE5D1C43A25900C59D17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E4EE5F1C43A2B900C59D17 /* HouseWeekListController.h */,
+				03E4EE601C43A2B900C59D17 /* HouseWeekListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03E4EE5E1C43A26100C59D17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E4EE621C43A3C100C59D17 /* HouseWeekListCell.h */,
+				03E4EE631C43A3C100C59D17 /* HouseWeekListCell.m */,
+				03E4EE641C43A3C100C59D17 /* HouseWeekListCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -2271,6 +2363,7 @@
 				03D643A01C195C590082F0D4 /* login.png in Resources */,
 				03DEED101C3BA89C00EE518F /* EntrustRentalController.xib in Resources */,
 				03D7A7ED1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg in Resources */,
+				03E4EE661C43A3C100C59D17 /* HouseWeekListCell.xib in Resources */,
 				0376AFEA1C1196C30033D2A2 /* Welcome_3.0_1.jpg in Resources */,
 				03E6BB481C3CC3DC0008D68B /* AddressListCell.xib in Resources */,
 				0376AFF31C1196C30033D2A2 /* Welcome_3.0_5@2x.jpg in Resources */,
@@ -2279,6 +2372,7 @@
 				0376AFF11C1196C30033D2A2 /* Welcome_3.0_4@2x.jpg in Resources */,
 				03D7A7E21C213F48003A3A68 /* arrow_right_12.81592039801px_1197003_easyicon.net.png in Resources */,
 				03D251DB1C22AE4D00BA9ED7 /* ModifyPasswordController.xib in Resources */,
+				03E4EE451C4381D700C59D17 /* MyShortRentDetailController.xib in Resources */,
 				03E0A25C1C18274000FCAAAC /* home.png in Resources */,
 				03D6439E1C195B010082F0D4 /* LoginController.xib in Resources */,
 				03D8C4FA1C17B9A700C71B98 /* down.png in Resources */,
@@ -2316,6 +2410,7 @@
 				03E0A25B1C18274000FCAAAC /* mine.png in Resources */,
 				0376AFE91C1196C30033D2A2 /* Welcome3@2x.jpg in Resources */,
 				03DB9D231C205A6400A40361 /* alipay_64px_1186722_easyicon.net.png in Resources */,
+				03E4EE4A1C438F1A00C59D17 /* CheckInMessageCommitController.xib in Resources */,
 				0376AFE61C1196C30033D2A2 /* Welcome2.jpg in Resources */,
 				03775B481C11368F00319C32 /* Main.storyboard in Resources */,
 			);
@@ -2410,13 +2505,13 @@
 				03DB9D0A1C200B3E00A40361 /* RecipientInformationView.m in Sources */,
 				03D7A7EB1C214776003A3A68 /* MineSubView.m in Sources */,
 				03DC50871C291B750040C939 /* CheckInDetailMessageContainView.m in Sources */,
-				03D6E52A1C3F97810068142C /* MyhouseDTOModel.m in Sources */,
 				03DEECF11C3B6CB600EE518F /* HouseInfoDTOModel.m in Sources */,
 				03D251DF1C22AE9300BA9ED7 /* ModifyNickNameController.m in Sources */,
 				03775B9D1C113C1B00319C32 /* PropertyRightCenterController.m in Sources */,
 				03E6BB6E1C3CF06F0008D68B /* EditViewWithButton.m in Sources */,
 				03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */,
 				03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */,
+				03E4EE651C43A3C100C59D17 /* HouseWeekListCell.m in Sources */,
 				03DC508A1C291BDB0040C939 /* CheckInDetailBaseViewWithRightTextFeild.m in Sources */,
 				03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */,
 				03D6E5181C3F87DD0068142C /* MyRentListCell.m in Sources */,
@@ -2460,6 +2555,7 @@
 				03E6BB561C3CE8190008D68B /* AddAddressContentScrollView.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */,
+				03E4EE4E1C43902F00C59D17 /* MTTools.m in Sources */,
 				03D6E5241C3F93840068142C /* AssignmentDTOModel.m in Sources */,
 				03E6BB471C3CC3DC0008D68B /* AddressListCell.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
@@ -2470,6 +2566,7 @@
 				03D0929C1C2D07840057182F /* ProductViewFatherModel.m in Sources */,
 				03DB9D101C200C4100A40361 /* PurchaseQuantityView.m in Sources */,
 				03D6E5391C3FA6700068142C /* ExchangePoolDTOModel.m in Sources */,
+				03E4EE441C4381D700C59D17 /* MyShortRentDetailController.m in Sources */,
 				03DB9D191C200CE900A40361 /* PurchaseAgreementView.m in Sources */,
 				03CFAEC91C321F42009C80EB /* ShortRentContentScrollView.m in Sources */,
 				03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */,
@@ -2489,6 +2586,7 @@
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
 				03D092A21C2D21300057182F /* ThemeListContentScrollViewModel.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
+				03E4EE5B1C43A02500C59D17 /* HoseWeekDTOModel.m in Sources */,
 				03CFAED81C326745009C80EB /* ShortRentDetailContentScrollView.m in Sources */,
 				03E066741C27F0AF00E85778 /* TransferContentScrollView.m in Sources */,
 				03DA247D1C23D5470098FE4B /* ThemeListContentView.m in Sources */,
@@ -2503,6 +2601,7 @@
 				03E6BB651C3CEF370008D68B /* ContactPersonEditView.m in Sources */,
 				03D830AE1C1EBDE1006DBFD9 /* ChoiceNessTheme.m in Sources */,
 				03E6BB6B1C3CF05F0008D68B /* EditViewWithTextFiled.m in Sources */,
+				03E4EE551C4397BE00C59D17 /* MyHouseDTOModel.m in Sources */,
 				03775BB01C1140B800319C32 /* MTNavigationController.m in Sources */,
 				03E0666D1C27C85000E85778 /* ExchangeDetailBaseView.m in Sources */,
 				03DB9D161C200CAF00A40361 /* LeaveWordView.m in Sources */,
@@ -2520,14 +2619,17 @@
 				03E6BB3D1C3CB8300008D68B /* AddressDTOModel.m in Sources */,
 				03775B3F1C11368F00319C32 /* main.m in Sources */,
 				03DDADF61C2B815B009DC36D /* LFLoopScrollViewForMT.m in Sources */,
+				03E4EE611C43A2B900C59D17 /* HouseWeekListController.m in Sources */,
 				03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */,
 				03DC508D1C291BFE0040C939 /* CheckInDetailBaseViewWithRightStepper.m in Sources */,
 				03DEED141C3BB47B00EE518F /* ResettingController.m in Sources */,
 				03DEF3551C30FE46000F25F0 /* BaseContentScrollView.m in Sources */,
+				03E4EE581C439FA200C59D17 /* HouseWeekTimeDTOModel.m in Sources */,
 				03CFAED21C3228EF009C80EB /* ShortRentView.m in Sources */,
 				03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */,
 				03DEF35B1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m in Sources */,
 				03D7A7DA1C210506003A3A68 /* MTLoginContentScrollVIew.m in Sources */,
+				03E4EE491C438F1A00C59D17 /* CheckInMessageCommitController.m in Sources */,
 				03D0929F1C2D1DE80057182F /* ThemeListContentScrollView.m in Sources */,
 				03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */,
 				03CFAED51C322DFA009C80EB /* ShortRentViewModel.m in Sources */,

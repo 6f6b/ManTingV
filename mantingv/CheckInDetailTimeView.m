@@ -7,12 +7,19 @@
 //
 
 #import "CheckInDetailTimeView.h"
+#import "HouseWeekDTOModel.h"
+#import "HouseWeekTimeDTOModel.h"
+
+#import "HouseWeekListController.h"
+#import "INeedCheckInDetailController.h"
 
 @interface CheckInDetailTimeView ()
 @property (nonatomic,weak) UIImageView *headImage;
 @property (nonatomic,weak) UILabel *timeLabel;
 @property (nonatomic,weak) UILabel *nightNumbersLabel;
 @property (nonatomic,weak) UIImageView *rightImage;
+
+@property (nonatomic,copy) NSArray *houseWeekTimeDTOs;
 @end
 @implementation CheckInDetailTimeView
 
@@ -50,6 +57,8 @@
         make.width.equalTo(@20);
     }];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap)];
+    [self addGestureRecognizer:tap];
 }
 
 - (UIImageView *)headImage{
@@ -94,7 +103,23 @@
 }
 
 - (void)setValueWith:(id)data{
-    self.timeLabel.text = @"2012年5月7日入住，5月9日离店";
-    self.nightNumbersLabel.text = @"共3晚";
+    INeedCheckInDetailController *iNeedCheckInDetailController = (INeedCheckInDetailController *)self.controller;
+    NSInteger index = iNeedCheckInDetailController.indexOfhouseWeekGuid;
+    
+    HouseWeekDTOModel *houseWeekDTOModel = [HouseWeekDTOModel modelWithDictionary:data];
+    NSArray *houseWeekTimeDTOs = houseWeekDTOModel.houseWeekTimeDTOs;
+    self.houseWeekTimeDTOs = houseWeekTimeDTOs;
+    HouseWeekTimeDTOModel *houseWeekTimeDTOModel = [HouseWeekTimeDTOModel modelWithDictionary:houseWeekTimeDTOs[index]];
+    self.model = houseWeekTimeDTOModel;
+    NSString *startTimeAndEndTime = [NSString stringWithFormat:@"%@入住%@离店",houseWeekTimeDTOModel.start,houseWeekTimeDTOModel.end];
+    self.timeLabel.text = startTimeAndEndTime;
+//    self.nightNumbersLabel.text = @"共3晚";
 }
+
+- (void)dealTap{
+    HouseWeekListController *houseWeekListController = [[HouseWeekListController alloc] init];
+    houseWeekListController.dataArray = self.houseWeekTimeDTOs;
+    [self.controller.navigationController pushViewController:houseWeekListController animated:YES];
+}
+
 @end

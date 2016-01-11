@@ -42,6 +42,7 @@
     NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:@"/my_house/rent_list_lessee/"];
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *userGuid = [user objectForKey:USER_GUID];
+    NSLog(@"%@",userGuid);
     NSString *url = [urlWithOutUserGuid stringByAppendingString:userGuid];
     
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -68,6 +69,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     RentListDTOModel *rentListDTOModel = [RentListDTOModel modelWithDictionary:self.dataArray[indexPath.row]];
     MyRentListCell *myRentListCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MyRentListCell class])];
     [myRentListCell.backImage lfSetImageWithURL:rentListDTOModel.houseImageGuid[0]];

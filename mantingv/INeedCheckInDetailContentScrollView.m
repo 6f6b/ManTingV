@@ -10,6 +10,8 @@
 #import "CheckInDetailTopContentView.h"
 #import "CheckInDetailMessageContainView.h"
 #import "CheckInDetailTimeView.h"
+#import "MyHouseDTOModel.h"
+#import "HouseWeekTimeDTOModel.h"
 
 @interface INeedCheckInDetailContentScrollView ()
 @property (nonatomic,weak) CheckInDetailTopContentView *checkInDetailTopContentView;
@@ -48,6 +50,7 @@
         CheckInDetailTimeView *checkInDetailTimeView = [[CheckInDetailTimeView alloc] init];
         checkInDetailTimeView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInDetailTopContentView.frame)+10, SCREEN_WIDTH, 50);
         checkInDetailTimeView.backgroundColor = [UIColor greenColor];
+        checkInDetailTimeView.controller = self.controller;
         [self addSubview:checkInDetailTimeView];
         _checkInDetailTimeView = checkInDetailTimeView;
     }
@@ -67,10 +70,11 @@
 }
 
 - (void)setValueWith:(id)data{
+    MyHouseDTOModel *myHouseDTOModel = [MyHouseDTOModel modelWithDictionary:data];
+    self.model = myHouseDTOModel;
+    [self.checkInDetailTopContentView setValueWith:myHouseDTOModel.houseInfoDTO];
     
-    [self.checkInDetailTopContentView setValueWith:nil];
-    
-    [self.checkInDetailTimeView setValueWith:nil];
+    [self.checkInDetailTimeView setValueWith:myHouseDTOModel.houseWeekDTO];
     
     [self.checkInDetailMessageContainView setValueWith:nil];
     
@@ -80,6 +84,33 @@
 }
 
 - (void)dealPay{
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
+    HouseWeekTimeDTOModel *houseWeekTimeDTOModel = self.checkInDetailTimeView.model;
+    NSString *houseWeekTimeGuids = houseWeekTimeDTOModel.guid;
+    [parameter setValue:houseWeekTimeGuids forKey:@"houseWeekTimeGuids"];
+    
+    MyHouseDTOModel *myHouseDTOModel = self.model;
+    NSString *myHouseGuid = myHouseDTOModel.guid;
+    [parameter setValue:myHouseGuid forKey:@"myHouseGuid"];
+    
+    NSString *userName = self.checkInDetailMessageContainView.contactPerson.rightTextFeild.text;
+    NSString *phoneNum = self.checkInDetailMessageContainView.forReceiveMessage.rightTextFeild.text;
+    NSString *person = [NSString stringWithFormat:@"%lu",self.checkInDetailMessageContainView.numberOfPeopleCheckIn.lfStepper.value];
+    [parameter setValue:userName forKey:@"userName"];
+    [parameter setValue:phoneNum forKey:@"phoneNum"];
+    [parameter setValue:person forKey:@"person"];
+
+    NSString *url = [BASE_URL stringByAppendingString:@"/reserve/booking"];
+    [self.manager POST:url parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dic);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    NSLog(@"%@",parameter);
     NSLog(@"立即支付");
 }
 @end

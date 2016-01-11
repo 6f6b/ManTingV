@@ -7,7 +7,9 @@
 //
 
 #import "ExchangeDetailBaseView.h"
+#import "LFStepper.h"
+
 
 @interface CheckInDetailBaseViewWithRightStepper : ExchangeDetailBaseView
-
+@property (nonatomic,weak) LFStepper *lfStepper;
 @end

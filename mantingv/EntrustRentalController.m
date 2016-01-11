@@ -33,17 +33,23 @@
     //出租天数
     [self.parameters setValue:self.rentalNumberOfDaysLabel.text forKey:@"days"];
     
+    //备注
     [self.parameters setValue:self.remarkLabel.text forKey:@"description"];
     
     NSString *url = [BASE_URL stringByAppendingString:@"/rent/torent"];
-    NSLog(@"-------->%@",self.parameters);
     [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"---->%@",dic);
+        NSString *result = [dic objectForKey:@"result"];
+        if([result isEqualToString:@"SUCCESS"]){
+            [KVNProgress showSuccessWithStatus:@"申请托管成功！"];
+        }
+        if ([result isEqualToString:@"ERROR"]) {
+            [KVNProgress showErrorWithStatus:@"申请托管失败"];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"错误");
+        [KVNProgress showErrorWithStatus:@"申请托管失败"];
     }];
 }
 

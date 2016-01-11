@@ -44,8 +44,7 @@
 
 - (void)setValueWith:(id)data{
     //检测是否登录
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *userGuid = [user objectForKey:USER_GUID];
+    NSString *userGuid = [MTTools userGuid];
     if (nil == userGuid) {
         [self.addAddressView setValueWith:nil];
         return;

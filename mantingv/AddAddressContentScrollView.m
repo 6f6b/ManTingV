@@ -71,8 +71,7 @@
 
 - (void)commitAddressInformation{
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *userGuid = [user objectForKey:USER_GUID];
+    NSString *userGuid = [MTTools userGuid];
     
     [parameter setValue:userGuid forKey:@"userGuid"];
     [parameter setValue:self.contactPersonEditView.nameEditView.rightTextFiled.text forKey:@"username"];
