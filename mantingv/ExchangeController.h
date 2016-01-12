@@ -9,5 +9,5 @@
 #import "MTController.h"
 
 @interface ExchangeController : MTController
-
+@property (nonatomic,copy) NSString *myHouseGuid;
 @end

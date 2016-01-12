@@ -8,6 +8,7 @@
 
 #import "ExchangeDetailDescriptionView.h"
 #import "ExchangeDetailBaseView.h"
+#import "HouseInfoDTOModel.h"
 @interface ExchangeDetailDescriptionView ()
 @property (nonatomic,weak) ExchangeDetailBaseView *exchangeDetailForAddressView;
 @property (nonatomic,weak) ExchangeDetailBaseView *exchangeDetailForDeveloperView;
@@ -95,10 +96,11 @@
 }
 
 - (void)setValueWith:(id)data{
-    self.exchangeDetailForAddressView.rightLabel.text = @"成都";
-    self.exchangeDetailForDeveloperView.rightLabel.text = @"manting";
-    self.exchangeDetailForBuildingPermitsView.rightLabel.text = @"110-";
-    self.exchangeDetailForOpeningTimeView.rightLabel.text = @"2016";
+    HouseInfoDTOModel *houseInfoDTOModel = data;
+    self.exchangeDetailForAddressView.rightLabel.text = [NSString stringWithFormat:@"%@%@",houseInfoDTOModel.province,houseInfoDTOModel.city];
+    self.exchangeDetailForDeveloperView.rightLabel.text = houseInfoDTOModel.developers;
+    self.exchangeDetailForBuildingPermitsView.rightLabel.text = houseInfoDTOModel.permits;
+    self.exchangeDetailForOpeningTimeView.rightLabel.text = @"NULL";
 
 //    CGRect frame = self.frame;
 //    frame.size.height = CGRectGetMaxY(self.exchangeDetailForOpeningTimeView.frame);

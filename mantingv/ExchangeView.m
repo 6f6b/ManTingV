@@ -8,6 +8,9 @@
 
 #import "ExchangeView.h"
 #import "ExchangeDetailController.h"
+#import "ExchangePoolDTOModel.h"
+#import "HouseInfoDTOModel.h"
+#import "ExchangeController.h"
 
 @interface ExchangeView ()
 //@property (nonatomic,weak) UIImageView *backImage;
@@ -89,6 +92,10 @@
 
 - (void)dealTap{
     ExchangeDetailController *exchangeDetailController = [[ExchangeDetailController alloc] init];
+    ExchangeController *exchangeController = (ExchangeController *)self.controller;
+    exchangeDetailController.myHouseGuid = exchangeController.myHouseGuid;
+    ExchangePoolDTOModel *exchangePoolDTOModel = (ExchangePoolDTOModel *)self.model;
+    exchangeDetailController.exchangePoolGuid = exchangePoolDTOModel.guid;
     [self.controller.navigationController pushViewController:exchangeDetailController animated:YES];
 }
 
@@ -192,7 +199,27 @@
 }
 
 - (void)setValueWith:(id)data{
-
+    ExchangePoolDTOModel *exchangePoolDTOModel = [ExchangePoolDTOModel modelWithDictionary:data];
+    HouseInfoDTOModel *houseInfoDTOModel = [HouseInfoDTOModel modelWithDictionary:exchangePoolDTOModel.houseInfoDTO];
+    self.model = exchangePoolDTOModel;
+    
+    [self.backImage lfSetImageWithURL:houseInfoDTOModel.imageGuids[0]];
+    self.roomNumber.text = NULL;
+    self.cycleLabel.text = [NSString stringWithFormat:@"【%@】->%@",exchangePoolDTOModel.houseWeekName,exchangePoolDTOModel.username];
+    self.titleLabel.text = houseInfoDTOModel.name;
+    self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",houseInfoDTOModel.houseType];
+    self.exchangeNumberOfDaysLabel.text = [NSString stringWithFormat:@"交换天数：%@",NULL];
+    self.addressLabel.text = [NSString stringWithFormat:@"%@",NULL];
+    self.priceLabel.text = [NSString stringWithFormat:@"价格：%@￥",houseInfoDTOModel.price];
+    //@property (nonatomic,weak) UIImageView *backImage;
+    //@property (nonatomic,weak) UILabel *roomNumberLabel;
+    //@property (nonatomic,weak) UILabel *roomNumber;
+    //@property (nonatomic,weak) UILabel *cycleLabel;
+    //@property (nonatomic,weak) UILabel *titleLabel;
+    //@property (nonatomic,weak) UILabel *houseTypeLabel;
+    //@property (nonatomic,weak) UILabel *exchangeNumberOfDaysLabel;
+    //@property (nonatomic,weak) UILabel *addressLabel;
+    //@property (nonatomic,weak) UILabel *priceLabel;
 }
 
 @end

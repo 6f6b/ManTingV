@@ -23,7 +23,7 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.indexOfDataAndButton = 0;
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UIColor colorWithRed:1.000 green:0.989 blue:0.916 alpha:1.000];
     }
     return self;
 }
@@ -83,6 +83,7 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
         CGFloat W = SCREEN_WIDTH/3;
         CGFloat H = 40;
         button.frame = CGRectMake(X, Y, W, H);
+        [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitle:titles[i] forState:UIControlStateNormal];
         [self addSubview:button];
     }

@@ -7,6 +7,7 @@
 //
 
 #import "ExchangeDetailPayMessageView.h"
+#import "HouseInfoDTOModel.h"
 
 @interface ExchangeDetailPayMessageView ()
 
@@ -128,8 +129,9 @@
 }
 
 - (void)setValueWith:(id)data{
-    self.separationOfPowersView.rightLabel.text = @"500";
-    self.propertyManagementFeeView.rightLabel.text = @"500";
-    self.numberOfShouldPayLabel.text = @"100";
+    HouseInfoDTOModel *houseInfoDTOModel = data;
+    self.separationOfPowersView.rightLabel.text = houseInfoDTOModel.price;
+    self.propertyManagementFeeView.rightLabel.text = houseInfoDTOModel.price;
+    self.numberOfShouldPayLabel.text = houseInfoDTOModel.price;
 }
 @end

@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "ContentScrollViewWithLoopScrollViewAndChooserView.h"
+#import "ContentScrollViewWithChooserView.h"
 
-@interface ExchangeContentScrollView : ContentScrollViewWithLoopScrollViewAndChooserView
+@interface ExchangeContentScrollView : ContentScrollViewWithChooserView
 
 @end

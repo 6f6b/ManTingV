@@ -22,6 +22,13 @@
         make.top.equalTo(superView).with.offset(10);
         make.left.equalTo(self.backImage.mas_right).with.offset(10);
     }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap)];
 }
 
+- (void)dealTap{
+//    TransferDetailController *transferDetailController = [[TransferDetailController alloc] init];
+//    transferDetailController.title = [NSString stringWithFormat:@"%lu",tap.view.tag];
+//    [self.controller.navigationController pushViewController:transferDetailController animated:YES];
+}
 @end

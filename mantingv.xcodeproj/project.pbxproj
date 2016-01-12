@@ -184,6 +184,9 @@
 		03DEF35B1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF35A1C30FEC4000F25F0 /* ContentScrollViewWithChooserView.m */; };
 		03DEF35E1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF35D1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m */; };
 		03DEF3611C31023F000F25F0 /* HolidayHouseSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */; };
+		03DFCDFB1C44ACBF00587463 /* ExchangeContainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCDFA1C44ACBF00587463 /* ExchangeContainView.m */; };
+		03DFCDFF1C44ECB200587463 /* TransferContainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCDFE1C44ECB200587463 /* TransferContainView.m */; };
+		03DFCE411C44FC8700587463 /* UINavigationBar+LF.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCE401C44FC8700587463 /* UINavigationBar+LF.m */; };
 		03E066451C27929600E85778 /* ExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066441C27929600E85778 /* ExchangeController.m */; };
 		03E066601C27C58100E85778 /* ExchangeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E0665F1C27C58100E85778 /* ExchangeDetailController.m */; };
 		03E066641C27C5AC00E85778 /* ExchangeDetailContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E066631C27C5AC00E85778 /* ExchangeDetailContentScrollView.m */; };
@@ -556,6 +559,12 @@
 		03DEF35D1C30FF2F000F25F0 /* ContentScrollViewWithLoopScrollViewAndChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentScrollViewWithLoopScrollViewAndChooserView.m; sourceTree = "<group>"; };
 		03DEF35F1C31023F000F25F0 /* HolidayHouseSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HolidayHouseSearchController.h; sourceTree = "<group>"; };
 		03DEF3601C31023F000F25F0 /* HolidayHouseSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HolidayHouseSearchController.m; sourceTree = "<group>"; };
+		03DFCDF91C44ACBF00587463 /* ExchangeContainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeContainView.h; sourceTree = "<group>"; };
+		03DFCDFA1C44ACBF00587463 /* ExchangeContainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeContainView.m; sourceTree = "<group>"; };
+		03DFCDFD1C44ECB200587463 /* TransferContainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferContainView.h; sourceTree = "<group>"; };
+		03DFCDFE1C44ECB200587463 /* TransferContainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferContainView.m; sourceTree = "<group>"; };
+		03DFCE3F1C44FC8700587463 /* UINavigationBar+LF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+LF.h"; sourceTree = "<group>"; };
+		03DFCE401C44FC8700587463 /* UINavigationBar+LF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+LF.m"; sourceTree = "<group>"; };
 		03E066431C27929600E85778 /* ExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeController.h; sourceTree = "<group>"; };
 		03E066441C27929600E85778 /* ExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeController.m; sourceTree = "<group>"; };
 		03E0665E1C27C58100E85778 /* ExchangeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailController.h; sourceTree = "<group>"; };
@@ -852,6 +861,8 @@
 				03FB248B1C33A8360049CADB /* AFHTTPSessionManagerForMT.m */,
 				03DA24661C23AB2D0098FE4B /* MTSwitchView.h */,
 				03DA24671C23AB2D0098FE4B /* MTSwitchView.m */,
+				03DFCE3F1C44FC8700587463 /* UINavigationBar+LF.h */,
+				03DFCE401C44FC8700587463 /* UINavigationBar+LF.m */,
 				03DA24841C23D6E30098FE4B /* SelectView */,
 				03DB9CF61C1FFF4000A40361 /* 支付信息界面 */,
 				03D65DE61C1E6C8400E7C679 /* 选择器 */,
@@ -1931,9 +1942,17 @@
 			name = "我要转让";
 			sourceTree = "<group>";
 		};
+		03DFCDFC1C44C2FD00587463 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		03E066411C27923500E85778 /* 我要交换 */ = {
 			isa = PBXGroup;
 			children = (
+				03DFCDFC1C44C2FD00587463 /* Models */,
 				03FB248D1C33D16E0049CADB /* Views */,
 				03E066421C27924F00E85778 /* Controllers */,
 			);
@@ -1943,9 +1962,9 @@
 		03E066421C27924F00E85778 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				03E0665C1C27C54400E85778 /* 交换详情 */,
 				03E066431C27929600E85778 /* ExchangeController.h */,
 				03E066441C27929600E85778 /* ExchangeController.m */,
-				03E0665C1C27C54400E85778 /* 交换详情 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2056,6 +2075,8 @@
 			children = (
 				03E066721C27F0AF00E85778 /* TransferContentScrollView.h */,
 				03E066731C27F0AF00E85778 /* TransferContentScrollView.m */,
+				03DFCDFD1C44ECB200587463 /* TransferContainView.h */,
+				03DFCDFE1C44ECB200587463 /* TransferContainView.m */,
 				03E0667B1C27FA3900E85778 /* TransferListBaseCell.h */,
 				03E0667C1C27FA3900E85778 /* TransferListBaseCell.m */,
 			);
@@ -2223,6 +2244,8 @@
 			children = (
 				03FB248E1C33D1BA0049CADB /* ExchangeContentScrollView.h */,
 				03FB248F1C33D1BA0049CADB /* ExchangeContentScrollView.m */,
+				03DFCDF91C44ACBF00587463 /* ExchangeContainView.h */,
+				03DFCDFA1C44ACBF00587463 /* ExchangeContainView.m */,
 				03FB24971C33DA550049CADB /* ExchangeView.h */,
 				03FB24981C33DA550049CADB /* ExchangeView.m */,
 			);
@@ -2527,6 +2550,7 @@
 				03D8AFB31C1A672200B41FF0 /* ThemeListController.m in Sources */,
 				03DEECF41C3B6E3E00EE518F /* HouseWeekDTOModel.m in Sources */,
 				03E6BB5F1C3CEEA80008D68B /* AddAdressContentViewWithTitle.m in Sources */,
+				03DFCE411C44FC8700587463 /* UINavigationBar+LF.m in Sources */,
 				03E6BB681C3CEF530008D68B /* ContactAddressEditView.m in Sources */,
 				03D7A7E81C21439A003A3A68 /* MineTopContainView.m in Sources */,
 				03D7A7D51C210491003A3A68 /* MTLoginController.m in Sources */,
@@ -2585,6 +2609,7 @@
 				03D6E51C1C3F87F70068142C /* RentListDTOModel.m in Sources */,
 				03DA24801C23D5E80098FE4B /* ThemeListView.m in Sources */,
 				03D092A21C2D21300057182F /* ThemeListContentScrollViewModel.m in Sources */,
+				03DFCDFF1C44ECB200587463 /* TransferContainView.m in Sources */,
 				03775B7B1C1139EA00319C32 /* MTController.m in Sources */,
 				03E4EE5B1C43A02500C59D17 /* HoseWeekDTOModel.m in Sources */,
 				03CFAED81C326745009C80EB /* ShortRentDetailContentScrollView.m in Sources */,
@@ -2644,6 +2669,7 @@
 				03CFAEE11C328354009C80EB /* RelatedProductViewModel.m in Sources */,
 				03DEED0F1C3BA89C00EE518F /* EntrustRentalController.m in Sources */,
 				03D2518E1C22510700BA9ED7 /* ShortRentPriceView.m in Sources */,
+				03DFCDFB1C44ACBF00587463 /* ExchangeContainView.m in Sources */,
 				03DC95E31C3E4CA80071D764 /* AgreementController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

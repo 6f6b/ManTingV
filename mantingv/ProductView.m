@@ -22,7 +22,7 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     
-    self.backgroundColor = [UIColor colorWithRed:0.894 green:1.000 blue:0.819 alpha:1.000];
+    self.backgroundColor = [UIColor whiteColor];
     UIView *superView = self;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
@@ -104,6 +104,7 @@
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.backgroundColor = [UIColor whiteColor];
+        titleLabel.font = [UIFont systemFontOfSize:14];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }

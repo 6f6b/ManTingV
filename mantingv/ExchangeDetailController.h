@@ -7,7 +7,9 @@
 //
 
 #import "MTController.h"
+#import "ExchangePoolDTOModel.h"
 
 @interface ExchangeDetailController : MTController
-
+@property (nonatomic,copy) NSString *myHouseGuid;
+@property (nonatomic,copy) NSString *exchangePoolGuid;
 @end

@@ -18,8 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.exchangeDetailContentScrollView setValueWith:nil];
-//    NSLog(@"%@",NSStringFromCGRect(self.exchangeDetailContentScrollView.ex))
+    
+    [self loadDataFromServer];
     // Do any additional setup after loading the view.
+}
+
+- (void)loadDataFromServer{
+    NSString *urlWithOutExchangePoolGuid = [BASE_URL stringByAppendingString:@"/exchange/details/"];
+    
+    NSString *url = [urlWithOutExchangePoolGuid stringByAppendingString:self.exchangePoolGuid];
+    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSDictionary *data = [dic objectForKey:@"data"];
+        [self.exchangeDetailContentScrollView setValueWith:data];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (ExchangeDetailContentScrollView *)exchangeDetailContentScrollView{

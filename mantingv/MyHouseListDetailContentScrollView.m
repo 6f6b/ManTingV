@@ -12,6 +12,8 @@
 
 #import "EntrustRentalController.h"
 #import "INeedCheckInDetailController.h"
+#import "ExchangeController.h"
+#import "TransferController.h"
 
 @implementation MyHouseListDetailContentScrollView
 
@@ -62,7 +64,7 @@
 }
 
 - (void)clickedAtIndexOfButton:(NSInteger)index{
-    MyHouseListModel *myHouseListModel = self.model;
+    MyHouseListModel *myHouseListModel = (MyHouseListModel *)self.model;
     MTController *controller;
     if (0 == index) {
         EntrustRentalController *entrustRentalController = [[EntrustRentalController alloc] init];
@@ -73,6 +75,16 @@
         INeedCheckInDetailController *iNeedCheckInDetailController = [[INeedCheckInDetailController alloc] init];
         iNeedCheckInDetailController.myHouseGuid = myHouseListModel.guid;
         controller = iNeedCheckInDetailController;
+    }
+    if (2 == index) {
+        ExchangeController *exchangeController = [[ExchangeController alloc] init];
+        exchangeController.myHouseGuid = myHouseListModel.guid;
+        controller = exchangeController;
+    }
+    if (3 == index) {
+        TransferController *transferController = [[TransferController alloc] init];
+        transferController.myHouseGuid = myHouseListModel.guid;
+        controller = transferController;
     }
     [self.controller.navigationController pushViewController:controller animated:YES];
 }

@@ -8,8 +8,9 @@
 
 #import "HomeController.h"
 #import "HomeContentScrollView.h"
+#import "UINavigationBar+LF.h"
 
-@interface HomeController ()
+@interface HomeController ()<UIScrollViewDelegate>
 @property (weak,nonatomic) HomeContentScrollView* homeContentScrollView;
 @property (nonatomic,weak) UISearchBar *productSearchBar;
 @end
@@ -18,20 +19,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"首页";
+//    [self.navigationController.navigationBar setShadowColor:[UIColor colorWithRed:0.941 green:0.879 blue:1.000 alpha:1.000]];
+    
+//    HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:CGRectMake(0, -64, SCREEN_WIDTH, SCREEN_HEIGHT+64)];
     HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:self.view.bounds];
     homeContentScrollView.backgroundColor = [UIColor whiteColor];
     homeContentScrollView.contentSize = CGSizeMake(0, 1000);
+//    homeContentScrollView.delegate = self;
     homeContentScrollView.controller = self;
     _homeContentScrollView = homeContentScrollView;
     [self.view addSubview:homeContentScrollView];
     
     [homeContentScrollView setValueWith:nil];
     
-    //创建顶部搜索框
-    UISearchBar *productSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 10, 80, 40)];
-    productSearchBar.placeholder = @"请输入关键词";
-    self.productSearchBar = productSearchBar;
-    self.navigationItem.titleView = productSearchBar;
+//    //创建顶部搜索框
+//    UISearchBar *productSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 10, 80, 40)];
+//    productSearchBar.placeholder = @"请输入关键词";
+//    self.productSearchBar = productSearchBar;
+//    self.navigationItem.titleView = productSearchBar;
     
 //    //创建左边下弹城市列表按钮
 //    UIButton *homeCityListButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -46,8 +52,20 @@
     
 }
 
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    self.navigationController.navigationBar.backgroundView.alpha = (scrollView.contentOffset.y+64)/500.0;
+//    NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
+//    if (scrollView.contentOffset.y>0) {
+//        self.navigationItem.title = @"首页";
+//    }
+//    else{
+//        self.navigationItem.title = @"";
+//    }
+//}
+
 - (void)viewWillDisappear:(BOOL)animated{
     [self.productSearchBar resignFirstResponder];
+//    [self.navigationController.navigationBar setShadowColor:[UIColor whiteColor]];
     [super viewWillDisappear:animated];
 }
 

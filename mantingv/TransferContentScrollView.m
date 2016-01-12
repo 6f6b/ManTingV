@@ -7,41 +7,46 @@
 //
 
 #import "TransferContentScrollView.h"
-#import "TransferListBaseCell.h"
+#import "TransferContainView.h"
 #import "TransferDetailController.h"
 
 @interface TransferContentScrollView ()
+@property (nonatomic,weak) TransferContainView *transferContainView;
 @end
 @implementation TransferContentScrollView
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithArray:self.chooserView.dataContentArray];
+    arr[2] = [MTTools houseWeekList];
+    [self.chooserView setDataArraysWith:arr];
     NSArray *buttonTitles = @[@"地点",@"度假屋",@"周次"];
     [self.chooserView setTitlesOfButtonWith:buttonTitles];
 }
 
-- (void)setValueWith:(id)data{
-    for (int i=0; i<10; i++) {
-        CGFloat X = 0;
-        CGFloat Y = CGRectGetMaxY(self.chooserView.frame)+100*i+10;
-        CGFloat W = SCREEN_WIDTH;
-        CGFloat H = 90;
-        TransferListBaseCell *transferListBaseCell = [[TransferListBaseCell alloc] initWithFrame:CGRectMake(X, Y, W, H)];
-        transferListBaseCell.backgroundColor = [UIColor greenColor];
-        [self addSubview:transferListBaseCell];
-        transferListBaseCell.tag = 100+i;
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap:)];
-        [transferListBaseCell addGestureRecognizer:tap];
-        
-        self.contentSize = CGSizeMake(0, CGRectGetMaxY(transferListBaseCell.frame));
+- (TransferContainView *)transferContainView{
+    if(nil == _transferContainView){
+        TransferContainView *transferContainView = [[TransferContainView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.chooserView.frame), SCREEN_WIDTH, 10)];
+        [self addSubview:transferContainView];
+        transferContainView.controller = self.controller;
+        _transferContainView = transferContainView;
     }
+    return _transferContainView;
+}
+
+- (void)setValueWith:(id)data{
+    NSString *url = [BASE_URL stringByAppendingString:@"/assignment/list"];
+    [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",NSStringFromClass([[dic objectForKey:@"data"] class]));
+        [self.transferContainView setValueWith:dic];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
     
 }
 
-- (void)dealTap:(UITapGestureRecognizer *)tap{
-    TransferDetailController *transferDetailController = [[TransferDetailController alloc] init];
-    transferDetailController.title = [NSString stringWithFormat:@"%lu",tap.view.tag];
-    [self.controller.navigationController pushViewController:transferDetailController animated:YES];
-}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ExchangeDetailBaseView.h"
+#import "HouseInfoDTOModel.h"
 
 @interface ExchangeDetailBaseView ()
 @property (nonatomic,weak) UIView *separationLine;
@@ -70,6 +71,8 @@
 }
 
 - (void)setValueWith:(id)data{
-
+    HouseInfoDTOModel *houseInfoDTOModel = data;
+    self.leftLabel.text = houseInfoDTOModel.name;
+    self.rightLabel.text = @"NULL";
 }
 @end

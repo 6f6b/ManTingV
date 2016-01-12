@@ -19,8 +19,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    //先将我的houseGuid放入装让池
+    NSString *urlWithOutMyHouseGuid = [BASE_URL stringByAppendingString:@"/assignment/init/"];
+    NSString *url = [urlWithOutMyHouseGuid stringByAppendingString:self.myHouseGuid];
+    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSString *result = [dic objectForKey:@"result"];
+        if ([result isEqualToString:@"SUCCESS"]) {
+            [KVNProgress showSuccessWithStatus:@"OK"];
+        }
+        else{
+            [KVNProgress showErrorWithStatus:result];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
     [self.transferContentScrollView setValueWith:nil];
+    
+    
 }
+
+//- (void)loadDataFromServer{
+//    NSMutableDictionary *parameter
+//    
+//    NSString *url = [BASE_URL stringByAppendingString:@""];
+//}
 
 - (TransferContentScrollView *)transferContentScrollView{
     if (nil == _transferContentScrollView) {

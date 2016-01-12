@@ -23,7 +23,7 @@
 - (HolidayHouseSearchContentScrollView *)holidayHouseSearchContentScrollView{
     if (nil == _holidayHouseSearchContentScrollView) {
         HolidayHouseSearchContentScrollView *holidayHouseSearchContentScrollView = [[HolidayHouseSearchContentScrollView alloc] initWithFrame:self.view.bounds];
-        holidayHouseSearchContentScrollView.backgroundColor = [UIColor yellowColor];
+        holidayHouseSearchContentScrollView.backgroundColor = [UIColor whiteColor];
         _holidayHouseSearchContentScrollView = holidayHouseSearchContentScrollView;
         holidayHouseSearchContentScrollView.controller = self;
         [self.view addSubview:holidayHouseSearchContentScrollView];
