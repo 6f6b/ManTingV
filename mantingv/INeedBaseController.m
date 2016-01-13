@@ -1,22 +1,22 @@
 //
-//  CheckInMessageCommitController.m
+//  INeedBaseController.m
 //  mantingv
 //
-//  Created by LiuFeng on 16/1/11.
+//  Created by LiuFeng on 16/1/13.
 //  Copyright © 2016年 LiuFeng. All rights reserved.
 //
 
-#import "CheckInMessageCommitController.h"
+#import "INeedBaseController.h"
 
-@interface CheckInMessageCommitController ()
+@interface INeedBaseController ()
 
 @end
 
-@implementation CheckInMessageCommitController
+@implementation INeedBaseController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

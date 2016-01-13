@@ -10,6 +10,7 @@
 #import "LFSelectionView.h"
 #import "TransferDetailTopContentView.h"
 #import "CommitSuccessController.h"
+#import "TransferDetailController.h"
 @interface TransferDetailContentScrollView ()<SeclectionViewDelegate>
 @property (nonatomic,weak) TransferDetailTopContentView *transferDetailTopContentView;
 @property (nonatomic,weak) LFSelectionView *selectView;
@@ -41,8 +42,8 @@
     if (nil == _commitButton) {
         UIButton *commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
         commitButton.backgroundColor = [UIColor orangeColor];
-        [commitButton setTitle:@"提交信息" forState:UIControlStateNormal];
         commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.selectView.frame), SCREEN_WIDTH-20, 40);
+        [commitButton addTarget:self action:@selector(dealCommit) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:commitButton];
         _commitButton = commitButton;
     }
@@ -58,15 +59,30 @@
 }
 
 - (void)setValueWith:(id)data{
-    [self.transferDetailTopContentView setValueWith:nil];
+    [self.transferDetailTopContentView setValueWith:data];
     
-//    [self.selectView setValue];
-    [self.commitButton addTarget:self action:@selector(dealCommit) forControlEvents:UIControlEventTouchUpInside];
+    [self.commitButton setTitle:@"提交信息" forState:UIControlStateNormal];
     self.selectView.delegate = self;
 }
 
 - (void)dealCommit{
-    CommitSuccessController *commitSuccessController = [[CommitSuccessController alloc] init];
-    [self.controller.navigationController pushViewController:commitSuccessController animated:YES];
+    TransferDetailController *transferDetailController = (TransferDetailController *)self.controller;
+    NSString *urlWithOutGuid = [BASE_URL stringByAppendingString:@"/assignment/change/"];
+    NSString *url = [NSString stringWithFormat:@"%@%@/%@",urlWithOutGuid,transferDetailController.assignmentGuid,transferDetailController.myHouseGuid];
+    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSString *result = [dic objectForKey:@"result"];
+        if ([@"SUCCESS" isEqualToString:result]) {
+            CommitSuccessController *commitSuccessController = [[CommitSuccessController alloc] init];
+            [self.controller.navigationController pushViewController:commitSuccessController animated:YES];
+        }
+        else{
+            [KVNProgress showErrorWithStatus:result];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"错误");
+    }];
 }
 @end

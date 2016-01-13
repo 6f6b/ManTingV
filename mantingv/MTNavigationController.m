@@ -30,8 +30,7 @@
     //隐藏掉所有的navigationBar
     self.navigationBar.hidden = NO;
 
-    self.navigationBar.tintColor = [UIColor blueColor];
-    
+    self.navigationBar.tintColor = [UIColor blackColor];
 }
 
 #pragma mark - 加载这个控制器的时候交换里面的两个方法的指针
@@ -46,7 +45,7 @@
     if (self.viewControllers.count>0) {
         viewController.hidesBottomBarWhenPushed = YES;
         
-        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Left_Arrow_31.015384615385px_1190911_easyicon.net"] style:UIBarButtonItemStyleDone target:self action:@selector(popViewControllerAnimated:)];
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_backArrow@2x"] style:UIBarButtonItemStyleDone target:self action:@selector(popViewControllerAnimated:)];
         viewController.navigationItem.leftBarButtonItem = leftItem;
     }
     [super pushViewController:viewController animated:animated];

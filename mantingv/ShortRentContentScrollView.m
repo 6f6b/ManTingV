@@ -127,7 +127,7 @@
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     
-    NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择度假屋"];
+    NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择度假基地"];
     [self.chooserView setTitlesOfButtonWith:buttonTitles];
     [self.chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
         NSDictionary *dic = self.chooserViewDataArray[indexOfDataAndButtons][indexPath.row];
@@ -157,6 +157,8 @@
         }
         [self loadDataForShortRentView];
     }];
+    
+    
 }
 
 - (NSMutableDictionary *)parameter{

@@ -7,14 +7,15 @@
 //
 
 #import "INeedCheckInDetailContentScrollView.h"
-#import "CheckInDetailTopContentView.h"
+#import "CheckInDetailTopDescriptionView.h"
 #import "CheckInDetailMessageContainView.h"
 #import "CheckInDetailTimeView.h"
 #import "MyHouseDTOModel.h"
 #import "HouseWeekTimeDTOModel.h"
+#import "HouseInfoDTOModel.h"
 
 @interface INeedCheckInDetailContentScrollView ()
-@property (nonatomic,weak) CheckInDetailTopContentView *checkInDetailTopContentView;
+@property (nonatomic,weak) CheckInDetailTopDescriptionView *checkInDetailTopDescriptionView;
 @property (nonatomic,weak) CheckInDetailMessageContainView *checkInDetailMessageContainView;
 @property (nonatomic,weak) CheckInDetailTimeView *checkInDetailTimeView;
 @property (nonatomic,weak) UIButton *payButton;
@@ -22,14 +23,14 @@
 
 @implementation INeedCheckInDetailContentScrollView
 
-- (CheckInDetailTopContentView *)checkInDetailTopContentView{
-    if (nil == _checkInDetailTopContentView) {
-        CheckInDetailTopContentView *checkInDetailTopContentView =
-        [CheckInDetailTopContentView checkInDetailTopContentView];
-        [self addSubview:checkInDetailTopContentView];
-        _checkInDetailTopContentView = checkInDetailTopContentView;
+- (CheckInDetailTopDescriptionView *)checkInDetailTopDescriptionView{
+    if (nil == _checkInDetailTopDescriptionView) {
+        CheckInDetailTopDescriptionView *checkInDetailTopDescriptionView =
+        [[CheckInDetailTopDescriptionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.loopScrollView.frame), SCREEN_WIDTH, 60)];
+        [self addSubview:checkInDetailTopDescriptionView];
+        _checkInDetailTopDescriptionView = checkInDetailTopDescriptionView;
     }
-    return _checkInDetailTopContentView;
+    return _checkInDetailTopDescriptionView;
 }
 
 - (CheckInDetailMessageContainView *)checkInDetailMessageContainView{
@@ -48,7 +49,7 @@
 - (CheckInDetailTimeView *)checkInDetailTimeView{
     if (nil == _checkInDetailTimeView) {
         CheckInDetailTimeView *checkInDetailTimeView = [[CheckInDetailTimeView alloc] init];
-        checkInDetailTimeView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInDetailTopContentView.frame)+10, SCREEN_WIDTH, 50);
+        checkInDetailTimeView.frame = CGRectMake(0, CGRectGetMaxY(self.checkInDetailTopDescriptionView.frame)+10, SCREEN_WIDTH, 50);
         checkInDetailTimeView.backgroundColor = [UIColor greenColor];
         checkInDetailTimeView.controller = self.controller;
         [self addSubview:checkInDetailTimeView];
@@ -72,7 +73,10 @@
 - (void)setValueWith:(id)data{
     MyHouseDTOModel *myHouseDTOModel = [MyHouseDTOModel modelWithDictionary:data];
     self.model = myHouseDTOModel;
-    [self.checkInDetailTopContentView setValueWith:myHouseDTOModel.houseInfoDTO];
+    HouseInfoDTOModel *houseInfoDTOModel = [HouseInfoDTOModel modelWithDictionary:myHouseDTOModel.houseInfoDTO];
+    [self.loopScrollView setImageWithUrlS:houseInfoDTOModel.imageGuids];
+    
+    [self.checkInDetailTopDescriptionView setValueWith:myHouseDTOModel.houseInfoDTO];
     
     [self.checkInDetailTimeView setValueWith:myHouseDTOModel.houseWeekDTO];
     

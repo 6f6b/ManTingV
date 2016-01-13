@@ -9,11 +9,7 @@
 #import "MyExchangeListController.h"
 #import "MyExchangeListCell.h"
 #import "ExchangePoolDTOModel.h"
-
-@interface MyExchangeListController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,weak) UITableView *tableView;
-@property (nonatomic,copy) NSArray *dataArray;
-@end
+#import "HouseInfoDTOModel.h"
 
 @implementation MyExchangeListController
 
@@ -21,19 +17,15 @@
     [super viewDidLoad];
     self.title = @"我的交换";
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    self.tableView = tableView;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.view addSubview:tableView];
+
+    
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyExchangeListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyExchangeListCell class])];
     
-    NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:@"/my_house/rent_list_lessee/"];
+    NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:@"/my_house/exchange_list/"];
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *userGuid = [user objectForKey:USER_GUID];
     NSString *url = [urlWithOutUserGuid stringByAppendingString:userGuid];
-    
+    NSLog(@"url----->%@",url);
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -53,18 +45,26 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+//    return 10;
     return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    ExchangePoolDTOModel *exchangePoolDTOModel = [ExchangePoolDTOModel modelWithDictionary:self.dataArray[indexPath.row]];
     MyExchangeListCell *myExchangeListCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MyExchangeListCell class])];
+    ExchangePoolDTOModel *exchangePoolDTOModel = [ExchangePoolDTOModel modelWithDictionary:self.dataArray[indexPath.row]];
+    HouseInfoDTOModel *houseInfoDTOModel = [HouseInfoDTOModel modelWithDictionary:exchangePoolDTOModel.houseInfoDTO];
+    [myExchangeListCell.headImage lfSetImageWithURL:houseInfoDTOModel.imageGuids[0]];
+    myExchangeListCell.titleLabel.text = [NSString stringWithFormat:@"title:%@",houseInfoDTOModel.name];
+    myExchangeListCell.priceLabel.text = [NSString stringWithFormat:@"价格：%@",houseInfoDTOModel.price];
     return myExchangeListCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 - (void)didReceiveMemoryWarning {

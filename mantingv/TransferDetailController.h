@@ -6,8 +6,10 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "INeedBaseController.h"
+#import "AssignmentDTOModel.h"
 
-@interface TransferDetailController : MTController
-
+@interface TransferDetailController : INeedBaseController
+@property (nonatomic,copy) NSString *assignmentGuid;
+@property (nonatomic,weak) AssignmentDTOModel *assignmentDTOModel;
 @end

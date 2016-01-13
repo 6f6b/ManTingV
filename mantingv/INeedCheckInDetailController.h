@@ -6,9 +6,8 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "INeedBaseController.h"
 
-@interface INeedCheckInDetailController : MTController
-@property (nonatomic,copy) NSString *myHouseGuid;
+@interface INeedCheckInDetailController : INeedBaseController
 @property (nonatomic,assign) NSInteger indexOfhouseWeekGuid;
 @end

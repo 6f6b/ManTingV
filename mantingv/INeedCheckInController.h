@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "INeedBaseController.h"
 
-@interface INeedCheckInController : MTController
+@interface INeedCheckInController : INeedBaseController
 
 @end

@@ -23,6 +23,7 @@
 @property (nonatomic,weak) MineTopContainView *mineTopContainView;
 @property (nonatomic,strong) NSMutableArray *mineSubViews;
 @property (nonatomic,weak) UIButton *loginOrResignButton;
+@property (nonatomic,strong) NSArray *classNames;
 @end
 @implementation MineContentScrollView
 
@@ -34,6 +35,14 @@
         self.mineTopContainView.frame = CGRectMake(0, 0, self.mineTopContainView.frame.size.width, self.mineTopContainView.frame.size.height);
         
         NSArray *titles = @[@"权益中心",@"我的交换",@"我的短租",@"我的转让",@"我的入住",@"帐号设置",@"关于我们"];
+        self.classNames = @[@"RightsListController",
+                            @"MyExchangeListController",
+                            @"MyShortRentListController",
+                            @"MyAssignmentListController",
+                            @"MyCheckInListController",
+                            @"AccountConfigController",
+                            @"AboutUsController"
+                            ];
         for (int i=0; i<6; i++) {
             MineSubView *mineSubView = [MineSubView mineSubViewWithLeftImage:@"arrow_right_12.81592039801px_1197003_easyicon.net"rightImage:@"arrow_right_12.81592039801px_1197003_easyicon.net" title:titles[i]];
             mineSubView.tag = 1000+i;
@@ -50,11 +59,10 @@
         }
         
         
-        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-        if (![user objectForKey:USER_GUID]) {
+        if (![MTTools userGuid]) {
             [self.loginOrResignButton setTitle:@"登录" forState:UIControlStateNormal];
         }
-        if ([user objectForKey:USER_GUID]) {
+        if ([MTTools userGuid]) {
             [self.loginOrResignButton setTitle:@"退出登录" forState:UIControlStateNormal];
         }
         self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.loginOrResignButton.frame));
@@ -63,8 +71,7 @@
 }
 
 - (void)setValueWith:(id)data{
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *guid = [user objectForKey:USER_GUID];
+    NSString *guid = [MTTools userGuid];
 
     if (!guid) {
         [self.loginOrResignButton setTitle:@"登录" forState:UIControlStateNormal];
@@ -109,60 +116,9 @@
  *  @param tap
  */
 - (void)dealTap:(UITapGestureRecognizer *)tap{
-    
     UIView *view = tap.view;
-    MTController *vc;
-    switch (view.tag) {
-        case 1000:{
-            //权益列表
-            RightsListController *rightsListController = [[RightsListController alloc] init];
-            vc = rightsListController;
-        }
-            break;
-        case 1001:{
-            //我的交换
-            MyExchangeListController *myExchangeListController = [[MyExchangeListController alloc] init];
-            vc = myExchangeListController;
-        }
-            break;
-        case 1002:{
-            //我的短租
-            MyShortRentListController *myShortRentListController = [[MyShortRentListController alloc] init];
-            vc = myShortRentListController;
-        }
-            
-            break;
-        case 1003:{
-            //我的转让
-            MyAssignmentListController *myAssignmentListController = [[MyAssignmentListController alloc] init];
-            vc = myAssignmentListController;
-        }
-            
-            break;
-        case 1004:{
-            //我的入住
-            MyCheckInListController *myCheckInListController = [[MyCheckInListController alloc] init];
-            vc = myCheckInListController;
-        }
-            
-            break;
-        case 1005:{
-            //账号设置
-            AccountConfigController *accountConfigController = [[AccountConfigController alloc] init];
-            vc = accountConfigController;
-        }
-            
-            break;
-        case 1006:{
-            //关于我们
-            AboutUsController *aboutUsController = [[AboutUsController alloc] init];
-            vc = aboutUsController;
-        }
-            
-            break;
-        default:
-            break;
-    }
+    Class class = NSClassFromString(self.classNames[view.tag-1000]);
+    MTController *vc = [[class alloc] init];
     vc.isNeedToCheckLogin = YES;
     [self.controller.navigationController pushViewController:vc animated:YES];
 }

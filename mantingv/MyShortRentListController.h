@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "MTTableViewController.h"
 
-@interface MyShortRentListController : MTController
+@interface MyShortRentListController : MTTableViewController
 
 @end

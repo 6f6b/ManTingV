@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.transferDetailContentScrollView setValueWith:nil];
+    [self.transferDetailContentScrollView setValueWith:self.assignmentDTOModel];
     // Do any additional setup after loading the view.
 }
 

@@ -12,41 +12,21 @@
 #import "HouseInfoDTOModel.h"
 #import "HouseWeekDTOModel.h"
 #import "MyHouseListDetailController.h"
-@interface RightsListController ()<UITableViewDataSource,UITableViewDelegate>
-@property (nonatomic,weak) UITableView *tableView;
-@property (nonatomic,strong) NSMutableArray *dataArray;
+@interface RightsListController ()
+//@property (nonatomic,weak) UITableView *tableView;
+//@property (nonatomic,strong) NSMutableArray *dataArray;
 @end
 
 @implementation RightsListController
-
-- (id)init{
-    if (self == [super init]) {
-//        self.isNeedToCheckLogin = YES;
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"权益列表";
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyHouseListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyHouseListCell class])];
-    [self.view addSubview:tableView];
-    self.tableView = tableView;
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyHouseListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyHouseListCell class])];
     
     [self loadDataFromServer];
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
 }
 
 #pragma mark - 从服务器下载数据

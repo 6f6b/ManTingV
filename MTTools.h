@@ -44,4 +44,13 @@
  *  @return 周次列表
  */
 + (NSArray *)houseWeekList;
+
+/**
+ *  将服务器返回的状态集转换为用户可见字符串
+ *
+ *  @param result 服务器返回的状态集
+ *
+ *  @return 用户可见字符串
+ */
++ (NSString *)resultStringWithEnumString:(NSString *)result;
 @end

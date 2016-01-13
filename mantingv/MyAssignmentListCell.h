@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MyAssignmentListCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIView *headImage;
-
-@property (weak, nonatomic) IBOutlet UIView *titleLabe;
-@property (weak, nonatomic) IBOutlet UIView *priceLabel;
-@property (weak, nonatomic) IBOutlet UIView *timeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @end

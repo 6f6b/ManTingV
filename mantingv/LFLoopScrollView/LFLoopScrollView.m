@@ -53,7 +53,7 @@
         return _pageControl;
     }
     UIPageControl *pageControl = [[UIPageControl alloc] init];
-    pageControl.pageIndicatorTintColor = [UIColor colorWithRed:124 green:252 blue:0 alpha:1];
+    pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.536 green:1.000 blue:0.585 alpha:1.000];
     pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     _pageControl = pageControl;
     [self addSubview:pageControl];
@@ -85,7 +85,7 @@
     if (_timer) {
         return _timer;
     }
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(dealTimer) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(dealTimer) userInfo:nil repeats:YES];
     return _timer;
 }
 

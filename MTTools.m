@@ -87,4 +87,32 @@
     NSArray *arr = @[dicWeek1,dicWeek2,dicWeek3,dicWeek4,dicWeek5];
     return arr;
 }
+
+
+/**
+ *  将服务器返回的状态集转换为用户可见字符串
+ *
+ *  @param result 服务器返回的状态集
+ *
+ *  @return 用户可见字符串
+ */
++ (NSString *)resultStringWithEnumString:(NSString *)result{
+    NSDictionary *resultEnum = @{@"SUCCESS":@"成功",
+                                 @"ERROR":@"服务器出错",
+                                 @"VALIDA_NUM_ERROR":@"验证码错误",
+                                 @"PASSWORD_ERROR":@"密码错误",
+                                 @"USERNAME_ERROR":@"用户名错误",
+                                 @"PASSWORD_NOT_SAME":@"密码不一致",
+                                 @"USER_IS_NOT_EXIST":@"用户不存在",
+                                 @"USER_IS_EXIST":@"用户已存在",
+                                 @"EXCHANGE_POWER_INADEQUATE":@"交换权限不足",
+                                 @"OLD_PASSWORD_ERROR":@"旧密码错误",
+                                 @"EXCHANGE_IS_EXIST":@"已加入交换池",
+                                 @"EXCHANGE_NOT_ALLOW":@"交换不被允许",};
+    NSString *resultForUser = [resultEnum objectForKey:result];
+    if (nil == resultForUser) {
+        resultForUser = @"发生未知错误!";
+    }
+    return resultForUser;
+}
 @end

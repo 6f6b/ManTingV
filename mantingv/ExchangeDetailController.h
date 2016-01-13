@@ -6,10 +6,9 @@
 //  Copyright © 2015年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "INeedBaseController.h"
 #import "ExchangePoolDTOModel.h"
 
-@interface ExchangeDetailController : MTController
-@property (nonatomic,copy) NSString *myHouseGuid;
+@interface ExchangeDetailController : INeedBaseController
 @property (nonatomic,copy) NSString *exchangePoolGuid;
 @end

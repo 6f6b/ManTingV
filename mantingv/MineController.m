@@ -20,9 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    self.title = @"我的";
     self.view.frame = CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT);
     MineContentScrollView *mineContentScrollView = [[MineContentScrollView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:mineContentScrollView];
+    mineContentScrollView.backgroundColor = [UIColor whiteColor];
     self.mineContentScrollView = mineContentScrollView;
     self.mineContentScrollView.controller = self;
 //    [self.mineContentScrollView setValueWith:nil];

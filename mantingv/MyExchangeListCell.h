@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MyExchangeListCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @end

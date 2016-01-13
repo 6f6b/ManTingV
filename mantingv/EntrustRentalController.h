@@ -6,8 +6,7 @@
 //  Copyright © 2016年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "INeedBaseController.h"
 
-@interface EntrustRentalController : MTController
-@property (nonatomic,copy) NSString *myHouseGuid;
+@interface EntrustRentalController : INeedBaseController
 @end

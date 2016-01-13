@@ -53,7 +53,7 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.image = [UIImage imageNamed:@"14008695_135933664000_2-2.jpg"];
+        backImage.image = [UIImage imageNamed:@"4c4fbadf4ab40b683a505af33965809d.jpg"];
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -63,8 +63,7 @@
 - (UIImageView *)icon{
     if (nil == _icon) {
         UIImageView *icon = [[UIImageView alloc] init];
-        icon.image = [UIImage imageNamed:@"18c2bff02481ae8f22c021a4142b44ba.jpg"];
-        icon.backgroundColor = [UIColor redColor];
+        icon.backgroundColor = [UIColor whiteColor];
         icon.layer.cornerRadius = 35;
         icon.clipsToBounds = YES;
         [self addSubview:icon];
@@ -84,8 +83,10 @@
 - (void)setValueWith:(id)data{
     UserAccount *model = [UserAccount modelWithDictionary:data];
     self.model = model;
-    NSLog(@"我的-->%@",model.imageGuid);
     [self.icon lfSetImageWithURL:model.imageGuid];
+    if (nil == self.icon.image) {
+        self.icon.image = [UIImage imageNamed:@"6e99cf785f741d8b840ed49bd5cd3df7.jpg"];
+    }
     self.accountLabel.text = model.username;
 //    self.accountLabel.text = [NSString stringWithFormat:@"%@/%@",userAccount.username,userAccount.phoneNum];
 }

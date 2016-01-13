@@ -16,7 +16,7 @@
 
 + (instancetype)mineSubViewWithLeftImage:(NSString *)leftImage rightImage:(NSString *)rightImage title:(NSString *)title{
     MineSubView *mineSubView = [[MineSubView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-    mineSubView.backgroundColor = [UIColor yellowColor];
+    mineSubView.backgroundColor = [UIColor colorWithRed:0.927 green:1.000 blue:0.926 alpha:1.000];
     
     mineSubView.leftImage.image = [UIImage imageNamed:leftImage];
     mineSubView.titleLabel.text = title;
@@ -69,6 +69,7 @@
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.text = @"漫庭";
+        titleLabel.textColor = [UIColor blackColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }

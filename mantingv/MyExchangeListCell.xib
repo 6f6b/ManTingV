@@ -21,14 +21,35 @@
                             <constraint firstAttribute="width" constant="80" id="hyP-Fo-QC0"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hy3-Gd-uI9">
+                        <rect key="frame" x="90" y="5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHE-6x-8TS">
+                        <rect key="frame" x="90" y="31" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="W0R-N5-yRr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="0qI-cz-9eM"/>
+                    <constraint firstItem="OHE-6x-8TS" firstAttribute="top" secondItem="Hy3-Gd-uI9" secondAttribute="bottom" constant="5" id="20K-LK-FBE"/>
+                    <constraint firstItem="Hy3-Gd-uI9" firstAttribute="leading" secondItem="W0R-N5-yRr" secondAttribute="trailing" constant="5" id="FkK-hy-fYK"/>
+                    <constraint firstItem="Hy3-Gd-uI9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="eWz-fk-Vn2"/>
                     <constraint firstItem="W0R-N5-yRr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="jUl-zW-fva"/>
+                    <constraint firstItem="OHE-6x-8TS" firstAttribute="leading" secondItem="Hy3-Gd-uI9" secondAttribute="leading" id="uph-R9-w1e"/>
                     <constraint firstItem="W0R-N5-yRr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vtW-Wn-dpl"/>
                     <constraint firstAttribute="bottom" secondItem="W0R-N5-yRr" secondAttribute="bottom" constant="5" id="xcl-Fp-ayy"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="headImage" destination="W0R-N5-yRr" id="pGe-3r-Eo2"/>
+                <outlet property="priceLabel" destination="OHE-6x-8TS" id="yui-y9-AfT"/>
+                <outlet property="titleLabel" destination="Hy3-Gd-uI9" id="uhT-vi-FPo"/>
+            </connections>
             <point key="canvasLocation" x="472" y="350"/>
         </tableViewCell>
     </objects>

@@ -11,11 +11,11 @@
 #import "MyAssignmentListCell.h"
 #import "AssignmentDTOModel.h"
 #import "myHouseDTOModel.h"
-
+#import "HouseInfoDTOModel.h"
+#import "HouseWeekDTOModel.h"
+#import "HouseDetailController.h"
 @interface MyAssignmentListController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,weak) MTSwitchView *switchView;
-@property (nonatomic,weak) UITableView *tableView;
-@property (nonatomic,copy) NSArray *dataArray;
 @end
 
 @implementation MyAssignmentListController
@@ -24,10 +24,19 @@
     [super viewDidLoad];
     self.title = @"我的转让";
     
+    NSArray *titles = @[@"正常",@"失效"];
+    MTSwitchView *switchView = [MTSwitchView switchViewWithTitles:titles];
+    [switchView setClickedAction:^(NSInteger index) {
+        NSLog(@"%lu",index);
+    }];
+    _switchView = switchView;
+    [self.view addSubview:switchView];
+    
+    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.switchView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(self.switchView.frame));
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyAssignmentListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyAssignmentListCell class])];
+    
     NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:@"/my_house/assignment_list/"];
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *userGui = [user objectForKey:USER_GUID];
-    NSString *url = [urlWithOutUserGuid stringByAppendingString:userGui];
+    NSString *url = [urlWithOutUserGuid stringByAppendingString:[MTTools userGuid]];
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -44,36 +53,10 @@
     }];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    NSArray *titles = @[@"正常",@"失效"];
-    MTSwitchView *switchView = [MTSwitchView switchViewWithTitles:titles];
-//    [switchView setClickedAction:^(NSInteger index) {
-//        NSLog(@"%lu",index);
-//    }];
-    _switchView = switchView;
-    [self.view addSubview:switchView];
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-}
-
-- (UITableView *)tableView{
-    if (nil == _tableView) {
-        NSLog(@"%@",self.switchView);
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.switchView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(self.switchView.frame)) style:UITableViewStylePlain];
-        [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyAssignmentListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyAssignmentListCell class])];
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        _tableView = tableView;
-        [self.view addSubview:tableView];
-    }
-    return _tableView;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return self.dataArray.count;
-    return 10;
+    return self.dataArray.count;
+//    return 10;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -83,11 +66,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MyAssignmentListCell *myAssignmentListCell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MyAssignmentListCell class])];
+    AssignmentDTOModel *assignmentDTOModel = [AssignmentDTOModel modelWithDictionary:self.dataArray[indexPath.row]];
+    MyHouseDTOModel *myHouseDTOModel = [MyHouseDTOModel modelWithDictionary:assignmentDTOModel.myHouseDTO];
+    HouseInfoDTOModel *houseInfoDTOModel = [HouseInfoDTOModel modelWithDictionary:myHouseDTOModel.houseInfoDTO];
+    [myAssignmentListCell.headImage lfSetImageWithURL:houseInfoDTOModel.imageGuids[0]];
+    myAssignmentListCell.titleLabel.text = [NSString stringWithFormat:@"title：%@",houseInfoDTOModel.name];
+    myAssignmentListCell.priceLabel.text = [NSString stringWithFormat:@"价格:%@",houseInfoDTOModel.price];
+    myAssignmentListCell.timeLabel.text = [NSString stringWithFormat:@"时间:"];
     return myAssignmentListCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    HouseDetailController *houseDetailController = [[HouseDetailController alloc] init];
+    AssignmentDTOModel *assignmentDTOModel = [AssignmentDTOModel modelWithDictionary:self.dataArray[indexPath.row]];
+    MyHouseDTOModel *myHouseDTOModel = [MyHouseDTOModel modelWithDictionary:assignmentDTOModel.myHouseDTO];
+    HouseWeekDTOModel *houseWeekDTOModel = [HouseWeekDTOModel modelWithDictionary:myHouseDTOModel.houseWeekDTO];
+    houseDetailController.houseWeekGuid = houseWeekDTOModel.guid;
+//    NSLog(@"%@---%@",self.)
+    [self.navigationController pushViewController:houseDetailController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

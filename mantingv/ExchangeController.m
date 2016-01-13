@@ -24,10 +24,6 @@
     self.title = @"交换大厅";
     // Do any additional setup after loading the view.
     
-//    //创建顶部搜索框
-//    UISearchBar *productSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 10, 80, 40)];
-//    productSearchBar.placeholder = @"请输入关键词";
-//    self.navigationItem.titleView = productSearchBar;
     
     //将我的houseGuid放进交换池子
     NSString *urlWithOutHouseGuid = [BASE_URL stringByAppendingString:@"/exchange/add_pool/"];
@@ -46,12 +42,6 @@
     [self.exchangeContentScrollView setValueWith:nil];
 }
 
-//- (void)dealTap:(UITapGestureRecognizer *)tap{
-//    NSLog(@"%lu",tap.view.tag);
-//    ExchangeListController *exchangeListController = [[ExchangeListController alloc] init];
-//    exchangeListController.title =  [NSString stringWithFormat:@"%lu",tap.view.tag];
-//    [self.navigationController pushViewController:exchangeListController animated:YES];
-//}
 
 - (ExchangeContentScrollView *)exchangeContentScrollView{
     if (nil == _exchangeContentScrollView) {

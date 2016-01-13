@@ -6,8 +6,8 @@
 //  Copyright © 2016年 LiuFeng. All rights reserved.
 //
 
-#import "MTController.h"
+#import "MTTableViewController.h"
 
-@interface MyExchangeListController : MTController
+@interface MyExchangeListController : MTTableViewController
 
 @end

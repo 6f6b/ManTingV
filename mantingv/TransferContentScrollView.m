@@ -8,7 +8,6 @@
 
 #import "TransferContentScrollView.h"
 #import "TransferContainView.h"
-#import "TransferDetailController.h"
 
 @interface TransferContentScrollView ()
 @property (nonatomic,weak) TransferContainView *transferContainView;
@@ -17,12 +16,9 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
-    NSMutableArray *arr = [[NSMutableArray alloc] initWithArray:self.chooserView.dataContentArray];
-    arr[2] = [MTTools houseWeekList];
-    [self.chooserView setDataArraysWith:arr];
-    NSArray *buttonTitles = @[@"地点",@"度假屋",@"周次"];
-    [self.chooserView setTitlesOfButtonWith:buttonTitles];
+    self.appendingUrl = @"/assignment/list";
 }
+
 
 - (TransferContainView *)transferContainView{
     if(nil == _transferContainView){
@@ -35,18 +31,14 @@
 }
 
 - (void)setValueWith:(id)data{
-    NSString *url = [BASE_URL stringByAppendingString:@"/assignment/list"];
-    [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"%@",NSStringFromClass([[dic objectForKey:@"data"] class]));
-        [self.transferContainView setValueWith:dic];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
-    
+    if (nil == data) {
+        [self loadDataFromServer];
+    }
+    [self.transferContainView removeFromSuperview];
+    self.transferContainView = nil;
+    NSArray *arr = [data objectForKey:@"data"];
+    [self.transferContainView setValueWith:arr];
+    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.transferContainView.frame));
 }
 
 @end

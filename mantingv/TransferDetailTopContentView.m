@@ -7,9 +7,13 @@
 //
 
 #import "TransferDetailTopContentView.h"
+#import "AssignmentDTOModel.h"
+#import "MyHouseDTOModel.h"
+#import "HouseInfoDTOModel.h"
+#import "HouseWeekDTOModel.h"
 
 @interface TransferDetailTopContentView ()
-@property (nonatomic,weak) LFLoopScrollView *pictureScrollView;
+@property (nonatomic,weak) LFLoopScrollViewForMT *pictureScrollView;
 @property (nonatomic,weak) UILabel *houseTypeLabel;
 @property (nonatomic,weak) UILabel *cycleLabel;
 @property (nonatomic,weak) UILabel *priceLabel;
@@ -50,9 +54,9 @@
     }];
 }
 
-- (LFLoopScrollView *)pictureScrollView{
+- (LFLoopScrollViewForMT *)pictureScrollView{
     if (nil == _pictureScrollView) {
-        LFLoopScrollView *pictureScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+        LFLoopScrollViewForMT *pictureScrollView = [LFLoopScrollViewForMT loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         [self addSubview:pictureScrollView];
         _pictureScrollView = pictureScrollView;
     }
@@ -102,12 +106,16 @@
 }
 
 - (void)setValueWith:(id)data{
-    NSArray *urls = @[@"http://down.tutu001.com/d/file/20101129/2f5ca0f1c9b6d02ea87df74fcc_560.jpg",@"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg",@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
-    [self.pictureScrollView setImageWithUrlS:urls];
+    AssignmentDTOModel *assignmentDTOModel = data;
+    MyHouseDTOModel *myHouseDTOModel = [MyHouseDTOModel modelWithDictionary:assignmentDTOModel.myHouseDTO];
+    HouseWeekDTOModel *houseWeekDTOModel = [HouseWeekDTOModel modelWithDictionary:myHouseDTOModel.houseWeekDTO];
+    HouseInfoDTOModel *houseInfoDTOModel = [HouseInfoDTOModel modelWithDictionary:myHouseDTOModel.houseInfoDTO];
+
+    [self.pictureScrollView setImageWithUrlS:houseInfoDTOModel.imageGuids];
+    self.houseTypeLabel.text = [NSString stringWithFormat:@"%@/%@平米",houseInfoDTOModel.houseType,houseInfoDTOModel.buildingTypeArea];
     
-    self.houseTypeLabel.text = @"两室一厅/90平米";
-    self.cycleLabel.text = @"淡季周";
+    self.cycleLabel.text = houseWeekDTOModel.name;
     self.priceLabel.text = @"价格:";
-    self.price.text = @"￥345";
+    self.price.text = houseInfoDTOModel.price;
 }
 @end

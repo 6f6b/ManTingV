@@ -63,10 +63,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="headImage" destination="H2p-sc-9uM" id="PNK-cV-PDd"/>
-                <outlet property="priceLabel" destination="H2p-sc-9uM" id="jgi-bg-sBe"/>
-                <outlet property="timeLabel" destination="H2p-sc-9uM" id="wlO-3D-QIe"/>
-                <outlet property="titleLabe" destination="H2p-sc-9uM" id="5Os-m2-X6K"/>
+                <outlet property="headImage" destination="p8y-r9-nKI" id="2IU-n0-LFx"/>
+                <outlet property="priceLabel" destination="W06-zx-uVH" id="8Mv-Np-piv"/>
+                <outlet property="timeLabel" destination="uUJ-gl-Vah" id="Qer-gh-qTH"/>
+                <outlet property="titleLabel" destination="jfh-VK-JFv" id="3Eb-Ld-xjt"/>
             </connections>
             <point key="canvasLocation" x="339" y="442"/>
         </tableViewCell>

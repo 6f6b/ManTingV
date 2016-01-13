@@ -24,37 +24,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];    
+    self.tabBar.tintColor = [UIColor redColor];
     
     //创建首页
     HomeController *home = [[HomeController alloc] init];
-    [self setViewControllerWith:home title:@"首页" itemImage:@"down"];
+    [self setViewControllerWith:home title:@"首页" itemImage:@"icon_tab1_normal@2x" selectedImage:@"icon_tab1_selected@2x"];
     
     
     //创建产品页
     ProductController *product = [[ProductController alloc] init];
-    [self setViewControllerWith:product title:@"产品" itemImage:@"down"];
+    [self setViewControllerWith:product title:@"产品" itemImage:@"icon_tab2_normal@2x" selectedImage:@"icon_tab2_selected@2x"];
     
     
     //创建短租页
     ShortRentController *shortRent = [[ShortRentController alloc] init];
-    [self setViewControllerWith:shortRent title:@"短租" itemImage:@"down"];
+    [self setViewControllerWith:shortRent title:@"短租" itemImage:@"icon_tab3_normal@2x" selectedImage:@"icon_tab3_selected@2x"];
     
-    //创建产权中心页
-    PropertyRightCenterController *propertyRC = [[PropertyRightCenterController alloc] init];
-    [self setViewControllerWith:propertyRC title:@"产权中心" itemImage:@"down"];
+//    //创建产权中心页
+//    PropertyRightCenterController *propertyRC = [[PropertyRightCenterController alloc] init];
+//    [self setViewControllerWith:propertyRC title:@"产权中心" itemImage:@"down"];
     
     //创建我的页
     MineController *mine = [[MineController alloc] init];
-   [self setViewControllerWith:mine title:@"我的" itemImage:@"down"];
+   [self setViewControllerWith:mine title:@"我的" itemImage:@"icon_tab4_normal@2x" selectedImage:@"icon_tab4_selected@2x"];
 
     self.delegate = self;
 
 }
 
-- (MTNavigationController *)setViewControllerWith:(UIViewController *)controller title:(NSString *)title itemImage:(NSString *)imageName{
+- (MTNavigationController *)setViewControllerWith:(UIViewController *)controller title:(NSString *)title itemImage:(NSString *)imageName selectedImage:(NSString *)selectedImage{
     MTNavigationController *NAV = [[MTNavigationController alloc] initWithRootViewController:controller];
     NAV.title =title;
     [NAV.tabBarItem setImage:[UIImage imageNamed:imageName]];
+    [NAV.tabBarItem setSelectedImage:[UIImage imageNamed:selectedImage]];
     [self addChildViewController:NAV];
     return NAV;
 }

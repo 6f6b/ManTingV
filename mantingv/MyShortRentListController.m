@@ -13,8 +13,6 @@
 
 @interface MyShortRentListController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,weak) MTSwitchView *switchView;
-@property (nonatomic,weak) UITableView *tableView;
-@property (nonatomic,copy) NSArray *dataArray;
 @end
 
 @implementation MyShortRentListController
@@ -31,19 +29,11 @@
     _switchView = switchView;
     [self.view addSubview:switchView];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.switchView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(self.switchView.frame)) style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    self.tableView = tableView;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.view addSubview:tableView];
+    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.switchView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(self.switchView.frame));
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyRentListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyRentListCell class])];
     
     NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:@"/my_house/rent_list_lessee/"];
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *userGuid = [user objectForKey:USER_GUID];
-    NSLog(@"%@",userGuid);
-    NSString *url = [urlWithOutUserGuid stringByAppendingString:userGuid];
+    NSString *url = [urlWithOutUserGuid stringByAppendingString:[MTTools userGuid]];
     
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -80,6 +70,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 88;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 - (void)didReceiveMemoryWarning {
