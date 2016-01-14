@@ -9,8 +9,10 @@
 #import "AppDelegate.h"
 
 #import "MTTabBarController.h"
-#import "LoginController.h"
 
+#import <AlipaySDK/AlipaySDK.h>
+
+#import "UMSocial.h"
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -24,7 +26,7 @@
     tbc.delegate = self;
     self.window.rootViewController = tbc;
     
-    
+    [UMSocialData setAppKey:@"56975b9467e58e3593001c47"];
     return YES;
 }
 
@@ -50,4 +52,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+    }
+    return YES;
+}
 @end

@@ -128,6 +128,7 @@
     /////////////////////////////////////////////下载轮播图片数据///////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
+    [KVNProgress showWithStatus:@"正在加载。。"];
     [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
@@ -141,31 +142,6 @@
     }];
 }
 
-/////////////////////////////////////////////设置四个按钮///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//- (void)setButtons{
-//    NSArray *titles = @[@"我要买房",@"我要入住",@"我要交换",@"我要转让"];
-//    //NSArray *images = @[];
-//    for (int i=0; i<4; i++) {
-//        float btnX = i*SCREEN_WIDTH/4;
-//        float btnY = CGRectGetMaxY(self.loopScrollView.frame);
-//        float btnW = SCREEN_WIDTH/4;
-//        float btnH = 50;
-//        
-//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [button setBackgroundColor:[UIColor blackColor]];
-//        [button setTitle:titles[i] forState:UIControlStateNormal];
-//        button.frame = CGRectMake(btnX, btnY, btnW, btnH);
-//        [button setBackgroundImage:[UIImage imageNamed:@"RSS_button_48px_1104904_easyicon.net"] forState:UIControlStateNormal];
-//        [button setImageEdgeInsets:UIEdgeInsetsMake(10, 20, -20, -10)];
-//        [button setTitleEdgeInsets:UIEdgeInsetsMake(20, 0, -20, 0)];
-//        
-//        button.tag = 100+i;
-//        [button addTarget:self action:@selector(dealButton:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.fourButtons addObject:button];
-//        [self addSubview:button];
-//    }
-//}
 
 /////////////////////////////////////////////下载特价房间数据///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

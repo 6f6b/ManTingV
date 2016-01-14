@@ -18,3 +18,6 @@ pod 'MJExtension', '~> 3.0.7'
 
 platform :ios, '9.1'
 pod 'YYText', '~> 0.9.16'
+
+platform :ios, '9.1'
+pod 'UMengSocial', '~> 4.4'

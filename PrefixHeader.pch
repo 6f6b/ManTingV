@@ -50,4 +50,10 @@
 #import "MJExtension.h"
 #import "MTTools.h"
 
+
+/**
+ *  支付各种ID及私钥
+ */
+#import "Alipayconfig.h"
+
 #endif /* PrefixHeader_pch */

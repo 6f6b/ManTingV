@@ -16,6 +16,7 @@
 #import "HouseDetailController.h"
 @interface MyAssignmentListController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,weak) MTSwitchView *switchView;
+@property (nonatomic,copy) NSString *appendingUrl;
 @end
 
 @implementation MyAssignmentListController
@@ -24,35 +25,40 @@
     [super viewDidLoad];
     self.title = @"我的转让";
     
+    NSArray *urls = @[@"/my_house/assignment_list/",@"/my_house/assigning_list/"];
+    self.appendingUrl = urls[0];
+    
     NSArray *titles = @[@"正常",@"失效"];
     MTSwitchView *switchView = [MTSwitchView switchViewWithTitles:titles];
     [switchView setClickedAction:^(NSInteger index) {
-        NSLog(@"%lu",index);
+        self.appendingUrl = urls[index-1000];
+        [self loadDataFromServer];
     }];
     _switchView = switchView;
     [self.view addSubview:switchView];
     
     self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.switchView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(self.switchView.frame));
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyAssignmentListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyAssignmentListCell class])];
-    
-    NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:@"/my_house/assignment_list/"];
+    [self loadDataFromServer];
+}
+
+
+- (void)loadDataFromServer{
+    NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:self.appendingUrl];
     NSString *url = [urlWithOutUserGuid stringByAppendingString:[MTTools userGuid]];
+    [KVNProgress showWithStatus:@"loading.."];
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSArray *arr = [dic objectForKey:@"data"];
         self.dataArray = arr;
-        if (0 == arr.count) {
-            [KVNProgress showErrorWithStatus:@"数据为空"];
-            return ;
-        }
         [self.tableView reloadData];
+        [KVNProgress dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArray.count;

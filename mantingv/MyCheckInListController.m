@@ -86,7 +86,7 @@
         NSArray *arr = [dic objectForKey:@"data"];
         self.dataArray = arr;
         if (0 == arr.count) {
-            [KVNProgress showErrorWithStatus:@"sorr！you have no vacation house yet"];
+            [KVNProgress showErrorWithStatus:@"数据为空！"];
         }
         [self.tableView reloadData];
         
