@@ -13,7 +13,7 @@
 
 #import "UMSocialSnsService.h"
 #import "UMSocial.h"
-@interface MyShortRentListController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MyShortRentListController ()<UITableViewDataSource,UITableViewDelegate,UMSocialDataDelegate>
 @property (nonatomic,weak) MTSwitchView *switchView;
 @property (nonatomic,copy) NSString *appendingUrl;
 @end
@@ -52,12 +52,43 @@
 }
 
 - (void)dealRightItem{
-    NSLog(@"分享");
-    UIImage *image = [UIImage imageNamed:@"6e99cf785f741d8b840ed49bd5cd3df7"];
-    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:@"http://www.baidu.com/img/bdlogo.gif"];
-    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeMusic url:@"http://music.huoxing.com/upload/20130330/1364651263157_1085.mp3"];
-    [UMSocialSnsService presentSnsIconSheetView:self appKey:@"56975b9467e58e3593001c47" shareText:@"www.baidu.com" shareImage:image shareToSnsNames:nil delegate:self];
+//    NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"6e99cf785f741d8b840ed49bd5cd3df7"], 0.2);
+    
+    /*================================UM默认分享UI界面==========================================*/
+    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:@"http://www.yoka.com/dna/pics/Star/ba15ae1c/1/d357517b7931d15177.jpg"];
+    
+    [UMSocialData defaultData].extConfig.wechatTimelineData.url = @"http://www.mantingv.com";
+    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"张学友漫庭之家演唱会";
+
+    [UMSocialData defaultData].extConfig.wechatSessionData.url = @"http://www.mantingv.com";
+    [UMSocialData defaultData].extConfig.wechatFavoriteData.url = @"http://www.mantingv.com";
+    
+    [UMSocialData defaultData].extConfig.qqData.url = @"http://www.mantingv.com";
+    
+    [UMSocialData defaultData].extConfig.qzoneData.url = @"http://www.mantingv.com";
+
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"56975b9467e58e3593001c47"
+                                      shareText:@"慢下来，享你所想"
+                                     shareImage:nil
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToQQ,UMShareToSms,UMShareToSina,UMShareToQzone,UMShareToEmail]
+                                       delegate:nil];
+    
+    /*================================自定义之微信系列分享==========================================*/
+////    [UMSocialData defaultData].extConfig.wechatTimelineData.url = @"http://www.baidu.com";
+////    [UMSocialData defaultData].extConfig.wechatTimelineData.title = @"微信朋友圈title";
+//    NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"6e99cf785f741d8b840ed49bd5cd3df7"]);
+//    
+//    //使用UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite分别代表微信好友、微信朋友圈、微信收藏
+//    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToSina] content:@"分享内嵌文字" image:imageData location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
+//        if (response.responseCode == UMSResponseCodeSuccess) {
+//            NSLog(@"分享成功！");
+//        }
+//    }];
+//    [UMSocialData defaultData].extConfig.wechatTimelineData.url = @"http://www.baidu.com";
+//    [UMSocialData defaultData].extConfig.wechatTimelineData.title = @"微信朋友圈title";
 }
+
 
 - (void)loadDataFromServer{
     NSString *urlWithOutUserGuid = [BASE_URL stringByAppendingString:self.appendingUrl];

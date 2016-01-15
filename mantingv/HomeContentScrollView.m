@@ -14,7 +14,7 @@
 #import "RightsListController.h"
 #import "ChoiceNessRoom.h"
 #import "ShortRentController.h"
-
+#import "SpecialOfferContentView.h"
 
 #import "MTModel.h"
 @interface HomeContentScrollView ()<FunctionButtonsViewDelegate>
@@ -66,16 +66,17 @@
     }
 }
 
-#pragma mark - 默认的两个主题
-- (ThemeContentView *)themeContentView{
-    if (nil == _themeContentView) {
-        ThemeContentView *themeContentView = [[ThemeContentView alloc] init];
-        themeContentView.controller = self.controller;
-        [self addSubview:themeContentView];
-        themeContentView.backgroundColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:1.000];
-        _themeContentView = themeContentView;
+#pragma mark - 特价房
+
+- (SpecialOfferContentView *)specialOfferContentView{
+    if (nil == _specialOfferContentView) {
+        SpecialOfferContentView *specialOfferContentView = [[SpecialOfferContentView alloc] init];
+        specialOfferContentView.controller = self.controller;
+        [self addSubview:specialOfferContentView];
+        specialOfferContentView.backgroundColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:1.000];
+        _specialOfferContentView = specialOfferContentView;
     }
-    return _themeContentView;
+    return _specialOfferContentView;
 }
 
 #pragma mark - 不知道什么鬼
@@ -128,14 +129,14 @@
     /////////////////////////////////////////////下载轮播图片数据///////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
-    [KVNProgress showWithStatus:@"正在加载。。"];
+//    [KVNProgress showWithStatus:@"正在加载。。"];
     [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         MTModel *model = [MTModel modelWithDictionary:dic];
         [self.loopScrollView setImageWithUrlS:model.data];
         
-        self.themeContentView.frame = CGRectMake(0, CGRectGetMaxY(self.functionButtonsView.frame)+20, SCREEN_WIDTH, 0);
+        self.specialOfferContentView.frame = CGRectMake(0, CGRectGetMaxY(self.functionButtonsView.frame)+20, SCREEN_WIDTH, 0);
         [self loadThemeContentViewData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -152,8 +153,8 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         
-        [self.themeContentView setValueWith:dic];
-        self.what.frame = CGRectMake(0, CGRectGetMaxY(self.themeContentView.frame), SCREEN_WIDTH, 200);
+        [self.specialOfferContentView setValueWith:dic];
+        self.what.frame = CGRectMake(0, CGRectGetMaxY(self.specialOfferContentView.frame), SCREEN_WIDTH, 200);
         self.choiceNessTheme.frame = CGRectMake(0, CGRectGetMaxY(self.what.frame), SCREEN_WIDTH, 0);
         [self loadWhatData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

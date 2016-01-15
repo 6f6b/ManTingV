@@ -36,8 +36,10 @@
         button.frame = CGRectMake(X, Y, W, H);
         
         [button setTitle:titles[i] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        [button setBackgroundColor:[UIColor grayColor]];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
+        [button setBackgroundColor:[UIColor colorWithRed:0.975 green:1.000 blue:0.964 alpha:1.000]];
+        [button setBackgroundImage:[UIImage imageNamed:@"software_shape_rectangle_96.727272727273px_1183075_easyicon.net"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchDown];
     }
 }

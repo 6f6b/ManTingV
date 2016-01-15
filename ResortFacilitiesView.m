@@ -19,7 +19,9 @@
         CGFloat H = 30;
         
         UILabel *label = [[UILabel alloc] init];
-        label.backgroundColor = [UIColor redColor];
+//        label.shadowColor = [UIColor greenColor];
+//        label.shadowOffset = CGSizeMake(-1, -1);
+        label.textColor = [UIColor grayColor];
         label.textAlignment = NSTextAlignmentCenter;
         NSDictionary *dic = arr[i];
         label.text = [dic objectForKey:@"name"];

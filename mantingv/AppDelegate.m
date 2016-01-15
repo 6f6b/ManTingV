@@ -13,6 +13,11 @@
 #import <AlipaySDK/AlipaySDK.h>
 
 #import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+
+#import <Bugly/CrashReporter.h>
+
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -26,8 +31,29 @@
     tbc.delegate = self;
     self.window.rootViewController = tbc;
     
-    [UMSocialData setAppKey:@"56975b9467e58e3593001c47"];
+    
+    
+    [self registThirdPartSDK];
     return YES;
+}
+
+/**
+ *  注册相关三方SDK
+ *
+ *  @param
+ */
+- (void)registThirdPartSDK{
+    [UMSocialData setAppKey:@"56975b9467e58e3593001c47"];
+    
+    //设置微信AppId、appSecret，分享url
+    [UMSocialWechatHandler setWXAppId:@"x91729efc43a30eac" appSecret:@"d4624c36b6795d1d99dcf0547af5443d" url:@"http://www.baidu.com"];
+    
+    //设置QQ
+    [UMSocialQQHandler setQQWithAppId:@"1105041237" appKey:@"olGOvGo5pwd8lveq" url:@"http://www.baidu.com"];
+    
+    //=======================================初始化bugly===========================//
+    [[CrashReporter sharedInstance] installWithAppId:@"900017958"];
+    [[CrashReporter sharedInstance] enableLog:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -64,6 +90,12 @@
             NSLog(@"result = %@",resultDic);
         }];
     }
+    
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
     return YES;
 }
 @end

@@ -22,7 +22,7 @@
         themeListView.backgroundColor = [UIColor whiteColor];
         
         CGFloat X = 0;
-        CGFloat Y = 82*i;
+        CGFloat Y = 81*i;
         CGFloat W = SCREEN_WIDTH;
         CGFloat H = 80;
         themeListView.frame = CGRectMake(X, Y, W, H);

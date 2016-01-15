@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.0.0-beta.3)
   - AFNetworking/UIKit (3.0.0-beta.3):
     - AFNetworking/NSURLSession
+  - Bugly (1.4.6)
   - KVNProgress (2.2.2)
   - Masonry (0.6.3)
   - MJExtension (3.0.8)
@@ -25,6 +26,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0-beta.3)
+  - Bugly
   - KVNProgress (~> 2.2.2)
   - Masonry (~> 0.6.3)
   - MJExtension (~> 3.0.7)
@@ -34,6 +36,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 4bbf9c2993fe416e02093128f3be1bfe20c6e847
+  Bugly: 13c3ca1f67d68f037416ab4dbef5b6cd3f933e84
   KVNProgress: 4697347e21e37fdaa5264ebc24e377c205a50328
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MJExtension: 12d2875959b4a0f936ae86b22a1eb6b0251c50ba

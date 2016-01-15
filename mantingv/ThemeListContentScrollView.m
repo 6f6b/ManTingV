@@ -25,7 +25,7 @@
         ThemeListContentView *themeListContentView = [[ThemeListContentView alloc] init];
         themeListContentView.frame = CGRectMake(0, CGRectGetMaxY(self.loopScrollView.frame), 0, 0);
         themeListContentView.controller = self.controller;
-        themeListContentView.backgroundColor = [UIColor orangeColor];
+        themeListContentView.backgroundColor = [UIColor grayColor];
         [self addSubview:themeListContentView];
         _themListContentView = themeListContentView;
     }

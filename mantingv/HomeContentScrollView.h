@@ -13,7 +13,7 @@
 #import "FunctionButtonsView.h"
 #import "ChoiceNessRoom.h"
 #import "ChoiceNessTheme.h"
-#import "ThemeContentView.h"
+#import "SpecialOfferContentView.h"
 
 @interface HomeContentScrollView : ContentScrollViewWithLoopScrollView
 @property (nonatomic,strong) NSMutableArray * fourButtons;
@@ -21,7 +21,7 @@
 @property (nonatomic,weak) ChoiceNessTheme *choiceNessTheme;
 @property (nonatomic,weak) ChoiceNessRoom *choiceNessRoom;
 @property (nonatomic,weak) UIImageView *what;
+@property (nonatomic,weak) SpecialOfferContentView *specialOfferContentView;
 
-@property (nonatomic,weak) ThemeContentView *themeContentView;
 @end
 

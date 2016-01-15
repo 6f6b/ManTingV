@@ -1,4 +1,7 @@
 platform :ios, '9.1'
+pod 'Bugly'
+
+platform :ios, '9.1'
 pod 'Masonry', '~> 0.6.3'
 
 platform :ios, '9.1'

@@ -89,7 +89,6 @@
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
         backImage.image = [UIImage imageNamed:@"mine"];
-        backImage.backgroundColor = [UIColor grayColor];
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -99,7 +98,6 @@
 - (UILabel *)timeLabel{
     if (nil == _timeLabel) {
         UILabel *timeLabel = [[UILabel alloc] init];
-        timeLabel.backgroundColor = [UIColor orangeColor];
         timeLabel.font = [UIFont systemFontOfSize:12];
         timeLabel.text = @"时间";
         [self addSubview:timeLabel];
@@ -113,7 +111,6 @@
         UILabel *houseTypeLabel = [[UILabel alloc] init];
         houseTypeLabel.font = [UIFont systemFontOfSize:12];
         houseTypeLabel.text = @"一室一厅";
-        houseTypeLabel.backgroundColor = [UIColor yellowColor];
         [self addSubview:houseTypeLabel];
         _houseTypeLabel = houseTypeLabel;
     }
@@ -123,9 +120,9 @@
 - (UILabel *)sizeLabel{
     if (nil == _sizeLabel) {
         UILabel *sizeLabel = [[UILabel alloc] init];
+        sizeLabel.textColor = [UIColor grayColor];
         sizeLabel.text = @"100平米";
         sizeLabel.font = [UIFont systemFontOfSize:12];
-        sizeLabel.backgroundColor = [UIColor greenColor];
         [self addSubview:sizeLabel];
         _sizeLabel = sizeLabel;
     }
@@ -135,7 +132,7 @@
 - (UILabel *)surplusLabel{
     if (nil == _surplusLabel) {
         UILabel *surplusLabel = [[UILabel alloc] init];
-        surplusLabel.backgroundColor = [UIColor yellowColor];
+        surplusLabel.textColor = [UIColor grayColor];
         surplusLabel.text = @"剩余100套";
         surplusLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:surplusLabel];
@@ -147,9 +144,9 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.text = @"20万";
+        priceLabel.textColor = [UIColor redColor];
+        priceLabel.text = @"NULL";
         priceLabel.font = [UIFont systemFontOfSize:12];
-        priceLabel.backgroundColor = [UIColor yellowColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
@@ -163,7 +160,7 @@
         buyBUtton.tintColor = [UIColor whiteColor];
         [buyBUtton setTitle:@"立即购买" forState:UIControlStateNormal];
         [buyBUtton addTarget:self action:@selector(dealBuyBtn) forControlEvents:UIControlEventTouchUpInside];
-        buyBUtton.backgroundColor = [UIColor redColor];
+        buyBUtton.backgroundColor = [UIColor orangeColor];
         [self addSubview:buyBUtton];
         _buyButton = buyBUtton;
     }

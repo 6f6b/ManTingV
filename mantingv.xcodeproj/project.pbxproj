@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		009CFA1BCBE4B569916C9AFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EC7ED67ED18BE89D8F1137 /* libPods.a */; };
+		03059B791C48EEAF00B19149 /* SpecialOfferContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03059B781C48EEAF00B19149 /* SpecialOfferContentView.m */; };
+		03059B7B1C48F58600B19149 /* software_shape_rectangle_96.727272727273px_1183075_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03059B7A1C48F58600B19149 /* software_shape_rectangle_96.727272727273px_1183075_easyicon.net.png */; };
+		03059B7D1C48F62100B19149 /* Rounded_rectangle_tool_96px_1185798_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03059B7C1C48F62100B19149 /* Rounded_rectangle_tool_96px_1185798_easyicon.net.png */; };
 		0376AFE41C1196C30033D2A2 /* Welcome1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0376AFD41C1196C30033D2A2 /* Welcome1.jpg */; };
 		0376AFE51C1196C30033D2A2 /* Welcome1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0376AFD51C1196C30033D2A2 /* Welcome1@2x.jpg */; };
 		0376AFE61C1196C30033D2A2 /* Welcome2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0376AFD61C1196C30033D2A2 /* Welcome2.jpg */; };
@@ -91,6 +94,9 @@
 		03D452AC1C478E9A00D26E35 /* Share_20.16690647482px_1183447_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D452AB1C478E9A00D26E35 /* Share_20.16690647482px_1183447_easyicon.net.png */; };
 		03D452B71C4797E700D26E35 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D452B21C4797E700D26E35 /* libSocialWechat.a */; };
 		03D452B81C4797E700D26E35 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D452B31C4797E700D26E35 /* libWeChatSDK.a */; };
+		03D4CC721C48C0DE0076BEE9 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D4CC6E1C48C0DE0076BEE9 /* libSocialQQ.a */; };
+		03D4CC731C48C0DE0076BEE9 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D4CC6F1C48C0DE0076BEE9 /* TencentOpenAPI.framework */; };
+		03D4CC741C48C0DE0076BEE9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03D4CC701C48C0DE0076BEE9 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		03D5BC421C34C25E00B92A72 /* UserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D5BC411C34C25E00B92A72 /* UserAccount.m */; };
 		03D5BC491C34CCE900B92A72 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D5BC471C34CCE900B92A72 /* RegisterController.m */; };
 		03D5BC4A1C34CCE900B92A72 /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D5BC481C34CCE900B92A72 /* RegisterController.xib */; };
@@ -298,6 +304,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03059B771C48EEAF00B19149 /* SpecialOfferContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialOfferContentView.h; sourceTree = "<group>"; };
+		03059B781C48EEAF00B19149 /* SpecialOfferContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialOfferContentView.m; sourceTree = "<group>"; };
+		03059B7A1C48F58600B19149 /* software_shape_rectangle_96.727272727273px_1183075_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = software_shape_rectangle_96.727272727273px_1183075_easyicon.net.png; sourceTree = "<group>"; };
+		03059B7C1C48F62100B19149 /* Rounded_rectangle_tool_96px_1185798_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rounded_rectangle_tool_96px_1185798_easyicon.net.png; sourceTree = "<group>"; };
 		0376AFD41C1196C30033D2A2 /* Welcome1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Welcome1.jpg; sourceTree = "<group>"; };
 		0376AFD51C1196C30033D2A2 /* Welcome1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Welcome1@2x.jpg"; sourceTree = "<group>"; };
 		0376AFD61C1196C30033D2A2 /* Welcome2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Welcome2.jpg; sourceTree = "<group>"; };
@@ -513,6 +523,10 @@
 		03D452B41C4797E700D26E35 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
 		03D452B51C4797E700D26E35 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		03D452B61C4797E700D26E35 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		03D4CC6E1C48C0DE0076BEE9 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
+		03D4CC6F1C48C0DE0076BEE9 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		03D4CC701C48C0DE0076BEE9 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		03D4CC711C48C0DE0076BEE9 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
 		03D5BC401C34C25E00B92A72 /* UserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccount.h; sourceTree = "<group>"; };
 		03D5BC411C34C25E00B92A72 /* UserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccount.m; sourceTree = "<group>"; };
 		03D5BC461C34CCE900B92A72 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
@@ -842,10 +856,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D4CC721C48C0DE0076BEE9 /* libSocialQQ.a in Frameworks */,
 				03D4516C1C47465200D26E35 /* SystemConfiguration.framework in Frameworks */,
 				03D4523E1C47551D00D26E35 /* libcrypto.a in Frameworks */,
 				03D452B81C4797E700D26E35 /* libWeChatSDK.a in Frameworks */,
 				03D4523F1C47551D00D26E35 /* libssl.a in Frameworks */,
+				03D4CC731C48C0DE0076BEE9 /* TencentOpenAPI.framework in Frameworks */,
 				03D452371C474F6D00D26E35 /* AlipaySDK.framework in Frameworks */,
 				03D4516A1C47464000D26E35 /* libz.tbd in Frameworks */,
 				009CFA1BCBE4B569916C9AFD /* libPods.a in Frameworks */,
@@ -873,6 +889,8 @@
 		0376AFD31C1196C30033D2A2 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				03059B7C1C48F62100B19149 /* Rounded_rectangle_tool_96px_1185798_easyicon.net.png */,
+				03059B7A1C48F58600B19149 /* software_shape_rectangle_96.727272727273px_1183075_easyicon.net.png */,
 				03D452AB1C478E9A00D26E35 /* Share_20.16690647482px_1183447_easyicon.net.png */,
 				03EDC9F81C4633CC0072DFC7 /* 6e99cf785f741d8b840ed49bd5cd3df7.jpg */,
 				03EDC9F61C46335C0072DFC7 /* 4c4fbadf4ab40b683a505af33965809d.jpg */,
@@ -939,6 +957,7 @@
 		03775B3C1C11368F00319C32 /* mantingv */ = {
 			isa = PBXGroup;
 			children = (
+				03D4CC6B1C48B4A90076BEE9 /* bug收集 */,
 				03D452B91C4797E900D26E35 /* 分享 */,
 				03D452AD1C478E9E00D26E35 /* 支付 */,
 				03EDC9C11C46121C0072DFC7 /* IconsFromDamai */,
@@ -1727,9 +1746,36 @@
 		03D452B91C4797E900D26E35 /* 分享 */ = {
 			isa = PBXGroup;
 			children = (
+				03D4CC6C1C48C0D20076BEE9 /* QQ */,
 				03D452B11C4797E700D26E35 /* Wechat */,
 			);
 			name = "分享";
+			sourceTree = "<group>";
+		};
+		03D4CC6B1C48B4A90076BEE9 /* bug收集 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "bug收集";
+			sourceTree = "<group>";
+		};
+		03D4CC6C1C48C0D20076BEE9 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				03D4CC6D1C48C0DE0076BEE9 /* TencentOpenAPI */,
+			);
+			name = QQ;
+			sourceTree = "<group>";
+		};
+		03D4CC6D1C48C0DE0076BEE9 /* TencentOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				03D4CC6E1C48C0DE0076BEE9 /* libSocialQQ.a */,
+				03D4CC6F1C48C0DE0076BEE9 /* TencentOpenAPI.framework */,
+				03D4CC701C48C0DE0076BEE9 /* TencentOpenApi_IOS_Bundle.bundle */,
+				03D4CC711C48C0DE0076BEE9 /* UMSocialQQHandler.h */,
+			);
+			path = TencentOpenAPI;
 			sourceTree = "<group>";
 		};
 		03D5BC431C34CCA200B92A72 /* 登录 */ = {
@@ -1786,6 +1832,8 @@
 			children = (
 				03DA24721C23D3F90098FE4B /* Theme.h */,
 				03DA24731C23D3F90098FE4B /* Theme.m */,
+				03059B771C48EEAF00B19149 /* SpecialOfferContentView.h */,
+				03059B781C48EEAF00B19149 /* SpecialOfferContentView.m */,
 				03DB9D1D1C2053EC00A40361 /* ThemeContentView.h */,
 				03DB9D1E1C2053EC00A40361 /* ThemeContentView.m */,
 			);
@@ -2851,6 +2899,7 @@
 				03D251E01C22AE9300BA9ED7 /* ModifyNickNameController.xib in Resources */,
 				03DC4FFF1C28EA340040C939 /* INeedCheckInCell.xib in Resources */,
 				03D251CF1C22ACA600BA9ED7 /* ModifyIconController.xib in Resources */,
+				03059B7B1C48F58600B19149 /* software_shape_rectangle_96.727272727273px_1183075_easyicon.net.png in Resources */,
 				0376AFF01C1196C30033D2A2 /* Welcome_3.0_4.jpg in Resources */,
 				03DC50011C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png in Resources */,
 				03D452AC1C478E9A00D26E35 /* Share_20.16690647482px_1183447_easyicon.net.png in Resources */,
@@ -2864,6 +2913,7 @@
 				03EDC9DF1C46124E0072DFC7 /* icon_tab4_normal@3x.png in Resources */,
 				03EDC9E11C46124E0072DFC7 /* icon_tab4_selected@3x.png in Resources */,
 				03E0A25F1C18274000FCAAAC /* product.png in Resources */,
+				03D4CC741C48C0DE0076BEE9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				03DEED151C3BB47B00EE518F /* ResettingController.xib in Resources */,
 				03D5BC4A1C34CCE900B92A72 /* RegisterController.xib in Resources */,
 				0376AFF21C1196C30033D2A2 /* Welcome_3.0_5.jpg in Resources */,
@@ -2872,6 +2922,7 @@
 				03D251E71C22BDDA00BA9ED7 /* BookOrderController.xib in Resources */,
 				0376AFEB1C1196C30033D2A2 /* Welcome_3.0_1@2x.jpg in Resources */,
 				03EDC9F71C46335C0072DFC7 /* 4c4fbadf4ab40b683a505af33965809d.jpg in Resources */,
+				03059B7D1C48F62100B19149 /* Rounded_rectangle_tool_96px_1185798_easyicon.net.png in Resources */,
 				03DA248B1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png in Resources */,
 				03775B9E1C113C1B00319C32 /* PropertyRightCenterController.xib in Resources */,
 				03D6E5361C3FA5040068142C /* MyExchangeListCell.xib in Resources */,
@@ -2968,6 +3019,7 @@
 				03CFAECC1C321F68009C80EB /* ShortRentController.m in Sources */,
 				03DA24771C23D4570098FE4B /* ChoiceRoom.m in Sources */,
 				03775BA21C113C3000319C32 /* MineController.m in Sources */,
+				03059B791C48EEAF00B19149 /* SpecialOfferContentView.m in Sources */,
 				03E066701C27F02400E85778 /* TransferController.m in Sources */,
 				03775B7F1C113AAD00319C32 /* HomeController.m in Sources */,
 				03DB9D1C1C200D1000A40361 /* PayTypeView.m in Sources */,
@@ -3240,6 +3292,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/mantingv",
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
+					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
 				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -3260,6 +3313,7 @@
 					"$(PROJECT_DIR)/mantingv",
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
 					"$(PROJECT_DIR)/mantingv/Wechat",
+					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.manting.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3384,6 +3438,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/mantingv",
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
+					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
 				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -3404,6 +3459,7 @@
 					"$(PROJECT_DIR)/mantingv",
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
 					"$(PROJECT_DIR)/mantingv/Wechat",
+					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.manting.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3422,6 +3478,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/mantingv",
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
+					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
 				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -3442,6 +3499,7 @@
 					"$(PROJECT_DIR)/mantingv",
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
 					"$(PROJECT_DIR)/mantingv/Wechat",
+					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.manting.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
