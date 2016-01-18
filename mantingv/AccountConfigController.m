@@ -46,16 +46,19 @@
     switch (tap.view.tag) {
         case 101:{
             ModifyIconController *modifyIconController = [[ModifyIconController alloc] init];
+            modifyIconController.title = @"修改头像";
             [self.navigationController pushViewController:modifyIconController animated:YES];
         }
             break;
         case 102:{
             ModifyNickNameController *modifyNickNameController= [[ModifyNickNameController alloc] init];
+            modifyNickNameController.title = @"修改昵称";
             [self.navigationController pushViewController:modifyNickNameController animated:YES];
         }
             break;
         case 103:{
             ModifyPasswordController *modifyPasswordController = [[ModifyPasswordController alloc] init];
+            modifyPasswordController.title = @"我的密码";
             [self.navigationController pushViewController:modifyPasswordController animated:YES];
         }
             break;

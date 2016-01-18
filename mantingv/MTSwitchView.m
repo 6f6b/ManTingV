@@ -40,7 +40,6 @@
         [button setTitle:titles[i] forState:UIControlStateNormal];
         button.frame = CGRectMake(X, Y, W, H);
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchUpInside];
-        NSLog(@"--->%@",button);
         [self addSubview:button];
     }
 }

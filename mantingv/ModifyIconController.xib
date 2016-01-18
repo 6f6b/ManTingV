@@ -27,8 +27,12 @@
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="CuD-w6-3f5"/>
-                                <constraint firstAttribute="height" constant="50" id="rWq-Ek-Q8Z"/>
+                                <constraint firstAttribute="width" constant="50" id="CuD-w6-3f5">
+                                    <variation key="heightClass=regular" constant="80"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="50" id="rWq-Ek-Q8Z">
+                                    <variation key="heightClass=regular" constant="80"/>
+                                </constraint>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">

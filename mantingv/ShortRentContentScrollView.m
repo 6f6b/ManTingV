@@ -28,6 +28,7 @@
 - (ShortRentContentView *)shortRentContentView{
     if (nil == _shortRentContentView) {
         ShortRentContentView *shortRentContentView  = [[ShortRentContentView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.chooserView.frame), SCREEN_WIDTH, 0)];
+        shortRentContentView.backgroundColor = [UIColor colorWithWhite:0.828 alpha:1.000];
         shortRentContentView.controller = self.controller;
         [self addSubview:shortRentContentView];
         _shortRentContentView = shortRentContentView;

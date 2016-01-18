@@ -8,7 +8,7 @@
 
 #import "ModifyPasswordController.h"
 
-@interface ModifyPasswordController ()
+@interface ModifyPasswordController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *originalPasswordTextFeild;
 
 @property (weak, nonatomic) IBOutlet UITextField *newpasswordTextFeild;
@@ -23,8 +23,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.originalPasswordTextFeild.delegate = self;
+    self.newpasswordTextFeild.delegate = self;
+    self.repeatNewPasswordTextFeild.delegate = self;
+
     // Do any additional setup after loading the view from its nib.
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.originalPasswordTextFeild resignFirstResponder];
+    [self.newpasswordTextFeild resignFirstResponder];
+    [self.repeatNewPasswordTextFeild resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)commitBtn:(id)sender {
     //设置userGuid
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];

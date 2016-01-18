@@ -1,21 +1,21 @@
 //
-//  Theme.m
+//  SpecialView.m
 //  mantingv
 //
-//  Created by LiuFeng on 15/12/18.
-//  Copyright © 2015年 LiuFeng. All rights reserved.
+//  Created by LiuFeng on 16/1/18.
+//  Copyright © 2016年 LiuFeng. All rights reserved.
 //
 
-#import "Theme.h"
+#import "SpecialView.h"
 #import "ThemeModel.h"
 #import "ThemeListController.h"
-@interface Theme ()
+@interface SpecialView ()
 @property (nonatomic,weak) UIImageView *backImage;
 @property (nonatomic,weak) UILabel *titleLabel;
 @property (nonatomic,weak) UILabel *bargainPriceLabel;
 @property (nonatomic,weak) UILabel *priceLabel;
 @end
-@implementation Theme
+@implementation SpecialView
 
 //创建子控件并创建约束
 - (void)willMoveToSuperview:(UIView *)newSuperview{
@@ -47,7 +47,7 @@
         
         make.height.equalTo(self.priceLabel);
         make.width.equalTo(self.priceLabel);
-
+        
     }];
     
     //priceLabel
@@ -67,7 +67,7 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-//        backImage.backgroundColor = [UIColor grayColor];
+        //        backImage.backgroundColor = [UIColor grayColor];
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -79,7 +79,7 @@
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.textColor = [UIColor whiteColor];
-//        titleLabel.backgroundColor = [UIColor orangeColor];
+        //        titleLabel.backgroundColor = [UIColor orangeColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -123,7 +123,9 @@
     ThemeListController *themeListController = [[ThemeListController alloc] init];
     ThemeModel *model = self.model;
     themeListController.guid = model.guid;
-    
+    themeListController.title = @"特价";
     [self.controller.navigationController pushViewController:themeListController animated:YES];
 }
+
+
 @end

@@ -8,7 +8,7 @@
 
 #import "ModifyNickNameController.h"
 
-@interface ModifyNickNameController ()
+@interface ModifyNickNameController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *newnickNameTextFeild;
 
@@ -18,8 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.newnickNameTextFeild.delegate = self;
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.newnickNameTextFeild resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)commitBtn:(id)sender {
     [self loadPersonInformationFromServer];
 }

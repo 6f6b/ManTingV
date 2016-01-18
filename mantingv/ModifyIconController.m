@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.headImage.layer.cornerRadius = 40;
+    self.headImage.clipsToBounds = YES;
     // Do any additional setup after loading the view from its nib.
 }
 

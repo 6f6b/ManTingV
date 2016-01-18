@@ -129,7 +129,7 @@
     /////////////////////////////////////////////下载轮播图片数据///////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
-//    [KVNProgress showWithStatus:@"正在加载。。"];
+    [KVNProgress showWithStatus:@"正在加载。。"];
     [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
@@ -137,7 +137,7 @@
         [self.loopScrollView setImageWithUrlS:model.data];
         
         self.specialOfferContentView.frame = CGRectMake(0, CGRectGetMaxY(self.functionButtonsView.frame)+20, SCREEN_WIDTH, 0);
-        [self loadThemeContentViewData];
+        [self loadSpecialOfferContentViewData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -146,7 +146,7 @@
 
 /////////////////////////////////////////////下载特价房间数据///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadThemeContentViewData{
+- (void)loadSpecialOfferContentViewData{
     NSString *url = [BASE_URL stringByAppendingString:@"/house/special"];
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -174,7 +174,7 @@
         [self.what lfSetImageWithURL:model.data];
         
         [self loadChoiceNessThemeData];
-        
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -191,6 +191,7 @@
         [self.choiceNessTheme setValueWith:dic];
         self.choiceNessRoom.frame = CGRectMake(0, CGRectGetMaxY(self.choiceNessTheme.frame), SCREEN_WIDTH, 0);
         [self loadChoiceNessRoomData];
+        [KVNProgress dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
     }];
@@ -205,7 +206,6 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         [self.choiceNessRoom setValueWith:dic];
-        [KVNProgress dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];

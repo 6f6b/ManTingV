@@ -20,7 +20,7 @@
         CGFloat H = 100;
         ShortRentView *shortRentView = [[ShortRentView alloc] initWithFrame:CGRectMake(X, Y, W, H)];
         [shortRentView setValueWith:arr[i]];
-        shortRentView.backgroundColor = [UIColor redColor];
+        shortRentView.backgroundColor = [UIColor whiteColor];
         [self addSubview:shortRentView];
         shortRentView.controller = self.controller;
         CGRect frame = self.frame;

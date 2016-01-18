@@ -25,7 +25,6 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    NSLog(@"@@@@");
     [self.phoneNumberTextFeild resignFirstResponder];
     [self.passWordTextFeild resignFirstResponder];
     return YES;
@@ -55,7 +54,6 @@
     NSString *guid = [data objectForKey:@"data"];
     NSLog(@"------->%@<",guid);
     if (nil == guid) {
-        NSLog(@"waht");
         return;
     }
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];

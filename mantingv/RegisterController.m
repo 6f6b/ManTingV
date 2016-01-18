@@ -8,12 +8,13 @@
 
 #import "RegisterController.h"
 
-@interface RegisterController ()
+@interface RegisterController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextFiled;
 @property (weak, nonatomic) IBOutlet UITextField *loginPasswordTextFiled;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextFiled;
 
 @property (weak, nonatomic) IBOutlet UITextField *identifyingCode;
+
 @end
 
 @implementation RegisterController
@@ -21,7 +22,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"注册";
-    // Do any additional setup after loading the view from its nib.
+    
+    self.phoneNumberTextFiled.delegate = self;
+    self.loginPasswordTextFiled.delegate = self;
+    self.confirmPasswordTextFiled.delegate = self;
+    self.identifyingCode.delegate = self;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 50, 40);
+    [button setTitle:@"保存" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(dealCommit) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.phoneNumberTextFiled resignFirstResponder];
+    [self.loginPasswordTextFiled resignFirstResponder];
+    [self.confirmPasswordTextFiled resignFirstResponder];
+    [self.identifyingCode resignFirstResponder];
+    return YES;
 }
 
 /**
@@ -50,8 +74,8 @@
  *
  *  @param sender <#sender description#>
  */
-- (IBAction)commitButton:(id)sender {
-    
+
+- (void)dealCommit{
     if ([@""  isEqual: self.phoneNumberTextFiled.text]) {
         [KVNProgress showErrorWithStatus:@"号码有错"];
         return;
@@ -117,6 +141,10 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+
+}
+- (IBAction)commitButton:(id)sender {
+    [self dealCommit];
 }
 
 - (void)didReceiveMemoryWarning {

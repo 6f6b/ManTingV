@@ -8,7 +8,7 @@
 
 #import "ResettingController.h"
 
-@interface ResettingController ()
+@interface ResettingController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextFiled;
 
 @property (weak, nonatomic) IBOutlet UITextField *verifyTextFiled;
@@ -19,6 +19,24 @@
 
 @implementation ResettingController
 
+
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.phoneNumberTextFiled.delegate = self;
+    self.verifyTextFiled.delegate = self;
+    self.passwordTextFiled.delegate = self;
+    self.confirmPasswordTextFiled.delegate = self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.phoneNumberTextFiled resignFirstResponder];
+    [self.verifyTextFiled resignFirstResponder];
+    [self.passwordTextFiled resignFirstResponder];
+    [self.confirmPasswordTextFiled resignFirstResponder];
+    return YES;
+}
 
 /**
  *  向输入的手机号码发送验证码
@@ -57,11 +75,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

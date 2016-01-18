@@ -34,7 +34,7 @@
         
         self.mineTopContainView.frame = CGRectMake(0, 0, self.mineTopContainView.frame.size.width, self.mineTopContainView.frame.size.height);
         
-        NSArray *titles = @[@"权益中心",@"我的交换",@"我的短租",@"我的转让",@"我的入住",@"帐号设置",@"关于我们"];
+        NSArray *titles = @[@"权益列表",@"我的交换",@"我的短租",@"我的转让",@"我的入住",@"帐号设置",@"关于我们"];
         self.classNames = @[@"RightsListController",
                             @"MyExchangeListController",
                             @"MyShortRentListController",
