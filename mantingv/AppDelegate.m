@@ -15,6 +15,7 @@
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
 #import "UMSocialQQHandler.h"
+#import "UMSocialSinaSSOHandler.h"
 
 #import <Bugly/CrashReporter.h>
 
@@ -50,6 +51,9 @@
     
     //设置QQ
     [UMSocialQQHandler setQQWithAppId:@"1105041237" appKey:@"olGOvGo5pwd8lveq" url:@"http://www.baidu.com"];
+    
+    //设置新浪微博
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"4121879963" RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
     
     //=======================================初始化bugly===========================//
     [[CrashReporter sharedInstance] installWithAppId:@"900017958"];

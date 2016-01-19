@@ -64,7 +64,6 @@
     [UMSocialData defaultData].extConfig.wechatFavoriteData.url = @"http://www.mantingv.com";
     
     [UMSocialData defaultData].extConfig.qqData.url = @"http://www.mantingv.com";
-    
     [UMSocialData defaultData].extConfig.qzoneData.url = @"http://www.mantingv.com";
 
     [UMSocialSnsService presentSnsIconSheetView:self
