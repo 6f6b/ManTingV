@@ -19,9 +19,9 @@
 - (void)setValueWith:(id)data{
     /////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    [self.parameters setValue:data forKey:@"houseBaseName"];
+//    [self.parameters setValue:data forKey:@"houseBaseName"];
     
-    [self loadAreaListForChooserView];
+    [self loadHolidayHouseListForChooserViewWith:@"NOT_LIMIT"];
     
 }
 
@@ -36,41 +36,13 @@
     return _shortRentContentView;
 }
 
-/////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadAreaListForChooserView{
-    NSString *url = [BASE_URL stringByAppendingString:@"/house/area_enum"];
-    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSArray *arr = [dic objectForKey:@"data"];
-        [self.chooserViewDataArray addObject:arr];
-        [self loadPriceListForChooserView];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"失败");
-    }];
-}
 
-/////////////////////////////////////////////请求价格列表数据///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////请求度假基地列表数据///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadPriceListForChooserView{
-    NSString *url = [BASE_URL stringByAppendingString:@"/house/price_enum"];
-    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSArray *arr = [dic objectForKey:@"data"];
-        [self.chooserViewDataArray addObject:arr];
-        [self loadHolidayHouseListForChooserView];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
-}
-/////////////////////////////////////////////请求度假屋列表数据///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadHolidayHouseListForChooserView{
-    NSString *url = [BASE_URL stringByAppendingString:@"/rent/find_house_by_area/NOT_LIMIT"];
+- (void)loadHolidayHouseListForChooserViewWith:(NSString *)houseBaseArea{
+    NSString *urlWithOutHouseBaseArea = [BASE_URL stringByAppendingString:@"/rent/find_house_by_area/"];
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@",urlWithOutHouseBaseArea,houseBaseArea];
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -84,8 +56,39 @@
         [dic2 setValue:@"" forKey:@"guid"];
         [arr2 insertObject:dic2 atIndex:0];
         
-        [self.chooserViewDataArray addObject:arr2];
-        [self.chooserView setDataArraysWith:self.chooserViewDataArray];
+        NSMutableArray *baseAreatitles = [[NSMutableArray alloc] init];
+        for (int i=0; i<arr2.count; i++) {
+            NSDictionary *dic = arr2[i];
+            NSString *title = [dic objectForKey:@"title"];
+            [baseAreatitles addObject:title];
+        }
+        
+        NSMutableArray *baseAreavalues = [[NSMutableArray alloc] init];
+        for (int i=0; i<arr2.count; i++) {
+            NSDictionary *dic = arr2[i];
+            NSString *value = [dic objectForKey:@"guid"];
+            [baseAreavalues addObject:value];
+        }
+        
+        NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择度假基地"];
+        [self.chooserView setTitlesOfButtonWith:buttonTitles];
+        
+        NSDictionary *houseBaseArea = [MTTools houseBaseAreaList];
+        NSArray *houseBaseAreaTitles = [houseBaseArea objectForKey:@"titles"];
+        NSArray *houseBaseAreaValues = [houseBaseArea objectForKey:@"values"];
+        
+        
+        NSDictionary *price = [MTTools priceList];
+        NSArray *priceTitles = [price objectForKey:@"titles"];
+        NSArray *priceValues = [price objectForKey:@"values"];
+        
+        NSArray *titles = @[houseBaseAreaTitles,priceTitles,baseAreatitles];
+        NSArray *values = @[houseBaseAreaValues,priceValues,baseAreavalues];
+        
+        [self.chooserView setCellTitlesWith:titles];
+        [self setChooserViewDataArray:values];
+        
+
         [self loadDataForShortRentView];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -125,41 +128,32 @@
     }];
 }
 
-- (void)willMoveToSuperview:(UIView *)newSuperview{
-    [super willMoveToSuperview:newSuperview];
-    
-    NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择度假基地"];
-    [self.chooserView setTitlesOfButtonWith:buttonTitles];
-    [self.chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
-        NSDictionary *dic = self.chooserViewDataArray[indexOfDataAndButtons][indexPath.row];
-        [self resetParameters];
-        NSString *value = [dic objectForKey:@"name"];
-        if (nil == value) {
-            value = [dic objectForKey:@"guid"];
-        }
-        if (0 == indexOfDataAndButtons) {
-            if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseArea"]]) {
-                //return ;
-            }
-            [self.parameter setValue:value forKey:@"houseBaseArea"];
-        }
-        if (1 == indexOfDataAndButtons) {
-            if ([value isEqualToString:[self.parameters objectForKey:@"price"]]) {
-                //return ;
-            }
-            [self.parameter setValue:value forKey:@"price"];
-        }
-        if (2 == indexOfDataAndButtons) {
-            if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseGuid"]]) {
-                //return ;
-            }
-            [self.parameter setValue:value forKey:@"houseBaseGuid"];
 
-        }
-        [self loadDataForShortRentView];
-    }];
+- (void)chooserViewDidSelectColumnAtIndex:(NSInteger)index RowAtIndexPath:(NSIndexPath *)indexPath{
+            NSString *value = self.chooserViewDataArray[index][indexPath.row];
+            [self resetParameters];
+
+            if (0 == index) {
+                if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseArea"]]) {
+                    //return ;
+                }
+                [self loadHolidayHouseListForChooserViewWith:value];
+                [self.parameter setValue:value forKey:@"houseBaseArea"];
+            }
+            if (1 == index) {
+                if ([value isEqualToString:[self.parameters objectForKey:@"price"]]) {
+                    //return ;
+                }
+                [self.parameter setValue:value forKey:@"price"];
+            }
+            if (2 == index) {
+                if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseGuid"]]) {
+                    //return ;
+                }
+                [self.parameter setValue:value forKey:@"houseBaseGuid"];
     
-    
+            }
+            [self loadDataForShortRentView];
 }
 
 - (NSMutableDictionary *)parameter{
@@ -173,9 +167,6 @@
     return _parameter;
 }
 
-- (void)setParameters:(NSMutableDictionary *)parameters{
-    
-}
 
 - (void)resetParameters{
     [self.parameters setObject:@"" forKey:@"houseBaseGuid"];

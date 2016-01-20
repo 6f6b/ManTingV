@@ -48,12 +48,7 @@
         ExchangeContentScrollView *exchangeContentScrollView = [[ExchangeContentScrollView alloc] initWithFrame:self.view.bounds];
         exchangeContentScrollView.backgroundColor = [UIColor yellowColor];
         exchangeContentScrollView.controller = self;
-        [exchangeContentScrollView.chooserView setTitlesOfButtonWith:@[@"目的地",@"周次",@"基地"]];
-        NSArray *locations = [MTTools houseBaseAreaList];
-        NSArray *weeks = [MTTools houseWeekList];
-        NSArray *prices = @[];
-        NSArray *arr = @[locations,weeks,prices];
-        [exchangeContentScrollView.chooserView setDataArraysWith:arr];
+
         _exchangeContentScrollView = exchangeContentScrollView;
         [self.view addSubview:exchangeContentScrollView];
     }

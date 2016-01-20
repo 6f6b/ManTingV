@@ -14,11 +14,13 @@
 @end
 @implementation TransferContentScrollView
 
-- (void)willMoveToSuperview:(UIView *)newSuperview{
-    [super willMoveToSuperview:newSuperview];
-    self.appendingUrl = @"/assignment/list";
-}
 
+- (id)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.appendingUrl = @"/assignment/list";
+    }
+    return self;
+}
 
 - (TransferContainView *)transferContainView{
     if(nil == _transferContainView){

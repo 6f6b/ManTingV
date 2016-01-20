@@ -11,12 +11,17 @@
 @implementation ContentScrollViewWithLoopScrollViewAndChooserView
 
 //创建条件选择器
-- (ChooserView *)chooserView{
+- (LFChooserView *)chooserView{
     if (nil == _chooserView) {
-        ChooserView *chooserView = [ChooserView shareChooserViewWith:CGPointMake(0, CGRectGetMaxY(self.loopScrollView.frame))];
+        LFChooserView *chooserView = [LFChooserView shareChooserViewWith:CGRectGetMaxY(self.loopScrollView.frame)];
         _chooserView = chooserView;
+        chooserView.delegate = self;
         [self addSubview:chooserView];
     }
     return _chooserView;
+}
+
+- (void)chooserViewDidSelectColumnAtIndex:(NSInteger)index RowAtIndexPath:(NSIndexPath *)indexPath{
+
 }
 @end

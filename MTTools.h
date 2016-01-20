@@ -22,28 +22,28 @@
  *
  *  @return 基地列表
  */
-+ (NSArray *)houseBaseAreaList;
++ (NSDictionary *)houseBaseAreaList;
 
 /**
  *
  *
  *  @return 价格列表
  */
-+ (NSArray *)priceList;
++ (NSDictionary *)priceList;
 
 /**
  *
  *
  *  @return 主题列表
  */
-+ (NSArray *)themeList;
++ (NSDictionary *)themeList;
 
 /**
  *
  *
  *  @return 周次列表
  */
-+ (NSArray *)houseWeekList;
++ (NSDictionary *)houseWeekList;
 
 /**
  *  将服务器返回的状态集转换为用户可见字符串

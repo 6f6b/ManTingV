@@ -138,34 +138,48 @@
     
     NSArray *buttonTitles = @[@"选择目的地",@"选择主题",@"选择价格"];
     [self.chooserView setTitlesOfButtonWith:buttonTitles];
-    [self.chooserView setClickedAction:^(NSInteger indexOfDataAndButtons, NSIndexPath *indexPath) {
-//        NSLog(@"%@",self)
-        NSDictionary *dic = self.chooserView.dataContentArray[indexOfDataAndButtons][indexPath.row];
-        [self resetParameters];
-        NSString *value = [dic objectForKey:@"name"];
-        if (0 == indexOfDataAndButtons) {
-            if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseArea"]]) {
-                //return ;
-            }
-            [self.parameters setValue:value forKey:@"houseBaseArea"];
-        }
-        if (1 == indexOfDataAndButtons) {
-            if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseTheme"]]) {
-                //return ;
-            }
-            [self.parameters setValue:value forKey:@"houseBaseTheme"];
-        }
-        if (2 == indexOfDataAndButtons) {
-            if ([value isEqualToString:[self.parameters objectForKey:@"houseBasePrice"]]) {
-                //return ;
-            }
-            [self.parameters setValue:value forKey:@"houseBasePrice"];
-        }
-        [self loadDataForProductContentView];
-        
-    }];
+    
+    NSDictionary *houseBaseArea = [MTTools houseBaseAreaList];
+    NSArray *houseBaseAreaTitles = [houseBaseArea objectForKey:@"titles"];
+    NSArray *houseBaseAreaValues = [houseBaseArea objectForKey:@"values"];
+    
+    NSDictionary *theme = [MTTools themeList];
+    NSArray *themeTitles = [theme objectForKey:@"titles"];
+    NSArray *themeValues = [theme objectForKey:@"values"];
+    
+    NSDictionary *price = [MTTools priceList];
+    NSArray *priceTitles = [price objectForKey:@"titles"];
+    NSArray *priceValues = [price objectForKey:@"values"];
+    
+    NSArray *titles = @[houseBaseAreaTitles,themeTitles,priceTitles];
+    NSArray *values = @[houseBaseAreaValues,themeValues,priceValues];
+    
+    [self.chooserView setCellTitlesWith:titles];
+    [self setChooserViewDataArray:values];
 }
 
-
+- (void)chooserViewDidSelectColumnAtIndex:(NSInteger)index RowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *value = self.chooserViewDataArray[index][indexPath.row];
+    [self resetParameters];
+    if (0 == index) {
+        if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseArea"]]) {
+            //return ;
+        }
+        [self.parameters setValue:value forKey:@"houseBaseArea"];
+    }
+    if (1 == index) {
+        if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseTheme"]]) {
+            //return ;
+        }
+        [self.parameters setValue:value forKey:@"houseBaseTheme"];
+    }
+    if (2 == index) {
+        if ([value isEqualToString:[self.parameters objectForKey:@"houseBasePrice"]]) {
+            //return ;
+        }
+        [self.parameters setValue:value forKey:@"houseBasePrice"];
+    }
+    [self loadDataForProductContentView];
+}
 
 @end

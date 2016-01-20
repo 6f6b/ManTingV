@@ -233,9 +233,10 @@
 		03E0A25E1C18274000FCAAAC /* short.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2591C18274000FCAAAC /* short.png */; };
 		03E0A25F1C18274000FCAAAC /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A25A1C18274000FCAAAC /* product.png */; };
 		03E25B751C1E9E9B001A2065 /* ChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E25B741C1E9E9B001A2065 /* ChooserView.m */; };
+		03E2DCFC1C4F59D2007A9370 /* LFChooserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E2DCFB1C4F59D2007A9370 /* LFChooserView.m */; };
+		03E2DCFF1C4F5AAC007A9370 /* MTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E2DCFD1C4F5AAC007A9370 /* MTTools.m */; };
 		03E4EE441C4381D700C59D17 /* MyShortRentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE421C4381D700C59D17 /* MyShortRentDetailController.m */; };
 		03E4EE451C4381D700C59D17 /* MyShortRentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E4EE431C4381D700C59D17 /* MyShortRentDetailController.xib */; };
-		03E4EE4E1C43902F00C59D17 /* MTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE4D1C43902F00C59D17 /* MTTools.m */; };
 		03E4EE551C4397BE00C59D17 /* MyHouseDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE541C4397BE00C59D17 /* MyHouseDTOModel.m */; };
 		03E4EE581C439FA200C59D17 /* HouseWeekTimeDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE571C439FA200C59D17 /* HouseWeekTimeDTOModel.m */; };
 		03E4EE5B1C43A02500C59D17 /* HoseWeekDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE5A1C43A02500C59D17 /* HoseWeekDTOModel.m */; };
@@ -782,11 +783,13 @@
 		03E0A25A1C18274000FCAAAC /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product.png; sourceTree = "<group>"; };
 		03E25B731C1E9E9B001A2065 /* ChooserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooserView.h; path = mantingv/LFLoopScrollView/ChooserView.h; sourceTree = "<group>"; };
 		03E25B741C1E9E9B001A2065 /* ChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooserView.m; path = mantingv/LFLoopScrollView/ChooserView.m; sourceTree = "<group>"; };
+		03E2DCFA1C4F59D2007A9370 /* LFChooserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFChooserView.h; sourceTree = "<group>"; };
+		03E2DCFB1C4F59D2007A9370 /* LFChooserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFChooserView.m; sourceTree = "<group>"; };
+		03E2DCFD1C4F5AAC007A9370 /* MTTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTools.m; sourceTree = "<group>"; };
+		03E2DCFE1C4F5AAC007A9370 /* MTTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTools.h; sourceTree = "<group>"; };
 		03E4EE411C4381D700C59D17 /* MyShortRentDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShortRentDetailController.h; sourceTree = "<group>"; };
 		03E4EE421C4381D700C59D17 /* MyShortRentDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShortRentDetailController.m; sourceTree = "<group>"; };
 		03E4EE431C4381D700C59D17 /* MyShortRentDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyShortRentDetailController.xib; sourceTree = "<group>"; };
-		03E4EE4C1C43902F00C59D17 /* MTTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTools.h; sourceTree = "<group>"; };
-		03E4EE4D1C43902F00C59D17 /* MTTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTools.m; sourceTree = "<group>"; };
 		03E4EE531C4397BE00C59D17 /* MyHouseDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHouseDTOModel.h; sourceTree = "<group>"; };
 		03E4EE541C4397BE00C59D17 /* MyHouseDTOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHouseDTOModel.m; sourceTree = "<group>"; };
 		03E4EE561C439FA200C59D17 /* HouseWeekTimeDTOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseWeekTimeDTOModel.h; sourceTree = "<group>"; };
@@ -1971,6 +1974,8 @@
 		03D65DE61C1E6C8400E7C679 /* 选择器 */ = {
 			isa = PBXGroup;
 			children = (
+				03E2DCFA1C4F59D2007A9370 /* LFChooserView.h */,
+				03E2DCFB1C4F59D2007A9370 /* LFChooserView.m */,
 				03E25B731C1E9E9B001A2065 /* ChooserView.h */,
 				03E25B741C1E9E9B001A2065 /* ChooserView.m */,
 				03D0C0791C4CE041007288A9 /* ChooserViewCell.h */,
@@ -2628,8 +2633,8 @@
 		03E4EE4B1C438FFA00C59D17 /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
-				03E4EE4C1C43902F00C59D17 /* MTTools.h */,
-				03E4EE4D1C43902F00C59D17 /* MTTools.m */,
+				03E2DCFE1C4F5AAC007A9370 /* MTTools.h */,
+				03E2DCFD1C4F5AAC007A9370 /* MTTools.m */,
 			);
 			name = "工具类";
 			sourceTree = "<group>";
@@ -3168,6 +3173,7 @@
 				03DDAE051C2BCC93009DC36D /* ProductViewModel.m in Sources */,
 				03DA246E1C23D0890098FE4B /* HomeContentScrollView.m in Sources */,
 				03DEF3521C30FD32000F25F0 /* HolidayHouseSearchContentScrollView.m in Sources */,
+				03E2DCFC1C4F59D2007A9370 /* LFChooserView.m in Sources */,
 				03DA24871C23D7450098FE4B /* ResortFacilitiesView.m in Sources */,
 				03DEED001C3B738C00EE518F /* MyHouseListDetailDescriptionView.m in Sources */,
 				03D452A01C475DEC00D26E35 /* DataVerifier.m in Sources */,
@@ -3186,7 +3192,6 @@
 				03E6BB561C3CE8190008D68B /* AddAddressContentScrollView.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */,
-				03E4EE4E1C43902F00C59D17 /* MTTools.m in Sources */,
 				03D6E5241C3F93840068142C /* AssignmentDTOModel.m in Sources */,
 				03E6BB471C3CC3DC0008D68B /* AddressListCell.m in Sources */,
 				03775BAA1C11406000319C32 /* MTTabBarController.m in Sources */,
@@ -3252,6 +3257,7 @@
 				03D2519D1C22924100BA9ED7 /* RelatedProductView.m in Sources */,
 				03DC51241C294D740040C939 /* LFSelectionView.m in Sources */,
 				03DB9D021C20040700A40361 /* OrderView.m in Sources */,
+				03E2DCFF1C4F5AAC007A9370 /* MTTools.m in Sources */,
 				03D669B51C2A98E8001C4C2C /* ChoiceThemeModel.m in Sources */,
 				03D0C0761C4CD1E8007288A9 /* SpecialView.m in Sources */,
 				03DEF34C1C30E979000F25F0 /* ProductContentScrollView.m in Sources */,

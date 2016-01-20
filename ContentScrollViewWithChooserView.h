@@ -7,9 +7,9 @@
 //
 
 #import "BaseContentScrollView.h"
-#import "ChooserView.h"
+#import "LFChooserView.h"
 
-@interface ContentScrollViewWithChooserView : BaseContentScrollView
-@property (nonatomic,weak) ChooserView *chooserView;
+@interface ContentScrollViewWithChooserView : BaseContentScrollView<LFChooserViewDelegate>
+@property (nonatomic,weak) LFChooserView *chooserView;
 @property (nonatomic,strong) NSMutableArray *chooserViewDataArray;
 @end

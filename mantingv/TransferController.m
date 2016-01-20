@@ -49,12 +49,7 @@
         TransferContentScrollView *transferContentScrollView = [[TransferContentScrollView alloc] initWithFrame:self.view.bounds];
         _transferContentScrollView = transferContentScrollView;
         transferContentScrollView.controller = self;
-        [transferContentScrollView.chooserView setTitlesOfButtonWith:@[@"目的地",@"周次",@"基地"]];
-        NSArray *locations = [MTTools houseBaseAreaList];
-        NSArray *weeks = [MTTools houseWeekList];
-        NSArray *prices = @[];
-        NSArray *arr = @[locations,weeks,prices];
-        [transferContentScrollView.chooserView setDataArraysWith:arr];
+//        [transferContentScrollView.chooserView setDataArraysWith:arr];
         [self.view addSubview:transferContentScrollView];
     }
     return _transferContentScrollView;

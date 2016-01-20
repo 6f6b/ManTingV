@@ -14,9 +14,12 @@
 @end
 @implementation ExchangeContentScrollView
 
-- (void)willMoveToSuperview:(UIView *)newSuperview{
-    [super willMoveToSuperview:newSuperview];
-    self.appendingUrl = @"/exchange/list";
+
+- (id)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.appendingUrl = @"/exchange/list";
+    }
+    return self;
 }
 
 - (ExchangeContainView *)exchangeContainView{
@@ -36,7 +39,6 @@
     if (nil == data) {
        [self loadDataFromServer];
     }
-    NSLog(@"Value");
     [self.exchangeContainView removeFromSuperview];
     self.exchangeContainView = nil;
     [self.exchangeContainView setValueWith:data];
