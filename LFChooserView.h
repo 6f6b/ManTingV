@@ -13,6 +13,7 @@
 
 @interface LFChooserView : UIView<UITabBarDelegate>
 @property (nonatomic,copy) NSArray *cellTitles;
+
 @property (nonatomic,strong) id <LFChooserViewDelegate> delegate;
 
 //创建选择器对象

@@ -8,13 +8,10 @@
 
 #import "ExchangeController.h"
 #import "ExchangeContentScrollView.h"
-#import "ChooserView.h"
 #import "ChoiceTheme.h"
 
 @interface ExchangeController ()
 @property (nonatomic,weak) ExchangeContentScrollView *exchangeContentScrollView;
-//@property (nonatomic,weak) LFLoopScrollView *adScrollView;
-//@property (nonatomic,weak) ChooserView *chooserView;
 @end
 
 @implementation ExchangeController

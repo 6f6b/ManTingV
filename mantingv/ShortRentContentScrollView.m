@@ -11,18 +11,18 @@
 
 @interface ShortRentContentScrollView ()
 @property (nonatomic,weak) ShortRentContentView *shortRentContentView;
-@property (nonatomic,strong) NSMutableDictionary *parameter;
 @end
 @implementation ShortRentContentScrollView
 
 
 - (void)setValueWith:(id)data{
-    /////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    [self.parameters setValue:data forKey:@"houseBaseName"];
-    
-    [self loadHolidayHouseListForChooserViewWith:@"NOT_LIMIT"];
-    
+/////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    if (nil == data) {
+        [self loadDataForShortRentView];
+        [self loadHolidayHouseListForChooserViewWith:@"NOT_LIMIT"];
+    }
+    [self.shortRentContentView setValueWith:data];
 }
 
 - (ShortRentContentView *)shortRentContentView{
@@ -36,6 +36,33 @@
     return _shortRentContentView;
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview{
+    [super willMoveToSuperview:newSuperview];
+    
+    [self.parameters setValue:@"" forKey:@"houseBaseGuid"];
+    [self.parameters setValue:@"NOT_LIMIT" forKey:@"houseBaseArea"];
+    [self.parameters setValue:@"NOT_LIMIT" forKey:@"price"];
+
+    
+    NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择度假基地"];
+    [self.chooserView setTitlesOfButtonWith:buttonTitles];
+    
+    NSDictionary *houseBaseArea = [MTTools houseBaseAreaList];
+    NSArray *houseBaseAreaTitles = [houseBaseArea objectForKey:@"titles"];
+    NSArray *houseBaseAreaValues = [houseBaseArea objectForKey:@"values"];
+    
+    
+    NSDictionary *price = [MTTools priceList];
+    NSArray *priceTitles = [price objectForKey:@"titles"];
+    NSArray *priceValues = [price objectForKey:@"values"];
+    
+    NSArray *titles = @[houseBaseAreaTitles,priceTitles,@[]];
+    NSArray *values = @[houseBaseAreaValues,priceValues,@[]];
+    
+    [self.chooserView setCellTitlesWith:titles];
+    [self setChooserViewDataArray:values];
+}
+
 
 /////////////////////////////////////////////请求度假基地列表数据///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -47,14 +74,8 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSArray *arr = [dic objectForKey:@"data"];
+        NSArray *arr2 = [dic objectForKey:@"data"];
         
-        //为服务器数据添加一个不限的数据
-        NSMutableArray *arr2 = [[NSMutableArray alloc] initWithArray:arr];
-        NSMutableDictionary *dic2 = [[NSMutableDictionary alloc] initWithDictionary:arr2[0]];
-        [dic2 setValue:@"不限" forKey:@"title"];
-        [dic2 setValue:@"" forKey:@"guid"];
-        [arr2 insertObject:dic2 atIndex:0];
         
         NSMutableArray *baseAreatitles = [[NSMutableArray alloc] init];
         for (int i=0; i<arr2.count; i++) {
@@ -70,26 +91,16 @@
             [baseAreavalues addObject:value];
         }
         
-        NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择度假基地"];
-        [self.chooserView setTitlesOfButtonWith:buttonTitles];
+        NSMutableArray *titles = [[NSMutableArray alloc] initWithArray:self.chooserView.cellTitles];
+        NSMutableArray *values = [[NSMutableArray alloc] initWithArray:self.chooserViewDataArray];
+        titles[2] = baseAreatitles;
+        values[2] = baseAreavalues;
         
-        NSDictionary *houseBaseArea = [MTTools houseBaseAreaList];
-        NSArray *houseBaseAreaTitles = [houseBaseArea objectForKey:@"titles"];
-        NSArray *houseBaseAreaValues = [houseBaseArea objectForKey:@"values"];
-        
-        
-        NSDictionary *price = [MTTools priceList];
-        NSArray *priceTitles = [price objectForKey:@"titles"];
-        NSArray *priceValues = [price objectForKey:@"values"];
-        
-        NSArray *titles = @[houseBaseAreaTitles,priceTitles,baseAreatitles];
-        NSArray *values = @[houseBaseAreaValues,priceValues,baseAreavalues];
         
         [self.chooserView setCellTitlesWith:titles];
         [self setChooserViewDataArray:values];
-        
 
-        [self loadDataForShortRentView];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -102,18 +113,18 @@
  *  默认加载的短租列表
  */
 - (void)loadDataForShortRentView{
-    NSString *url = [BASE_URL stringByAppendingString:@"/rent/list"];
-    [self.manager POST:url parameters:self.parameter progress:^(NSProgress * _Nonnull uploadProgress) {
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    NSString *url = [BASE_URL stringByAppendingString:@"/rent/list"];
+//    [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.shortRentContentView removeFromSuperview];
         self.shortRentContentView = nil;
         NSString *url = [BASE_URL stringByAppendingString:@"/rent/search"];
-        [self.manager POST:url parameters:self.parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             NSArray *arr = [dic objectForKey:@"data"];
-            [self.shortRentContentView setValueWith:arr];
+            [self setValueWith:arr];
             if (0 == arr.count) {
                 return ;
             }
@@ -123,9 +134,9 @@
         
         
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//    }];
 }
 
 
@@ -138,40 +149,22 @@
                     //return ;
                 }
                 [self loadHolidayHouseListForChooserViewWith:value];
-                [self.parameter setValue:value forKey:@"houseBaseArea"];
+                [self.parameters setValue:value forKey:@"houseBaseArea"];
             }
             if (1 == index) {
                 if ([value isEqualToString:[self.parameters objectForKey:@"price"]]) {
                     //return ;
                 }
-                [self.parameter setValue:value forKey:@"price"];
+                [self.parameters setValue:value forKey:@"price"];
             }
             if (2 == index) {
                 if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseGuid"]]) {
                     //return ;
                 }
-                [self.parameter setValue:value forKey:@"houseBaseGuid"];
+                [self.parameters setValue:value forKey:@"houseBaseGuid"];
     
             }
             [self loadDataForShortRentView];
 }
 
-- (NSMutableDictionary *)parameter{
-    if (nil == _parameter) {
-        NSDictionary *dic = @{@"houseBaseGuid":@"",
-                              @"houseBaseArea":@"NOT_LIMIT",
-                              @"price":@"NOT_LIMIT"
-                              };
-        _parameter = [[NSMutableDictionary alloc] initWithDictionary:dic];
-    }
-    return _parameter;
-}
-
-
-- (void)resetParameters{
-    [self.parameters setObject:@"" forKey:@"houseBaseGuid"];
-    [self.parameters setObject:@"NOT_LIMIT" forKey:@"houseBaseArea"];
-    [self.parameters setObject:@"NOT_LIMIT" forKey:@"price"];
-
-}
 @end

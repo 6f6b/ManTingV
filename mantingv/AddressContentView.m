@@ -24,7 +24,6 @@
     if (nil == _addAddressView) {
         AddAddressView *addAddressView = [[AddAddressView alloc] initWithFrame:self.bounds];
         addAddressView.controller = self.controller;
-        addAddressView.backgroundColor = [UIColor greenColor];
         [self addSubview:addAddressView];
         _addAddressView = addAddressView;
     }
@@ -35,7 +34,6 @@
     if (nil == _recipientInformationView) {
         RecipientInformationView *recipientInformationView = [[RecipientInformationView alloc] initWithFrame:self.bounds];
         recipientInformationView.controller = self.controller;
-        recipientInformationView.backgroundColor = [UIColor greenColor];
         [self addSubview:recipientInformationView];
         _recipientInformationView = recipientInformationView;
     }
@@ -65,6 +63,7 @@
         
         //如果不为空,默认设置第一个联系地址
         if (0 != arr.count) {
+            self.addAddressView.hidden = YES;
             MTPayController *payController = (MTPayController *)self.controller;
             self.addressGuid = [arr[payController.addressTag] objectForKey:@"guid"];
             [self.recipientInformationView setValueWith:arr[payController.addressTag]];

@@ -81,7 +81,7 @@
 - (UIImageView *)indicateImage{
     if (nil == _indicateImage) {
         UIImageView *indicateImage = [[UIImageView alloc] init];
-        indicateImage.backgroundColor = [UIColor redColor];
+        indicateImage.image = [UIImage imageNamed:@"arrow_right_12.81592039801px_1197003_easyicon.net"];
         [self addSubview:indicateImage];
         _indicateImage = indicateImage;
     }

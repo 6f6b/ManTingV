@@ -31,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData];
     
     if (nil != self.themeListViewModel.price) {
         double totalPrice = self.payContentScrollView.purchaseQuantityView.purchaseQuantityStepper.value*[self.themeListViewModel.price doubleValue];
@@ -53,14 +52,60 @@
     }];
 }
 
-- (void)loadData{
-    [self.payContentScrollView setValueWith:nil];
+- (MTPayContentScrollView *)payContentScrollView{
+    if (nil == _payContentScrollView) {
+        MTPayContentScrollView *payContentScrollView = [[MTPayContentScrollView alloc] initWithFrame:self.view.bounds];
+        payContentScrollView.controller = self;
+        payContentScrollView.backgroundColor = [UIColor colorWithRed:0.984 green:0.972 blue:1.000 alpha:1.000];
+        _payContentScrollView = payContentScrollView;
+        [self.view addSubview:_payContentScrollView];
+    }
+    return _payContentScrollView;
 }
+
+
+/**
+ *  获取支付前的POST参数
+ *
+ *  @return 返回支付前的POST参数
+ */
+- (NSDictionary *)getParameter{
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
+    [parameter setValue:self.themeListViewModel.guid forKey:@"houseWeekGuid"];
+    NSString *buyNum = [NSString stringWithFormat:@"%lu",(long)self.payContentScrollView.purchaseQuantityView.purchaseQuantityStepper.value];
+    [parameter setValue:buyNum forKey:@"buyNum"];
+    
+    [parameter setValue:[NSString stringWithFormat:@"%f",self.totalPrice] forKey:@"totalPrice"];
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userGuid = [user objectForKey:USER_GUID];
+    [parameter setValue:userGuid forKey:@"userGuid"];
+    
+    [parameter setValue:self.payContentScrollView.addressContentView.addressGuid forKey:@"addressGuid"];
+    return parameter;
+}
+
+- (UILabel *)totalPriceLabel{
+    if (nil == _totalPriceLabel) {
+        UILabel *totalPriceLabel = [[UILabel alloc] init];
+        totalPriceLabel.backgroundColor = [UIColor colorWithRed:0.989 green:1.000 blue:0.962 alpha:1.000];
+        NSString *totalPriceString = [NSString stringWithFormat:@"应付金额：%f",self.totalPrice];
+        totalPriceLabel.text = totalPriceString;
+        [self.view addSubview:totalPriceLabel];
+        _totalPriceLabel = totalPriceLabel;
+    }
+    return _totalPriceLabel;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.payContentScrollView setValueWith:self.themeListViewModel];
+}
+
 
 - (void)setTotalPrice:(double)totalPrice{
     _totalPrice = totalPrice;
     NSString *totalPriceString = [NSString stringWithFormat:@"金额：%0.2f",totalPrice];
-    NSLog(@"%@",totalPriceString);
     self.totalPriceLabel.text = totalPriceString;
 }
 
@@ -203,55 +248,6 @@
         [resultStr appendString:oneStr];
     }
     return resultStr;
-}
-
-/**
- *  获取支付前的POST参数
- *
- *  @return 返回支付前的POST参数
- */
-- (NSDictionary *)getParameter{
-    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
-    [parameter setValue:self.themeListViewModel.guid forKey:@"houseWeekGuid"];
-    NSString *buyNum = [NSString stringWithFormat:@"%lu",(long)self.payContentScrollView.purchaseQuantityView.purchaseQuantityStepper.value];
-    [parameter setValue:buyNum forKey:@"buyNum"];
-    
-    [parameter setValue:[NSString stringWithFormat:@"%f",self.totalPrice] forKey:@"totalPrice"];
-    
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *userGuid = [user objectForKey:USER_GUID];
-    [parameter setValue:userGuid forKey:@"userGuid"];
-    
-    [parameter setValue:self.payContentScrollView.addressContentView.addressGuid forKey:@"addressGuid"];
-    return parameter;
-}
-
-- (UILabel *)totalPriceLabel{
-    if (nil == _totalPriceLabel) {
-        UILabel *totalPriceLabel = [[UILabel alloc] init];
-        totalPriceLabel.backgroundColor = [UIColor colorWithRed:0.989 green:1.000 blue:0.962 alpha:1.000];
-        NSString *totalPriceString = [NSString stringWithFormat:@"应付金额：%f",self.totalPrice];
-        totalPriceLabel.text = totalPriceString;
-        [self.view addSubview:totalPriceLabel];
-        _totalPriceLabel = totalPriceLabel;
-    }
-    return _totalPriceLabel;
-}
-
-- (MTPayContentScrollView *)payContentScrollView{
-    if (nil == _payContentScrollView) {
-        MTPayContentScrollView *payContentScrollView = [[MTPayContentScrollView alloc] initWithFrame:self.view.bounds];
-        payContentScrollView.controller = self;
-        payContentScrollView.backgroundColor = [UIColor whiteColor];
-        _payContentScrollView = payContentScrollView;
-        [self.view addSubview:_payContentScrollView];
-    }
-    return _payContentScrollView;
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.payContentScrollView setValueWith:self.themeListViewModel];
 }
 
 - (void)didReceiveMemoryWarning {

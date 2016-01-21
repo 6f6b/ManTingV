@@ -27,10 +27,11 @@
 //设置约束
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
-
+    
+    self.addressContentView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
     
     //订单
-    self.orderView.frame = CGRectMake(0, 90, SCREEN_WIDTH, 200);
+    self.orderView.frame = CGRectMake(0, 90, SCREEN_WIDTH, 150);
 
     
     //购买数量
@@ -51,15 +52,15 @@
     //支付类型
     self.payTypeView.frame = CGRectMake(0, CGRectGetMaxY(self.purchaseAgreementView.frame)+20, SCREEN_WIDTH, 50);
     
-    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.payTypeView.frame)+50);
+    self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.payTypeView.frame)+50+30);
 
 }
 
 - (AddressContentView *)addressContentView{
     if (nil == _addressContentView) {
-        AddressContentView *addressContentView = [[AddressContentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
+        AddressContentView *addressContentView = [[AddressContentView alloc] init];
+        addressContentView.backgroundColor = [UIColor whiteColor];
         addressContentView.controller = self.controller;
-        addressContentView.backgroundColor = [UIColor greenColor];
         [self addSubview:addressContentView];
         _addressContentView = addressContentView;
     }
@@ -69,7 +70,7 @@
 - (OrderView *)orderView{
     if (nil == _orderView) {
         OrderView *orderView = [[OrderView alloc] init];
-        orderView.backgroundColor = [UIColor greenColor];
+        orderView.backgroundColor = [UIColor whiteColor];
         [self addSubview:orderView];
         _orderView = orderView;
     }
@@ -79,8 +80,8 @@
 - (PurchaseQuantityView *)purchaseQuantityView{
     if (nil == _purchaseQuantityView) {
         PurchaseQuantityView *purchaseQuantityView = [[PurchaseQuantityView alloc] init];
+        purchaseQuantityView.backgroundColor = [UIColor whiteColor];
         purchaseQuantityView.controller = self.controller;
-        purchaseQuantityView.backgroundColor = [UIColor greenColor];
         [self addSubview:purchaseQuantityView];
         _purchaseQuantityView = purchaseQuantityView;
     }
@@ -90,7 +91,7 @@
 - (FreightView *)freightView{
     if (nil == _freightView) {
         FreightView *freightView = [[FreightView alloc] init];
-        freightView.backgroundColor = [UIColor greenColor];
+        freightView.backgroundColor = [UIColor whiteColor];
         [self addSubview:freightView];
         _freightView = freightView;
     }
@@ -100,7 +101,7 @@
 - (LeaveWordView *)leaveWordView{
     if (nil == _leaveWordView) {
         LeaveWordView *leaveWordView = [[LeaveWordView alloc] init];
-        leaveWordView.backgroundColor = [UIColor greenColor];
+        leaveWordView.backgroundColor = [UIColor whiteColor];
         [self addSubview:leaveWordView];
         _leaveWordView = leaveWordView;
     }
@@ -110,8 +111,8 @@
 - (PurchaseAgreementView *)purchaseAgreementView{
     if (nil == _purchaseAgreementView) {
         PurchaseAgreementView *purchaseAgreementView = [[PurchaseAgreementView alloc] init];
+        purchaseAgreementView.backgroundColor = [UIColor whiteColor];
         purchaseAgreementView.controller = self.controller;
-        purchaseAgreementView.backgroundColor = [UIColor greenColor];
         [self addSubview:purchaseAgreementView];
         _purchaseAgreementView = purchaseAgreementView;
     }
@@ -121,7 +122,7 @@
 - (PayTypeView *)payTypeView{
     if (nil == _payTypeView) {
         PayTypeView *payTypeView = [[PayTypeView alloc] init];
-        payTypeView.backgroundColor = [UIColor greenColor];
+        payTypeView.backgroundColor = [UIColor whiteColor];
         [self addSubview:payTypeView];
         _payTypeView = payTypeView;
     }
@@ -129,8 +130,7 @@
 }
 
 - (void)setValueWith:(id)data{
-    MTPayController *payController = self.controller;
-    
+    MTPayController *payController = (MTPayController *)self.controller;
     //刷新控件数据
     [self.addressContentView setValueWith:nil];
     [self.orderView setValueWith:data];

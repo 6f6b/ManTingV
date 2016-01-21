@@ -8,7 +8,7 @@
 
 #import "LeaveWordView.h"
 
-@interface LeaveWordView ()
+@interface LeaveWordView ()<UITextFieldDelegate>
 @property (nonatomic,weak) UILabel *leaveWordLabel;
 @property (nonatomic,weak) UITextField *leaveWordTextField;
 @end
@@ -35,7 +35,10 @@
         //距 self.leaveWordLabel 右侧 5
         make.left.equalTo(self.leaveWordLabel.mas_right).with.offset(5);
         
+        make.width.equalTo(@200);
     }];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
 - (UILabel *)leaveWordLabel{
@@ -51,11 +54,36 @@
 - (UITextField *)leaveWordTextField{
     if (nil == _leaveWordTextField) {
         UITextField *leaveWordTextField = [[UITextField alloc] init];
-        leaveWordTextField.backgroundColor = [UIColor blueColor];
+        leaveWordTextField.delegate = self;
         leaveWordTextField.placeholder = @"请输入留言";
         [self addSubview:leaveWordTextField];
         _leaveWordTextField = leaveWordTextField;
     }
     return _leaveWordTextField;
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.leaveWordTextField resignFirstResponder];
+    return YES;
+}
+
+//- (void)keyBoardWillChangeFrame:(NSNotification *)notif{
+//    
+//    NSLog(@"改变");
+//    NSDictionary *userInfo = notif.userInfo;
+//    double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+//    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+//    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+//    
+//    
+//    CGFloat changeY = beginFrame.origin.y-endFrame.origin.y;
+//    [UIView animateWithDuration:duration animations:^{
+//        UIScrollView *scrollView = (UIScrollView *)self.superview;
+//        
+//        CGSize size = scrollView.contentSize;
+//        size.height = size.height+changeY;
+//        scrollView.contentSize = size;
+//    }];
+//}
+
 @end

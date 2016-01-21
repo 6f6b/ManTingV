@@ -18,6 +18,9 @@
     self.addressForDetailTextFiled.frame = CGRectMake(0, CGRectGetMaxY(self.contactAddressEditView.frame), SCREEN_WIDTH, 50);
     self.commitButton.frame = CGRectMake(10, CGRectGetMaxY(self.addressForDetailTextFiled.frame)+10, SCREEN_WIDTH-20, 40);
     self.contentSize = CGSizeMake(0, CGRectGetMaxY(self.commitButton.frame));
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardDidShowNotification object:nil];
 }
 
 - (ContactPersonEditView *)contactPersonEditView{
@@ -67,6 +70,23 @@
         _commitButton = commitButton;
     }
     return _commitButton;
+}
+
+- (void)keyBoardWillChangeFrame:(NSNotification *)notif{
+    NSLog(@"改变");
+
+    NSDictionary *userInfo = notif.userInfo;
+    double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+
+
+    CGFloat changeY = beginFrame.origin.y-endFrame.origin.y;
+    [UIView animateWithDuration:duration animations:^{
+        CGSize size = self.contentSize;
+        size.height = size.height+changeY;
+        self.contentSize = size;
+    }];
 }
 
 - (void)commitAddressInformation{

@@ -60,22 +60,10 @@
         UIStepper *purchaseQuantityStepper = [[UIStepper alloc] init];
         [purchaseQuantityStepper addTarget:self action:@selector(dealPurchaseQuantityStepper:) forControlEvents:UIControlEventValueChanged];
         purchaseQuantityStepper.minimumValue = 1;
-        purchaseQuantityStepper.backgroundColor = [UIColor whiteColor];
         [self addSubview:purchaseQuantityStepper];
         _purchaseQuantityStepper = purchaseQuantityStepper;
     }
     return _purchaseQuantityStepper;
-}
-
-- (UILabel *)purchaseQuantityShowLabel{
-    if (nil == _purchaseQuantityShowLabel) {
-        UILabel *purchaseQuantityShowLabel = [[UILabel alloc] init];
-        purchaseQuantityShowLabel.backgroundColor = [UIColor yellowColor];
-        purchaseQuantityShowLabel.text = [NSString stringWithFormat:@"%d",(int)self.purchaseQuantityStepper.value];
-        [self addSubview:purchaseQuantityShowLabel];
-        _purchaseQuantityShowLabel = purchaseQuantityShowLabel;
-    }
-    return _purchaseQuantityShowLabel;
 }
 
 - (void)dealPurchaseQuantityStepper:(UIStepper *)stepper{
@@ -84,4 +72,15 @@
     double totalPrice = stepper.value*[payController.themeListViewModel.price doubleValue];
     payController.totalPrice = totalPrice;
 }
+
+- (UILabel *)purchaseQuantityShowLabel{
+    if (nil == _purchaseQuantityShowLabel) {
+        UILabel *purchaseQuantityShowLabel = [[UILabel alloc] init];
+        purchaseQuantityShowLabel.text = [NSString stringWithFormat:@"%d",(int)self.purchaseQuantityStepper.value];
+        [self addSubview:purchaseQuantityShowLabel];
+        _purchaseQuantityShowLabel = purchaseQuantityShowLabel;
+    }
+    return _purchaseQuantityShowLabel;
+}
+
 @end

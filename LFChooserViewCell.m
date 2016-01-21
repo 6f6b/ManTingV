@@ -1,14 +1,14 @@
 //
-//  ChooserViewCell.m
-//  mantingv
+//  LFChooserViewCell.m
+//  LFChooserViewDemo
 //
-//  Created by LiuFeng on 16/1/18.
+//  Created by LiuFeng on 16/1/21.
 //  Copyright © 2016年 LiuFeng. All rights reserved.
 //
 
-#import "ChooserViewCell.h"
+#import "LFChooserViewCell.h"
 
-@implementation ChooserViewCell
+@implementation LFChooserViewCell
 
 - (void)awakeFromNib {
     // Initialization code

@@ -7,10 +7,9 @@
 //
 
 #import "AgreementController.h"
-#import "YYLabel.h"
 
 @interface AgreementController ()
-@property (nonatomic,weak) UITextView *agreementLabel;
+@property (nonatomic,weak) UIWebView *agreenmentView;
 @end
 
 @implementation AgreementController
@@ -19,27 +18,26 @@
     [super viewDidLoad];
     NSString *urlWithOutHouseInfoGuid = [BASE_URL stringByAppendingString:@"/order/agreement/"];
     NSString *url = [urlWithOutHouseInfoGuid stringByAppendingString:self.houseInfoGuid];
+    [self.agreenmentView loadHTMLString:@"" baseURL:nil];
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSDictionary *agreementDTO = [dic objectForKey:@"data"];
         NSString *webString = [agreementDTO objectForKey:@"content"];
-        UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.bounds];
-        [web loadHTMLString:webString baseURL:nil];
-        [self.view addSubview:web];
+        [self.agreenmentView loadHTMLString:webString baseURL:nil];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     }];
     // Do any additional setup after loading the view.
 }
 
-- (UITextView *)agreementLabel{
-    if (nil == _agreementLabel) {
-        UITextView *agreementLabel = [[UITextView alloc] initWithFrame:self.view.bounds];
-        [self.view addSubview:agreementLabel];
-        _agreementLabel = agreementLabel;
+- (UIWebView *)agreenmentView{
+    if (nil == _agreenmentView) {
+        UIWebView *agreenmentView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [self.view addSubview:agreenmentView];
+        _agreenmentView = agreenmentView;
     }
-    return _agreementLabel;
+    return _agreenmentView;
 }
 
 - (void)didReceiveMemoryWarning {

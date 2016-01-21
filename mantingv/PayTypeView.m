@@ -105,7 +105,7 @@
 - (UIImageView *)selectImage{
     if (nil == _selectImage) {
         UIImageView *selectImage = [[UIImageView alloc] init];
-        selectImage.backgroundColor = [UIColor redColor];
+        selectImage.image = [UIImage imageNamed:@"dot_green_16px_1174477_easyicon.net"];
         [self addSubview:selectImage];
         _selectImage = selectImage;
     }

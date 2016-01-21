@@ -7,16 +7,20 @@
 //
 
 #import "LFChooserView.h"
+#import "LFChooserViewCell.h"
 
 #define TABLEVIEW_HEIGHT 130
 #define BUTTON_HEIGHT 40
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPath);
 
 @interface LFChooserView ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,weak) UITableView *tableView;
+
 @property (nonatomic,assign) NSInteger indexOfDataAndButton;
+
+@property (nonatomic,strong) NSMutableArray *selectedTitles;
+
 @end
 @implementation LFChooserView
 
@@ -43,10 +47,9 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
 
 //设置按钮title
 - (void)setTitlesOfButtonWith:(NSArray *)titles{
-    for (UIView *subview in self.subviews) {
-        [subview removeFromSuperview];
-    }
+    self.selectedTitles = [[NSMutableArray alloc] init];
     for (int i=0; i<titles.count; i++) {
+        [self.selectedTitles addObject:@""];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
@@ -82,8 +85,7 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
         _tableView = tableView;
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.backgroundColor = [UIColor greenColor];
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LFChooserViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([LFChooserViewCell class])];
         _tableView.hidden = YES;
         [self addSubview:tableView];
         
@@ -102,23 +104,36 @@ typedef void(^ChooseBlock)(NSInteger indexOfDataAndButtons,NSIndexPath *indexPat
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    LFChooserViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LFChooserViewCell class])];
     NSString *title = self.cellTitles[self.indexOfDataAndButton][indexPath.row];
+    NSString *selectedTitle = self.selectedTitles[self.indexOfDataAndButton];
+    cell.chooserViewTitleLabel.text = title;
 
-    cell.textLabel.text = title;
-    cell.backgroundColor = [UIColor orangeColor];
+    if ([title isEqualToString:selectedTitle]) {
+        [cell.isSelectedImage setImage:[UIImage imageNamed:@"draw_ellipse_16px_1066243_easyicon.net"]];
+    }
+    else{
+        [cell.isSelectedImage setImage:[UIImage imageNamed:@""]];
+
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self hiddenTableView];
+    //将对应数组中的number值全部置0
+    self.selectedTitles[self.indexOfDataAndButton] = self.cellTitles[self.indexOfDataAndButton][indexPath.row];
+    
+    //刷新tableview
+    [self.tableView reloadData];
+    
     if ([self.delegate respondsToSelector:@selector(chooserViewDidSelectColumnAtIndex:RowAtIndexPath:)]) {
         [self.delegate chooserViewDidSelectColumnAtIndex:self.indexOfDataAndButton RowAtIndexPath:indexPath];
     }
 }
 
-- (void)chooserViewDidSelectColumnAtIndex:(NSInteger)index RowAtIndexPath:(NSIndexPath *)indexPath{
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
 }
 #pragma mark - 自定义方法用于显示和隐藏tableview
 

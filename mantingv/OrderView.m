@@ -82,7 +82,6 @@
 - (UILabel *)topCycleLabel{
     if (nil == _topCycleLabel) {
         UILabel *topCycleLabel = [[UILabel alloc] init];
-        topCycleLabel.backgroundColor = [UIColor blueColor];
         [self addSubview:topCycleLabel];
         _topCycleLabel = topCycleLabel;
     }
@@ -92,7 +91,6 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.backgroundColor = [UIColor blueColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -102,7 +100,6 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor blueColor];
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -112,7 +109,6 @@
 - (UILabel *)houseTypeLabel{
     if (nil == _houseTypeLabel) {
         UILabel *houseTypeLabel = [[UILabel alloc] init];
-        houseTypeLabel.backgroundColor = [UIColor blueColor];
         [self addSubview:houseTypeLabel];
         _houseTypeLabel = houseTypeLabel;
     }
@@ -122,7 +118,6 @@
 - (UILabel *)cycleLabel{
     if (nil == _cycleLabel) {
         UILabel *cycleLabel = [[UILabel alloc] init];
-        cycleLabel.backgroundColor = [UIColor blueColor];
         [self addSubview:cycleLabel];
         _cycleLabel = cycleLabel;
     }
@@ -131,7 +126,6 @@
 - (UILabel *)sizeLabel{
     if (nil == _sizeLabel) {
         UILabel *sizeLabel = [[UILabel alloc] init];
-        sizeLabel.backgroundColor = [UIColor blueColor];
         [self addSubview:sizeLabel];
         _sizeLabel = sizeLabel;
     }

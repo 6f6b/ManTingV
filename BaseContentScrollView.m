@@ -12,15 +12,7 @@
 
 - (NSMutableDictionary *)parameters{
     if (nil == _parameters) {
-        NSDictionary *dictionary = @{@"houseBaseName":@"",              //搜索框
-                                     @"houseBaseArea":@"NOT_LIMIT",     //目的地
-                                     @"houseBaseTheme":@"NOT_LIMIT",    //主题
-                                     @"houseBasePrice":@"NOT_LIMIT",    //价格
-                                     @"productType":@"HOUSEBASE",
-                                     @"pageSize":@"100",
-                                     @"currentPage":@"1"
-                                     };
-        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
         _parameters = dic;
     }
     return _parameters;

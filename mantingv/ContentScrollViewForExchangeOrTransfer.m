@@ -103,18 +103,6 @@
         titles[2] = baseAreatitles;
         values[2] = baseAreavalues;
         
-        
-//        NSDictionary *houseBaseArea = [MTTools houseBaseAreaList];
-//        NSArray *houseBaseAreaTitles = [houseBaseArea objectForKey:@"titles"];
-//        NSArray *houseBaseAreaValues = [houseBaseArea objectForKey:@"values"];
-//        
-//        
-//        NSDictionary *price = [MTTools priceList];
-//        NSArray *priceTitles = [price objectForKey:@"titles"];
-//        NSArray *priceValues = [price objectForKey:@"values"];
-//        
-//        NSArray *titles = @[houseBaseAreaTitles,priceTitles,baseAreatitles];
-//        NSArray *values = @[houseBaseAreaValues,priceValues,baseAreavalues];
 
         [self.chooserView setCellTitlesWith:titles];
         [self setChooserViewDataArray:values];
