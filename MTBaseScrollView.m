@@ -14,7 +14,6 @@
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.delegate = self;
-        self.backgroundColor = [UIColor colorWithRed:0.989 green:1.000 blue:0.962 alpha:1.000];
 //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
     }
     return self;

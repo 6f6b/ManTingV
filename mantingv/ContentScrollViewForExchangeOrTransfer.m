@@ -19,7 +19,7 @@
     [self.parameters setValue:[MTTools userGuid] forKey:@"userGuid"];
     [self loadHolidayHouseListForChooserViewWith:@"NOT_LIMIT"];
     
-    NSArray *buttonTitles = @[@"选择目的地",@"选择价格",@"选择度假基地"];
+    NSArray *buttonTitles = @[@"目的地",@"周次",@"度假基地"];
     [self.chooserView setTitlesOfButtonWith:buttonTitles];
     
     NSDictionary *houseBaseArea = [MTTools houseBaseAreaList];
@@ -27,12 +27,12 @@
     NSArray *houseBaseAreaValues = [houseBaseArea objectForKey:@"values"];
     
     
-    NSDictionary *price = [MTTools priceList];
-    NSArray *priceTitles = [price objectForKey:@"titles"];
-    NSArray *priceValues = [price objectForKey:@"values"];
+    NSDictionary *houseWeek = [MTTools houseWeekList];
+    NSArray *houseWeekTitles = [houseWeek objectForKey:@"titles"];
+    NSArray *houseWeekValues = [houseWeek objectForKey:@"values"];
     
-    NSArray *titles = @[houseBaseAreaTitles,priceTitles,@[]];
-    NSArray *values = @[houseBaseAreaValues,priceValues,@[]];
+    NSArray *titles = @[houseBaseAreaTitles,houseWeekTitles,@[]];
+    NSArray *values = @[houseBaseAreaValues,houseWeekValues,@[]];
     
     [self.chooserView setCellTitlesWith:titles];
     [self setChooserViewDataArray:values];
@@ -40,7 +40,7 @@
 
 - (void)chooserViewDidSelectColumnAtIndex:(NSInteger)index RowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *value = self.chooserViewDataArray[index][indexPath.row];
-    [self resetParameters];
+//    [self resetParameters];
     if (0 == index) {
         if ([value isEqualToString:[self.parameters objectForKey:@"houseBaseArea"]]) {
             //return ;
@@ -121,6 +121,9 @@
 - (void)loadDataFromServer{
     NSString *url = [BASE_URL stringByAppendingString:self.appendingUrl];
     [KVNProgress showWithStatus:@"加载中。。----"];
+    NSLog(@"%@",url);
+    NSLog(@"%@",self.parameters);
+
     [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -128,7 +131,7 @@
         [self setValueWith:dic];
         [KVNProgress dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        NSLog(@"error");
     }];
 }
 @end

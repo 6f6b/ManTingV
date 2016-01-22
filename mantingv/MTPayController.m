@@ -56,7 +56,7 @@
     if (nil == _payContentScrollView) {
         MTPayContentScrollView *payContentScrollView = [[MTPayContentScrollView alloc] initWithFrame:self.view.bounds];
         payContentScrollView.controller = self;
-        payContentScrollView.backgroundColor = [UIColor colorWithRed:0.984 green:0.972 blue:1.000 alpha:1.000];
+        payContentScrollView.backgroundColor = [UIColor colorWithRed:(float)239/255 green:(float)239/255 blue:(float)239/255 alpha:1.000];
         _payContentScrollView = payContentScrollView;
         [self.view addSubview:_payContentScrollView];
     }
@@ -89,6 +89,8 @@
     if (nil == _totalPriceLabel) {
         UILabel *totalPriceLabel = [[UILabel alloc] init];
         totalPriceLabel.backgroundColor = [UIColor colorWithRed:0.989 green:1.000 blue:0.962 alpha:1.000];
+        totalPriceLabel.textColor = [UIColor redColor];
+        
         NSString *totalPriceString = [NSString stringWithFormat:@"应付金额：%f",self.totalPrice];
         totalPriceLabel.text = totalPriceString;
         [self.view addSubview:totalPriceLabel];

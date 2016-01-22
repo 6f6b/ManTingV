@@ -9,75 +9,18 @@
 #import "HolidayHouseSearchContentScrollView.h"
 #import "ProductView.h"
 @interface HolidayHouseSearchContentScrollView ()
-@property (nonatomic,strong) NSMutableArray *chooserViewData;
 @end
 
 @implementation HolidayHouseSearchContentScrollView
-- (NSMutableArray *)chooserViewData{
-    if (nil == _chooserViewData) {
-        NSMutableArray *chooserViewData = [[NSMutableArray alloc] init];
-        _chooserViewData = chooserViewData;
-    }
-    return _chooserViewData;
-}
+
 
 - (void)setValueWith:(id)data{
     /////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     [self.parameters setValue:data forKey:@"houseBaseName"];
-
-    [self loadAreaListForChooserView];
-    
+    [self loadDataForProductView];
 }
 
-
-/////////////////////////////////////////////请求目的地列表数据///////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadAreaListForChooserView{
-    NSString *url = [BASE_URL stringByAppendingString:@"/house/area_enum"];
-    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSArray *arr = [dic objectForKey:@"data"];
-        [self.chooserViewData addObject:arr];
-        [self loadThemeListForChooserView];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"失败");
-    }];
-}
-
-/////////////////////////////////////////////请求主题列表数据///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadThemeListForChooserView{
-    NSString *url = [BASE_URL stringByAppendingString:@"/house/theme_enum"];
-    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSArray *arr = [dic objectForKey:@"data"];
-        [self.chooserViewData addObject:arr];
-        [self loadPriceListForChooserView];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
-}
-/////////////////////////////////////////////请求价格列表数据///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadPriceListForChooserView{
-    NSString *url = [BASE_URL stringByAppendingString:@"/house/price_enum"];
-    [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSArray *arr = [dic objectForKey:@"data"];
-        [self.chooserViewData addObject:arr];
-//        [self.chooserView setDataArraysWith:self.chooserViewData];
-        [self loadDataForProductView];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
-}
 
 /////////////////////////////////////////////请求产品列表数据///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -126,7 +69,14 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
-    self.chooserViewData = [[NSMutableArray alloc] init];
+    
+    [self.parameters setValue:@"" forKey:@"houseBaseName"];//搜索框
+    [self.parameters setValue:@"NOT_LIMIT" forKey:@"houseBaseArea"];//目的地
+    [self.parameters setValue:@"NOT_LIMIT" forKey:@"houseBaseTheme"];//主题
+    [self.parameters setValue:@"NOT_LIMIT" forKey:@"houseBasePrice"];//价格
+    [self.parameters setValue:@"HOUSEBASE" forKey:@"productType"];
+    [self.parameters setValue:@"100" forKey:@"pageSize"];
+    [self.parameters setValue:@"1" forKey:@"currentPage"];
     
     NSArray *buttonTitles = @[@"选择目的地",@"选择主题",@"选择价格"];
     [self.chooserView setTitlesOfButtonWith:buttonTitles];

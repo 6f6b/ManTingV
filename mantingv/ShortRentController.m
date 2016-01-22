@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"短租";
-    self.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.999 blue:0.938 alpha:1.000];
     [self.shortRentContentScrollView setValueWith:nil];
     // Do any additional setup after loading the view.
 }

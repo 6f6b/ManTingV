@@ -120,8 +120,8 @@
 - (UILabel *)checkInLabel{
     if (nil == _checkInLabel) {
         UILabel *checkInLabel = [[UILabel alloc] init];
-        checkInLabel.backgroundColor = [UIColor redColor];
         checkInLabel.textAlignment = NSTextAlignmentCenter;
+        checkInLabel.textColor = [UIColor grayColor];
         [self addSubview:checkInLabel];
         checkInLabel.text = @"入住";
         _checkInLabel = checkInLabel;
@@ -132,8 +132,8 @@
 - (UILabel *)checkOutLabel{
     if (nil == _checkOutLabel) {
         UILabel *checkOutLabel = [[UILabel alloc] init];
-        checkOutLabel.backgroundColor = [UIColor redColor];
         checkOutLabel.textAlignment = NSTextAlignmentCenter;
+        checkOutLabel.textColor = [UIColor grayColor];
         [self addSubview:checkOutLabel];
         checkOutLabel.text = @"退房";
         _checkOutLabel = checkOutLabel;
@@ -144,7 +144,8 @@
 - (UILabel *)checkInDayLabel{
     if (nil == _checkInDayLabel) {
         UILabel *checkInDayLabel = [[UILabel alloc] init];
-        checkInDayLabel.backgroundColor = [UIColor redColor];
+        checkInDayLabel.textColor = [UIColor whiteColor];
+        checkInDayLabel.backgroundColor = [UIColor colorWithRed:(float)254/255 green:(float)122/255 blue:(float)120/255 alpha:1.000];
         [self addSubview:checkInDayLabel];
         _checkInDayLabel = checkInDayLabel;
     }
@@ -154,8 +155,8 @@
 - (UILabel *)checkOutDayLabel{
     if (nil == _checkOutDayLabel) {
         UILabel *checkOutDayLabel = [[UILabel alloc] init];
-        checkOutDayLabel.backgroundColor = [UIColor redColor];
-
+        checkOutDayLabel.textColor = [UIColor whiteColor];
+        checkOutDayLabel.backgroundColor = [UIColor colorWithRed:(float)254/255 green:(float)122/255 blue:(float)120/255 alpha:1.000];
         [self addSubview:checkOutDayLabel];
         _checkOutDayLabel = checkOutDayLabel;
     }
@@ -165,7 +166,6 @@
 - (UILabel *)checkInMonthLabel{
     if (nil == _checkInMonthLabel) {
         UILabel *checkInMonthLabel = [[UILabel alloc] init];
-        checkInMonthLabel.backgroundColor = [UIColor redColor];
 
         [self addSubview:checkInMonthLabel];
         _checkInMonthLabel = checkInMonthLabel;
@@ -176,7 +176,6 @@
 - (UILabel *)checkOutMonthLabel{
     if (nil == _checkOutMonthLabel) {
         UILabel *checkOutMonthLabel = [[UILabel alloc] init];
-        checkOutMonthLabel.backgroundColor = [UIColor redColor];
 
         [self addSubview:checkOutMonthLabel];
         _checkOutMonthLabel = checkOutMonthLabel;
@@ -188,8 +187,7 @@
 - (UILabel *)checkInWeekDayLabel{
     if (nil == _checkInWeekDayLabel) {
         UILabel *checkInWeekDayLabel = [[UILabel alloc] init];
-        checkInWeekDayLabel.backgroundColor = [UIColor redColor];
-
+        checkInWeekDayLabel.textColor = [UIColor grayColor];
         [self addSubview:checkInWeekDayLabel];
         _checkInWeekDayLabel = checkInWeekDayLabel;
     }
@@ -199,8 +197,7 @@
 - (UILabel *)checkOutWeekDayLabel{
     if (nil == _checkOutWeekDayLabel) {
         UILabel *checkOutWeekDayLabel = [[UILabel alloc] init];
-        checkOutWeekDayLabel.backgroundColor = [UIColor redColor];
-
+        checkOutWeekDayLabel.textColor = [UIColor grayColor];
         [self addSubview:checkOutWeekDayLabel];
         _checkOutWeekDayLabel = checkOutWeekDayLabel;
     }
@@ -244,14 +241,16 @@
 //    @property (nonatomic,weak) UIView *segementationLine;
 //    @property (nonatomic,weak) UIView *horizontalSegementationLine;
     
-    NSLog(@"实现");
-    self.checkInDayLabel.text = model.checkInDate;
-    self.checkOutDayLabel.text = model.leaveDate;
+    //时间格式为2015-12-16
+    NSArray *checkIntimes =[model.checkInDate componentsSeparatedByString:@"-"];
+    NSArray *leaveTimes = [model.leaveDate componentsSeparatedByString:@"-"];
+    self.checkInDayLabel.text = [NSString stringWithFormat:@"%@号",checkIntimes[2]];
+    self.checkOutDayLabel.text = [NSString stringWithFormat:@"%@号",leaveTimes[2]];
     
-    self.checkInMonthLabel.text = model.checkInDate;
-    self.checkOutMonthLabel.text = model.leaveDate;
+    self.checkInMonthLabel.text = [NSString stringWithFormat:@"%@月",checkIntimes[1]];
+    self.checkOutMonthLabel.text = [NSString stringWithFormat:@"%@月",leaveTimes[1]];
     
-    self.checkInWeekDayLabel.text = model.checkInDate;
-    self.checkOutWeekDayLabel.text = model.leaveDate;
+    self.checkInWeekDayLabel.text = [NSString stringWithFormat:@"%@年",checkIntimes[0]];
+    self.checkOutWeekDayLabel.text = [NSString stringWithFormat:@"%@年",leaveTimes[0]];
 }
 @end

@@ -3402,7 +3402,7 @@
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
 					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
-				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "${SRCROOT}/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -3550,7 +3550,7 @@
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
 					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
-				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "${SRCROOT}/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -3592,7 +3592,7 @@
 					"$(PROJECT_DIR)/mantingv/AliPaySDK",
 					"$(PROJECT_DIR)/mantingv/TencentOpenAPI",
 				);
-				GCC_PREFIX_HEADER = /Users/liufeng/Desktop/mantingv/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "${SRCROOT}/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

@@ -11,5 +11,5 @@
 
 @interface ContentScrollViewWithChooserView : BaseContentScrollView<LFChooserViewDelegate>
 @property (nonatomic,weak) LFChooserView *chooserView;
-@property (nonatomic,strong) NSMutableArray *chooserViewDataArray;
+@property (nonatomic,strong) NSArray *chooserViewDataArray;
 @end

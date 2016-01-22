@@ -16,13 +16,13 @@
     
     for (int i=0; i<arr.count; i++) {
         CGFloat X = 0;
-        CGFloat Y = 87*i;
+        CGFloat Y = 81*i;
         CGFloat W = SCREEN_WIDTH;
         CGFloat H = 80;
         RelatedProductView *relatedProductView = [[RelatedProductView alloc] init];
         relatedProductView.controller = self.controller;
         [relatedProductView setValueWith:arr[i]];
-        relatedProductView.backgroundColor = [UIColor yellowColor];
+        relatedProductView.backgroundColor = [UIColor whiteColor];
         relatedProductView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:relatedProductView];
         

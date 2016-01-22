@@ -72,6 +72,7 @@
     
     self.houseTypeLabel.text = model.houseType;
     
+    self.sizeLabel.textColor = [UIColor redColor];
     self.sizeLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
     
 }

@@ -98,6 +98,7 @@
 - (UILabel *)timeLabel{
     if (nil == _timeLabel) {
         UILabel *timeLabel = [[UILabel alloc] init];
+        timeLabel.textColor = [UIColor colorWithRed:(float)3/255 green:(float)167/255 blue:(float)156/255 alpha:1.000];
         timeLabel.font = [UIFont systemFontOfSize:12];
         timeLabel.text = @"时间";
         [self addSubview:timeLabel];
@@ -109,6 +110,7 @@
 - (UILabel *)houseTypeLabel{
     if (nil == _houseTypeLabel) {
         UILabel *houseTypeLabel = [[UILabel alloc] init];
+        houseTypeLabel.textColor = [UIColor grayColor];
         houseTypeLabel.font = [UIFont systemFontOfSize:12];
         houseTypeLabel.text = @"一室一厅";
         [self addSubview:houseTypeLabel];

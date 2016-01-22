@@ -15,7 +15,7 @@
     NSArray *arr = data;
     for (int i=0; i<arr.count; i++) {
         CGFloat X = 0;
-        CGFloat Y = i*110+10;
+        CGFloat Y = i*101+1;
         CGFloat W = SCREEN_WIDTH;
         CGFloat H = 100;
         ShortRentView *shortRentView = [[ShortRentView alloc] initWithFrame:CGRectMake(X, Y, W, H)];

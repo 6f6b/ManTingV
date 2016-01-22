@@ -88,7 +88,6 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
-    self.chooserViewData = [[NSMutableArray alloc] init];
     
     [self.parameters setValue:@"" forKey:@"houseBaseName"];//搜索框
     [self.parameters setValue:@"NOT_LIMIT" forKey:@"houseBaseArea"];//目的地

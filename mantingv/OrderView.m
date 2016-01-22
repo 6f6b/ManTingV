@@ -82,6 +82,7 @@
 - (UILabel *)topCycleLabel{
     if (nil == _topCycleLabel) {
         UILabel *topCycleLabel = [[UILabel alloc] init];
+        topCycleLabel.textColor = [UIColor colorWithRed:(float)10/255 green:(float)199/255 blue:(float)190/255 alpha:1.000];
         [self addSubview:topCycleLabel];
         _topCycleLabel = topCycleLabel;
     }
@@ -136,7 +137,7 @@
     
     ThemeListViewModel *model = data;
     [self.backImage lfSetImageWithURL:model.imageUrl];
-    self.topCycleLabel.text = [NSString stringWithFormat:@"周期：%@",model.name];
+    self.topCycleLabel.text = [NSString stringWithFormat:@"【%@】",model.name];
     self.titleLabel.text = model.title;
     self.cycleLabel.text = [NSString stringWithFormat:@"周期：%@",model.name];
     self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",model.houseType];

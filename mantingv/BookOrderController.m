@@ -9,7 +9,7 @@
 
 #import "BookOrderController.h"
 
-@interface BookOrderController ()
+@interface BookOrderController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *advancePaymentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *earnestMoneyLabel;
 
@@ -23,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.reservationPerson.delegate = self;
+    self.phoneNum.delegate = self;
+    self.leaveWord.delegate = self;
     self.advancePaymentLabel.text = [NSString stringWithFormat:@"预付价：￥%@",self.earnestMoney];
     self.earnestMoneyLabel.text = [NSString stringWithFormat:@"%@",self.earnestMoney];
 
@@ -50,6 +53,13 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.reservationPerson resignFirstResponder];
+    [self.phoneNum resignFirstResponder];
+    [self.leaveWord resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -45,7 +45,7 @@
 - (CheckInAndCheckOutView *)checkInAndCheckOutView{
     if (nil == _checkInAndCheckOutView) {
         CheckInAndCheckOutView *checkInAndCheckOutView = [[CheckInAndCheckOutView alloc] init];
-        checkInAndCheckOutView.backgroundColor = [UIColor yellowColor];
+        checkInAndCheckOutView.backgroundColor = [UIColor whiteColor];
         [self addSubview:checkInAndCheckOutView];
         _checkInAndCheckOutView = checkInAndCheckOutView;
     }
@@ -55,7 +55,8 @@
 - (ShortRentPriceView *)shortRentPriceView{
     if (nil == _shortRentPriceView) {
         ShortRentPriceView *shortRentPriceView = [[ShortRentPriceView alloc] init];
-        shortRentPriceView.backgroundColor = [UIColor purpleColor];
+        shortRentPriceView.backgroundColor = [UIColor whiteColor];
+
         shortRentPriceView.controller = self.controller;
         [self addSubview:shortRentPriceView];
         _shortRentPriceView = shortRentPriceView;
@@ -67,7 +68,7 @@
     if (nil == _relatedProductsLabel) {
         UILabel *relatedProductsLabel = [[UILabel alloc] init];
         relatedProductsLabel.text = @"相关产品";
-        relatedProductsLabel.backgroundColor = [UIColor greenColor];
+        relatedProductsLabel.backgroundColor = [UIColor colorWithRed:(float)238/255 green:(float)238/255 blue:(float)238/255 alpha:1.000];
         [self addSubview:relatedProductsLabel];
         _relatedProductsLabel = relatedProductsLabel;
     }
@@ -78,7 +79,7 @@
     if (nil == _relatedProductContentView) {
         RelatedProductContentView *relatedProductContentView = [[RelatedProductContentView alloc] init];
         relatedProductContentView.controller = self.controller;
-        relatedProductContentView.backgroundColor = [UIColor purpleColor];
+        relatedProductContentView.backgroundColor = [UIColor colorWithRed:(float)238/255 green:(float)238/255 blue:(float)238/255 alpha:1.000];
         [self addSubview:relatedProductContentView];
         _relatedProductContentView = relatedProductContentView;
     }

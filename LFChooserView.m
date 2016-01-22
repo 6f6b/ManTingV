@@ -28,7 +28,7 @@
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.indexOfDataAndButton = 0;
-        self.backgroundColor = [UIColor colorWithRed:1.000 green:0.989 blue:0.916 alpha:1.000];
+        self.backgroundColor = [UIColor colorWithRed:(float)244/255 green:(float)244/255 blue:(float)244/255 alpha:1.000];
     }
     return self;
 }

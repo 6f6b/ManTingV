@@ -102,7 +102,7 @@
 - (UILabel *)retailPriceLabel{
     if (nil == _retailPriceLabel) {
         UILabel *retailPriceLabel = [[UILabel alloc] init];
-        retailPriceLabel.backgroundColor = [UIColor greenColor];
+        retailPriceLabel.textColor = [UIColor grayColor];
         retailPriceLabel.textAlignment = NSTextAlignmentCenter;
         retailPriceLabel.text = @"零售价";
         [self addSubview:retailPriceLabel];
@@ -114,7 +114,7 @@
 - (UILabel *)retailPrice{
     if (nil == _retailPrice) {
         UILabel *retailPrice = [[UILabel alloc] init];
-        retailPrice.backgroundColor = [UIColor greenColor];
+        retailPrice.textColor = [UIColor redColor];
         retailPrice.textAlignment = NSTextAlignmentCenter;
         retailPrice.text = @"零售价";
         [self addSubview:retailPrice];
@@ -127,7 +127,7 @@
 - (UILabel *)memberPriceLabel{
     if (nil == _memberPriceLabel) {
         UILabel *memberPriceLabel = [[UILabel alloc] init];
-        memberPriceLabel.backgroundColor = [UIColor greenColor];
+        memberPriceLabel.textColor = [UIColor grayColor];
         memberPriceLabel.textAlignment = NSTextAlignmentCenter;
         memberPriceLabel.text = @"会员价";
         [self addSubview:memberPriceLabel];
@@ -139,7 +139,7 @@
 - (UILabel *)memberPrice{
     if (nil == _memberPrice) {
         UILabel *memberPrice = [[UILabel alloc] init];
-        memberPrice.backgroundColor = [UIColor greenColor];
+        memberPrice.textColor = [UIColor redColor];
         memberPrice.textAlignment = NSTextAlignmentCenter;
         memberPrice.text = @"会员价";
         [self addSubview:memberPrice];
@@ -172,7 +172,7 @@
     if (nil == _immediateBookButton) {
         UIButton *immediateBookButton = [UIButton buttonWithType:UIButtonTypeCustom];
         immediateBookButton.backgroundColor = [UIColor purpleColor];
-//        [immediateBookButton setBackgroundColor:[UIColor redColor]];
+        [immediateBookButton setBackgroundColor:[UIColor colorWithRed:(float)255/255 green:(float)154/255 blue:0 alpha:1.000]];
         [immediateBookButton setTitle:@"立即预订" forState:UIControlStateNormal];
         [immediateBookButton addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:immediateBookButton];

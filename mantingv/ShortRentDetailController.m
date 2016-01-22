@@ -24,7 +24,7 @@
 - (ShortRentDetailContentScrollView *)shortRentDetailContentScrollView{
     if (nil == _shortRentDetailContentScrollView) {
         ShortRentDetailContentScrollView *shortRentDetailContentScrollView = [[ShortRentDetailContentScrollView alloc] initWithFrame:self.view.bounds];
-        shortRentDetailContentScrollView.backgroundColor = [UIColor whiteColor];
+        shortRentDetailContentScrollView.backgroundColor = [UIColor colorWithRed:(float)238/255 green:(float)238/255 blue:(float)238/255 alpha:1.000];
         shortRentDetailContentScrollView.controller = self;
         [self.view addSubview:shortRentDetailContentScrollView];
         _shortRentDetailContentScrollView = shortRentDetailContentScrollView;

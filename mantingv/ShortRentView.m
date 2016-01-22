@@ -35,6 +35,7 @@
     [self.numOfRoomLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(superView).with.offset(10);
         make.top.equalTo(superView).with.offset(10);
+        make.right.equalTo(self.numOfRoom);
     }];
     
     //房间号
@@ -89,7 +90,8 @@
 - (UILabel *)numOfRoomLabel{
     if (nil == _numOfRoomLabel) {
         UILabel *numOfRoomLabel = [[UILabel alloc] init];
-        numOfRoomLabel.backgroundColor = [UIColor orangeColor];
+        numOfRoomLabel.backgroundColor = [UIColor colorWithRed:(float)254/255 green:(float)165/255 blue:(float)38/255 alpha:1.000];
+        numOfRoomLabel.textColor = [UIColor whiteColor];
         numOfRoomLabel.text = @"房号";
         [self addSubview:numOfRoomLabel];
         _numOfRoomLabel = numOfRoomLabel;
@@ -100,7 +102,8 @@
 - (UILabel *)numOfRoom{
     if (nil == _numOfRoom) {
         UILabel *numOfRoom = [[UILabel alloc] init];
-        numOfRoom.backgroundColor = [UIColor orangeColor];
+        numOfRoom.textColor = [UIColor whiteColor];
+        numOfRoom.backgroundColor = [UIColor colorWithRed:(float)92/255 green:(float)92/255 blue:(float)92/255 alpha:1.000];
         [self addSubview:numOfRoom];
         _numOfRoom = numOfRoom;
     }
@@ -111,7 +114,8 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor orangeColor];
+        backImage.clipsToBounds = YES;
+        backImage.layer.cornerRadius = 5;
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -122,7 +126,6 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.backgroundColor = [UIColor orangeColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -132,7 +135,7 @@
 - (UILabel *)houseTypeLabel{
     if (nil == _houseTypeLabel) {
         UILabel *houseTypeLabel = [[UILabel alloc] init];
-        houseTypeLabel.backgroundColor = [UIColor orangeColor];
+        houseTypeLabel.textColor = [UIColor grayColor];
         [self addSubview:houseTypeLabel];
         _houseTypeLabel = houseTypeLabel;
     }
@@ -142,7 +145,7 @@
 - (UILabel *)weeklyLabel{
     if (nil == _weeklyLabel) {
         UILabel *weeklyLabel = [[UILabel alloc] init];
-        weeklyLabel.backgroundColor = [UIColor orangeColor];
+        weeklyLabel.textColor = [UIColor grayColor];
         [self addSubview:weeklyLabel];
         _weeklyLabel = weeklyLabel;
     }
@@ -152,7 +155,7 @@
 - (UILabel *)addressLabel{
     if (nil == _addressLabel) {
         UILabel *addressLabel = [[UILabel alloc] init];
-        addressLabel.backgroundColor = [UIColor orangeColor];
+        addressLabel.textColor = [UIColor grayColor];
         [self addSubview:addressLabel];
         _addressLabel = addressLabel;
     }
@@ -162,7 +165,7 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.backgroundColor = [UIColor orangeColor];
+        priceLabel.textColor = [UIColor redColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
