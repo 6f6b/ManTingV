@@ -21,6 +21,7 @@
 
 @property (nonatomic,strong) NSMutableArray *selectedTitles;
 
+@property (nonatomic,strong) NSMutableArray *buttons;
 @end
 @implementation LFChooserView
 
@@ -47,10 +48,13 @@
 
 //设置按钮title
 - (void)setTitlesOfButtonWith:(NSArray *)titles{
+    self.buttons = [[NSMutableArray alloc] init];
     self.selectedTitles = [[NSMutableArray alloc] init];
     for (int i=0; i<titles.count; i++) {
         [self.selectedTitles addObject:@""];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.buttons addObject:button];
+        [button setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
         CGFloat X = SCREEN_WIDTH/3*i;
@@ -71,7 +75,20 @@
 //button的点击事件
 - (void)dealBtn:(UIButton *)button{
     self.indexOfDataAndButton = button.tag;
-    [self showTableView];
+    BOOL b = button.selected;
+    button.selected = !b;
+    if (button.selected) {
+        [self showTableView];
+    }
+    else{
+        [self hiddenTableView];
+        [self.tableView reloadData];
+    }
+    for (int i=0; i<self.buttons.count; i++) {
+        UIButton *button = self.buttons[i];
+        button.selected = NO;
+    }
+    button.selected = !b;
 }
 
 //创建tableView

@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];    
-    self.tabBar.tintColor = [UIColor redColor];
+    self.tabBar.tintColor = [UIColor colorWithRed:0/255.0 green:177/255.0 blue:168/255.0 alpha:1.000];
     
     //创建首页
     HomeController *home = [[HomeController alloc] init];
@@ -54,7 +54,18 @@
 
 - (MTNavigationController *)setViewControllerWith:(UIViewController *)controller title:(NSString *)title itemImage:(NSString *)imageName selectedImage:(NSString *)selectedImage{
     MTNavigationController *NAV = [[MTNavigationController alloc] initWithRootViewController:controller];
-    NAV.title =title;
+    controller.title = title;
+//    //使navigationbar背景透明
+//    [NAV.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    
+//    
+//    //插入背景图片
+//    UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigationbar_backimage"]];
+//    imageview.frame = CGRectMake(0, -20, SCREEN_WIDTH, 64);
+//    [NAV.navigationBar insertSubview:imageview atIndex:0];
+    [NAV.navigationBar setBarTintColor:[UIColor colorWithRed:0/255.0 green:177/255.0 blue:168/255.0 alpha:1.0]];
+    [NAV.navigationBar setTintColor:[UIColor whiteColor]];
+    [NAV.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
     [NAV.tabBarItem setImage:[UIImage imageNamed:imageName]];
     [NAV.tabBarItem setSelectedImage:[UIImage imageNamed:selectedImage]];
     [self addChildViewController:NAV];

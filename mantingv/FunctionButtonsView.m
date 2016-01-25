@@ -33,11 +33,24 @@
         CGFloat Y = 0;
         CGFloat W = SCREEN_WIDTH/images.count;
         CGFloat H = self.frame.size.height-20;
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(X, Y, W, H)];
+        
+        UIView *buttonContentView = [[UIView alloc] initWithFrame:CGRectMake(X, Y, W, H)];
+        [self addSubview:buttonContentView];
+        
+        UIButton *button = [[UIButton alloc] init];
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
-        [self addSubview:button];
         button.tag = i;
         [button addTarget:self action:@selector(dealButton:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [buttonContentView addSubview:button];
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(buttonContentView).with.offset(10);
+            make.bottom.equalTo(buttonContentView).with.offset(-10);
+            make.left.equalTo(buttonContentView).with.offset(10);
+            make.right.equalTo(buttonContentView).with.offset(-10);
+            
+        }];
+
     }
 }
 
@@ -61,7 +74,6 @@
         
         [buttonContentView addSubview:button];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(buttonContentView);
             make.top.equalTo(buttonContentView).with.offset(10);
             make.bottom.equalTo(buttonContentView).with.offset(-10);
             make.left.equalTo(buttonContentView).with.offset(10);

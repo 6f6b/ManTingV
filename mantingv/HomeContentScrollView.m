@@ -40,11 +40,11 @@
         NSArray *titles = @[@"委托出租",@"我要入驻",@"我要交换",@"我要转让"];
         NSMutableArray *images = [[NSMutableArray alloc] init];
         for (int i=0; i<4; i++) {
-            NSString *url = [NSString stringWithFormat:@"http://manting.51shanjian.com/Public/images/nav_0%d.png",i+1];
+            NSString *url = [NSString stringWithFormat:@"home0%d.png",i+1];
             [images addObject:url];
         }
-        [functionButtonsView setImagesWithUrls:images titles:titles];
-//        [functionButtonsView setImages:images titles:titles];
+//        [functionButtonsView setImagesWithUrls:images titles:titles];
+        [functionButtonsView setImages:images titles:titles];
         [self addSubview:functionButtonsView];
         _functionButtonsView = functionButtonsView;
     }
@@ -135,11 +135,13 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         MTModel *model = [MTModel modelWithDictionary:dic];
         [self.loopScrollView setImageWithUrlS:model.data];
-        
+        NSLog(@"轮播图片");
         self.specialOfferContentView.frame = CGRectMake(0, CGRectGetMaxY(self.functionButtonsView.frame)+20, SCREEN_WIDTH, 0);
+        NSLog(@"轮播图片错误");
         [self loadSpecialOfferContentViewData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+       
     }];
 }
 
@@ -152,13 +154,13 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        
+        NSLog(@"特价房");
         [self.specialOfferContentView setValueWith:dic];
         self.what.frame = CGRectMake(0, CGRectGetMaxY(self.specialOfferContentView.frame), SCREEN_WIDTH, 200);
         self.choiceNessTheme.frame = CGRectMake(0, CGRectGetMaxY(self.what.frame), SCREEN_WIDTH, 0);
         [self loadWhatData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        NSLog(@"特价房错误");
     }];
 }
 

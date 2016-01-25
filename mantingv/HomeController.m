@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"首页";
 //    [self.navigationController.navigationBar setShadowColor:[UIColor colorWithRed:0.941 green:0.879 blue:1.000 alpha:1.000]];
     
 //    HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:CGRectMake(0, -64, SCREEN_WIDTH, SCREEN_HEIGHT+64)];

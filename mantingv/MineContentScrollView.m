@@ -44,7 +44,7 @@
                             @"AboutUsController"
                             ];
         for (int i=0; i<6; i++) {
-            MineSubView *mineSubView = [MineSubView mineSubViewWithLeftImage:@"arrow_right_12.81592039801px_1197003_easyicon.net"rightImage:@"arrow_right_12.81592039801px_1197003_easyicon.net" title:titles[i]];
+            MineSubView *mineSubView = [MineSubView mineSubViewWithLeftImage:[NSString stringWithFormat:@"mine%d",i+1] rightImage:@"rightarrow" title:titles[i]];
             mineSubView.tag = 1000+i;
             CGFloat X = 0;
             CGFloat Y = (mineSubView.frame.size.height+2)*i+20+CGRectGetMaxY(self.mineTopContainView.frame);

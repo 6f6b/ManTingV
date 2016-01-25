@@ -22,14 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的短租";
+    self.navigationItem.title = @"我的短租";
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Share_20.16690647482px_1183447_easyicon.net"] style:UIBarButtonItemStyleDone target:self action:@selector(dealRightItem)];
-    self.navigationController.navigationBar.tintColor = [UIColor greenColor];
-//    [self.navigationItem.rightBarButtonItem backgroundImageForState:UIControlStateNormal barMetrics:uibar];
     self.navigationItem.rightBarButtonItem = rightItem;
-//    UIImageView *imagev = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"6e99cf785f741d8b840ed49bd5cd3df7"]];
-//    self.navigationItem.titleView = imagev;
+
     
     NSArray *urls = @[@"/my_house/rent_list_lessee/",@"/my_house/rent_list_hirer/"];
     self.appendingUrl = urls[0];

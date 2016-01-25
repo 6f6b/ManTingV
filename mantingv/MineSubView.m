@@ -16,7 +16,7 @@
 
 + (instancetype)mineSubViewWithLeftImage:(NSString *)leftImage rightImage:(NSString *)rightImage title:(NSString *)title{
     MineSubView *mineSubView = [[MineSubView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-    mineSubView.backgroundColor = [UIColor colorWithRed:0.927 green:1.000 blue:0.926 alpha:1.000];
+    mineSubView.backgroundColor = [UIColor whiteColor];
     
     mineSubView.leftImage.image = [UIImage imageNamed:leftImage];
     mineSubView.titleLabel.text = title;
@@ -34,8 +34,8 @@
         
         make.left.equalTo(superView).with.offset(5);
         
-        make.height.equalTo(@10);
-        make.width.equalTo(@10);
+        make.height.equalTo(@15);
+        make.width.equalTo(@20);
     }];
     
     
@@ -51,8 +51,8 @@
         
         make.right.equalTo(superView).with.offset(-5);
         
-        make.height.equalTo(@10);
-        make.width.equalTo(@10);
+        make.height.equalTo(@20);
+        make.width.equalTo(@15);
     }];
 }
 

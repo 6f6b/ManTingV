@@ -27,12 +27,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     MTTabBarController *tbc = [[MTTabBarController alloc] init];
     tbc.delegate = self;
     self.window.rootViewController = tbc;
     
-    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     [self registThirdPartSDK];
     return YES;
