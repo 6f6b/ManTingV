@@ -27,6 +27,7 @@
 - (void)loadDataFromServer{
     NSString *string = [NSString stringWithFormat:@"/house/house_info/details/%@",self.guid];
     NSString *url = [BASE_URL stringByAppendingString:string];
+    NSLog(@"---->%@",url);
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

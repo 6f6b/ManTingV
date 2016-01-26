@@ -141,7 +141,7 @@
         [self loadSpecialOfferContentViewData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-       
+        [self loadSpecialOfferContentViewData];
     }];
 }
 
@@ -150,6 +150,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadSpecialOfferContentViewData{
     NSString *url = [BASE_URL stringByAppendingString:@"/house/special"];
+    NSLog(@"%@",url);
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

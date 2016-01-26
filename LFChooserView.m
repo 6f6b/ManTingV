@@ -53,6 +53,13 @@
     for (int i=0; i<titles.count; i++) {
         [self.selectedTitles addObject:@""];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:[UIImage imageNamed:@"chooser_down"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"chooser_up"] forState:UIControlStateSelected];
+//        button.imageEdgeInsets = UIEdgeInsetsMake(0, SCREEN_WIDTH/3-20, 0, 0);
+//        button.titleEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 10);
+//        [button.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.right.equalTo(button.imageView.mas_left);
+//        }];
         [self.buttons addObject:button];
         [button setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -127,10 +134,10 @@
     cell.chooserViewTitleLabel.text = title;
 
     if ([title isEqualToString:selectedTitle]) {
-        [cell.isSelectedImage setImage:[UIImage imageNamed:@"draw_ellipse_16px_1066243_easyicon.net"]];
+        [cell.isSelectedImage setImage:[UIImage imageNamed:@"chooser_selected"]];
     }
     else{
-        [cell.isSelectedImage setImage:[UIImage imageNamed:@""]];
+        [cell.isSelectedImage setImage:[UIImage imageNamed:@"chooser_unselected"]];
 
     }
     return cell;
@@ -138,7 +145,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self hiddenTableView];
-    //将对应数组中的number值全部置0
+    UIButton *button = self.buttons[self.indexOfDataAndButton];
+    button.selected = !button.selected;
+    
     self.selectedTitles[self.indexOfDataAndButton] = self.cellTitles[self.indexOfDataAndButton][indexPath.row];
     
     //刷新tableview

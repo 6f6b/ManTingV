@@ -29,7 +29,7 @@
         [self addSubview:themeListView];
         NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:model.houseWeekDTOs[i]];
         [dic setValue:model.buildingTypeArea forKey:@"buildingTypeArea"];
-        [dic setValue:model.imageGuids[0] forKey:@"imageUrl"];
+        [dic setValue:model.imageGuids[i] forKey:@"imageUrl"];
         [dic setValue:model.houseType forKey:@"houseType"];
         [dic setValue:model.name forKey:@"title"];
         

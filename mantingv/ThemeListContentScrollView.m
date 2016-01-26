@@ -60,6 +60,7 @@
     
 //////////////////////////////////////为SelectView赋值////////////////////////////////////////////////////////////////////////////
     [self.selectView setTitlesWith:@[@"度假屋介绍",@"基本信息",@"度假屋设施"]];
+    
     /***********度假屋介绍View***************/
     UILabel *holidayHomeIntroductionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0)];
     holidayHomeIntroductionLabel.text = model.houseFeature;
