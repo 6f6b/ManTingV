@@ -18,7 +18,7 @@
 @implementation MineTopContainView
 
 + (instancetype)mineTopContainView{
-    MineTopContainView *mineTopContainView = [[MineTopContainView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
+    MineTopContainView *mineTopContainView = [[MineTopContainView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 220)];
     return mineTopContainView;
 }
 
@@ -53,7 +53,7 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.image = [UIImage imageNamed:@"4c4fbadf4ab40b683a505af33965809d.jpg"];
+        backImage.image = [UIImage imageNamed:@"user_backgrounimage"];
         [self addSubview:backImage];
         _backImage = backImage;
     }

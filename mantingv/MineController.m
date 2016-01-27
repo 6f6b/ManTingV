@@ -23,7 +23,7 @@
     self.view.backgroundColor = [UIColor clearColor];
     
     self.view.frame = CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT);
-    MineContentScrollView *mineContentScrollView = [[MineContentScrollView alloc] initWithFrame:self.view.bounds];
+    MineContentScrollView *mineContentScrollView = [[MineContentScrollView alloc] initWithFrame:CGRectMake(0, -64, SCREEN_WIDTH, SCREEN_HEIGHT+64)];
     [self.view addSubview:mineContentScrollView];
     mineContentScrollView.backgroundColor = [UIColor colorWithRed:(float)239/255 green:(float)239/255 blue:(float)239/255 alpha:1.000];
     self.mineContentScrollView = mineContentScrollView;
@@ -40,6 +40,14 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.mineContentScrollView setValueWith:nil];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning {

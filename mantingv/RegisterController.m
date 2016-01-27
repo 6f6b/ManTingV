@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *identifyingCode;
 
+@property (weak, nonatomic) IBOutlet UIButton *sendVerifyCodeButton;
 @end
 
 @implementation RegisterController
@@ -22,6 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"注册";
+    
+    self.sendVerifyCodeButton.layer.borderColor = [[UIColor orangeColor] CGColor];
+    self.sendVerifyCodeButton.layer.borderWidth = 1.0;
+    self.sendVerifyCodeButton.clipsToBounds = YES;
+    self.sendVerifyCodeButton.layer.cornerRadius = 5;
     
     self.phoneNumberTextFiled.delegate = self;
     self.loginPasswordTextFiled.delegate = self;

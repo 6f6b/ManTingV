@@ -9,7 +9,7 @@
 #import "LoginController.h"
 #import "RegisterController.h"
 #import "ResettingController.h"
-
+#import <QuartzCore/QuartzCore.h>
 @interface LoginController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextFeild;
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextFeild;
@@ -20,8 +20,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.phoneNumberTextFeild.delegate = self;
+    self.phoneNumberTextFeild.borderStyle = UITextBorderStyleLine;
+    self.phoneNumberTextFeild.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.phoneNumberTextFeild.layer.borderWidth = 1.0;
+    UIImageView *phoneLeftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 15, 20)];
+    phoneLeftImageView.image = [UIImage imageNamed:@"phonenumber"];
+    self.phoneNumberTextFeild.leftView = phoneLeftImageView;
+    self.phoneNumberTextFeild.leftViewMode = UITextFieldViewModeAlways;
+    
     self.passWordTextFeild.delegate = self;
-    // Do any additional setup after loading the view from its nib.
+    self.passWordTextFeild.borderStyle = UITextBorderStyleLine;
+    self.passWordTextFeild.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.passWordTextFeild.layer.borderWidth = 1.0;
+    UIImageView *passLeftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 15, 20)];
+    passLeftImageView.image = [UIImage imageNamed:@"password"];
+    self.passWordTextFeild.leftView = passLeftImageView;
+    self.passWordTextFeild.leftViewMode = UITextFieldViewModeAlways;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{

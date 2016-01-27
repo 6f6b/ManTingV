@@ -64,7 +64,6 @@
 //    imageview.frame = CGRectMake(0, -20, SCREEN_WIDTH, 64);
 //    [NAV.navigationBar insertSubview:imageview atIndex:0];
     [NAV.navigationBar setBarTintColor:[UIColor colorWithRed:0/255.0 green:177/255.0 blue:168/255.0 alpha:1.0]];
-    [NAV.navigationBar setTintColor:[UIColor whiteColor]];
     [NAV.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
     [NAV.tabBarItem setImage:[UIImage imageNamed:imageName]];
     [NAV.tabBarItem setSelectedImage:[UIImage imageNamed:selectedImage]];

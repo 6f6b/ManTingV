@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextFiled;
 
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextFiled;
+@property (weak, nonatomic) IBOutlet UIButton *sendVerfifyCodeButton;
 @end
 
 @implementation ResettingController
@@ -28,6 +29,11 @@
     self.verifyTextFiled.delegate = self;
     self.passwordTextFiled.delegate = self;
     self.confirmPasswordTextFiled.delegate = self;
+    
+    self.sendVerfifyCodeButton.layer.borderColor = [[UIColor orangeColor] CGColor];
+    self.sendVerfifyCodeButton.layer.borderWidth = 1.0;
+    self.sendVerfifyCodeButton.clipsToBounds = YES;
+    self.sendVerfifyCodeButton.layer.cornerRadius = 5;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
