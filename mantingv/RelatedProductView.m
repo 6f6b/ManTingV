@@ -66,11 +66,14 @@
 //    @property (nonatomic,copy) NSString *houseType;
     [self.buyButton setTitle:@"立即预定" forState:UIControlStateNormal];
     [self.backImage lfSetImageWithURL:model.houseImageGuid[0]];
+    
     self.timeLabel.text = [NSString stringWithFormat:@"【%@】",model.houseWeek];
+    self.timeLabel.textColor = [UIColor colorWithRed:(float)3/255 green:(float)167/255 blue:(float)156/255 alpha:1.000];
     
     self.houseNameLabel.text = model.houseName;
     
     self.houseTypeLabel.text = model.houseType;
+    self.houseTypeLabel.textColor = [UIColor grayColor];
     
     self.sizeLabel.textColor = [UIColor redColor];
     self.sizeLabel.text = [NSString stringWithFormat:@"￥%@",model.price];

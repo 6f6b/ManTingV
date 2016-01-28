@@ -65,6 +65,7 @@
 //    [NAV.navigationBar insertSubview:imageview atIndex:0];
     [NAV.navigationBar setBarTintColor:[UIColor colorWithRed:0/255.0 green:177/255.0 blue:168/255.0 alpha:1.0]];
     [NAV.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
+    [NAV.navigationBar setTintColor:[UIColor whiteColor]];
     [NAV.tabBarItem setImage:[UIImage imageNamed:imageName]];
     [NAV.tabBarItem setSelectedImage:[UIImage imageNamed:selectedImage]];
     [self addChildViewController:NAV];

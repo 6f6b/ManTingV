@@ -98,7 +98,7 @@
 - (UILabel *)timeLabel{
     if (nil == _timeLabel) {
         UILabel *timeLabel = [[UILabel alloc] init];
-        timeLabel.textColor = [UIColor colorWithRed:(float)3/255 green:(float)167/255 blue:(float)156/255 alpha:1.000];
+//        timeLabel.textColor = [UIColor colorWithRed:(float)3/255 green:(float)167/255 blue:(float)156/255 alpha:1.000];
         timeLabel.font = [UIFont systemFontOfSize:12];
         timeLabel.text = @"时间";
         [self addSubview:timeLabel];
@@ -110,7 +110,7 @@
 - (UILabel *)houseTypeLabel{
     if (nil == _houseTypeLabel) {
         UILabel *houseTypeLabel = [[UILabel alloc] init];
-        houseTypeLabel.textColor = [UIColor grayColor];
+//        houseTypeLabel.textColor = [UIColor grayColor];
         houseTypeLabel.font = [UIFont systemFontOfSize:12];
         houseTypeLabel.text = @"一室一厅";
         [self addSubview:houseTypeLabel];
@@ -193,7 +193,7 @@
     self.timeLabel.text = [NSString stringWithFormat:@"周期：%@",model.name];
     self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",model.houseType];
     self.sizeLabel.text = [NSString stringWithFormat:@"面积：%@",model.buildingTypeArea];
-    self.surplusLabel.text = [NSString stringWithFormat:@"剩余%@份",model.fee];
+    self.surplusLabel.text = [NSString stringWithFormat:@"剩余%@份",model.totalNum];
     self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
     
 }

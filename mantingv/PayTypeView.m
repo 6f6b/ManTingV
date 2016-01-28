@@ -73,7 +73,7 @@
 - (UIImageView *)payTypeImage{
     if (nil == _payTypeImage) {
         UIImageView *payTypeImage = [[UIImageView alloc] init];
-        payTypeImage.image = [[UIImage imageNamed:@"alipay_72px_1186722_easyicon.net"] stretchableImageWithLeftCapWidth:-10 topCapHeight:10];
+        payTypeImage.image = [[UIImage imageNamed:@"alipay_66x66"] stretchableImageWithLeftCapWidth:-10 topCapHeight:10];
 
         //payTypeImage.backgroundColor = [UIColor redColor];
         [self addSubview:payTypeImage];
@@ -86,6 +86,7 @@
     if (nil == _payTypeLabel) {
         UILabel *payTypeLabel = [[UILabel alloc] init];
         payTypeLabel.text = @"支付宝钱包支付";
+        payTypeLabel.font = [UIFont systemFontOfSize:15];
         [self addSubview:payTypeLabel];
         _payTypeLabel = payTypeLabel;
     }
@@ -96,6 +97,8 @@
     if (nil == _otherLabel) {
         UILabel *otherLabel = [[UILabel alloc] init];
         otherLabel.text = @"推荐支付宝用户使用";
+        otherLabel.textColor = [UIColor grayColor];
+        otherLabel.font = [UIFont systemFontOfSize:13];
         [self addSubview:otherLabel];
         _otherLabel = otherLabel;
     }
@@ -105,7 +108,7 @@
 - (UIImageView *)selectImage{
     if (nil == _selectImage) {
         UIImageView *selectImage = [[UIImageView alloc] init];
-        selectImage.image = [UIImage imageNamed:@"dot_green_16px_1174477_easyicon.net"];
+        selectImage.image = [UIImage imageNamed:@"paytype_selected"];
         [self addSubview:selectImage];
         _selectImage = selectImage;
     }

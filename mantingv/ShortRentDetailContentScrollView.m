@@ -21,16 +21,6 @@
 @end
 @implementation ShortRentDetailContentScrollView
 
-//- (LFLoopScrollView *)shortRentDetailAdScrollView{
-//    if (nil == _shortRentDetailAdScrollView) {
-//        LFLoopScrollView *shortRentDetailAdScrollView = [LFLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-//        shortRentDetailAdScrollView.autoScroll = YES;
-//        shortRentDetailAdScrollView.backgroundColor = [UIColor greenColor];
-//        _shortRentDetailAdScrollView = shortRentDetailAdScrollView;
-//        [self addSubview:shortRentDetailAdScrollView];
-//    }
-//    return _shortRentDetailAdScrollView;
-//}
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     self.checkInAndCheckOutView.frame = CGRectMake(0, CGRectGetMaxY(self.loopScrollView.frame), SCREEN_WIDTH, 100);

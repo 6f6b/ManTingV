@@ -58,6 +58,7 @@
 - (UIStepper *)purchaseQuantityStepper{
     if(nil == _purchaseQuantityStepper){
         UIStepper *purchaseQuantityStepper = [[UIStepper alloc] init];
+        purchaseQuantityStepper.tintColor = [UIColor blackColor];
         [purchaseQuantityStepper addTarget:self action:@selector(dealPurchaseQuantityStepper:) forControlEvents:UIControlEventValueChanged];
         purchaseQuantityStepper.minimumValue = 1;
         [self addSubview:purchaseQuantityStepper];

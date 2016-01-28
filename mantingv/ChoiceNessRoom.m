@@ -26,7 +26,7 @@
     NSArray *arr = model.data;
     for (int i=0; i<arr.count; i++) {
         float X = i%2*10+(SCREEN_WIDTH-10)/2*(i%2);
-        float Y = i/2*160+40;
+        float Y = i/2*160+30;
         float W = (SCREEN_WIDTH-10)/2;
         float H = 150;
         

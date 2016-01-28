@@ -51,7 +51,7 @@
         make.height.equalTo(@20);
         
         //宽 20
-        make.width.equalTo(@20);
+        make.width.equalTo(@15);
     }];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dealTap)];
@@ -81,7 +81,7 @@
 - (UIImageView *)indicateImage{
     if (nil == _indicateImage) {
         UIImageView *indicateImage = [[UIImageView alloc] init];
-        indicateImage.image = [UIImage imageNamed:@"arrow_right_12.81592039801px_1197003_easyicon.net"];
+        indicateImage.image = [UIImage imageNamed:@"rightarrow"];
         [self addSubview:indicateImage];
         _indicateImage = indicateImage;
     }
@@ -90,6 +90,7 @@
 
 - (void)dealTap{
     AgreementController *agreementController = [[AgreementController alloc] init];
+    agreementController.navigationItem.title =  @"购买合同";
     MTPayController *payController = (MTPayController *)self.controller;
     NSLog(@"_______>%@",payController);
     agreementController.houseInfoGuid = payController.themeListViewModel.houseInfoGuid;

@@ -18,9 +18,10 @@
         ProductContainView *previewsProductContainView;
         for (int i=0; i<arr.count; i++) {
             CGFloat productViewX = 0;
-            CGFloat productViewY = CGRectGetMaxY(previewsProductContainView.frame);
+            CGFloat productViewY = CGRectGetMaxY(previewsProductContainView.frame)+11;
             
             ProductContainView *productContainView = [ProductContainView choiceNessViewWithPoint:CGPointMake(productViewX, productViewY)];
+            productContainView.backgroundColor = [UIColor whiteColor];
             productContainView.controller = self.controller;
 
             previewsProductContainView = productContainView;

@@ -29,7 +29,7 @@
         contactPersonEditView.nameEditView.rightTextFiled.delegate = self;
         contactPersonEditView.phoneNumEditView.rightTextFiled.delegate = self;
         contactPersonEditView.titleLabel.text = @"联系人";
-        contactPersonEditView.backgroundColor = [UIColor redColor];
+        contactPersonEditView.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.000];
         [self addSubview:contactPersonEditView];
         _contactPersonEditView = contactPersonEditView;
     }
@@ -41,7 +41,7 @@
     if (nil == _contactAddressEditView) {
         ContactAddressEditView *contactAddressEditView = [[ContactAddressEditView alloc] init];
         contactAddressEditView.titleLabel.text = @"联系地址";
-        contactAddressEditView.backgroundColor = [UIColor greenColor];
+        contactAddressEditView.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.000];
         [self addSubview:contactAddressEditView];
         _contactAddressEditView = contactAddressEditView;
     }

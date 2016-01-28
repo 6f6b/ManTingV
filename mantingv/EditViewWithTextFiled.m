@@ -27,6 +27,8 @@
         make.bottom.equalTo(superView);
         make.right.equalTo(superView);
     }];
+    
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 - (UILabel *)titleLabel{

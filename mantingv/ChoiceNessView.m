@@ -27,16 +27,16 @@ typedef void(^SeeMoreBlock)();
 
 - (id)initWithFrame:(CGRect)frame{
     if (self=[super initWithFrame:frame]) {
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 20, 20)];
         [self addSubview:titleLabel];
         self.titleLabel = titleLabel;
         
         UIButton *seeMore = [UIButton buttonWithType:UIButtonTypeCustom];
-        seeMore.frame = CGRectMake(SCREEN_WIDTH-100, 0, 100, 30);
+        seeMore.frame = CGRectMake(SCREEN_WIDTH-80, 5, 100, 30);
         _seeMore = seeMore;
         [self addSubview:seeMore];
         [seeMore setTitleColor:[UIColor colorWithRed:0.464 green:0.467 blue:0.461 alpha:1.000] forState:UIControlStateNormal];
-        seeMore.titleLabel.font = [UIFont systemFontOfSize:12];
+        seeMore.titleLabel.font = [UIFont systemFontOfSize:13];
         [seeMore setTitle:@"查看更多" forState:UIControlStateNormal];
         [seeMore addTarget:self action:@selector(dealSeeMore) forControlEvents:UIControlEventTouchUpInside];
         

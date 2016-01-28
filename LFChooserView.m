@@ -38,6 +38,7 @@
     CGRect frame;
     CGPoint origin = frame.origin;
     origin.y = y;
+    origin.x = 0;
     frame.origin = origin;
     
     frame.size.width = SCREEN_WIDTH;
@@ -61,7 +62,7 @@
 //            make.right.equalTo(button.imageView.mas_left);
 //        }];
         [self.buttons addObject:button];
-        [button setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
+        [button setTitleColor:[UIColor colorWithRed:(float)3/255 green:(float)167/255 blue:(float)156/255 alpha:1.000] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
         CGFloat X = SCREEN_WIDTH/3*i;

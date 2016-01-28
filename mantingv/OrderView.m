@@ -83,6 +83,7 @@
     if (nil == _topCycleLabel) {
         UILabel *topCycleLabel = [[UILabel alloc] init];
         topCycleLabel.textColor = [UIColor colorWithRed:(float)10/255 green:(float)199/255 blue:(float)190/255 alpha:1.000];
+        topCycleLabel.font = [UIFont systemFontOfSize:14];
         [self addSubview:topCycleLabel];
         _topCycleLabel = topCycleLabel;
     }
@@ -92,6 +93,7 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
+        titleLabel.font = [UIFont systemFontOfSize:14];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -101,6 +103,8 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
+        backImage.clipsToBounds = YES;
+        backImage.layer.cornerRadius = 3;
         [self addSubview:backImage];
         _backImage = backImage;
     }

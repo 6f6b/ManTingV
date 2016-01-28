@@ -27,7 +27,7 @@
     [self setTitle:model.title];
     for (int i=0; i<model.buildingTypeDTOs.count; i++) {
         CGFloat X = 0;
-        CGFloat Y = 200*i+40;
+        CGFloat Y = 200*i+30;
         CGFloat W = self.frame.size.width;
         CGFloat H = 190;
         ProductView *productView = [[ProductView alloc] initWithFrame:CGRectMake(X, Y, W, H)];

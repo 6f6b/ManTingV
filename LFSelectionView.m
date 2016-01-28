@@ -37,9 +37,9 @@
         
         [button setTitle:titles[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
-        [button setBackgroundColor:[UIColor colorWithRed:0.975 green:1.000 blue:0.964 alpha:1.000]];
-        [button setBackgroundImage:[UIImage imageNamed:@"software_shape_rectangle_96.727272727273px_1183075_easyicon.net"] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor colorWithRed:(float)3/255 green:(float)167/255 blue:(float)156/255 alpha:1.000] forState:UIControlStateSelected];
+        [button setBackgroundImage:[UIImage imageNamed:@"selectionview_unselected"] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"selectionview_selected"] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(dealBtn:) forControlEvents:UIControlEventTouchDown];
     }
 }

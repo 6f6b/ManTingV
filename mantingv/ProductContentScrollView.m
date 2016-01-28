@@ -20,6 +20,7 @@
     if (nil == _productContentView) {
         ProductContentView *productContentView = [[ProductContentView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.chooserView.frame), SCREEN_WIDTH, 0)];
         [self addSubview:productContentView];
+        productContentView.backgroundColor = [UIColor colorWithRed:243/255.0 green:243/255.0 blue:243/255.0 alpha:1.000];
         productContentView.controller = self.controller;
         _productContentView = productContentView;
     }

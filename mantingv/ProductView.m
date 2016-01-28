@@ -49,6 +49,14 @@
         make.bottom.equalTo(self.titleLabel.mas_top).with.offset(-10);
     }];
     
+//    [self.houseWeekLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        //距 父视图 左边 5
+//        make.left.equalTo(superView).with.offset(5);
+//        
+//        //距 backImage 下边 5
+//        make.top.equalTo(self.backImage.mas_bottom).with.offset(5);
+//    }];
+    
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         //距 父视图 左边 5
         make.left.equalTo(superView).with.offset(5);
@@ -83,7 +91,8 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor grayColor];
+        backImage.clipsToBounds = YES;
+        backImage.layer.cornerRadius = 3;
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -93,7 +102,8 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.backgroundColor = [UIColor whiteColor];
+        priceLabel.backgroundColor = [UIColor colorWithRed:0.054 green:0.027 blue:0.000 alpha:0.550];
+        priceLabel.textColor = [UIColor whiteColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
@@ -104,17 +114,31 @@
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.backgroundColor = [UIColor whiteColor];
-        titleLabel.font = [UIFont systemFontOfSize:14];
+        titleLabel.font = [UIFont systemFontOfSize:13];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
     return _titleLabel;
 }
 
+//- (UILabel *)houseWeekLabel{
+//    if (nil == _houseWeekLabel) {
+//        UILabel *houseWeekLabel = [[UILabel alloc] init];
+//        houseWeekLabel.backgroundColor = [UIColor whiteColor];
+//        houseWeekLabel.textColor = [UIColor colorWithRed:(float)3/255 green:(float)167/255 blue:(float)156/255 alpha:1.000];
+//        houseWeekLabel.font = [UIFont systemFontOfSize:14];
+//        [self addSubview:houseWeekLabel];
+//        _houseWeekLabel = houseWeekLabel;
+//    }
+//    return _houseWeekLabel;
+//}
+
 - (UILabel *)seeDetailLabel{
     if (nil == _seeDetailLabel) {
         UILabel *seeDetailLabel = [[UILabel alloc] init];
         seeDetailLabel.backgroundColor = [UIColor whiteColor];
+        seeDetailLabel.textColor = [UIColor grayColor];
+        seeDetailLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:seeDetailLabel];
         _seeDetailLabel = seeDetailLabel;
     }
@@ -126,6 +150,7 @@
         UILabel *houseTypeAndSizeLabel = [[UILabel alloc] init];
         houseTypeAndSizeLabel.font = [UIFont systemFontOfSize:12];
         houseTypeAndSizeLabel.backgroundColor = [UIColor whiteColor];
+        houseTypeAndSizeLabel.textColor = [UIColor grayColor];
         [self addSubview:houseTypeAndSizeLabel];
         _houseTypeAndSizeLabel = houseTypeAndSizeLabel;
     }
