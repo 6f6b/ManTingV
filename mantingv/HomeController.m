@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     [self getsong];
 //    [self.navigationController.navigationBar setShadowColor:[UIColor colorWithRed:0.941 green:0.879 blue:1.000 alpha:1.000]];
     
 //    HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:CGRectMake(0, -64, SCREEN_WIDTH, SCREEN_HEIGHT+64)];
@@ -52,43 +51,6 @@
     
 }
 
-- (void)getsong{
-    NSString *httpUrl = @"http://apis.baidu.com/geekery/music/query";
-    NSString *httpArg = @"s=%E5%A4%A9%E4%B8%8B&limit=10&p=1";
-    [self request: httpUrl withHttpArg: httpArg];
-    
-    
-}
-
--(void)request: (NSString*)httpUrl withHttpArg: (NSString*)HttpArg  {
-    NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, HttpArg];
-    NSURL *url = [NSURL URLWithString: urlStr];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
-    [request setHTTPMethod: @"GET"];
-    [request addValue: @"8c1f4e97a097504a4ae74030273761cf" forHTTPHeaderField: @"apikey"];
-    [NSURLConnection sendAsynchronousRequest: request
-                                       queue: [NSOperationQueue mainQueue]
-                           completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
-                               if (error) {
-                                   NSLog(@"Httperror: %@%ld", error.localizedDescription, error.code);
-                               } else {
-                                   NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
-                                   NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                   NSLog(@"HttpResponseCode:%ld", responseCode);
-                                   NSLog(@"HttpResponseBody %@",responseString);
-                               }
-                           }];
-}
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//    self.navigationController.navigationBar.backgroundView.alpha = (scrollView.contentOffset.y+64)/500.0;
-//    NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
-//    if (scrollView.contentOffset.y>0) {
-//        self.navigationItem.title = @"首页";
-//    }
-//    else{
-//        self.navigationItem.title = @"";
-//    }
-//}
 
 - (void)viewWillDisappear:(BOOL)animated{
     [self.productSearchBar resignFirstResponder];

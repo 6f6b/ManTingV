@@ -70,7 +70,6 @@
 		03D251C01C22A47E00BA9ED7 /* MyCheckInListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251BF1C22A47E00BA9ED7 /* MyCheckInListController.m */; };
 		03D251C41C22A4AA00BA9ED7 /* AccountConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251C21C22A4AA00BA9ED7 /* AccountConfigController.m */; };
 		03D251C51C22A4AA00BA9ED7 /* AccountConfigController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251C31C22A4AA00BA9ED7 /* AccountConfigController.xib */; };
-		03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251C71C22A4D900BA9ED7 /* AboutUsController.m */; };
 		03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251CC1C22ACA600BA9ED7 /* ModifyIconController.m */; };
 		03D251CF1C22ACA600BA9ED7 /* ModifyIconController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D251CD1C22ACA600BA9ED7 /* ModifyIconController.xib */; };
 		03D251DA1C22AE4D00BA9ED7 /* ModifyPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D251D81C22AE4D00BA9ED7 /* ModifyPasswordController.m */; };
@@ -257,6 +256,12 @@
 		03E0A25E1C18274000FCAAAC /* short.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A2591C18274000FCAAAC /* short.png */; };
 		03E0A25F1C18274000FCAAAC /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E0A25A1C18274000FCAAAC /* product.png */; };
 		03E2DCFF1C4F5AAC007A9370 /* MTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E2DCFD1C4F5AAC007A9370 /* MTTools.m */; };
+		03E472CC1C5AF16A00C9D7E1 /* mine_accountconfig_modifypassword.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E472CB1C5AF16A00C9D7E1 /* mine_accountconfig_modifypassword.png */; };
+		03E472CE1C5AF61900C9D7E1 /* headbackimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E472CD1C5AF61900C9D7E1 /* headbackimage.png */; };
+		03E472D21C5AFD2000C9D7E1 /* AboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E472D01C5AFD2000C9D7E1 /* AboutUsController.m */; };
+		03E472D31C5AFD2000C9D7E1 /* AboutUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E472D11C5AFD2000C9D7E1 /* AboutUsController.xib */; };
+		03E472D51C5AFE2500C9D7E1 /* mine_aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E472D41C5AFE2500C9D7E1 /* mine_aboutus.png */; };
+		03E472D71C5AFF3500C9D7E1 /* mine7.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E472D61C5AFF3500C9D7E1 /* mine7.png */; };
 		03E4EE441C4381D700C59D17 /* MyShortRentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE421C4381D700C59D17 /* MyShortRentDetailController.m */; };
 		03E4EE451C4381D700C59D17 /* MyShortRentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E4EE431C4381D700C59D17 /* MyShortRentDetailController.xib */; };
 		03E4EE551C4397BE00C59D17 /* MyHouseDTOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E4EE541C4397BE00C59D17 /* MyHouseDTOModel.m */; };
@@ -429,8 +434,6 @@
 		03D251C11C22A4AA00BA9ED7 /* AccountConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountConfigController.h; sourceTree = "<group>"; };
 		03D251C21C22A4AA00BA9ED7 /* AccountConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountConfigController.m; sourceTree = "<group>"; };
 		03D251C31C22A4AA00BA9ED7 /* AccountConfigController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountConfigController.xib; sourceTree = "<group>"; };
-		03D251C61C22A4D900BA9ED7 /* AboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsController.h; sourceTree = "<group>"; };
-		03D251C71C22A4D900BA9ED7 /* AboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsController.m; sourceTree = "<group>"; };
 		03D251CB1C22ACA500BA9ED7 /* ModifyIconController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyIconController.h; sourceTree = "<group>"; };
 		03D251CC1C22ACA600BA9ED7 /* ModifyIconController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyIconController.m; sourceTree = "<group>"; };
 		03D251CD1C22ACA600BA9ED7 /* ModifyIconController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyIconController.xib; sourceTree = "<group>"; };
@@ -814,6 +817,13 @@
 		03E0A25A1C18274000FCAAAC /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product.png; sourceTree = "<group>"; };
 		03E2DCFD1C4F5AAC007A9370 /* MTTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTools.m; sourceTree = "<group>"; };
 		03E2DCFE1C4F5AAC007A9370 /* MTTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTools.h; sourceTree = "<group>"; };
+		03E472CB1C5AF16A00C9D7E1 /* mine_accountconfig_modifypassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_accountconfig_modifypassword.png; sourceTree = "<group>"; };
+		03E472CD1C5AF61900C9D7E1 /* headbackimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headbackimage.png; sourceTree = "<group>"; };
+		03E472CF1C5AFD2000C9D7E1 /* AboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsController.h; sourceTree = "<group>"; };
+		03E472D01C5AFD2000C9D7E1 /* AboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsController.m; sourceTree = "<group>"; };
+		03E472D11C5AFD2000C9D7E1 /* AboutUsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsController.xib; sourceTree = "<group>"; };
+		03E472D41C5AFE2500C9D7E1 /* mine_aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_aboutus.png; sourceTree = "<group>"; };
+		03E472D61C5AFF3500C9D7E1 /* mine7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine7.png; sourceTree = "<group>"; };
 		03E4EE411C4381D700C59D17 /* MyShortRentDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShortRentDetailController.h; sourceTree = "<group>"; };
 		03E4EE421C4381D700C59D17 /* MyShortRentDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShortRentDetailController.m; sourceTree = "<group>"; };
 		03E4EE431C4381D700C59D17 /* MyShortRentDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyShortRentDetailController.xib; sourceTree = "<group>"; };
@@ -928,6 +938,10 @@
 		0376AFD31C1196C30033D2A2 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				03E472D61C5AFF3500C9D7E1 /* mine7.png */,
+				03E472D41C5AFE2500C9D7E1 /* mine_aboutus.png */,
+				03E472CD1C5AF61900C9D7E1 /* headbackimage.png */,
+				03E472CB1C5AF16A00C9D7E1 /* mine_accountconfig_modifypassword.png */,
 				03DEA07D1C59C2900075023E /* paytype_unselected.png */,
 				03DEA07B1C59C28A0075023E /* paytype_selected.png */,
 				03DEA0791C59C0B20075023E /* alipay_66x66.png */,
@@ -1620,8 +1634,9 @@
 		03D251B21C22A3A500BA9ED7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03D251C61C22A4D900BA9ED7 /* AboutUsController.h */,
-				03D251C71C22A4D900BA9ED7 /* AboutUsController.m */,
+				03E472CF1C5AFD2000C9D7E1 /* AboutUsController.h */,
+				03E472D01C5AFD2000C9D7E1 /* AboutUsController.m */,
+				03E472D11C5AFD2000C9D7E1 /* AboutUsController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2997,12 +3012,14 @@
 			files = (
 				03D447651C55FDF1006D7DBF /* modifypassword.png in Resources */,
 				03E0A25E1C18274000FCAAAC /* short.png in Resources */,
+				03E472D51C5AFE2500C9D7E1 /* mine_aboutus.png in Resources */,
 				033A99EA1C571E820004323A /* chooser_up.png in Resources */,
 				03DEA0771C59B1D90075023E /* selectionview_selected.png in Resources */,
 				033A99E81C571E820004323A /* chooser_selected.png in Resources */,
 				033A99E21C570F2B0004323A /* icon.png in Resources */,
 				03D4475F1C55F705006D7DBF /* mine6.png in Resources */,
 				03EDC9F91C4633CC0072DFC7 /* 6e99cf785f741d8b840ed49bd5cd3df7.jpg in Resources */,
+				03E472CE1C5AF61900C9D7E1 /* headbackimage.png in Resources */,
 				03D0EA8A1C5882D000EC8AD1 /* user_backgrounimage.png in Resources */,
 				03D447641C55FDF1006D7DBF /* modifynickname.png in Resources */,
 				03EDC9E81C46194E0072DFC7 /* arrow_drop_up_24px_1181653_easyicon.net.png in Resources */,
@@ -3056,6 +3073,7 @@
 				03DC50011C28EF910040C939 /* arrow_left_18.63670411985px_1190576_easyicon.net.png in Resources */,
 				03D452AC1C478E9A00D26E35 /* Share_20.16690647482px_1183447_easyicon.net.png in Resources */,
 				03EDC9E91C46194E0072DFC7 /* arrow_drop_down_24px_1181651_easyicon.net.png in Resources */,
+				03E472CC1C5AF16A00C9D7E1 /* mine_accountconfig_modifypassword.png in Resources */,
 				03D251C51C22A4AA00BA9ED7 /* AccountConfigController.xib in Resources */,
 				03D6E5191C3F87DD0068142C /* MyRentListCell.xib in Resources */,
 				03D4475E1C55F705006D7DBF /* mine5.png in Resources */,
@@ -3066,6 +3084,7 @@
 				03D4CC741C48C0DE0076BEE9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				03D1389B1C4E2FCB005E5035 /* WeiboSDK.bundle in Resources */,
 				03DEED151C3BB47B00EE518F /* ResettingController.xib in Resources */,
+				03E472D31C5AFD2000C9D7E1 /* AboutUsController.xib in Resources */,
 				03D5BC4A1C34CCE900B92A72 /* RegisterController.xib in Resources */,
 				03D363741C50AA6600CB7C58 /* dot_green_16px_1174477_easyicon.net.png in Resources */,
 				03D251E71C22BDDA00BA9ED7 /* BookOrderController.xib in Resources */,
@@ -3079,6 +3098,7 @@
 				03D447781C5628DA006D7DBF /* home03.png in Resources */,
 				03D447791C5628DA006D7DBF /* home04.png in Resources */,
 				03DC50BB1C291CC40040C939 /* add_24px_1138892_easyicon.net.png in Resources */,
+				03E472D71C5AFF3500C9D7E1 /* mine7.png in Resources */,
 				031D848E1C576E5E009855CE /* rightarrow.png in Resources */,
 				03E6BB4D1C3CE1A50008D68B /* AddAddressCell.xib in Resources */,
 				03D363701C507C3600CB7C58 /* LFChooserViewCell.xib in Resources */,
@@ -3164,6 +3184,7 @@
 			files = (
 				03E066891C28099F00E85778 /* TransferDetailTopContentView.m in Sources */,
 				03DC4FFE1C28EA340040C939 /* INeedCheckInCell.m in Sources */,
+				03E472D21C5AFD2000C9D7E1 /* AboutUsController.m in Sources */,
 				03DA247A1C23D4A60098FE4B /* ChoiceTheme.m in Sources */,
 				03EDC9F51C4627A90072DFC7 /* ContentScrollViewForExchangeOrTransfer.m in Sources */,
 				03D251CE1C22ACA600BA9ED7 /* ModifyIconController.m in Sources */,
@@ -3285,7 +3306,6 @@
 				03D251BA1C22A43F00BA9ED7 /* MyAssignmentListController.m in Sources */,
 				03D452A21C475DEC00D26E35 /* NSDataEx.m in Sources */,
 				03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */,
-				03D251C81C22A4D900BA9ED7 /* AboutUsController.m in Sources */,
 				03CFAEDB1C3267F0009C80EB /* ShortRentDetailContentScrollViewModel.m in Sources */,
 				03E6BB651C3CEF370008D68B /* ContactPersonEditView.m in Sources */,
 				03D830AE1C1EBDE1006DBFD9 /* ChoiceNessTheme.m in Sources */,

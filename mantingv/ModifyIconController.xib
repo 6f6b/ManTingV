@@ -19,13 +19,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejv-WG-gHJ">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-n4-X2i">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headbackimage" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-n4-X2i">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.7609343104086369" green="0.9115370282604961" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ple-gp-wTo">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.99215692280000001" green="0.99215692280000001" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="CuD-w6-3f5">
                                     <variation key="heightClass=regular" constant="80"/>
@@ -150,4 +150,7 @@
             <point key="canvasLocation" x="-8" y="270"/>
         </view>
     </objects>
+    <resources>
+        <image name="headbackimage" width="36" height="36"/>
+    </resources>
 </document>

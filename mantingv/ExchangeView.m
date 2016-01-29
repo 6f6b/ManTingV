@@ -42,6 +42,7 @@
     [self.roomNumberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(superView).with.offset(10);
         make.left.equalTo(superView).with.offset(10);
+        make.right.equalTo(self.roomNumber);
     }];
     
     //房间号
@@ -102,7 +103,8 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor orangeColor];
+        backImage.clipsToBounds = YES;
+        backImage.layer.cornerRadius = 3;
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -113,8 +115,10 @@
 - (UILabel *)roomNumberLabel{
     if (nil == _roomNumberLabel) {
         UILabel *roomNumberLabel = [[UILabel alloc] init];
+        roomNumberLabel.font = [UIFont systemFontOfSize:15];
         roomNumberLabel.text = @"房号";
-        roomNumberLabel.backgroundColor = [UIColor redColor];
+        roomNumberLabel.backgroundColor = [UIColor orangeColor];
+        roomNumberLabel.textColor = [UIColor whiteColor];
         [self addSubview:roomNumberLabel];
         _roomNumberLabel = roomNumberLabel;
     }
@@ -124,8 +128,10 @@
 - (UILabel *)roomNumber{
     if (nil == _roomNumber) {
         UILabel *roomNumber = [[UILabel alloc] init];
+        roomNumber.font = [UIFont systemFontOfSize:15];
         roomNumber.text = @"110";
         roomNumber.backgroundColor = [UIColor grayColor];
+        roomNumber.textColor = [UIColor whiteColor];
         [self addSubview:roomNumber];
         _roomNumber = roomNumber;
     }
@@ -135,8 +141,9 @@
 - (UILabel *)cycleLabel{
     if (nil == _cycleLabel) {
         UILabel *cycleLabel = [[UILabel alloc] init];
+        cycleLabel.font = [UIFont systemFontOfSize:15];
         cycleLabel.text = @"【旺季周】";
-        cycleLabel.backgroundColor = [UIColor greenColor];
+        cycleLabel.textColor = [UIColor colorWithRed:11/255.0 green:198/255.0 blue:191/255.0 alpha:1.000];
         [self addSubview:cycleLabel];
         _cycleLabel = cycleLabel;
     }
@@ -146,8 +153,9 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
+        titleLabel.font = [UIFont systemFontOfSize:15];
         titleLabel.text = @"老子山";
-        titleLabel.backgroundColor = [UIColor orangeColor];
+        titleLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -157,8 +165,10 @@
 - (UILabel *)houseTypeLabel{
     if (nil == _houseTypeLabel) {
         UILabel *houseTypeLabel = [[UILabel alloc] init];
+        houseTypeLabel.font = [UIFont systemFontOfSize:13];
         houseTypeLabel.text = @"房型：两房一厅";
-        houseTypeLabel.backgroundColor = [UIColor orangeColor];
+        houseTypeLabel.textColor = [UIColor grayColor];
+        houseTypeLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:houseTypeLabel];
         _houseTypeLabel = houseTypeLabel;
     }
@@ -168,8 +178,10 @@
 - (UILabel *)exchangeNumberOfDaysLabel{
     if (nil == _exchangeNumberOfDaysLabel) {
         UILabel *exchangeNumberOfDaysLabel = [[UILabel alloc] init];
+        exchangeNumberOfDaysLabel.font = [UIFont systemFontOfSize:13];
         exchangeNumberOfDaysLabel.text = @"交换天数：30";
-        exchangeNumberOfDaysLabel.backgroundColor = [UIColor orangeColor];
+        exchangeNumberOfDaysLabel.backgroundColor = [UIColor whiteColor];
+        exchangeNumberOfDaysLabel.textColor = [UIColor grayColor];
         [self addSubview:exchangeNumberOfDaysLabel];
         _exchangeNumberOfDaysLabel = exchangeNumberOfDaysLabel;
     }
@@ -179,8 +191,10 @@
 - (UILabel *)addressLabel{
     if (nil == _addressLabel) {
         UILabel *addressLabel = [[UILabel alloc] init];
+        addressLabel.font = [UIFont systemFontOfSize:13];
         addressLabel.text = @"地址：成都市";
-        addressLabel.backgroundColor = [UIColor orangeColor];
+        addressLabel.backgroundColor = [UIColor whiteColor];
+        addressLabel.textColor = [UIColor grayColor];
         [self addSubview:addressLabel];
         _addressLabel = addressLabel;
     }
@@ -191,7 +205,8 @@
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
         priceLabel.text = @"￥100";
-        priceLabel.backgroundColor = [UIColor orangeColor];
+        priceLabel.backgroundColor = [UIColor whiteColor];
+        priceLabel.textColor = [UIColor redColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
@@ -204,12 +219,12 @@
     self.model = exchangePoolDTOModel;
     
     [self.backImage lfSetImageWithURL:houseInfoDTOModel.imageGuids[0]];
-    self.roomNumber.text = NULL;
-    self.cycleLabel.text = [NSString stringWithFormat:@"【%@】->%@",exchangePoolDTOModel.houseWeekName,exchangePoolDTOModel.username];
+    self.roomNumber.text = @"110";
+    self.cycleLabel.text = [NSString stringWithFormat:@"【%@】",exchangePoolDTOModel.houseWeekName];
     self.titleLabel.text = houseInfoDTOModel.name;
     self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",houseInfoDTOModel.houseType];
     self.exchangeNumberOfDaysLabel.text = [NSString stringWithFormat:@"交换天数：%@",NULL];
-    self.addressLabel.text = [NSString stringWithFormat:@"%@",NULL];
+    self.addressLabel.text = [NSString stringWithFormat:@"地址:%@%@",houseInfoDTOModel.province,houseInfoDTOModel.city];
     self.priceLabel.text = [NSString stringWithFormat:@"价格：%@￥",houseInfoDTOModel.price];
     //@property (nonatomic,weak) UIImageView *backImage;
     //@property (nonatomic,weak) UILabel *roomNumberLabel;

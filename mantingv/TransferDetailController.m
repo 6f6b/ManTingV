@@ -24,7 +24,7 @@
 - (TransferDetailContentScrollView *)transferDetailContentScrollView{
     if (nil == _transferDetailContentScrollView) {
         TransferDetailContentScrollView *transferDetailContentScrollView = [[TransferDetailContentScrollView alloc] initWithFrame:self.view.bounds];
-        transferDetailContentScrollView.backgroundColor = [UIColor yellowColor];
+        transferDetailContentScrollView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.000];
         _transferDetailContentScrollView = transferDetailContentScrollView;
         transferDetailContentScrollView.controller = self;
         [self.view addSubview:transferDetailContentScrollView];

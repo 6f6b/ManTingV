@@ -41,17 +41,41 @@
 }
 
 - (IBAction)modifyIcon:(id)sender {
-    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.sourceType = sourceType;
     picker.allowsEditing = YES;
     picker.delegate = self;
-    [self presentViewController:picker animated:YES completion:^{
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.sourceType = sourceType;
+        [self presentViewController:picker animated:YES completion:^{
+            
+        }];
+    }
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *actionForCamera = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+            picker.sourceType = sourceType;
+            [self presentViewController:picker animated:YES completion:^{
+                
+            }];
+        }];
+        UIAlertAction *actionForPhotoLibrary = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            picker.sourceType = sourceType;
+            [self presentViewController:picker animated:YES completion:^{
+                
+            }];
+        }];
+        UIAlertAction *actionForCancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alertController addAction:actionForCamera];
+        [alertController addAction:actionForPhotoLibrary];
+        [alertController addAction:actionForCancel];
         
-    }];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{

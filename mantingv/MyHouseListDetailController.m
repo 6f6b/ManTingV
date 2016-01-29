@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self loadDataFromServer];
     [self.myHouseListDetailContentScrollView setValueWith:nil];
     // Do any additional setup after loading the view.

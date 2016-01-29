@@ -43,7 +43,7 @@
 - (ExchangeContentScrollView *)exchangeContentScrollView{
     if (nil == _exchangeContentScrollView) {
         ExchangeContentScrollView *exchangeContentScrollView = [[ExchangeContentScrollView alloc] initWithFrame:self.view.bounds];
-        exchangeContentScrollView.backgroundColor = [UIColor yellowColor];
+        exchangeContentScrollView.backgroundColor = [UIColor whiteColor];
         exchangeContentScrollView.controller = self;
 
         _exchangeContentScrollView = exchangeContentScrollView;

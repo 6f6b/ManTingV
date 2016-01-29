@@ -15,12 +15,12 @@
     NSArray *arr = data;
     for (int i =0; i<arr.count; i++) {
         CGFloat X = 0;
-        CGFloat Y = 100*i+10;
+        CGFloat Y = 91*i;
         CGFloat W = SCREEN_WIDTH;
         CGFloat H = 90;
         TransferView *transferView = [[TransferView alloc] initWithFrame:CGRectMake(X, Y, W, H)];
         transferView.controller = self.controller;
-        transferView.backgroundColor = [UIColor greenColor];
+        transferView.backgroundColor = [UIColor whiteColor];
         [transferView setValueWith:arr[i]];
         [self addSubview:transferView];
         

@@ -34,15 +34,19 @@
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *userGuid = [user objectForKey:USER_GUID];
     NSString *url = [BASE_URL stringByAppendingString:[NSString stringWithFormat:@"/my_house/list/%@",userGuid]];
+    NSLog(@"---------->%@",url);
+    [KVNProgress showWithStatus:@"加载中。。"];
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSArray *arr = [dic objectForKey:@"data"];
+        NSLog(@"----->%@",arr);
+        [KVNProgress dismiss];
         self.dataArray = [[NSMutableArray alloc] initWithArray:arr];
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        NSLog(@"error");
     }];
 }
 

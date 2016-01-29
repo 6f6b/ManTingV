@@ -25,6 +25,7 @@
 - (TransferContainView *)transferContainView{
     if(nil == _transferContainView){
         TransferContainView *transferContainView = [[TransferContainView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.chooserView.frame), SCREEN_WIDTH, 10)];
+        transferContainView.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0];
         [self addSubview:transferContainView];
         transferContainView.controller = self.controller;
         _transferContainView = transferContainView;

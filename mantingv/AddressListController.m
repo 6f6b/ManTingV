@@ -26,6 +26,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"地址列表";
+    
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.dataSource = self;
     tableView.delegate = self;

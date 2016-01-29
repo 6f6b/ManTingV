@@ -67,7 +67,6 @@
 - (UILabel *)houseTypeLabel{
     if (nil == _houseTypeLabel) {
         UILabel *houseTypeLabel = [[UILabel alloc] init];
-        houseTypeLabel.backgroundColor = [UIColor grayColor];
         [self addSubview:houseTypeLabel];
         _houseTypeLabel = houseTypeLabel;
     }
@@ -77,7 +76,6 @@
 - (UILabel *)cycleLabel{
     if (nil == _cycleLabel) {
         UILabel *cycleLabel = [[UILabel alloc] init];
-        cycleLabel.backgroundColor = [UIColor grayColor];
         [self addSubview:cycleLabel];
         _cycleLabel = cycleLabel;
     }
@@ -87,7 +85,6 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.backgroundColor = [UIColor grayColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
@@ -97,7 +94,6 @@
 - (UILabel *)price{
     if (nil == _price) {
         UILabel *price = [[UILabel alloc] init];
-        price.backgroundColor = [UIColor grayColor];
         price.textColor = [UIColor redColor];
         [self addSubview:price];
         _price = price;

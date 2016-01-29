@@ -27,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"添加地址";
+    
     [self.addAddressContentScrollView setValueWith:nil];
     
     self.nameEditTextFiled = self.addAddressContentScrollView.contactPersonEditView.nameEditView.rightTextFiled;
@@ -44,17 +46,18 @@
 
 - (UIPickerView *)pickerView{
     if (nil == _pickerView) {
-        UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-200, SCREEN_WIDTH, 200)];
-        pickerView.backgroundColor = [UIColor colorWithRed:0.962 green:0.879 blue:1.000 alpha:1.000];
+        UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-120, SCREEN_WIDTH, 120)];
+        pickerView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:pickerView];
         _pickerView = pickerView;
         pickerView.dataSource = self;
         pickerView.delegate = self;
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.000];
         [button setTitle:@"完成" forState:UIControlStateNormal];
-        [button setBackgroundColor:[UIColor blueColor]];
+        [button setTitleColor:[UIColor colorWithRed:(float)10/255 green:(float)199/255 blue:(float)190/255 alpha:1.000] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(dealBtn) forControlEvents:UIControlEventTouchUpInside];
-        button.frame = CGRectMake(SCREEN_WIDTH-40, SCREEN_HEIGHT-200-30, 40, 30);
+        button.frame = CGRectMake(0, SCREEN_HEIGHT-120-30, SCREEN_WIDTH, 30);
         _finishButton = button;
         [self.view addSubview:button];
     }

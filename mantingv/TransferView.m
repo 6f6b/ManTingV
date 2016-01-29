@@ -33,7 +33,7 @@
         make.left.equalTo(superView).with.offset(10);
         
         make.bottom.equalTo(superView).with.offset(-10);
-        make.width.equalTo(@100);
+        make.width.equalTo(self.backImage.mas_height);
     }];
     
     //主题
@@ -87,7 +87,8 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor orangeColor];
+        backImage.clipsToBounds = YES;
+        backImage.layer.cornerRadius = 3;
         [self addSubview:backImage];
         _backImage = backImage;
     }
@@ -97,8 +98,8 @@
 - (UILabel *)titleLabel{
     if (nil == _titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.text = @"￥100";
-        titleLabel.backgroundColor = [UIColor orangeColor];
+        titleLabel.font = [UIFont systemFontOfSize:15];
+        titleLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -108,8 +109,9 @@
 - (UILabel *)houseTypeLabel{
     if (nil == _houseTypeLabel) {
         UILabel *houseTypeLabel = [[UILabel alloc] init];
-        houseTypeLabel.text = @"房型：两房一厅";
-        houseTypeLabel.backgroundColor = [UIColor orangeColor];
+        houseTypeLabel.font = [UIFont systemFontOfSize:13];
+        houseTypeLabel.backgroundColor = [UIColor whiteColor];
+        houseTypeLabel.textColor = [UIColor grayColor];
         [self addSubview:houseTypeLabel];
         _houseTypeLabel = houseTypeLabel;
     }
@@ -119,8 +121,9 @@
 - (UILabel *)cycleLabel{
     if (nil == _cycleLabel) {
         UILabel *cycleLabel = [[UILabel alloc] init];
-        cycleLabel.text = @"【旺季周】";
-        cycleLabel.backgroundColor = [UIColor greenColor];
+        cycleLabel.font = [UIFont systemFontOfSize:13];
+        cycleLabel.backgroundColor = [UIColor whiteColor];
+        cycleLabel.textColor = [UIColor grayColor];
         [self addSubview:cycleLabel];
         _cycleLabel = cycleLabel;
     }
@@ -130,8 +133,9 @@
 - (UILabel *)addressLabel{
     if (nil == _addressLabel) {
         UILabel *addressLabel = [[UILabel alloc] init];
-        addressLabel.text = @"地址：成都市";
-        addressLabel.backgroundColor = [UIColor orangeColor];
+        addressLabel.font = [UIFont systemFontOfSize:13];
+        addressLabel.backgroundColor = [UIColor whiteColor];
+        addressLabel.textColor = [UIColor grayColor];
         [self addSubview:addressLabel];
         _addressLabel = addressLabel;
     }
@@ -141,8 +145,9 @@
 - (UILabel *)priceLabel{
     if (nil == _priceLabel) {
         UILabel *priceLabel = [[UILabel alloc] init];
-        priceLabel.text = @"￥100";
-        priceLabel.backgroundColor = [UIColor orangeColor];
+        priceLabel.font = [UIFont systemFontOfSize:15];
+        priceLabel.backgroundColor = [UIColor whiteColor];
+        priceLabel.textColor = [UIColor redColor];
         [self addSubview:priceLabel];
         _priceLabel = priceLabel;
     }
@@ -168,6 +173,6 @@
     self.houseTypeLabel.text = [NSString stringWithFormat:@"房型：%@",houseInfoDTOModel.houseType];
     self.cycleLabel.text = [NSString stringWithFormat:@"周次：%@",houseWeekDTOModel.name];
     self.addressLabel.text = [NSString stringWithFormat:@"地址：%@%@",houseInfoDTOModel.province,houseInfoDTOModel.city];
-    self.priceLabel.text = [NSString stringWithFormat:@"价格：%@",houseInfoDTOModel.price];
+    self.priceLabel.text = [NSString stringWithFormat:@"¥%@",houseInfoDTOModel.price];
 }
 @end

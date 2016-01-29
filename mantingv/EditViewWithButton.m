@@ -43,6 +43,7 @@
     if(nil == _rightButton){
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [rightButton setTitle:@"请选择" forState:UIControlStateNormal];
+        [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self addSubview:rightButton];
         _rightButton = rightButton;
     }

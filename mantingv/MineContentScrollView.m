@@ -43,7 +43,7 @@
                             @"AccountConfigController",
                             @"AboutUsController"
                             ];
-        for (int i=0; i<6; i++) {
+        for (int i=0; i<titles.count; i++) {
             MineSubView *mineSubView = [MineSubView mineSubViewWithLeftImage:[NSString stringWithFormat:@"mine%d",i+1] rightImage:@"rightarrow" title:titles[i]];
             mineSubView.tag = 1000+i;
             CGFloat X = 0;

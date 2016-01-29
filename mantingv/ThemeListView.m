@@ -88,6 +88,8 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
+        backImage.clipsToBounds = YES;
+        backImage.layer.cornerRadius = 3;
         backImage.image = [UIImage imageNamed:@"mine"];
         [self addSubview:backImage];
         _backImage = backImage;
