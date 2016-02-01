@@ -23,11 +23,6 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入6-12个字母或者汉字..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6X-jv-aOx">
-                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWr-Hc-woF">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.62" colorSpace="calibratedRGB"/>
@@ -49,6 +44,24 @@
                         <action selector="commitBtn:" destination="-1" eventType="touchUpInside" id="20e-Tw-Rpn"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入6-12个字母或者汉字..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6X-jv-aOx">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="NdG-iH-rrj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="NdG-iH-rrj"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="NdG-iH-rrj"/>
+                        </mask>
+                    </variation>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.94563365657688925" green="0.96897227968575061" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -64,8 +77,8 @@
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="pO1-Wy-vO7"/>
-                    <exclude reference="o6X-jv-aOx"/>
                     <exclude reference="qWr-Hc-woF"/>
+                    <exclude reference="o6X-jv-aOx"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="DmI-pc-DeI"/>
@@ -81,8 +94,8 @@
             <variation key="heightClass=regular">
                 <mask key="subviews">
                     <include reference="pO1-Wy-vO7"/>
-                    <include reference="o6X-jv-aOx"/>
                     <include reference="qWr-Hc-woF"/>
+                    <include reference="o6X-jv-aOx"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="DmI-pc-DeI"/>

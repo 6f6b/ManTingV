@@ -15,7 +15,6 @@
 
 + (instancetype)switchViewWithTitles:(NSArray *)titles{
     MTSwitchView *switchView = [[MTSwitchView alloc] init];
-    switchView.backgroundColor = [UIColor redColor];
     switchView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 40);
     [switchView setTitles:titles];
     return switchView;
@@ -34,8 +33,9 @@
         CGFloat W = SCREEN_WIDTH/titles.count;
         CGFloat H = 40;
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.backgroundColor = [UIColor greenColor];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"selectionview_unselected"] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"selectionview_selected"] forState:UIControlStateSelected];
         button.tag = 1000+i;
         [button setTitle:titles[i] forState:UIControlStateNormal];
         button.frame = CGRectMake(X, Y, W, H);
