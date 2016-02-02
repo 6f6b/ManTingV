@@ -1,4 +1,7 @@
 platform :ios, '9.1'
+pod 'JGProgressHUD', '~> 1.3.1'
+
+platform :ios, '9.1'
 pod 'Bugly'
 
 platform :ios, '9.1'

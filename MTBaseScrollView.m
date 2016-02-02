@@ -29,7 +29,7 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (scrollView.contentOffset.y<=-50) {
-        NSLog(@"刷新");
+//        [self setValueWith:nil];
     }
 }
 

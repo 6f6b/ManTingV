@@ -52,6 +52,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadPicturesForAdScrollView{
      NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
+    [self.hud showInView:self.superview];
     [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -82,6 +83,7 @@
         if (0 == arr.count) {
         }
         
+        [self.hud dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
