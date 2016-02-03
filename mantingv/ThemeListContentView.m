@@ -22,9 +22,9 @@
         themeListView.backgroundColor = [UIColor whiteColor];
         
         CGFloat X = 0;
-        CGFloat Y = 81*i;
+        CGFloat Y = 71*i;
         CGFloat W = SCREEN_WIDTH;
-        CGFloat H = 80;
+        CGFloat H = 70;
         themeListView.frame = CGRectMake(X, Y, W, H);
         [self addSubview:themeListView];
         NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:model.houseWeekDTOs[i]];

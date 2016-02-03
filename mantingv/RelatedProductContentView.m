@@ -16,9 +16,9 @@
     
     for (int i=0; i<arr.count; i++) {
         CGFloat X = 0;
-        CGFloat Y = 81*i;
+        CGFloat Y = 71*i;
         CGFloat W = SCREEN_WIDTH;
-        CGFloat H = 80;
+        CGFloat H = 70;
         RelatedProductView *relatedProductView = [[RelatedProductView alloc] init];
         relatedProductView.controller = self.controller;
         [relatedProductView setValueWith:arr[i]];

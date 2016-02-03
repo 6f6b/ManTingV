@@ -669,7 +669,7 @@
 		03DA24781C23D4A60098FE4B /* ChoiceTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceTheme.h; sourceTree = "<group>"; };
 		03DA24791C23D4A60098FE4B /* ChoiceTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceTheme.m; sourceTree = "<group>"; };
 		03DA247B1C23D5470098FE4B /* ThemeListContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeListContentView.h; sourceTree = "<group>"; };
-		03DA247C1C23D5470098FE4B /* ThemeListContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeListContentView.m; path = mantingv/ThemeListContentView.m; sourceTree = "<group>"; };
+		03DA247C1C23D5470098FE4B /* ThemeListContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeListContentView.m; sourceTree = "<group>"; };
 		03DA247E1C23D5E80098FE4B /* ThemeListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeListView.h; sourceTree = "<group>"; };
 		03DA247F1C23D5E80098FE4B /* ThemeListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeListView.m; sourceTree = "<group>"; };
 		03DA24851C23D7450098FE4B /* ResortFacilitiesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResortFacilitiesView.h; sourceTree = "<group>"; };
@@ -1130,7 +1130,6 @@
 		03775B751C1138F200319C32 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				03DA247C1C23D5470098FE4B /* ThemeListContentView.m */,
 				03E4EE4B1C438FFA00C59D17 /* 工具类 */,
 				03DDADF31C2B8133009DC36D /* LFLoopScrollViewForMT */,
 				03E066521C279CB400E85778 /* ContentScrollView */,
@@ -2211,6 +2210,7 @@
 				03D0929D1C2D1DE80057182F /* ThemeListContentScrollView.h */,
 				03D0929E1C2D1DE80057182F /* ThemeListContentScrollView.m */,
 				03DA247B1C23D5470098FE4B /* ThemeListContentView.h */,
+				03DA247C1C23D5470098FE4B /* ThemeListContentView.m */,
 				03DA247E1C23D5E80098FE4B /* ThemeListView.h */,
 				03DA247F1C23D5E80098FE4B /* ThemeListView.m */,
 			);
