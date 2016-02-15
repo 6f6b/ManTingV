@@ -15,10 +15,10 @@ PODS:
   - AFNetworking/UIKit (3.0.0-beta.3):
     - AFNetworking/NSURLSession
   - Bugly (1.4.6)
-  - JGProgressHUD (1.3.1)
   - KVNProgress (2.2.2)
   - Masonry (0.6.3)
   - MJExtension (3.0.8)
+  - MJRefresh (3.1.0)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -28,10 +28,10 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0-beta.3)
   - Bugly
-  - JGProgressHUD (~> 1.3.1)
   - KVNProgress (~> 2.2.2)
   - Masonry (~> 0.6.3)
   - MJExtension (~> 3.0.7)
+  - MJRefresh (~> 3.1.0)
   - SDWebImage (~> 3.7.3)
   - UMengSocial (~> 4.4)
   - YYText (~> 0.9.16)
@@ -39,10 +39,10 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 4bbf9c2993fe416e02093128f3be1bfe20c6e847
   Bugly: 13c3ca1f67d68f037416ab4dbef5b6cd3f933e84
-  JGProgressHUD: 153053a21d81208cb5f659691996bcefce6a9885
   KVNProgress: 4697347e21e37fdaa5264ebc24e377c205a50328
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MJExtension: 12d2875959b4a0f936ae86b22a1eb6b0251c50ba
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   UMengSocial: aba7296602310385114d82c255539a7bef3b7ab0
   YYText: af9b51c4891abeb5fc77fa8cb663ff9177c332b2

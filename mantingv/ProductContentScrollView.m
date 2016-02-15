@@ -51,8 +51,8 @@
 /////////////////////////////////////////////请求滚动广告数据///////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadPicturesForAdScrollView{
+    [KVNProgress showWithStatus:@"加载中.."];
      NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
-    [self.hud showInView:self.superview];
     [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -83,7 +83,7 @@
         if (0 == arr.count) {
         }
         
-        [self.hud dismiss];
+        [KVNProgress dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];

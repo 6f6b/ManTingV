@@ -119,21 +119,20 @@
 //    NSString *url = [BASE_URL stringByAppendingString:@"/rent/list"];
 //    [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
 //    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [KVNProgress showWithStatus:@"加载中.."];
         [self.shortRentContentView removeFromSuperview];
         self.shortRentContentView = nil;
         NSString *url = [BASE_URL stringByAppendingString:@"/rent/search"];
-    [self.hud showInView:self.superview];
-    NSLog(@"%@",self.hud);
         [self.manager POST:url parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             NSArray *arr = [dic objectForKey:@"data"];
-            [self.hud dismiss];
             [self setValueWith:arr];
             if (0 == arr.count) {
                 return ;
             }
+            [KVNProgress dismiss];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
         }];

@@ -19,13 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.navigationController.navigationBar setShadowColor:[UIColor colorWithRed:0.941 green:0.879 blue:1.000 alpha:1.000]];
     
-//    HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:CGRectMake(0, -64, SCREEN_WIDTH, SCREEN_HEIGHT+64)];
     HomeContentScrollView *homeContentScrollView = [[HomeContentScrollView alloc] initWithFrame:self.view.bounds];
     homeContentScrollView.backgroundColor = [UIColor whiteColor];
     homeContentScrollView.contentSize = CGSizeMake(0, 1000);
-//    homeContentScrollView.delegate = self;
+    homeContentScrollView.delegate = self;
     homeContentScrollView.controller = self;
     _homeContentScrollView = homeContentScrollView;
     [self.view addSubview:homeContentScrollView];
@@ -51,6 +49,9 @@
     
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+}
 
 - (void)viewWillDisappear:(BOOL)animated{
     [self.productSearchBar resignFirstResponder];

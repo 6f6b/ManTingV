@@ -9,17 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JGProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>KVNProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,27 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3A24B4349C4DC17472CA21D5BD95D025</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4523E86A925DD29CBBB2C8DE479BDF9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5BA4C739AB137FF7677B5AC1D6CA6F2E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5D597F18E23812E72ECAA91F8756F890</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5D89375F6AFC9D92EF21D0538F770B08</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5F92A86B4ABE60E52576639BBD32FF2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A22D8E23AD14BC53ECE7C56568032C22</key>
+		<key>8DA4980A466CD5286D9F3E77177B5F34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8DAC9DAEDAB75CE3FE8CDB3BAF380723</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF3D063E0065BEDE62A93CA5A52915C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

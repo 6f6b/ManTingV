@@ -14,7 +14,6 @@
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.delegate = self;
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
     }
     return self;
 }
@@ -28,30 +27,14 @@
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (scrollView.contentOffset.y<=-50) {
-//        [self setValueWith:nil];
+    if (scrollView.contentOffset.y<=-60) {
+        if (nil != self.refreshBlock) {
+            self.refreshBlock();
+        }
     }
 }
 
 - (void)setValueWith:(id)data{
 }
 
-//- (void)keyBoardWillChangeFrame:(NSNotification *)notif{
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
-//    
-//    NSLog(@"改变");
-//    NSDictionary *userInfo = notif.userInfo;
-//    double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-//    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-//    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-//    
-//    
-//    CGFloat changeY = beginFrame.origin.y-endFrame.origin.y;
-//    NSLog(@"change %f-----%@",changeY,self);
-//    [UIView animateWithDuration:duration animations:^{
-//        CGSize size = self.contentSize;
-//        size.height = size.height+changeY;
-//        self.contentSize = size;
-//    }];
-//}
 @end

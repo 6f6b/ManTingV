@@ -11,6 +11,5 @@
 
 @interface BaseContentScrollView : MTBaseScrollView
 @property (nonatomic,strong) NSMutableDictionary *parameters;
-@property (nonatomic,weak) JGProgressHUD *hud;
 - (void)resetParameters;
 @end

@@ -152,10 +152,6 @@
     [self setAutoScroll:_autoScroll];
 }
 
-//- (void)setImageWithUrl:(NSString *)url atIndex:(NSInteger)index{
-//    
-//    dispatch_async(<#dispatch_queue_t queue#>, <#^(void)block#>)
-//}
 
 
 

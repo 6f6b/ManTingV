@@ -12,5 +12,6 @@
 @property (nonatomic,strong) MTModel *model;
 @property (nonatomic,weak) UIViewController *controller;
 @property (nonatomic,strong) AFHTTPSessionManagerForMT *manager;
+@property (nonatomic,strong) void(^refreshBlock)();
 - (void)setValueWith:(id)data;
 @end

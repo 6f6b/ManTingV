@@ -18,7 +18,19 @@
     myblock = ^(NSURLSessionDataTask *task, id _Nullable responseObject){
         success(task,responseObject);
     };
-    NSURLSessionDataTask *task = [super GET:URLString parameters:parameters progress:downloadProgress success:myblock failure:failure];
+    
+    //如果网络加载失败，注销HUD，并且显示错误
+    void (^myErrorBlock)(NSURLSessionDataTask * _Nullable task, NSError *error);
+    myErrorBlock = ^(NSURLSessionDataTask * _Nullable task, NSError *error){
+        failure(task,error);
+        [KVNProgress dismiss];
+        
+        [KVNProgress showErrorWithStatus:@"网络请求出错"];
+//        UIAlertController *alterController = [UIAlertController alertControllerWithTitle:@"网络请求发生错误" message:@"确定" preferredStyle:UIAlertControllerStyleAlert];
+//        [alterController showViewController:alterController sender:nil];
+    };
+    
+    NSURLSessionDataTask *task = [super GET:URLString parameters:parameters progress:downloadProgress success:myblock failure:myErrorBlock];
     return task;
 }
 

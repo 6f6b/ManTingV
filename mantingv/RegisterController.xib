@@ -130,21 +130,21 @@
                                     <exclude reference="fjk-8h-nOf"/>
                                 </mask>
                                 <mask key="constraints">
-                                    <exclude reference="fdi-gS-rUu"/>
-                                    <exclude reference="zkh-xh-yZY"/>
-                                    <exclude reference="06m-hr-X8P"/>
-                                    <exclude reference="3kb-QN-dWT"/>
-                                    <exclude reference="B5K-Hw-Ogp"/>
-                                    <exclude reference="ecQ-cd-782"/>
                                     <exclude reference="dAo-2d-3ED"/>
                                     <exclude reference="oA2-b6-LeC"/>
-                                    <exclude reference="4F4-ya-oRM"/>
-                                    <exclude reference="CwY-Tg-gff"/>
-                                    <exclude reference="jxE-0y-35K"/>
                                     <exclude reference="45Q-s3-Zgv"/>
                                     <exclude reference="UVf-vz-94b"/>
                                     <exclude reference="apy-RL-lyc"/>
                                     <exclude reference="beP-9f-GQx"/>
+                                    <exclude reference="06m-hr-X8P"/>
+                                    <exclude reference="3kb-QN-dWT"/>
+                                    <exclude reference="B5K-Hw-Ogp"/>
+                                    <exclude reference="ecQ-cd-782"/>
+                                    <exclude reference="4F4-ya-oRM"/>
+                                    <exclude reference="CwY-Tg-gff"/>
+                                    <exclude reference="jxE-0y-35K"/>
+                                    <exclude reference="fdi-gS-rUu"/>
+                                    <exclude reference="zkh-xh-yZY"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular">
@@ -156,21 +156,21 @@
                                     <include reference="fjk-8h-nOf"/>
                                 </mask>
                                 <mask key="constraints">
-                                    <include reference="fdi-gS-rUu"/>
-                                    <include reference="zkh-xh-yZY"/>
-                                    <include reference="06m-hr-X8P"/>
-                                    <include reference="3kb-QN-dWT"/>
-                                    <include reference="B5K-Hw-Ogp"/>
-                                    <include reference="ecQ-cd-782"/>
                                     <include reference="dAo-2d-3ED"/>
                                     <include reference="oA2-b6-LeC"/>
-                                    <include reference="4F4-ya-oRM"/>
-                                    <include reference="CwY-Tg-gff"/>
-                                    <include reference="jxE-0y-35K"/>
                                     <include reference="45Q-s3-Zgv"/>
                                     <include reference="UVf-vz-94b"/>
                                     <include reference="apy-RL-lyc"/>
                                     <exclude reference="beP-9f-GQx"/>
+                                    <include reference="06m-hr-X8P"/>
+                                    <include reference="3kb-QN-dWT"/>
+                                    <include reference="B5K-Hw-Ogp"/>
+                                    <include reference="ecQ-cd-782"/>
+                                    <include reference="4F4-ya-oRM"/>
+                                    <include reference="CwY-Tg-gff"/>
+                                    <include reference="jxE-0y-35K"/>
+                                    <include reference="fdi-gS-rUu"/>
+                                    <include reference="zkh-xh-yZY"/>
                                 </mask>
                             </variation>
                         </view>
@@ -204,7 +204,7 @@
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34n-rB-fpA">
                                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1K-zg-Z8Z">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -337,7 +337,7 @@
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6G-rK-xY6">
                                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

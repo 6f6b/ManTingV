@@ -107,6 +107,7 @@
         CGFloat W = SCREEN_WIDTH;
         CGFloat H = TABLEVIEW_HEIGHT;
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(X, Y, W, H) style:UITableViewStylePlain];
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView = tableView;
         _tableView.delegate = self;
         _tableView.dataSource = self;

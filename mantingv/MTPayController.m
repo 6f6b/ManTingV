@@ -8,6 +8,7 @@
 
 #import "MTPayController.h"
 #import "MTPayContentScrollView.h"
+#import "UploadSignatureAndIDcardController.h"
 
 #import "Order.h"
 #import <AlipaySDK/AlipaySDK.h>
@@ -193,7 +194,15 @@
                        orderSpec, signedString, @"RSA"];
         
         [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
-            NSLog(@"reslut = %@",resultDic);
+            if([@"9000" isEqualToString:[resultDic objectForKey:@"resultStatus"]]){
+                NSLog(@"支付成功");
+            }
+            if (![@"9000" isEqualToString:[resultDic objectForKey:@"resultStatus"]]) {
+                UploadSignatureAndIDcardController *uploadController = [[UploadSignatureAndIDcardController alloc] init];
+                uploadController.navigationItem.title = @"签字及身份证上传";
+                [self.navigationController pushViewController:uploadController animated:YES];
+                NSLog(@"支付失败");
+            }
         }];
     }
 

@@ -29,13 +29,5 @@
     [self.parameters setValue:@"1" forKey:@"currentPage"];
 }
 
-- (JGProgressHUD *)hud{
-    if (nil == _hud) {
-        JGProgressHUD *hud = [[JGProgressHUD alloc] initWithStyle:JGProgressHUDStyleLight];
-        hud.textLabel.text = @"loading";
-        _hud = hud;
-        [self.superview addSubview:hud];
-    }
-    return _hud;
-}
+
 @end

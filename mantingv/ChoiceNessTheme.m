@@ -19,7 +19,6 @@
     for(int i=0;i<arr.count;i++){
         ChoiceTheme *choiceTheme = [[ChoiceTheme alloc] init];
         choiceTheme.controller = self.controller;
-        choiceTheme.backgroundColor = [UIColor brownColor];
         choiceTheme.layer.cornerRadius = 5;
         choiceTheme.clipsToBounds = YES;
         choiceTheme.tag = 100+i;

@@ -1,5 +1,5 @@
 platform :ios, '9.1'
-pod 'JGProgressHUD', '~> 1.3.1'
+pod 'MJRefresh', '~> 3.1.0'
 
 platform :ios, '9.1'
 pod 'Bugly'

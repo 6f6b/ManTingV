@@ -22,32 +22,6 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="o02-Cq-MtK">
-                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="300" id="27i-YR-hdJ"/>
-                        <constraint firstAttribute="height" constant="30" id="bdV-5n-Iur"/>
-                    </constraints>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="27i-YR-hdJ"/>
-                            <exclude reference="bdV-5n-Iur"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular">
-                        <mask key="constraints">
-                            <include reference="27i-YR-hdJ"/>
-                            <include reference="bdV-5n-Iur"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <outlet property="delegate" destination="i5M-Pr-FkT" id="bug-G6-mM1"/>
-                    </connections>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-PB-nPD">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,7 +133,7 @@
                         <action selector="registerBtn:" destination="-1" eventType="touchUpInside" id="JK2-M3-XRf"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="TopLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="邮箱/手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="91a-VL-Qwn">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="TopLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="91a-VL-Qwn">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -168,7 +142,7 @@
                     </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="BXQ-QM-Zxr"/>
@@ -183,6 +157,32 @@
                     </variation>
                     <connections>
                         <outlet property="delegate" destination="i5M-Pr-FkT" id="sat-Dz-8Ex"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="o02-Cq-MtK">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="27i-YR-hdJ"/>
+                        <constraint firstAttribute="height" constant="30" id="bdV-5n-Iur"/>
+                    </constraints>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="27i-YR-hdJ"/>
+                            <exclude reference="bdV-5n-Iur"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="27i-YR-hdJ"/>
+                            <include reference="bdV-5n-Iur"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="bug-G6-mM1"/>
                     </connections>
                 </textField>
             </subviews>
@@ -218,7 +218,6 @@
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="FGJ-t6-zRo"/>
-                    <exclude reference="o02-Cq-MtK"/>
                     <exclude reference="nGr-PB-nPD"/>
                     <exclude reference="H70-lX-gWV"/>
                     <exclude reference="4Jx-be-Mjr"/>
@@ -226,36 +225,36 @@
                     <exclude reference="S4o-Gu-rap"/>
                     <exclude reference="c5Y-zP-UYb"/>
                     <exclude reference="91a-VL-Qwn"/>
+                    <exclude reference="o02-Cq-MtK"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="D8P-Xa-OxR"/>
-                    <exclude reference="FfL-fX-ARs"/>
-                    <exclude reference="YBa-YJ-9Ko"/>
-                    <exclude reference="ff8-th-efT"/>
                     <exclude reference="5B8-KF-P6j"/>
                     <exclude reference="DJk-k4-Zem"/>
                     <exclude reference="Oq5-N5-ng8"/>
                     <exclude reference="uiC-6N-fWh"/>
+                    <exclude reference="9Gs-dt-1vy"/>
+                    <exclude reference="dJE-jJ-6kw"/>
+                    <exclude reference="xMG-wW-0iX"/>
+                    <exclude reference="y27-5x-MQ4"/>
                     <exclude reference="hWf-JZ-c3h"/>
                     <exclude reference="mIs-EW-MuT"/>
-                    <exclude reference="2cU-yr-4OH"/>
-                    <exclude reference="y27-5x-MQ4"/>
                     <exclude reference="CHZ-0P-uqh"/>
                     <exclude reference="LSg-uf-3Pb"/>
                     <exclude reference="gsi-c1-3B2"/>
                     <exclude reference="ks3-dM-iSb"/>
+                    <exclude reference="2cU-yr-4OH"/>
+                    <exclude reference="D8P-Xa-OxR"/>
+                    <exclude reference="FfL-fX-ARs"/>
+                    <exclude reference="YBa-YJ-9Ko"/>
+                    <exclude reference="ff8-th-efT"/>
                     <exclude reference="3jO-Hn-J3C"/>
                     <exclude reference="X4B-iv-QDD"/>
                     <exclude reference="xrb-wq-c9K"/>
-                    <exclude reference="9Gs-dt-1vy"/>
-                    <exclude reference="dJE-jJ-6kw"/>
-                    <exclude reference="xMG-wW-0iX"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
                 <mask key="subviews">
                     <include reference="FGJ-t6-zRo"/>
-                    <include reference="o02-Cq-MtK"/>
                     <include reference="nGr-PB-nPD"/>
                     <include reference="H70-lX-gWV"/>
                     <include reference="4Jx-be-Mjr"/>
@@ -263,30 +262,31 @@
                     <include reference="S4o-Gu-rap"/>
                     <include reference="c5Y-zP-UYb"/>
                     <include reference="91a-VL-Qwn"/>
+                    <include reference="o02-Cq-MtK"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="D8P-Xa-OxR"/>
-                    <include reference="FfL-fX-ARs"/>
-                    <include reference="YBa-YJ-9Ko"/>
-                    <include reference="ff8-th-efT"/>
                     <include reference="5B8-KF-P6j"/>
                     <include reference="DJk-k4-Zem"/>
                     <include reference="Oq5-N5-ng8"/>
                     <include reference="uiC-6N-fWh"/>
+                    <include reference="9Gs-dt-1vy"/>
+                    <include reference="dJE-jJ-6kw"/>
+                    <include reference="xMG-wW-0iX"/>
+                    <include reference="y27-5x-MQ4"/>
                     <include reference="hWf-JZ-c3h"/>
                     <include reference="mIs-EW-MuT"/>
-                    <include reference="2cU-yr-4OH"/>
-                    <include reference="y27-5x-MQ4"/>
                     <include reference="CHZ-0P-uqh"/>
                     <include reference="LSg-uf-3Pb"/>
                     <include reference="gsi-c1-3B2"/>
                     <include reference="ks3-dM-iSb"/>
+                    <include reference="2cU-yr-4OH"/>
+                    <include reference="D8P-Xa-OxR"/>
+                    <include reference="FfL-fX-ARs"/>
+                    <include reference="YBa-YJ-9Ko"/>
+                    <include reference="ff8-th-efT"/>
                     <include reference="3jO-Hn-J3C"/>
                     <include reference="X4B-iv-QDD"/>
                     <include reference="xrb-wq-c9K"/>
-                    <include reference="9Gs-dt-1vy"/>
-                    <include reference="dJE-jJ-6kw"/>
-                    <include reference="xMG-wW-0iX"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="495" y="193"/>

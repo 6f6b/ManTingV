@@ -47,7 +47,7 @@
     [UMSocialData setAppKey:@"56975b9467e58e3593001c47"];
     
     //设置微信AppId、appSecret，分享url
-    [UMSocialWechatHandler setWXAppId:@"x91729efc43a30eac" appSecret:@"d4624c36b6795d1d99dcf0547af5443d" url:@"http://www.baidu.com"];
+    [UMSocialWechatHandler setWXAppId:@"wx91729efc43a30eac" appSecret:@"d4624c36b6795d1d99dcf0547af5443d" url:@"http://www.baidu.com"];
     
     //设置QQ
     [UMSocialQQHandler setQQWithAppId:@"1105041237" appKey:@"olGOvGo5pwd8lveq" url:@"http://www.baidu.com"];

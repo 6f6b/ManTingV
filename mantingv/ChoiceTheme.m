@@ -83,7 +83,6 @@
 - (UIImageView *)backImage{
     if (nil == _backImage) {
         UIImageView *backImage = [[UIImageView alloc] init];
-        backImage.backgroundColor = [UIColor redColor];
         [self addSubview:backImage];
         _backImage = backImage;
     }

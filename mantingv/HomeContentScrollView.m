@@ -26,6 +26,10 @@
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.fourButtons = [[NSMutableArray alloc] init];
+//        __weak typeof(self) ws = self;
+//        self.refreshBlock = ^(){
+//            [ws setValueWith:nil];
+//        };
     }
     return self;
 }
@@ -83,7 +87,6 @@
 - (UIImageView *)what{
     if (nil == _what) {
         UIImageView *what = [[UIImageView alloc] init];
-        what.backgroundColor = [UIColor redColor];
         [self addSubview:what];
         _what = what;
     }
@@ -125,11 +128,12 @@
 }
 
 
+
 - (void)setValueWith:(id)data{
     /////////////////////////////////////////////下载轮播图片数据///////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    [KVNProgress showWithStatus:@"加载中。。"];
     NSString *adScrollViewUrl = [BASE_URL stringByAppendingString:@"/front/banner/first"];
-    [self.hud showInView:self.superview];
     [self.manager GET:adScrollViewUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
@@ -150,7 +154,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadSpecialOfferContentViewData{
     NSString *url = [BASE_URL stringByAppendingString:@"/house/special"];
-    NSLog(@"%@",url);
     [self.manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -161,7 +164,6 @@
         self.choiceNessTheme.frame = CGRectMake(0, CGRectGetMaxY(self.what.frame), SCREEN_WIDTH, 0);
         [self loadWhatData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"特价房错误");
     }];
 }
 
@@ -194,7 +196,6 @@
         [self.choiceNessTheme setValueWith:dic];
         self.choiceNessRoom.frame = CGRectMake(0, CGRectGetMaxY(self.choiceNessTheme.frame), SCREEN_WIDTH, 0);
         [self loadChoiceNessRoomData];
-        [self.hud dismissAnimated:YES];
         [KVNProgress dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 

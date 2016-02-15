@@ -49,7 +49,6 @@
 #import "UserAccount.h"
 #import "MJExtension.h"
 #import "MTTools.h"
-#import "JGProgressHUD.h"
 
 /**
  *  支付各种ID及私钥
