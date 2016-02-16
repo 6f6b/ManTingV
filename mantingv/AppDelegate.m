@@ -17,6 +17,7 @@
 #import "UMSocialQQHandler.h"
 #import "UMSocialSinaSSOHandler.h"
 
+#import "GuidController.h"
 #import <Bugly/CrashReporter.h>
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
@@ -27,10 +28,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    MTTabBarController *tbc = [[MTTabBarController alloc] init];
-    tbc.delegate = self;
-    self.window.rootViewController = tbc;
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *str = [user valueForKey:@"install"];
+    if (nil == str) {
+        GuidController *gc = [[GuidController alloc] init];
+        self.window.rootViewController = gc;
+    }
+    if (nil != str) {
+        MTTabBarController *tbc = [[MTTabBarController alloc] init];
+        tbc.delegate = self;
+        self.window.rootViewController = tbc;
+    }
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     

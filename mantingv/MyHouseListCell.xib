@@ -32,16 +32,16 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="du9-su-iJy">
-                        <rect key="frame" x="388" y="37" width="20" height="20"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightarrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="du9-su-iJy">
+                        <rect key="frame" x="391" y="37" width="20" height="20"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="bX8-Z2-g6T"/>
                             <constraint firstAttribute="width" constant="20" id="dWJ-BM-p3U"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.059999999999999998" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="ng2-NS-e8O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="1kB-4z-Yue"/>
                     <constraint firstItem="du9-su-iJy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="581-jl-4Cb"/>
@@ -68,4 +68,7 @@
             <point key="canvasLocation" x="302" y="144"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="rightarrow.png" width="17" height="30"/>
+    </resources>
 </document>

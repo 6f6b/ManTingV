@@ -7,7 +7,9 @@
 //
 
 #import "MTController.h"
-
+@protocol GetSignatureControllerDelegate <NSObject>
+- (void)getSignatureImage:(UIImage *)signatureImage;
+@end
 @interface GetSignatureController : MTController
-
+@property (nonatomic,weak) id <GetSignatureControllerDelegate> delegate;
 @end

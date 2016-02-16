@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GuidController">
+            <connections>
+                <outlet property="guidContentScrollView" destination="XmQ-lL-fnN" id="hS9-xF-Y0c"/>
+                <outlet property="pageControl" destination="CRE-nv-k1t" id="fpk-IA-eMq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmQ-lL-fnN">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CRE-nv-k1t">
+                    <rect key="frame" x="-19" y="-18" width="39" height="37"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CRE-nv-k1t" secondAttribute="bottom" constant="50" id="Bqv-6h-48B"/>
+                <constraint firstItem="XmQ-lL-fnN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OAn-ZN-9fd"/>
+                <constraint firstAttribute="bottom" secondItem="XmQ-lL-fnN" secondAttribute="bottom" id="Z0d-M0-YEW"/>
+                <constraint firstAttribute="trailing" secondItem="XmQ-lL-fnN" secondAttribute="trailing" id="gQl-A4-oMR"/>
+                <constraint firstItem="XmQ-lL-fnN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nmr-UA-R7a"/>
+                <constraint firstItem="CRE-nv-k1t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sbu-go-dVX"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="XmQ-lL-fnN"/>
+                    <exclude reference="CRE-nv-k1t"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="OAn-ZN-9fd"/>
+                    <exclude reference="Z0d-M0-YEW"/>
+                    <exclude reference="gQl-A4-oMR"/>
+                    <exclude reference="nmr-UA-R7a"/>
+                    <exclude reference="Bqv-6h-48B"/>
+                    <exclude reference="sbu-go-dVX"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="subviews">
+                    <include reference="XmQ-lL-fnN"/>
+                    <include reference="CRE-nv-k1t"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="OAn-ZN-9fd"/>
+                    <include reference="Z0d-M0-YEW"/>
+                    <include reference="gQl-A4-oMR"/>
+                    <include reference="nmr-UA-R7a"/>
+                    <include reference="Bqv-6h-48B"/>
+                    <include reference="sbu-go-dVX"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

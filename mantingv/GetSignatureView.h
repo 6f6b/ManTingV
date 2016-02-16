@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GetSignatureView : UIView
-
+@property (nonatomic,strong) NSMutableArray *lines;
 @end

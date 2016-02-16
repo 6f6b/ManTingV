@@ -23,7 +23,10 @@
 @implementation MTTabBarController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setValue:@"YES" forKey:@"install"];
+    
     self.tabBar.tintColor = [UIColor colorWithRed:0/255.0 green:177/255.0 blue:168/255.0 alpha:1.000];
     
     //创建首页

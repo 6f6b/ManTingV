@@ -133,6 +133,12 @@
 		03D643B31C197E1B0082F0D4 /* NSObject+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643B21C197E1B0082F0D4 /* NSObject+AOP.m */; };
 		03D643BE1C198A9F0082F0D4 /* CheckInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643BD1C198A9F0082F0D4 /* CheckInController.m */; };
 		03D643C41C1994BB0082F0D4 /* RightsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D643C31C1994BB0082F0D4 /* RightsListController.m */; };
+		03D65DAD1C72C97F005E494F /* GetSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DAC1C72C97F005E494F /* GetSignatureView.m */; };
+		03D65DB31C72FB27005E494F /* GuidController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DB11C72FB27005E494F /* GuidController.m */; };
+		03D65DB41C72FB27005E494F /* GuidController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D65DB21C72FB27005E494F /* GuidController.xib */; };
+		03D65DBA1C730318005E494F /* 102.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D65DB71C730318005E494F /* 102.png */; };
+		03D65DBB1C730318005E494F /* 100.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D65DB81C730318005E494F /* 100.png */; };
+		03D65DBC1C730318005E494F /* 101.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D65DB91C730318005E494F /* 101.png */; };
 		03D65DD91C1E5F7500E7C679 /* ChoiceThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */; };
 		03D65DE51C1E697C00E7C679 /* MTBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D65DE41C1E697C00E7C679 /* MTBaseScrollView.m */; };
 		03D6698F1C2A4635001C4C2C /* ZJModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6698E1C2A4635001C4C2C /* ZJModelTool.m */; };
@@ -289,7 +295,6 @@
 		03EC24281C71B3E600610B28 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EC24271C71B3E600610B28 /* camera.png */; };
 		03EC242E1C71CAAB00610B28 /* GetSignatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EC242C1C71CAAB00610B28 /* GetSignatureController.m */; };
 		03EC242F1C71CAAB00610B28 /* GetSignatureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EC242D1C71CAAB00610B28 /* GetSignatureController.xib */; };
-		03EC24321C71D49400610B28 /* GetSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EC24311C71D49400610B28 /* GetSignatureView.m */; };
 		03EDC9C01C45ED640072DFC7 /* TransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDC9BF1C45ED640072DFC7 /* TransferView.m */; };
 		03EDC9D91C46124E0072DFC7 /* icon_tab2_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EDC9C91C46124E0072DFC7 /* icon_tab2_selected@3x.png */; };
 		03EDC9E31C4616680072DFC7 /* icons_back_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EDC9E21C4616680072DFC7 /* icons_back_dark@3x.png */; };
@@ -606,6 +611,14 @@
 		03D643BD1C198A9F0082F0D4 /* CheckInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInController.m; sourceTree = "<group>"; };
 		03D643C21C1994BB0082F0D4 /* RightsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightsListController.h; sourceTree = "<group>"; };
 		03D643C31C1994BB0082F0D4 /* RightsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightsListController.m; sourceTree = "<group>"; };
+		03D65DAB1C72C97F005E494F /* GetSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetSignatureView.h; sourceTree = "<group>"; };
+		03D65DAC1C72C97F005E494F /* GetSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetSignatureView.m; sourceTree = "<group>"; };
+		03D65DB01C72FB27005E494F /* GuidController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidController.h; sourceTree = "<group>"; };
+		03D65DB11C72FB27005E494F /* GuidController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidController.m; sourceTree = "<group>"; };
+		03D65DB21C72FB27005E494F /* GuidController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuidController.xib; sourceTree = "<group>"; };
+		03D65DB71C730318005E494F /* 102.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 102.png; sourceTree = "<group>"; };
+		03D65DB81C730318005E494F /* 100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100.png; sourceTree = "<group>"; };
+		03D65DB91C730318005E494F /* 101.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 101.png; sourceTree = "<group>"; };
 		03D65DD71C1E5F7500E7C679 /* ChoiceThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceThemeController.h; sourceTree = "<group>"; };
 		03D65DD81C1E5F7500E7C679 /* ChoiceThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceThemeController.m; sourceTree = "<group>"; };
 		03D65DE31C1E697C00E7C679 /* MTBaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBaseScrollView.h; sourceTree = "<group>"; };
@@ -877,8 +890,6 @@
 		03EC242B1C71CAAB00610B28 /* GetSignatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetSignatureController.h; sourceTree = "<group>"; };
 		03EC242C1C71CAAB00610B28 /* GetSignatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetSignatureController.m; sourceTree = "<group>"; };
 		03EC242D1C71CAAB00610B28 /* GetSignatureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetSignatureController.xib; sourceTree = "<group>"; };
-		03EC24301C71D49400610B28 /* GetSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetSignatureView.h; sourceTree = "<group>"; };
-		03EC24311C71D49400610B28 /* GetSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetSignatureView.m; sourceTree = "<group>"; };
 		03EDC9BE1C45ED640072DFC7 /* TransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferView.h; sourceTree = "<group>"; };
 		03EDC9BF1C45ED640072DFC7 /* TransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferView.m; sourceTree = "<group>"; };
 		03EDC9C91C46124E0072DFC7 /* icon_tab2_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab2_selected@3x.png"; sourceTree = "<group>"; };
@@ -1044,6 +1055,7 @@
 		03775B3C1C11368F00319C32 /* mantingv */ = {
 			isa = PBXGroup;
 			children = (
+				03D65DAF1C72FB02005E494F /* 引导页 */,
 				03D4CC6B1C48B4A90076BEE9 /* bug收集 */,
 				03D452B91C4797E900D26E35 /* 分享 */,
 				03D452AD1C478E9E00D26E35 /* 支付 */,
@@ -1998,6 +2010,19 @@
 			name = "特价房";
 			sourceTree = "<group>";
 		};
+		03D65DAF1C72FB02005E494F /* 引导页 */ = {
+			isa = PBXGroup;
+			children = (
+				03D65DB71C730318005E494F /* 102.png */,
+				03D65DB81C730318005E494F /* 100.png */,
+				03D65DB91C730318005E494F /* 101.png */,
+				03D65DB01C72FB27005E494F /* GuidController.h */,
+				03D65DB11C72FB27005E494F /* GuidController.m */,
+				03D65DB21C72FB27005E494F /* GuidController.xib */,
+			);
+			name = "引导页";
+			sourceTree = "<group>";
+		};
 		03D65DD31C1E5EF900E7C679 /* 精选主题 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2851,8 +2876,8 @@
 				03EC242B1C71CAAB00610B28 /* GetSignatureController.h */,
 				03EC242C1C71CAAB00610B28 /* GetSignatureController.m */,
 				03EC242D1C71CAAB00610B28 /* GetSignatureController.xib */,
-				03EC24301C71D49400610B28 /* GetSignatureView.h */,
-				03EC24311C71D49400610B28 /* GetSignatureView.m */,
+				03D65DAB1C72C97F005E494F /* GetSignatureView.h */,
+				03D65DAC1C72C97F005E494F /* GetSignatureView.m */,
 			);
 			name = "签名";
 			sourceTree = "<group>";
@@ -3050,6 +3075,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D65DB41C72FB27005E494F /* GuidController.xib in Resources */,
 				03D447651C55FDF1006D7DBF /* modifypassword.png in Resources */,
 				03E0A25E1C18274000FCAAAC /* short.png in Resources */,
 				03E472D51C5AFE2500C9D7E1 /* mine_aboutus.png in Resources */,
@@ -3071,6 +3097,7 @@
 				03D643A01C195C590082F0D4 /* login.png in Resources */,
 				03EC242F1C71CAAB00610B28 /* GetSignatureController.xib in Resources */,
 				033A99E91C571E820004323A /* chooser_unselected.png in Resources */,
+				03D65DBB1C730318005E494F /* 100.png in Resources */,
 				03DEED101C3BA89C00EE518F /* EntrustRentalController.xib in Resources */,
 				03D0EA7A1C5853BB00EC8AD1 /* login_background.png in Resources */,
 				03D7A7ED1C2152CD003A3A68 /* 14008695_135933664000_2-2.jpg in Resources */,
@@ -3131,6 +3158,7 @@
 				03D5BC4A1C34CCE900B92A72 /* RegisterController.xib in Resources */,
 				03D363741C50AA6600CB7C58 /* dot_green_16px_1174477_easyicon.net.png in Resources */,
 				03D251E71C22BDDA00BA9ED7 /* BookOrderController.xib in Resources */,
+				03D65DBC1C730318005E494F /* 101.png in Resources */,
 				03059B7D1C48F62100B19149 /* Rounded_rectangle_tool_96px_1185798_easyicon.net.png in Resources */,
 				03DA248B1C23DF960098FE4B /* arrows_slim_left_51.707317073171px_1182560_easyicon.net.png in Resources */,
 				03D0EA881C5867AE00EC8AD1 /* signup_verifycode.png in Resources */,
@@ -3147,6 +3175,7 @@
 				03D363701C507C3600CB7C58 /* LFChooserViewCell.xib in Resources */,
 				03D7A7EF1C215361003A3A68 /* 18c2bff02481ae8f22c021a4142b44ba.jpg in Resources */,
 				03D0EA861C5867AE00EC8AD1 /* signup_phonenumber.png in Resources */,
+				03D65DBA1C730318005E494F /* 102.png in Resources */,
 				03D4475A1C55F705006D7DBF /* mine1.png in Resources */,
 				03D4476F1C5623AA006D7DBF /* icon_tab2_normal@2x.png in Resources */,
 				03D363721C50AA0E00CB7C58 /* arrow_right_12.81592039801px_1197003_easyicon.net.png in Resources */,
@@ -3300,6 +3329,7 @@
 				03D7A7E01C210F13003A3A68 /* MTRegisterPreview.m in Sources */,
 				03DC50841C291B410040C939 /* CheckInDetailTimeView.m in Sources */,
 				03E6BB561C3CE8190008D68B /* AddAddressContentScrollView.m in Sources */,
+				03D65DB31C72FB27005E494F /* GuidController.m in Sources */,
 				03DB9CFF1C1FFFC600A40361 /* MTPayContentScrollView.m in Sources */,
 				03DDAE021C2BC853009DC36D /* ProductContainViewModel.m in Sources */,
 				03D6E5241C3F93840068142C /* AssignmentDTOModel.m in Sources */,
@@ -3389,7 +3419,7 @@
 				03D4523A1C4752DD00D26E35 /* Order.m in Sources */,
 				03D669B01C2A7DB3001C4C2C /* UIImageView+LF.m in Sources */,
 				03CFAED51C322DFA009C80EB /* ShortRentViewModel.m in Sources */,
-				03EC24321C71D49400610B28 /* GetSignatureView.m in Sources */,
+				03D65DAD1C72C97F005E494F /* GetSignatureView.m in Sources */,
 				03FB24901C33D1BA0049CADB /* ExchangeContentScrollView.m in Sources */,
 				03D830AB1C1EBD9B006DBFD9 /* ChoiceNessRoom.m in Sources */,
 				03CFAECF1C3228E0009C80EB /* ShortRentContentView.m in Sources */,

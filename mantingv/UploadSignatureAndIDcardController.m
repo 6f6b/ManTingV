@@ -9,7 +9,7 @@
 #import "UploadSignatureAndIDcardController.h"
 #import "GetSignatureController.h"
 
-@interface UploadSignatureAndIDcardController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface UploadSignatureAndIDcardController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,GetSignatureControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollview;
 
 @property (weak, nonatomic) IBOutlet UIView *tapToUploadIDcardView;
@@ -80,12 +80,23 @@
 //点击生成签名
 - (IBAction)dealGenerateSignatureBtn:(id)sender {
     GetSignatureController *getSignatureController = [[GetSignatureController alloc] init];
+    getSignatureController.delegate = self;
     getSignatureController.navigationItem.title = @"生成签名";
     [self.navigationController pushViewController:getSignatureController animated:YES];
 }
 
+- (void)getSignatureImage:(UIImage *)signatureImage{
+    [self.signatureImageView setImage:signatureImage];
+}
+
 //上传身份证和签名
 - (IBAction)dealCommit:(id)sender {
+    if (nil == self.IDcardImageView.image) {
+        NSLog(@"身份证为空");
+    }
+    if (nil == self.signatureImageView.image) {
+        NSLog(@"签名为空");
+    }
 }
 
 - (void)didReceiveMemoryWarning {

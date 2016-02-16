@@ -24,7 +24,6 @@
     self.title = @"权益列表";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyHouseListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([MyHouseListCell class])];
-    
     [self loadDataFromServer];
    
 }

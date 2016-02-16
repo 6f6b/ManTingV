@@ -45,9 +45,9 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6f-oP-JGf">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <mutableString key="text">www.xxx.com"&amp;service="mobile.securitypay.pay"&amp;payment_type="1"&amp;_input_charset="utf-8"&amp;it_b_pay="30m"&amp;show_url="m.alipay.com"
+                            <string key="text">www.xxx.com"&amp;service="mobile.securitypay.pay"&amp;payment_type="1"&amp;_input_charset="utf-8"&amp;it_b_pay="30m"&amp;show_url="m.alipay.com"
 2016-02-15 14:47:32.293 mantingv[8839:203501] LaunchServices: ERROR: There is no registered handler for URL scheme alipay
-2016-02-15 14:47:36.466 mantingv[8839:203501] 支付失败</mutableString>
+2016-02-15 14:47:36.466 mantingv[8839:203501] 支付失败</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -125,15 +125,15 @@
                                 </mask>
                                 <mask key="constraints">
                                     <exclude reference="fYe-F8-JgV"/>
-                                    <exclude reference="c3b-1p-7x1"/>
-                                    <exclude reference="jhq-d0-eNn"/>
-                                    <exclude reference="yFd-w7-QTB"/>
+                                    <exclude reference="KDx-If-e1H"/>
                                     <exclude reference="8ZP-eI-yQk"/>
                                     <exclude reference="k3b-XP-THT"/>
-                                    <exclude reference="KDx-If-e1H"/>
                                     <exclude reference="aK4-if-teB"/>
                                     <exclude reference="nNC-ax-d5R"/>
                                     <exclude reference="rrc-oV-bGy"/>
+                                    <exclude reference="c3b-1p-7x1"/>
+                                    <exclude reference="jhq-d0-eNn"/>
+                                    <exclude reference="yFd-w7-QTB"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular">
@@ -145,15 +145,15 @@
                                 </mask>
                                 <mask key="constraints">
                                     <include reference="fYe-F8-JgV"/>
-                                    <include reference="c3b-1p-7x1"/>
-                                    <include reference="jhq-d0-eNn"/>
-                                    <include reference="yFd-w7-QTB"/>
+                                    <include reference="KDx-If-e1H"/>
                                     <include reference="8ZP-eI-yQk"/>
                                     <include reference="k3b-XP-THT"/>
-                                    <include reference="KDx-If-e1H"/>
                                     <include reference="aK4-if-teB"/>
                                     <include reference="nNC-ax-d5R"/>
                                     <include reference="rrc-oV-bGy"/>
+                                    <include reference="c3b-1p-7x1"/>
+                                    <include reference="jhq-d0-eNn"/>
+                                    <include reference="yFd-w7-QTB"/>
                                 </mask>
                             </variation>
                         </view>
@@ -368,7 +368,7 @@
                         <constraint firstAttribute="trailing" secondItem="lx8-uA-VTW" secondAttribute="trailing" id="77Z-ZP-HCe"/>
                         <constraint firstItem="cXJ-co-G29" firstAttribute="leading" secondItem="FtS-No-qxc" secondAttribute="leading" id="9sr-VP-qUH"/>
                         <constraint firstAttribute="trailing" secondItem="m6f-oP-JGf" secondAttribute="trailing" id="Gz6-so-QEp"/>
-                        <constraint firstItem="lx8-uA-VTW" firstAttribute="top" secondItem="FtS-No-qxc" secondAttribute="top" constant="74" id="HeH-yx-GDz"/>
+                        <constraint firstItem="lx8-uA-VTW" firstAttribute="top" secondItem="FtS-No-qxc" secondAttribute="top" constant="64" id="HeH-yx-GDz"/>
                         <constraint firstItem="Y0I-re-vHH" firstAttribute="top" secondItem="btS-cD-Y9n" secondAttribute="bottom" constant="10" id="Jn2-Ny-Fs5"/>
                         <constraint firstAttribute="trailing" secondItem="KXO-eU-KaH" secondAttribute="trailing" id="Kgg-it-YDG"/>
                         <constraint firstItem="btS-cD-Y9n" firstAttribute="leading" secondItem="FtS-No-qxc" secondAttribute="leading" id="LwG-vo-NhR"/>
@@ -394,6 +394,10 @@
                             <exclude reference="Y0I-re-vHH"/>
                         </mask>
                         <mask key="constraints">
+                            <exclude reference="Jn2-Ny-Fs5"/>
+                            <exclude reference="afT-mC-ZZx"/>
+                            <exclude reference="hAG-mN-LbH"/>
+                            <exclude reference="yif-Gu-dta"/>
                             <exclude reference="77Z-ZP-HCe"/>
                             <exclude reference="HeH-yx-GDz"/>
                             <exclude reference="Vno-it-tS4"/>
@@ -404,16 +408,12 @@
                             <exclude reference="Kgg-it-YDG"/>
                             <exclude reference="TYb-2x-Yb4"/>
                             <exclude reference="Z3f-Qd-eFS"/>
-                            <exclude reference="4v4-GV-YOV"/>
-                            <exclude reference="9sr-VP-qUH"/>
-                            <exclude reference="VWj-U2-CRK"/>
                             <exclude reference="5gH-1l-ecM"/>
                             <exclude reference="LwG-vo-NhR"/>
                             <exclude reference="wfC-Bw-Hx1"/>
-                            <exclude reference="Jn2-Ny-Fs5"/>
-                            <exclude reference="afT-mC-ZZx"/>
-                            <exclude reference="hAG-mN-LbH"/>
-                            <exclude reference="yif-Gu-dta"/>
+                            <exclude reference="4v4-GV-YOV"/>
+                            <exclude reference="9sr-VP-qUH"/>
+                            <exclude reference="VWj-U2-CRK"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular">
@@ -426,6 +426,10 @@
                             <include reference="Y0I-re-vHH"/>
                         </mask>
                         <mask key="constraints">
+                            <include reference="Jn2-Ny-Fs5"/>
+                            <include reference="afT-mC-ZZx"/>
+                            <include reference="hAG-mN-LbH"/>
+                            <include reference="yif-Gu-dta"/>
                             <include reference="77Z-ZP-HCe"/>
                             <include reference="HeH-yx-GDz"/>
                             <include reference="Vno-it-tS4"/>
@@ -436,16 +440,12 @@
                             <include reference="Kgg-it-YDG"/>
                             <include reference="TYb-2x-Yb4"/>
                             <include reference="Z3f-Qd-eFS"/>
-                            <include reference="4v4-GV-YOV"/>
-                            <include reference="9sr-VP-qUH"/>
-                            <include reference="VWj-U2-CRK"/>
                             <include reference="5gH-1l-ecM"/>
                             <include reference="LwG-vo-NhR"/>
                             <include reference="wfC-Bw-Hx1"/>
-                            <include reference="Jn2-Ny-Fs5"/>
-                            <include reference="afT-mC-ZZx"/>
-                            <include reference="hAG-mN-LbH"/>
-                            <include reference="yif-Gu-dta"/>
+                            <include reference="4v4-GV-YOV"/>
+                            <include reference="9sr-VP-qUH"/>
+                            <include reference="VWj-U2-CRK"/>
                         </mask>
                     </variation>
                 </scrollView>
@@ -479,7 +479,7 @@
                     <include reference="t1v-cY-Oj7"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="502.5" y="-3026"/>
+            <point key="canvasLocation" x="443" y="-3028"/>
         </view>
     </objects>
     <resources>
